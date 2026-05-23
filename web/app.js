@@ -278,7 +278,7 @@ function openChapter(num) {
         theme: "dracula",
         lineNumbers: true,
         indentUnit: 4,
-        readOnly: cell.type === "code",
+        readOnly: false,
         viewportMargin: Infinity,
       });
       editors.push({ cm, outputDiv, type: cell.type });

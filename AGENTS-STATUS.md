@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — session Tâche 1 terminée_
+_Dernière mise à jour : 2026-05-23 — session Tâche 2 terminée_
 
 ---
 
@@ -21,7 +21,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | # | Tâche | État | Notes |
 |---|-------|------|-------|
 | 1 | Restructurer contenu → `chapters/ch*/` | ✅ Done 2026-05-23 | 240 fichiers, 26 chapitres |
-| 2 | Cellules toutes éditables (`readOnly: false`) | ⬜ Todo | `app.js` ligne ~282 |
+| 2 | Cellules toutes éditables (`readOnly: false`) | ✅ Done 2026-05-23 | `app.js` ligne 281 — 1 ligne |
 | 3 | Déplacer `web/` → racine + git init | ⬜ Todo | Avant GitHub Pages |
 | 4 | Firebase Firestore multi-joueur | ⬜ Todo | Dépend de 3 |
 | 5 | Leaderboard | ⬜ Todo | Dépend de 4 |
@@ -73,8 +73,11 @@ apprendre_python/
 - `.gitignore` créé, repo git initialisé (commit initial)
 - Rétrocompat : champ `source` = `source_en` dans les cellules md (supprimer en Tâche 6)
 
-**Prochaine session — Tâche 2** : `app.js` ligne ~282, `readOnly: false`.
-Ensuite Tâche 3 : déplacer `web/` → racine + `git remote add origin`.
+**2026-05-23** : Tâche 2 exécutée.
+- `web/app.js` ligne 281 : `readOnly: cell.type === "code"` → `readOnly: false`
+- Toutes les cellules (exemples + exercices) sont maintenant éditables par le joueur
+
+**Prochaine session — Tâche 3** : déplacer `web/` → racine + `git remote add origin`.
 
 **Blocants connus** :
 - Firebase credentials à créer manuellement (Tâche 4) — pas de blocant immédiat
