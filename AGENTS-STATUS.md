@@ -105,10 +105,22 @@ apprendre_python/
   - Colonne "Level" → "Pokémon (niveau)" avec `starter_pokemon` + niveau calculé
   - Bouton "Rafraîchir" ajouté
 
-**2026-05-23** : Fix zoom CSS (hors plan).
-- `style.css` : `min-width: 640px` + `overflow-x: auto` sur `html`
+**2026-05-23** : Fix zoom CSS (hors plan) — partiellement résolu.
+
+Symptôme : au zoom, le centrage gauche/droite se perd et la top-bar se décale (icônes cachées).
+Cause : le viewport CSS rétrécit sous la largeur naturelle de la top-bar (~620px), le flex-wrap
+bascule les icônes en ligne 2, le justify-content:center se recalcule ligne par ligne.
+
+Essais effectués (aucun n'a réglé le trackpad) :
+- `min-width: 640px` sur `html` → règle Ctrl+scroll ✅, pas le trackpad ❌
+- `overflow-x: auto` sur `html` → aucun effet supplémentaire ❌
+
+Résultat :
 - Zoom Ctrl+scroll → centrage et top-bar stables ✅
-- Zoom pinch trackpad Windows → non résolu ⚠️ (comportement Visual Viewport natif, nécessiterait JS)
+- Zoom pinch trackpad Windows → non résolu ⚠️
+  Hypothèse : le geste trackpad déclenche la Visual Viewport API (zoom visuel sans
+  recalcul du layout CSS), `min-width` est donc inopérant. Fix possible : JS sur
+  `window.visualViewport` pour détecter et compenser — non implémenté.
 
 **Prochaine session — Tâche 6** : Contenu bilingue EN/FR (`.fr.md` à rédiger).
 
