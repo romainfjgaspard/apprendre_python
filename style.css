@@ -109,6 +109,24 @@ body {
 
 .name-form input:focus { border-color: var(--cyan); box-shadow: 0 0 12px rgba(103,232,249,.3); }
 
+.name-form select {
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  padding: 10px 16px;
+  width: 260px;
+  cursor: pointer;
+}
+
+.name-form-sep {
+  color: var(--border);
+  font-size: 12px;
+  margin: 4px 0;
+}
+
 /* ── Buttons ─────────────────────────────────────────────────────────────── */
 .btn {
   background: var(--bg-card);

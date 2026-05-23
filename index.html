@@ -40,8 +40,16 @@
       </div>
       <p class="subtitle" data-i18n="splash_subtitle">Learn Python by building games!</p>
       <div class="name-form">
-        <label for="player-name" data-i18n="splash_label">What is your name, Trainer?</label>
-        <input type="text" id="player-name" maxlength="20" placeholder="Your name..." autofocus>
+        <!-- Section dresseurs existants — masquée si Firebase non configuré -->
+        <div id="existing-section" class="hidden">
+          <label for="existing-player" data-i18n="splash_existing_label">Dresseur existant :</label>
+          <select id="existing-player">
+            <option value="">--</option>
+          </select>
+          <div class="name-form-sep" data-i18n="splash_or">— ou —</div>
+        </div>
+        <label for="player-name" data-i18n="splash_label">Nouveau dresseur — entre ton nom</label>
+        <input type="text" id="player-name" maxlength="20" placeholder="Ton nom..." autofocus>
         <button id="start-btn" class="btn btn-primary" data-i18n="splash_start">Start Adventure! ⚡</button>
       </div>
     </div>
@@ -111,7 +119,7 @@
     </div>
   </div>
 
-  <script src="firebase.js"></script>
-  <script src="app.js"></script>
+  <script type="module" src="firebase.js"></script>
+  <script defer src="app.js"></script>
 </body>
 </html>

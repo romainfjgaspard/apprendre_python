@@ -6,7 +6,9 @@
 const I18N = {
   en: {
     splash_subtitle: "Learn Python by building games!",
-    splash_label: "What is your name, Trainer?",
+    splash_label: "New Trainer — enter your name",
+    splash_existing_label: "Existing Trainer:",
+    splash_or: "— or —",
     splash_start: "Start Adventure! ⚡",
     map_title: "🗺️ Adventure Map",
     season1_title: "⚡ Season 1 — Pokémon Edition",
@@ -26,7 +28,9 @@ const I18N = {
   },
   fr: {
     splash_subtitle: "Apprends Python en créant des jeux !",
-    splash_label: "Quel est ton nom, Dresseur ?",
+    splash_label: "Nouveau dresseur — entre ton nom",
+    splash_existing_label: "Dresseur existant :",
+    splash_or: "— ou —",
     splash_start: "Lancer l'aventure ! ⚡",
     map_title: "🗺️ Carte d'aventure",
     season1_title: "⚡ Saison 1 — Édition Pokémon",
@@ -462,11 +466,35 @@ $("#victory-btn").addEventListener("click", () => {
 });
 
 // ── Splash / name entry ──────────────────────────────────────────────────────
-function startGame() {
-  const nameInput = $("#player-name");
-  const name = nameInput.value.trim();
-  if (!name) { nameInput.focus(); return; }
-  PROG.name = name;
+async function startGame() {
+  const sel = $("#existing-player");
+  const selectedName = sel && sel.value ? sel.value : "";
+
+  if (selectedName) {
+    // Dresseur existant — charger depuis Firestore
+    const data = typeof loadPlayer === "function" ? await loadPlayer(selectedName) : null;
+    if (data) {
+      PROG = {
+        name: data.name,
+        xp: data.xp || 0,
+        chapters_done: data.chapters_done || [],
+        badges: data.badges || [],
+        starter_pokemon: data.starter_pokemon || "",
+        lang: data.lang || LANG
+      };
+      if (data.lang) setLang(data.lang);
+    } else {
+      PROG.name = selectedName;
+    }
+  } else {
+    // Nouveau dresseur
+    const nameInput = $("#player-name");
+    const name = nameInput.value.trim();
+    if (!name) { nameInput.focus(); return; }
+    PROG.name = name;
+    PROG.lang = LANG;
+  }
+
   saveProgress(PROG);
   showScreen("home");
   renderMap();
@@ -475,6 +503,18 @@ function startGame() {
 $("#start-btn").addEventListener("click", startGame);
 $("#player-name").addEventListener("keydown", (e) => {
   if (e.key === "Enter") startGame();
+});
+
+// Effacer la sélection dropdown si l'utilisateur tape un nouveau nom
+$("#player-name").addEventListener("input", () => {
+  const sel = $("#existing-player");
+  if (sel) sel.value = "";
+});
+
+// Effacer le champ texte si un dresseur existant est sélectionné
+$("#existing-player")?.addEventListener("change", () => {
+  const sel = $("#existing-player");
+  if (sel && sel.value) $("#player-name").value = "";
 });
 
 // ── Verify module (embedded as string, loaded into Pyodide) ──────────────────
@@ -699,11 +739,24 @@ async function boot() {
   const res = await fetch("chapters.json");
   DATA = await res.json();
 
-  // Init Firebase (non-blocking)
+  // Init Firebase
   if (typeof initFirebase === "function") {
-    initFirebase().then(ok => {
-      if (ok && PROG.name) syncProgress(PROG);
-    });
+    const ok = await initFirebase();
+    if (ok) {
+      // Peupler le dropdown des dresseurs existants
+      const players = await listAllPlayers();
+      if (players.length > 0) {
+        const sel = $("#existing-player");
+        players.forEach(p => {
+          const opt = document.createElement("option");
+          opt.value = p.name;
+          opt.textContent = `${p.name} (${p.xp} XP)`;
+          sel.appendChild(opt);
+        });
+        show($("#existing-section"));
+      }
+      if (PROG.name) syncProgress(PROG);
+    }
   }
 
   applyI18n();
