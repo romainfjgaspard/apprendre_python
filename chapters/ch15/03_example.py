@@ -1,4 +1,4 @@
-import pandas as pd
+ import pandas as pd
 
 data = {
     'driver':   ['Verstappen', 'Leclerc', 'Norris', 'Sainz', 'Hamilton', 'Russell'],

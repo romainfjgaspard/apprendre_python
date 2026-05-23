@@ -12,12 +12,14 @@
     {
      "type": "md",
      "source_en": "# ⚡ Chapter 1 — Hello Pokémon!\n\n<img src=\"images/pokedex/7.png\" width=\"160\" alt=\"Squirtle\" style=\"margin: 6px; vertical-align: middle;\"/>\n\nWelcome to **Python Quest**! You will learn Python by building a Pokémon game.\n\n**What you will learn:**\n- `print()` — display text on screen\n- **Variables** — store data (like Scratch variables 🟧)\n- **f-strings** — put variables inside text\n\n**How to play:**\n1. Read each 📖 lesson cell\n2. Click **▶ Run** to run code cells\n3. Fill in the ✏️ exercise — replace `???` with your code\n4. Click **✅ Verify** at the bottom to check your answers\n\n> 💡 Click **▶ Run** next to any code cell to execute it",
-     "source": "# ⚡ Chapter 1 — Hello Pokémon!\n\n<img src=\"images/pokedex/7.png\" width=\"160\" alt=\"Squirtle\" style=\"margin: 6px; vertical-align: middle;\"/>\n\nWelcome to **Python Quest**! You will learn Python by building a Pokémon game.\n\n**What you will learn:**\n- `print()` — display text on screen\n- **Variables** — store data (like Scratch variables 🟧)\n- **f-strings** — put variables inside text\n\n**How to play:**\n1. Read each 📖 lesson cell\n2. Click **▶ Run** to run code cells\n3. Fill in the ✏️ exercise — replace `???` with your code\n4. Click **✅ Verify** at the bottom to check your answers\n\n> 💡 Click **▶ Run** next to any code cell to execute it"
+     "source": "# ⚡ Chapter 1 — Hello Pokémon!\n\n<img src=\"images/pokedex/7.png\" width=\"160\" alt=\"Squirtle\" style=\"margin: 6px; vertical-align: middle;\"/>\n\nWelcome to **Python Quest**! You will learn Python by building a Pokémon game.\n\n**What you will learn:**\n- `print()` — display text on screen\n- **Variables** — store data (like Scratch variables 🟧)\n- **f-strings** — put variables inside text\n\n**How to play:**\n1. Read each 📖 lesson cell\n2. Click **▶ Run** to run code cells\n3. Fill in the ✏️ exercise — replace `???` with your code\n4. Click **✅ Verify** at the bottom to check your answers\n\n> 💡 Click **▶ Run** next to any code cell to execute it",
+     "source_fr": "# ⚡ Chapitre 1 — Bonjour Pokémon !\n\n<img src=\"images/pokedex/7.png\" width=\"160\" alt=\"Squirtle\" style=\"margin: 6px; vertical-align: middle;\"/>\n\nBienvenue dans **Python Quest** ! Tu vas apprendre Python en construisant un jeu Pokémon.\n\n**Ce que tu vas apprendre :**\n- `print()` — afficher du texte à l'écran\n- **Variables** — stocker des données (comme les variables Scratch 🟧)\n- **f-strings** — mettre des variables dans du texte\n\n**Comment jouer :**\n1. Lis chaque cellule de cours 📖\n2. Clique sur **▶ Exécuter** pour lancer les cellules de code\n3. Remplis l'exercice ✏️ — remplace `???` par ton code\n4. Clique sur **✅ Vérifier** en bas pour vérifier tes réponses\n\n> 💡 Clique sur **▶ Exécuter** à côté d'une cellule de code pour l'exécuter\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — `print()`: Talk to the screen!\n\nIn Scratch you use the **\"say\"** 💬 block to show a message.\nIn Python you use `print()`.\n\n⚠️ Text must be inside **quotes**: `\"hello\"` or `'hello'`",
-     "source": "---\n## 📖 Lesson 1 — `print()`: Talk to the screen!\n\nIn Scratch you use the **\"say\"** 💬 block to show a message.\nIn Python you use `print()`.\n\n⚠️ Text must be inside **quotes**: `\"hello\"` or `'hello'`"
+     "source": "---\n## 📖 Lesson 1 — `print()`: Talk to the screen!\n\nIn Scratch you use the **\"say\"** 💬 block to show a message.\nIn Python you use `print()`.\n\n⚠️ Text must be inside **quotes**: `\"hello\"` or `'hello'`",
+     "source_fr": "---\n## 📖 Leçon 1 — `print()` : Parle à l'écran !\n\nDans Scratch tu utilises le bloc **\"dire\"** 💬 pour afficher un message.\nEn Python tu utilises `print()`.\n\n⚠️ Le texte doit être entre **guillemets** : `\"hello\"` ou `'hello'`\n"
     },
     {
      "type": "code",
@@ -26,7 +28,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Variables: Store your data\n\nA **variable** stores a value — like a Scratch variable 🟧.\n\n```python\nname = \"Pikachu\"    # text → needs quotes\nhp = 35             # number → no quotes\nlevel = 5           # number → no quotes\n```\n\n| Rule | Example |\n|------|--------|\n| Text → **quotes** | `\"Pikachu\"` |\n| Whole number → **no quotes** | `35` |\n| Decimal → **dot, no quotes** | `3.14` |\n| True/False → **capital, no quotes** | `True` |",
-     "source": "---\n## 📖 Lesson 2 — Variables: Store your data\n\nA **variable** stores a value — like a Scratch variable 🟧.\n\n```python\nname = \"Pikachu\"    # text → needs quotes\nhp = 35             # number → no quotes\nlevel = 5           # number → no quotes\n```\n\n| Rule | Example |\n|------|--------|\n| Text → **quotes** | `\"Pikachu\"` |\n| Whole number → **no quotes** | `35` |\n| Decimal → **dot, no quotes** | `3.14` |\n| True/False → **capital, no quotes** | `True` |"
+     "source": "---\n## 📖 Lesson 2 — Variables: Store your data\n\nA **variable** stores a value — like a Scratch variable 🟧.\n\n```python\nname = \"Pikachu\"    # text → needs quotes\nhp = 35             # number → no quotes\nlevel = 5           # number → no quotes\n```\n\n| Rule | Example |\n|------|--------|\n| Text → **quotes** | `\"Pikachu\"` |\n| Whole number → **no quotes** | `35` |\n| Decimal → **dot, no quotes** | `3.14` |\n| True/False → **capital, no quotes** | `True` |",
+     "source_fr": "---\n## 📖 Leçon 2 — Variables : Stocke tes données\n\nUne **variable** stocke une valeur — comme une variable Scratch 🟧.\n\n```python\nname = \"Pikachu\"    # texte → besoin de guillemets\nhp = 35             # nombre → pas de guillemets\nlevel = 5           # nombre → pas de guillemets\n```\n\n| Règle | Exemple |\n|-------|---------|\n| Texte → **guillemets** | `\"Pikachu\"` |\n| Nombre entier → **pas de guillemets** | `35` |\n| Décimal → **point, pas de guillemets** | `3.14` |\n| Vrai/Faux → **majuscule, pas de guillemets** | `True` |\n"
     },
     {
      "type": "code",
@@ -35,7 +38,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — f-strings: Mix text and variables\n\nAn **f-string** lets you put variables inside text using `{curly braces}`.\n\n```python\nname = \"Pikachu\"\nhp = 35\nprint(f\"{name} has {hp} HP\")  # → Pikachu has 35 HP\n```\n\nDon't forget the **`f`** before the opening quote!",
-     "source": "---\n## 📖 Lesson 3 — f-strings: Mix text and variables\n\nAn **f-string** lets you put variables inside text using `{curly braces}`.\n\n```python\nname = \"Pikachu\"\nhp = 35\nprint(f\"{name} has {hp} HP\")  # → Pikachu has 35 HP\n```\n\nDon't forget the **`f`** before the opening quote!"
+     "source": "---\n## 📖 Lesson 3 — f-strings: Mix text and variables\n\nAn **f-string** lets you put variables inside text using `{curly braces}`.\n\n```python\nname = \"Pikachu\"\nhp = 35\nprint(f\"{name} has {hp} HP\")  # → Pikachu has 35 HP\n```\n\nDon't forget the **`f`** before the opening quote!",
+     "source_fr": "---\n## 📖 Leçon 3 — f-strings : Mélange texte et variables\n\nUn **f-string** te permet de mettre des variables dans du texte grâce aux `{accolades}`.\n\n```python\nname = \"Pikachu\"\nhp = 35\nprint(f\"{name} has {hp} HP\")  # → Pikachu has 35 HP\n```\n\nN'oublie pas le **`f`** avant le guillemet ouvrant !\n"
     },
     {
      "type": "code",
@@ -44,7 +48,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 4 — More Pokémon, more variables!\n\nYou can create as many variables as you want.\nGive each one a descriptive name.",
-     "source": "---\n## 📖 Lesson 4 — More Pokémon, more variables!\n\nYou can create as many variables as you want.\nGive each one a descriptive name."
+     "source": "---\n## 📖 Lesson 4 — More Pokémon, more variables!\n\nYou can create as many variables as you want.\nGive each one a descriptive name.",
+     "source_fr": "---\n## 📖 Leçon 4 — Encore plus de Pokémon, encore plus de variables !\n\nTu peux créer autant de variables que tu veux.\nDonne à chacune un nom descriptif.\n"
     },
     {
      "type": "code",
@@ -53,7 +58,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Create your starter Pokémon!\n\nReplace each `???` with the right value.\nChoose your favorite starter Pokémon!\n\n> 🔑 Remember:\n> - Text → in quotes: `\"Bulbasaur\"`\n> - Numbers → no quotes: `45`\n> - True/False → capital, no quotes: `True`",
-     "source": "---\n## ✏️ Your Turn — Create your starter Pokémon!\n\nReplace each `???` with the right value.\nChoose your favorite starter Pokémon!\n\n> 🔑 Remember:\n> - Text → in quotes: `\"Bulbasaur\"`\n> - Numbers → no quotes: `45`\n> - True/False → capital, no quotes: `True`"
+     "source": "---\n## ✏️ Your Turn — Create your starter Pokémon!\n\nReplace each `???` with the right value.\nChoose your favorite starter Pokémon!\n\n> 🔑 Remember:\n> - Text → in quotes: `\"Bulbasaur\"`\n> - Numbers → no quotes: `45`\n> - True/False → capital, no quotes: `True`",
+     "source_fr": "---\n## ✏️ À ton tour — Crée ton Pokémon de départ !\n\nRemplace chaque `???` par la bonne valeur.\nChoisis ton Pokémon de départ préféré !\n\n> 🔑 Rappel :\n> - Texte → entre guillemets : `\"Bulbasaur\"`\n> - Nombres → sans guillemets : `45`\n> - Vrai/Faux → majuscule, sans guillemets : `True`\n"
     },
     {
      "type": "exercise",
@@ -77,12 +83,14 @@
     {
      "type": "md",
      "source_en": "# 🔢 Chapter 2 — Types & Math\n\nEvery value in Python has a **type**. The type tells Python what you can\ndo with the value.\n\n**What you will learn:**\n- The 4 basic types: `int`, `float`, `str`, `bool`\n- Math operators: `+  -  *  /  //  %  **`\n- Comparisons: `==  !=  <  >  <=  >=`\n- How to calculate Pokémon battle damage!\n\n> In Scratch every number is the same.\n> In Python whole numbers (`int`) and decimals (`float`) are different types.",
-     "source": "# 🔢 Chapter 2 — Types & Math\n\nEvery value in Python has a **type**. The type tells Python what you can\ndo with the value.\n\n**What you will learn:**\n- The 4 basic types: `int`, `float`, `str`, `bool`\n- Math operators: `+  -  *  /  //  %  **`\n- Comparisons: `==  !=  <  >  <=  >=`\n- How to calculate Pokémon battle damage!\n\n> In Scratch every number is the same.\n> In Python whole numbers (`int`) and decimals (`float`) are different types."
+     "source": "# 🔢 Chapter 2 — Types & Math\n\nEvery value in Python has a **type**. The type tells Python what you can\ndo with the value.\n\n**What you will learn:**\n- The 4 basic types: `int`, `float`, `str`, `bool`\n- Math operators: `+  -  *  /  //  %  **`\n- Comparisons: `==  !=  <  >  <=  >=`\n- How to calculate Pokémon battle damage!\n\n> In Scratch every number is the same.\n> In Python whole numbers (`int`) and decimals (`float`) are different types.",
+     "source_fr": "# 🔢 Chapitre 2 — Types & Maths\n\nChaque valeur en Python a un **type**. Le type indique à Python ce que\ntu peux faire avec la valeur.\n\n**Ce que tu vas apprendre :**\n- Les 4 types de base : `int`, `float`, `str`, `bool`\n- Les opérateurs mathématiques : `+  -  *  /  //  %  **`\n- Les comparaisons : `==  !=  <  >  <=  >=`\n- Comment calculer les dégâts d'un combat Pokémon !\n\n> Dans Scratch tous les nombres sont pareils.\n> En Python les nombres entiers (`int`) et les décimaux (`float`) sont des types différents.\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — The 4 basic types\n\n| Type | What it is | Example |\n|------|-----------|--------|\n| `int` | Whole number | `hp = 35` |\n| `float` | Decimal number | `speed = 3.14` |\n| `str` | Text (string) | `name = \"Pikachu\"` |\n| `bool` | True or False | `alive = True` |\n\nUse `type()` to check:",
-     "source": "---\n## 📖 Lesson 1 — The 4 basic types\n\n| Type | What it is | Example |\n|------|-----------|--------|\n| `int` | Whole number | `hp = 35` |\n| `float` | Decimal number | `speed = 3.14` |\n| `str` | Text (string) | `name = \"Pikachu\"` |\n| `bool` | True or False | `alive = True` |\n\nUse `type()` to check:"
+     "source": "---\n## 📖 Lesson 1 — The 4 basic types\n\n| Type | What it is | Example |\n|------|-----------|--------|\n| `int` | Whole number | `hp = 35` |\n| `float` | Decimal number | `speed = 3.14` |\n| `str` | Text (string) | `name = \"Pikachu\"` |\n| `bool` | True or False | `alive = True` |\n\nUse `type()` to check:",
+     "source_fr": "---\n## 📖 Leçon 1 — Les 4 types de base\n\n| Type | Ce que c'est | Exemple |\n|------|-------------|---------|\n| `int` | Nombre entier | `hp = 35` |\n| `float` | Nombre décimal | `speed = 3.14` |\n| `str` | Texte (chaîne) | `name = \"Pikachu\"` |\n| `bool` | Vrai ou Faux | `alive = True` |\n\nUtilise `type()` pour vérifier :\n"
     },
     {
      "type": "code",
@@ -91,7 +99,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Math operators\n\n| Operator | What it does | Example | Result |\n|----------|-------------|---------|--------|\n| `+` | Addition | `10 + 3` | `13` |\n| `-` | Subtraction | `10 - 3` | `7` |\n| `*` | Multiplication | `10 * 3` | `30` |\n| `/` | Division | `10 / 3` | `3.333` |\n| `//` | Integer division | `10 // 3` | `3` |\n| `%` | Remainder | `10 % 3` | `1` |\n| `**` | Power | `2 ** 3` | `8` |\n\n> 💡 `/` always gives a `float`. `//` always gives an `int` (rounded down).",
-     "source": "---\n## 📖 Lesson 2 — Math operators\n\n| Operator | What it does | Example | Result |\n|----------|-------------|---------|--------|\n| `+` | Addition | `10 + 3` | `13` |\n| `-` | Subtraction | `10 - 3` | `7` |\n| `*` | Multiplication | `10 * 3` | `30` |\n| `/` | Division | `10 / 3` | `3.333` |\n| `//` | Integer division | `10 // 3` | `3` |\n| `%` | Remainder | `10 % 3` | `1` |\n| `**` | Power | `2 ** 3` | `8` |\n\n> 💡 `/` always gives a `float`. `//` always gives an `int` (rounded down)."
+     "source": "---\n## 📖 Lesson 2 — Math operators\n\n| Operator | What it does | Example | Result |\n|----------|-------------|---------|--------|\n| `+` | Addition | `10 + 3` | `13` |\n| `-` | Subtraction | `10 - 3` | `7` |\n| `*` | Multiplication | `10 * 3` | `30` |\n| `/` | Division | `10 / 3` | `3.333` |\n| `//` | Integer division | `10 // 3` | `3` |\n| `%` | Remainder | `10 % 3` | `1` |\n| `**` | Power | `2 ** 3` | `8` |\n\n> 💡 `/` always gives a `float`. `//` always gives an `int` (rounded down).",
+     "source_fr": "---\n## 📖 Leçon 2 — Opérateurs mathématiques\n\n| Opérateur | Ce qu'il fait | Exemple | Résultat |\n|-----------|--------------|---------|---------|\n| `+` | Addition | `10 + 3` | `13` |\n| `-` | Soustraction | `10 - 3` | `7` |\n| `*` | Multiplication | `10 * 3` | `30` |\n| `/` | Division | `10 / 3` | `3.333` |\n| `//` | Division entière | `10 // 3` | `3` |\n| `%` | Reste | `10 % 3` | `1` |\n| `**` | Puissance | `2 ** 3` | `8` |\n\n> 💡 `/` donne toujours un `float`. `//` donne toujours un `int` (arrondi vers le bas).\n"
     },
     {
      "type": "code",
@@ -100,7 +109,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Comparisons\n\nComparisons return a `bool` — `True` or `False`.\n\n| Operator | Meaning |\n|----------|--------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `<` | Less than |\n| `>` | Greater than |\n| `<=` | Less or equal |\n| `>=` | Greater or equal |\n\n> ⚠️ `=` means **store** a value. `==` means **compare**. Do not mix them up!",
-     "source": "---\n## 📖 Lesson 3 — Comparisons\n\nComparisons return a `bool` — `True` or `False`.\n\n| Operator | Meaning |\n|----------|--------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `<` | Less than |\n| `>` | Greater than |\n| `<=` | Less or equal |\n| `>=` | Greater or equal |\n\n> ⚠️ `=` means **store** a value. `==` means **compare**. Do not mix them up!"
+     "source": "---\n## 📖 Lesson 3 — Comparisons\n\nComparisons return a `bool` — `True` or `False`.\n\n| Operator | Meaning |\n|----------|--------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `<` | Less than |\n| `>` | Greater than |\n| `<=` | Less or equal |\n| `>=` | Greater or equal |\n\n> ⚠️ `=` means **store** a value. `==` means **compare**. Do not mix them up!",
+     "source_fr": "---\n## 📖 Leçon 3 — Comparaisons\n\nLes comparaisons renvoient un `bool` — `True` ou `False`.\n\n| Opérateur | Signification |\n|-----------|--------------|\n| `==` | Égal à |\n| `!=` | Différent de |\n| `<` | Inférieur à |\n| `>` | Supérieur à |\n| `<=` | Inférieur ou égal |\n| `>=` | Supérieur ou égal |\n\n> ⚠️ `=` sert à **stocker** une valeur. `==` sert à **comparer**. Ne les confonds pas !\n"
     },
     {
      "type": "code",
@@ -109,7 +119,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Pokemon Battle Score!\n\nYour Pokemon just fought a battle! Replace each `???` with a Python **expression** — a calculation using the variables above.\n\n> Use the operators from the lesson: `+ - * / //` and comparisons: `> < == >=`",
-     "source": "---\n## ✏️ Your Turn — Pokemon Battle Score!\n\nYour Pokemon just fought a battle! Replace each `???` with a Python **expression** — a calculation using the variables above.\n\n> Use the operators from the lesson: `+ - * / //` and comparisons: `> < == >=`"
+     "source": "---\n## ✏️ Your Turn — Pokemon Battle Score!\n\nYour Pokemon just fought a battle! Replace each `???` with a Python **expression** — a calculation using the variables above.\n\n> Use the operators from the lesson: `+ - * / //` and comparisons: `> < == >=`",
+     "source_fr": "---\n## ✏️ À ton tour — Score de combat Pokémon !\n\nTon Pokémon vient de combattre ! Remplace chaque `???` par une **expression** Python — un calcul utilisant les variables ci-dessus.\n\n> Utilise les opérateurs du cours : `+ - * / //` et les comparaisons : `> < == >=`\n"
     },
     {
      "type": "exercise",
@@ -133,12 +144,14 @@
     {
      "type": "md",
      "source_en": "# 🔀 Chapter 3 — Conditions\n\nMake your program **decide** what to do!\n\n**What you will learn:**\n- `if` / `elif` / `else` — like Scratch's **\"if-then-else\"** block\n- `and`, `or`, `not` — combining conditions\n- Pokémon type effectiveness!\n\n> In Scratch: ⬡ if <condition> then / else\n> In Python: `if condition:` / `else:`",
-     "source": "# 🔀 Chapter 3 — Conditions\n\nMake your program **decide** what to do!\n\n**What you will learn:**\n- `if` / `elif` / `else` — like Scratch's **\"if-then-else\"** block\n- `and`, `or`, `not` — combining conditions\n- Pokémon type effectiveness!\n\n> In Scratch: ⬡ if <condition> then / else\n> In Python: `if condition:` / `else:`"
+     "source": "# 🔀 Chapter 3 — Conditions\n\nMake your program **decide** what to do!\n\n**What you will learn:**\n- `if` / `elif` / `else` — like Scratch's **\"if-then-else\"** block\n- `and`, `or`, `not` — combining conditions\n- Pokémon type effectiveness!\n\n> In Scratch: ⬡ if <condition> then / else\n> In Python: `if condition:` / `else:`",
+     "source_fr": "# 🔀 Chapitre 3 — Les Conditions\n\nFais prendre des **décisions** à ton programme !\n\n**Ce que tu vas apprendre :**\n- `if` / `elif` / `else` — comme le bloc **\"si... alors... sinon\"** de Scratch\n- `and`, `or`, `not` — combiner des conditions\n- Les types Pokémon et leurs avantages !\n\n> Dans Scratch : ⬡ si <condition> alors / sinon\n> En Python : `if condition:` / `else:`\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — `if` and `else`\n\n```python\nif condition:\n    # runs when True\nelse:\n    # runs when False\n```\n\n⚠️ Don't forget the **colon** `:` at the end and the **4-space indentation**!",
-     "source": "---\n## 📖 Lesson 1 — `if` and `else`\n\n```python\nif condition:\n    # runs when True\nelse:\n    # runs when False\n```\n\n⚠️ Don't forget the **colon** `:` at the end and the **4-space indentation**!"
+     "source": "---\n## 📖 Lesson 1 — `if` and `else`\n\n```python\nif condition:\n    # runs when True\nelse:\n    # runs when False\n```\n\n⚠️ Don't forget the **colon** `:` at the end and the **4-space indentation**!",
+     "source_fr": "---\n## 📖 Leçon 1 — `if` et `else`\n\n```python\nif condition:\n    # s'exécute si True\nelse:\n    # s'exécute si False\n```\n\n⚠️ N'oublie pas les **deux-points** `:` à la fin et l'**indentation de 4 espaces** !\n"
     },
     {
      "type": "code",
@@ -147,7 +160,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — `elif` — Multiple choices\n\nWhen you have more than 2 options use `elif` (short for \"else if\").\n\n```python\nif condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...  # none of the above\n```",
-     "source": "---\n## 📖 Lesson 2 — `elif` — Multiple choices\n\nWhen you have more than 2 options use `elif` (short for \"else if\").\n\n```python\nif condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...  # none of the above\n```"
+     "source": "---\n## 📖 Lesson 2 — `elif` — Multiple choices\n\nWhen you have more than 2 options use `elif` (short for \"else if\").\n\n```python\nif condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...  # none of the above\n```",
+     "source_fr": "---\n## 📖 Leçon 2 — `elif` — Plusieurs choix\n\nQuand tu as plus de 2 options, utilise `elif` (raccourci de \"else if\").\n\n```python\nif condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...  # aucune des conditions ci-dessus\n```\n"
     },
     {
      "type": "code",
@@ -156,7 +170,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — `and`, `or`, `not`\n\nCombine conditions:\n\n| Keyword | Meaning | Example |\n|---------|---------|--------|\n| `and` | Both must be True | `hp > 0 and level >= 5` |\n| `or` | At least one True | `type == \"Fire\" or type == \"Water\"` |\n| `not` | Flip True ↔ False | `not fainted` |",
-     "source": "---\n## 📖 Lesson 3 — `and`, `or`, `not`\n\nCombine conditions:\n\n| Keyword | Meaning | Example |\n|---------|---------|--------|\n| `and` | Both must be True | `hp > 0 and level >= 5` |\n| `or` | At least one True | `type == \"Fire\" or type == \"Water\"` |\n| `not` | Flip True ↔ False | `not fainted` |"
+     "source": "---\n## 📖 Lesson 3 — `and`, `or`, `not`\n\nCombine conditions:\n\n| Keyword | Meaning | Example |\n|---------|---------|--------|\n| `and` | Both must be True | `hp > 0 and level >= 5` |\n| `or` | At least one True | `type == \"Fire\" or type == \"Water\"` |\n| `not` | Flip True ↔ False | `not fainted` |",
+     "source_fr": "---\n## 📖 Leçon 3 — `and`, `or`, `not`\n\nCombine plusieurs conditions :\n\n| Mot-clé | Signification | Exemple |\n|---------|---------------|---------|\n| `and` | Les deux doivent être True | `hp > 0 and level >= 5` |\n| `or` | Au moins une True | `type == \"Fire\" or type == \"Water\"` |\n| `not` | Inverse True ↔ False | `not fainted` |\n"
     },
     {
      "type": "code",
@@ -165,7 +180,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 4 — Type Effectiveness\n\nIn Pokémon, type matchups change the damage:\n- 🔥 Fire beats 🌿 Grass\n- 🌿 Grass beats 💧 Water\n- 💧 Water beats 🔥 Fire\n\nLet's code this!",
-     "source": "---\n## 📖 Lesson 4 — Type Effectiveness\n\nIn Pokémon, type matchups change the damage:\n- 🔥 Fire beats 🌿 Grass\n- 🌿 Grass beats 💧 Water\n- 💧 Water beats 🔥 Fire\n\nLet's code this!"
+     "source": "---\n## 📖 Lesson 4 — Type Effectiveness\n\nIn Pokémon, type matchups change the damage:\n- 🔥 Fire beats 🌿 Grass\n- 🌿 Grass beats 💧 Water\n- 💧 Water beats 🔥 Fire\n\nLet's code this!",
+     "source_fr": "---\n## 📖 Leçon 4 — Les types Pokémon\n\nDans Pokémon, les types changent les dégâts infligés :\n- 🔥 Feu bat 🌿 Plante\n- 🌿 Plante bat 💧 Eau\n- 💧 Eau bat 🔥 Feu\n\nVoyons comment coder ça !\n"
     },
     {
      "type": "code",
@@ -174,7 +190,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Pokemon Health Check!\n\nWrite conditions to check a Pokemon's battle status. Replace each `???` with a Python expression.\n\n> Use comparisons, `if/elif/else`, and `and`/`or` from the lessons above!",
-     "source": "---\n## ✏️ Your Turn — Pokemon Health Check!\n\nWrite conditions to check a Pokemon's battle status. Replace each `???` with a Python expression.\n\n> Use comparisons, `if/elif/else`, and `and`/`or` from the lessons above!"
+     "source": "---\n## ✏️ Your Turn — Pokemon Health Check!\n\nWrite conditions to check a Pokemon's battle status. Replace each `???` with a Python expression.\n\n> Use comparisons, `if/elif/else`, and `and`/`or` from the lessons above!",
+     "source_fr": "---\n## ✏️ À toi — Vérification de l'état du Pokémon !\n\nÉcris des conditions pour vérifier l'état d'un Pokémon en combat. Remplace chaque `???` par une expression Python.\n\n> Utilise les comparaisons, `if/elif/else` et `and`/`or` des leçons ci-dessus !\n"
     },
     {
      "type": "exercise",
@@ -198,12 +215,14 @@
     {
      "type": "md",
      "source_en": "# 🔁 Chapter 4 — Loops\n\nLoops let you repeat code — like Scratch's **\"repeat\"** and **\"forever\"** blocks.\n\n**What you will learn:**\n- `for` loop with `range()` — repeat a fixed number of times\n- `for` loop with a list — do something for each item\n- `while` loop — repeat until a condition is False\n- `break` — escape a loop early",
-     "source": "# 🔁 Chapter 4 — Loops\n\nLoops let you repeat code — like Scratch's **\"repeat\"** and **\"forever\"** blocks.\n\n**What you will learn:**\n- `for` loop with `range()` — repeat a fixed number of times\n- `for` loop with a list — do something for each item\n- `while` loop — repeat until a condition is False\n- `break` — escape a loop early"
+     "source": "# 🔁 Chapter 4 — Loops\n\nLoops let you repeat code — like Scratch's **\"repeat\"** and **\"forever\"** blocks.\n\n**What you will learn:**\n- `for` loop with `range()` — repeat a fixed number of times\n- `for` loop with a list — do something for each item\n- `while` loop — repeat until a condition is False\n- `break` — escape a loop early",
+     "source_fr": "# 🔁 Chapitre 4 — Les Boucles\n\nLes boucles répètent du code — comme les blocs **\"répéter\"** et **\"répéter indéfiniment\"** de Scratch.\n\n**Ce que tu vas apprendre :**\n- La boucle `for` avec `range()` — répéter un nombre fixe de fois\n- La boucle `for` sur une liste — faire quelque chose pour chaque élément\n- La boucle `while` — répéter tant qu'une condition est vraie\n- `break` — sortir d'une boucle en avance\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — `for` + `range()`: Repeat N times\n\nLike Scratch's **repeat (10)** block.\n\n```python\nfor i in range(5):   # i goes 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0).",
-     "source": "---\n## 📖 Lesson 1 — `for` + `range()`: Repeat N times\n\nLike Scratch's **repeat (10)** block.\n\n```python\nfor i in range(5):   # i goes 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0)."
+     "source": "---\n## 📖 Lesson 1 — `for` + `range()`: Repeat N times\n\nLike Scratch's **repeat (10)** block.\n\n```python\nfor i in range(5):   # i goes 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0).",
+     "source_fr": "---\n## 📖 Leçon 1 — `for` + `range()` : Répéter N fois\n\nComme le bloc **répéter (10)** de Scratch.\n\n```python\nfor i in range(5):   # i vaut 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = les nombres 0, 1, 2, 3, 4 (5 valeurs, en partant de 0).\n"
     },
     {
      "type": "code",
@@ -212,7 +231,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — `for` with a list\n\nGo through each item in a list, one at a time.",
-     "source": "---\n## 📖 Lesson 2 — `for` with a list\n\nGo through each item in a list, one at a time."
+     "source": "---\n## 📖 Lesson 2 — `for` with a list\n\nGo through each item in a list, one at a time.",
+     "source_fr": "---\n## 📖 Leçon 2 — `for` sur une liste\n\nParcours chaque élément d'une liste, un par un.\n"
     },
     {
      "type": "code",
@@ -221,7 +241,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — `while`: Repeat until done\n\nLike Scratch's **\"repeat until\"** block.\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\n> ⚠️ If the condition never becomes False you get an **infinite loop** — the\n> program freezes! Always make sure something changes.",
-     "source": "---\n## 📖 Lesson 3 — `while`: Repeat until done\n\nLike Scratch's **\"repeat until\"** block.\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\n> ⚠️ If the condition never becomes False you get an **infinite loop** — the\n> program freezes! Always make sure something changes."
+     "source": "---\n## 📖 Lesson 3 — `while`: Repeat until done\n\nLike Scratch's **\"repeat until\"** block.\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\n> ⚠️ If the condition never becomes False you get an **infinite loop** — the\n> program freezes! Always make sure something changes.",
+     "source_fr": "---\n## 📖 Leçon 3 — `while` : Répéter jusqu'à la fin\n\nComme le bloc **\"répéter jusqu'à\"** de Scratch.\n\n```python\nwhile condition:\n    # s'exécute tant que la condition est True\n    # DOIT changer quelque chose pour finir par devenir False !\n```\n\n> ⚠️ Si la condition ne devient jamais False, tu obtiens une **boucle infinie** —\n> le programme se bloque ! Assure-toi que quelque chose change à chaque tour.\n"
     },
     {
      "type": "code",
@@ -230,7 +251,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 4 — `break`: Escape a loop early\n\n`break` immediately exits the current loop.",
-     "source": "---\n## 📖 Lesson 4 — `break`: Escape a loop early\n\n`break` immediately exits the current loop."
+     "source": "---\n## 📖 Lesson 4 — `break`: Escape a loop early\n\n`break` immediately exits the current loop.",
+     "source_fr": "---\n## 📖 Leçon 4 — `break` : Sortir d'une boucle en avance\n\n`break` quitte immédiatement la boucle en cours.\n"
     },
     {
      "type": "code",
@@ -239,7 +261,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Training & Battles!\n\nReplace each `???` with the right code.",
-     "source": "---\n## ✏️ Your Turn — Training & Battles!\n\nReplace each `???` with the right code."
+     "source": "---\n## ✏️ Your Turn — Training & Battles!\n\nReplace each `???` with the right code.",
+     "source_fr": "---\n## ✏️ À toi — Entraînement et Combats !\n\nRemplace chaque `???` par le bon code.\n"
     },
     {
      "type": "exercise",
@@ -263,12 +286,14 @@
     {
      "type": "md",
      "source_en": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- List comprehensions (create lists in one line!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful.",
-     "source": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- List comprehensions (create lists in one line!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful."
+     "source": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- List comprehensions (create lists in one line!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful.",
+     "source_fr": "# 📋 Chapitre 5 — Les Listes\n\nUne **liste** stocke plusieurs valeurs dans l'ordre — comme une équipe de Pokémon !\n\n**Ce que tu vas apprendre :**\n- Créer une liste et accéder aux éléments par index\n- Ajouter et supprimer des éléments\n- Parcourir une liste avec une boucle\n- Trier une liste\n- Les compréhensions de liste (créer des listes en une ligne !)\n\n> Dans Scratch tu as les blocs **\"liste\"** — les listes Python sont très similaires mais bien plus puissantes.\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Create & access a list\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\n#        index 0     index 1      index 2\n```\n\n⚠️ Indexing starts at **0**, not 1!",
-     "source": "---\n## 📖 Lesson 1 — Create & access a list\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\n#        index 0     index 1      index 2\n```\n\n⚠️ Indexing starts at **0**, not 1!"
+     "source": "---\n## 📖 Lesson 1 — Create & access a list\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\n#        index 0     index 1      index 2\n```\n\n⚠️ Indexing starts at **0**, not 1!",
+     "source_fr": "---\n## 📖 Leçon 1 — Créer une liste et accéder aux éléments\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\n#        index 0     index 1      index 2\n```\n\n⚠️ Les index commencent à **0**, pas à 1 !\n"
     },
     {
      "type": "code",
@@ -277,7 +302,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Add and remove items\n\n| Method | What it does |\n|--------|------------|\n| `list.append(x)` | Add `x` at the end |\n| `list.remove(x)` | Remove the first `x` found |\n| `list.pop()` | Remove and return the last item |\n| `list.insert(i, x)` | Insert `x` at position `i` |",
-     "source": "---\n## 📖 Lesson 2 — Add and remove items\n\n| Method | What it does |\n|--------|------------|\n| `list.append(x)` | Add `x` at the end |\n| `list.remove(x)` | Remove the first `x` found |\n| `list.pop()` | Remove and return the last item |\n| `list.insert(i, x)` | Insert `x` at position `i` |"
+     "source": "---\n## 📖 Lesson 2 — Add and remove items\n\n| Method | What it does |\n|--------|------------|\n| `list.append(x)` | Add `x` at the end |\n| `list.remove(x)` | Remove the first `x` found |\n| `list.pop()` | Remove and return the last item |\n| `list.insert(i, x)` | Insert `x` at position `i` |",
+     "source_fr": "---\n## 📖 Leçon 2 — Ajouter et supprimer des éléments\n\n| Méthode | Ce qu'elle fait |\n|---------|-----------------|\n| `list.append(x)` | Ajoute `x` à la fin |\n| `list.remove(x)` | Supprime le premier `x` trouvé |\n| `list.pop()` | Supprime et renvoie le dernier élément |\n| `list.insert(i, x)` | Insère `x` à la position `i` |\n"
     },
     {
      "type": "code",
@@ -286,7 +312,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Sort, min, max\n\nUseful list functions:",
-     "source": "---\n## 📖 Lesson 3 — Sort, min, max\n\nUseful list functions:"
+     "source": "---\n## 📖 Lesson 3 — Sort, min, max\n\nUseful list functions:",
+     "source_fr": "---\n## 📖 Leçon 3 — Trier, min, max\n\nFonctions utiles sur les listes :\n"
     },
     {
      "type": "code",
@@ -295,7 +322,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```",
-     "source": "---\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```"
+     "source": "---\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```",
+     "source_fr": "---\n## 📖 Leçon 4 — Compréhensions de liste (la magie en une ligne !)\n\nCrée une nouvelle liste en transformant ou filtrant une autre liste.\n\n```python\n# Ancienne façon :\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# Compréhension de liste :\nresult = [x * 2 for x in items]\n```\n"
     },
     {
      "type": "code",
@@ -304,7 +332,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Build your dream team!\n\nReplace each `???`.",
-     "source": "---\n## ✏️ Your Turn — Build your dream team!\n\nReplace each `???`."
+     "source": "---\n## ✏️ Your Turn — Build your dream team!\n\nReplace each `???`.",
+     "source_fr": "---\n## ✏️ À toi — Construis ton équipe de rêve !\n\nRemplace chaque `???`.\n"
     },
     {
      "type": "exercise",
@@ -328,12 +357,14 @@
     {
      "type": "md",
      "source_en": "# 📖 Chapter 6 — Dictionaries\n\nA **dictionary** (`dict`) maps **keys** to **values** — like a real\nPokédex where you look up a Pokémon by name and get its info!\n\n**What you will learn:**\n- Create a dict and access values by key\n- Add, update, and loop through a dict\n- Nested dicts and lists of dicts\n- Build a Pokédex!",
-     "source": "# 📖 Chapter 6 — Dictionaries\n\nA **dictionary** (`dict`) maps **keys** to **values** — like a real\nPokédex where you look up a Pokémon by name and get its info!\n\n**What you will learn:**\n- Create a dict and access values by key\n- Add, update, and loop through a dict\n- Nested dicts and lists of dicts\n- Build a Pokédex!"
+     "source": "# 📖 Chapter 6 — Dictionaries\n\nA **dictionary** (`dict`) maps **keys** to **values** — like a real\nPokédex where you look up a Pokémon by name and get its info!\n\n**What you will learn:**\n- Create a dict and access values by key\n- Add, update, and loop through a dict\n- Nested dicts and lists of dicts\n- Build a Pokédex!",
+     "source_fr": "# 📖 Chapitre 6 — Les Dictionnaires\n\nUn **dictionnaire** (`dict`) associe des **clés** à des **valeurs** — comme un vrai\nPokédex où tu cherches un Pokémon par son nom et tu obtiens ses infos !\n\n**Ce que tu vas apprendre :**\n- Créer un dict et accéder aux valeurs par clé\n- Ajouter, modifier, et parcourir un dict\n- Les dicts imbriqués et les listes de dicts\n- Construire un Pokédex !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Create and read a dict\n\n```python\npikachu = {\n    \"name\": \"Pikachu\",      # key → value\n    \"type\": \"Electric\",\n    \"hp\":   35,\n}\nprint(pikachu[\"type\"])  # → Electric\n```\n\nAccess a value with `dict[\"key\"]`. The key is always a string in quotes.",
-     "source": "---\n## 📖 Lesson 1 — Create and read a dict\n\n```python\npikachu = {\n    \"name\": \"Pikachu\",      # key → value\n    \"type\": \"Electric\",\n    \"hp\":   35,\n}\nprint(pikachu[\"type\"])  # → Electric\n```\n\nAccess a value with `dict[\"key\"]`. The key is always a string in quotes."
+     "source": "---\n## 📖 Lesson 1 — Create and read a dict\n\n```python\npikachu = {\n    \"name\": \"Pikachu\",      # key → value\n    \"type\": \"Electric\",\n    \"hp\":   35,\n}\nprint(pikachu[\"type\"])  # → Electric\n```\n\nAccess a value with `dict[\"key\"]`. The key is always a string in quotes.",
+     "source_fr": "---\n## 📖 Leçon 1 — Créer et lire un dict\n\n```python\npikachu = {\n    \"name\": \"Pikachu\",      # clé → valeur\n    \"type\": \"Electric\",\n    \"hp\":   35,\n}\nprint(pikachu[\"type\"])  # → Electric\n```\n\nAccède à une valeur avec `dict[\"clé\"]`. La clé est toujours une chaîne entre guillemets.\n"
     },
     {
      "type": "code",
@@ -342,7 +373,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Loop through a dict\n\n| Method | What you get |\n|--------|------------|\n| `dict.keys()` | All keys |\n| `dict.values()` | All values |\n| `dict.items()` | All (key, value) pairs |",
-     "source": "---\n## 📖 Lesson 2 — Loop through a dict\n\n| Method | What you get |\n|--------|------------|\n| `dict.keys()` | All keys |\n| `dict.values()` | All values |\n| `dict.items()` | All (key, value) pairs |"
+     "source": "---\n## 📖 Lesson 2 — Loop through a dict\n\n| Method | What you get |\n|--------|------------|\n| `dict.keys()` | All keys |\n| `dict.values()` | All values |\n| `dict.items()` | All (key, value) pairs |",
+     "source_fr": "---\n## 📖 Leçon 2 — Parcourir un dict\n\n| Méthode | Ce que tu obtiens |\n|---------|-------------------|\n| `dict.keys()` | Toutes les clés |\n| `dict.values()` | Toutes les valeurs |\n| `dict.items()` | Toutes les paires (clé, valeur) |\n"
     },
     {
      "type": "code",
@@ -351,7 +383,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — List of dicts = Pokédex!\n\nA **list of dicts** is one of the most useful structures in Python.\nEach dict has the same keys. You can loop, filter, sort, etc.",
-     "source": "---\n## 📖 Lesson 3 — List of dicts = Pokédex!\n\nA **list of dicts** is one of the most useful structures in Python.\nEach dict has the same keys. You can loop, filter, sort, etc."
+     "source": "---\n## 📖 Lesson 3 — List of dicts = Pokédex!\n\nA **list of dicts** is one of the most useful structures in Python.\nEach dict has the same keys. You can loop, filter, sort, etc.",
+     "source_fr": "---\n## 📖 Leçon 3 — Liste de dicts = Pokédex !\n\nUne **liste de dicts** est l'une des structures les plus utiles en Python.\nChaque dict a les mêmes clés. Tu peux parcourir, filtrer, trier, etc.\n"
     },
     {
      "type": "code",
@@ -360,7 +393,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Build a Pokédex!\n\nReplace each `???`.",
-     "source": "---\n## ✏️ Your Turn — Build a Pokédex!\n\nReplace each `???`."
+     "source": "---\n## ✏️ Your Turn — Build a Pokédex!\n\nReplace each `???`.",
+     "source_fr": "---\n## ✏️ À toi — Construis un Pokédex !\n\nRemplace chaque `???`.\n"
     },
     {
      "type": "exercise",
@@ -384,12 +418,14 @@
     {
      "type": "md",
      "source_en": "# 🧩 Chapter 7 — Functions\n\nA **function** is a reusable block of code — like a **custom block** in Scratch!\n\n**What you will learn:**\n- `def` — define a function\n- Parameters and `return`\n- Default values for parameters\n- Functions that call other functions\n- Build the Pokémon battle system!",
-     "source": "# 🧩 Chapter 7 — Functions\n\nA **function** is a reusable block of code — like a **custom block** in Scratch!\n\n**What you will learn:**\n- `def` — define a function\n- Parameters and `return`\n- Default values for parameters\n- Functions that call other functions\n- Build the Pokémon battle system!"
+     "source": "# 🧩 Chapter 7 — Functions\n\nA **function** is a reusable block of code — like a **custom block** in Scratch!\n\n**What you will learn:**\n- `def` — define a function\n- Parameters and `return`\n- Default values for parameters\n- Functions that call other functions\n- Build the Pokémon battle system!",
+     "source_fr": "# 🧩 Chapitre 7 — Les Fonctions\n\nUne **fonction** est un bloc de code réutilisable — comme un **bloc personnalisé** dans Scratch !\n\n**Ce que tu vas apprendre :**\n- `def` — définir une fonction\n- Les paramètres et `return`\n- Les valeurs par défaut pour les paramètres\n- Les fonctions qui appellent d'autres fonctions\n- Construire le système de combat Pokémon !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — `def` and `return`\n\n```python\ndef function_name(parameters):\n    # code inside the function\n    return result\n```\n\n- `def` = \"I am defining a function\"\n- Parameters = inputs the function receives\n- `return` = the result sent back\n- Indentation (4 spaces) = everything inside the function",
-     "source": "---\n## 📖 Lesson 1 — `def` and `return`\n\n```python\ndef function_name(parameters):\n    # code inside the function\n    return result\n```\n\n- `def` = \"I am defining a function\"\n- Parameters = inputs the function receives\n- `return` = the result sent back\n- Indentation (4 spaces) = everything inside the function"
+     "source": "---\n## 📖 Lesson 1 — `def` and `return`\n\n```python\ndef function_name(parameters):\n    # code inside the function\n    return result\n```\n\n- `def` = \"I am defining a function\"\n- Parameters = inputs the function receives\n- `return` = the result sent back\n- Indentation (4 spaces) = everything inside the function",
+     "source_fr": "---\n## 📖 Leçon 1 — `def` et `return`\n\n```python\ndef nom_de_la_fonction(parametres):\n    # code à l'intérieur de la fonction\n    return resultat\n```\n\n- `def` = \"je définis une fonction\"\n- Paramètres = les données que la fonction reçoit\n- `return` = le résultat renvoyé\n- L'indentation (4 espaces) = tout ce qui est à l'intérieur de la fonction\n"
     },
     {
      "type": "code",
@@ -398,7 +434,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Default values\n\nGive a parameter a default so it becomes optional.",
-     "source": "---\n## 📖 Lesson 2 — Default values\n\nGive a parameter a default so it becomes optional."
+     "source": "---\n## 📖 Lesson 2 — Default values\n\nGive a parameter a default so it becomes optional.",
+     "source_fr": "---\n## 📖 Leçon 2 — Valeurs par défaut\n\nDonne une valeur par défaut à un paramètre pour le rendre optionnel.\n"
     },
     {
      "type": "code",
@@ -407,7 +444,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Functions calling functions\n\nFunctions can call other functions — that is how you build complex systems\nfrom simple pieces!",
-     "source": "---\n## 📖 Lesson 3 — Functions calling functions\n\nFunctions can call other functions — that is how you build complex systems\nfrom simple pieces!"
+     "source": "---\n## 📖 Lesson 3 — Functions calling functions\n\nFunctions can call other functions — that is how you build complex systems\nfrom simple pieces!",
+     "source_fr": "---\n## 📖 Leçon 3 — Fonctions qui appellent d'autres fonctions\n\nLes fonctions peuvent appeler d'autres fonctions — c'est comme ça qu'on construit\ndes systèmes complexes à partir de petites pièces simples !\n"
     },
     {
      "type": "code",
@@ -416,7 +454,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Build battle functions!\n\nComplete the functions below by replacing `???`.",
-     "source": "---\n## ✏️ Your Turn — Build battle functions!\n\nComplete the functions below by replacing `???`."
+     "source": "---\n## ✏️ Your Turn — Build battle functions!\n\nComplete the functions below by replacing `???`.",
+     "source_fr": "---\n## ✏️ À toi — Construis les fonctions de combat !\n\nComplète les fonctions ci-dessous en remplaçant `???`.\n"
     },
     {
      "type": "exercise",
@@ -440,12 +479,14 @@
     {
      "type": "md",
      "source_en": "# 💾 Chapter 8 — Files & JSON\n\nSave your game data to a file and load it back!\n\n**What you will learn:**\n- Write text to a file with `open()`\n- Read text from a file\n- Save Python data (dicts, lists) to JSON\n- Load data from a JSON file\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!",
-     "source": "# 💾 Chapter 8 — Files & JSON\n\nSave your game data to a file and load it back!\n\n**What you will learn:**\n- Write text to a file with `open()`\n- Read text from a file\n- Save Python data (dicts, lists) to JSON\n- Load data from a JSON file\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!"
+     "source": "# 💾 Chapter 8 — Files & JSON\n\nSave your game data to a file and load it back!\n\n**What you will learn:**\n- Write text to a file with `open()`\n- Read text from a file\n- Save Python data (dicts, lists) to JSON\n- Load data from a JSON file\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!",
+     "source_fr": "# 💾 Chapitre 8 — Fichiers & JSON\n\nSauvegarde les données de ton jeu dans un fichier et recharge-les !\n\n**Ce que tu vas apprendre :**\n- Écrire du texte dans un fichier avec `open()`\n- Lire du texte depuis un fichier\n- Sauvegarder des données Python (dicts, listes) en JSON\n- Charger des données depuis un fichier JSON\n\n> JSON = JavaScript Object Notation — un format universel pour les données.\n> Il ressemble exactement aux dicts et listes Python !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Write to a file\n\n```python\nwith open(\"file.txt\", \"w\") as f:   # \"w\" = write mode\n    f.write(\"Hello!\\n\")\n```\n\n- `\"w\"` = **write** (creates or overwrites the file)\n- `\"a\"` = **append** (adds to the end)\n- `with` automatically closes the file when done",
-     "source": "---\n## 📖 Lesson 1 — Write to a file\n\n```python\nwith open(\"file.txt\", \"w\") as f:   # \"w\" = write mode\n    f.write(\"Hello!\\n\")\n```\n\n- `\"w\"` = **write** (creates or overwrites the file)\n- `\"a\"` = **append** (adds to the end)\n- `with` automatically closes the file when done"
+     "source": "---\n## 📖 Lesson 1 — Write to a file\n\n```python\nwith open(\"file.txt\", \"w\") as f:   # \"w\" = write mode\n    f.write(\"Hello!\\n\")\n```\n\n- `\"w\"` = **write** (creates or overwrites the file)\n- `\"a\"` = **append** (adds to the end)\n- `with` automatically closes the file when done",
+     "source_fr": "---\n## 📖 Leçon 1 — Écrire dans un fichier\n\n```python\nwith open(\"fichier.txt\", \"w\") as f:   # \"w\" = mode écriture\n    f.write(\"Bonjour !\\n\")\n```\n\n- `\"w\"` = **write** (crée ou écrase le fichier)\n- `\"a\"` = **append** (ajoute à la fin)\n- `with` ferme automatiquement le fichier quand c'est terminé\n"
     },
     {
      "type": "code",
@@ -454,7 +495,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Read from a file",
-     "source": "---\n## 📖 Lesson 2 — Read from a file"
+     "source": "---\n## 📖 Lesson 2 — Read from a file",
+     "source_fr": "---\n## 📖 Leçon 2 — Lire depuis un fichier\n"
     },
     {
      "type": "code",
@@ -463,7 +505,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — JSON: Save and load game data\n\nJSON is perfect for saving dicts and lists.\n\n```python\nimport json\n\n# Save\nwith open(\"data.json\", \"w\") as f:\n    json.dump(my_dict, f)\n\n# Load\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n```",
-     "source": "---\n## 📖 Lesson 3 — JSON: Save and load game data\n\nJSON is perfect for saving dicts and lists.\n\n```python\nimport json\n\n# Save\nwith open(\"data.json\", \"w\") as f:\n    json.dump(my_dict, f)\n\n# Load\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n```"
+     "source": "---\n## 📖 Lesson 3 — JSON: Save and load game data\n\nJSON is perfect for saving dicts and lists.\n\n```python\nimport json\n\n# Save\nwith open(\"data.json\", \"w\") as f:\n    json.dump(my_dict, f)\n\n# Load\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n```",
+     "source_fr": "---\n## 📖 Leçon 3 — JSON : Sauvegarder et charger les données du jeu\n\nJSON est parfait pour sauvegarder des dicts et des listes.\n\n```python\nimport json\n\n# Sauvegarder\nwith open(\"data.json\", \"w\") as f:\n    json.dump(mon_dict, f)\n\n# Charger\nwith open(\"data.json\", \"r\") as f:\n    charge = json.load(f)\n```\n"
     },
     {
      "type": "code",
@@ -472,7 +515,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Your Turn — Save and load your Pokédex!\n\nReplace each `???`.",
-     "source": "---\n## ✏️ Your Turn — Save and load your Pokédex!\n\nReplace each `???`."
+     "source": "---\n## ✏️ Your Turn — Save and load your Pokédex!\n\nReplace each `???`.",
+     "source_fr": "---\n## ✏️ À toi — Sauvegarde et charge ton Pokédex !\n\nRemplace chaque `???`.\n"
     },
     {
      "type": "exercise",
@@ -496,12 +540,14 @@
     {
      "type": "md",
      "source_en": "# 🏆 BOSS — Pokémon Arena!\n\nTime to combine **everything** you learned in Season 1!\n\nYou will build a complete Pokémon battle game step by step.\nEach step uses concepts from the previous chapters.\n\n| Step | Concept used |\n|------|-------------|\n| 1 | Dicts — Pokémon data |\n| 2 | Functions — damage & battle |\n| 3 | Loops + Conditions — battle loop |\n| 4 | Lists — Team management |\n| 5 | Files — Save results |\n\n> Follow each step and customize it your way! 🎮",
-     "source": "# 🏆 BOSS — Pokémon Arena!\n\nTime to combine **everything** you learned in Season 1!\n\nYou will build a complete Pokémon battle game step by step.\nEach step uses concepts from the previous chapters.\n\n| Step | Concept used |\n|------|-------------|\n| 1 | Dicts — Pokémon data |\n| 2 | Functions — damage & battle |\n| 3 | Loops + Conditions — battle loop |\n| 4 | Lists — Team management |\n| 5 | Files — Save results |\n\n> Follow each step and customize it your way! 🎮"
+     "source": "# 🏆 BOSS — Pokémon Arena!\n\nTime to combine **everything** you learned in Season 1!\n\nYou will build a complete Pokémon battle game step by step.\nEach step uses concepts from the previous chapters.\n\n| Step | Concept used |\n|------|-------------|\n| 1 | Dicts — Pokémon data |\n| 2 | Functions — damage & battle |\n| 3 | Loops + Conditions — battle loop |\n| 4 | Lists — Team management |\n| 5 | Files — Save results |\n\n> Follow each step and customize it your way! 🎮",
+     "source_fr": "# 🏆 BOSS — Arène Pokémon !\n\nL'heure de combiner **tout** ce que tu as appris en Saison 1 !\n\nTu vas construire un jeu de combat Pokémon complet, étape par étape.\nChaque étape utilise les concepts des chapitres précédents.\n\n| Étape | Concept utilisé |\n|-------|----------------|\n| 1 | Dicts — données Pokémon |\n| 2 | Fonctions — dégâts & combat |\n| 3 | Boucles + Conditions — boucle de combat |\n| 4 | Listes — gestion d'équipe |\n| 5 | Fichiers — sauvegarder les résultats |\n\n> Suis chaque étape et personnalise-la à ta façon ! 🎮\n"
     },
     {
      "type": "md",
      "source_en": "---\n## Step 1 — Define your Pokémon\n\nEach Pokémon is a dict.",
-     "source": "---\n## Step 1 — Define your Pokémon\n\nEach Pokémon is a dict."
+     "source": "---\n## Step 1 — Define your Pokémon\n\nEach Pokémon is a dict.",
+     "source_fr": "---\n## Étape 1 — Définis tes Pokémon\n\nChaque Pokémon est un dict.\n"
     },
     {
      "type": "code",
@@ -510,7 +556,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 2 — Battle functions",
-     "source": "---\n## Step 2 — Battle functions"
+     "source": "---\n## Step 2 — Battle functions",
+     "source_fr": "---\n## Étape 2 — Fonctions de combat\n"
     },
     {
      "type": "code",
@@ -519,7 +566,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 3 — Fight! (Run this cell to watch a battle)",
-     "source": "---\n## Step 3 — Fight! (Run this cell to watch a battle)"
+     "source": "---\n## Step 3 — Fight! (Run this cell to watch a battle)",
+     "source_fr": "---\n## Étape 3 — Au combat ! (Lance cette cellule pour voir un duel)\n"
     },
     {
      "type": "code",
@@ -528,7 +576,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 4 — Tournament!\n\nRun a 3-round tournament with random matchups.",
-     "source": "---\n## Step 4 — Tournament!\n\nRun a 3-round tournament with random matchups."
+     "source": "---\n## Step 4 — Tournament!\n\nRun a 3-round tournament with random matchups.",
+     "source_fr": "---\n## Étape 4 — Tournoi !\n\nLance un tournoi en 3 rounds avec des matchs aléatoires.\n"
     },
     {
      "type": "code",
@@ -537,7 +586,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 5 — Save the results",
-     "source": "---\n## Step 5 — Save the results"
+     "source": "---\n## Step 5 — Save the results",
+     "source_fr": "---\n## Étape 5 — Sauvegarde les résultats\n"
     },
     {
      "type": "code",
@@ -546,12 +596,14 @@
     {
      "type": "md",
      "source_en": "---\n## ✅ Boss Verification\n\nRun this cell to verify you completed the boss!",
-     "source": "---\n## ✅ Boss Verification\n\nRun this cell to verify you completed the boss!"
+     "source": "---\n## ✅ Boss Verification\n\nRun this cell to verify you completed the boss!",
+     "source_fr": "---\n## ✅ Vérification du Boss\n\nLance cette cellule pour vérifier que tu as réussi le boss !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 🌟 Bonus Challenges (optional!)\n\nIf you want to go further, try these:\n\n1. **Team battle** — Each player has 3 Pokémon. When one faints, the next one comes in.\n2. **Choose your moves** — Each Pokémon has 4 moves with different power levels.\n3. **Level system** — Pokémon gain XP after winning and level up.\n4. **Evolution** — At certain levels, a Pokémon evolves (changes stats and name).\n5. **Pokédex viewer** — Use `input()` to let the player search for a Pokémon by name.\n\nThese are open-ended — there is no single right answer. Be creative! 🚀",
-     "source": "---\n## 🌟 Bonus Challenges (optional!)\n\nIf you want to go further, try these:\n\n1. **Team battle** — Each player has 3 Pokémon. When one faints, the next one comes in.\n2. **Choose your moves** — Each Pokémon has 4 moves with different power levels.\n3. **Level system** — Pokémon gain XP after winning and level up.\n4. **Evolution** — At certain levels, a Pokémon evolves (changes stats and name).\n5. **Pokédex viewer** — Use `input()` to let the player search for a Pokémon by name.\n\nThese are open-ended — there is no single right answer. Be creative! 🚀"
+     "source": "---\n## 🌟 Bonus Challenges (optional!)\n\nIf you want to go further, try these:\n\n1. **Team battle** — Each player has 3 Pokémon. When one faints, the next one comes in.\n2. **Choose your moves** — Each Pokémon has 4 moves with different power levels.\n3. **Level system** — Pokémon gain XP after winning and level up.\n4. **Evolution** — At certain levels, a Pokémon evolves (changes stats and name).\n5. **Pokédex viewer** — Use `input()` to let the player search for a Pokémon by name.\n\nThese are open-ended — there is no single right answer. Be creative! 🚀",
+     "source_fr": "---\n## 🌟 Défis Bonus (optionnels !)\n\nSi tu veux aller plus loin, essaie ces idées :\n\n1. **Combat en équipe** — Chaque joueur a 3 Pokémon. Quand l'un tombe, le suivant entre.\n2. **Choix des attaques** — Chaque Pokémon a 4 attaques avec des puissances différentes.\n3. **Système de niveaux** — Les Pokémon gagnent de l'XP après une victoire et montent de niveau.\n4. **Évolution** — À certains niveaux, un Pokémon évolue (stats et nom changent).\n5. **Visionneuse de Pokédex** — Utilise `input()` pour chercher un Pokémon par son nom.\n\nCes défis sont ouverts — il n'y a pas une seule bonne réponse. Sois créatif ! 🚀\n"
     },
     {
      "type": "verify",
@@ -571,12 +623,14 @@
     {
      "type": "md",
      "source_en": "# 🏎️ Chapter 10 — Lists of Lists (F1 Grid)\n\n<p><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 2 — Formula 1**! 🏁\n\n**What you will learn:**\n- **Nested lists** (lists inside lists) — like a 2D grid\n- **List comprehensions** — build a list in 1 line\n\n> 💡 In Scratch, you only had simple lists. Python lets you nest them!",
-     "source": "# 🏎️ Chapter 10 — Lists of Lists (F1 Grid)\n\n<p><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 2 — Formula 1**! 🏁\n\n**What you will learn:**\n- **Nested lists** (lists inside lists) — like a 2D grid\n- **List comprehensions** — build a list in 1 line\n\n> 💡 In Scratch, you only had simple lists. Python lets you nest them!"
+     "source": "# 🏎️ Chapter 10 — Lists of Lists (F1 Grid)\n\n<p><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 2 — Formula 1**! 🏁\n\n**What you will learn:**\n- **Nested lists** (lists inside lists) — like a 2D grid\n- **List comprehensions** — build a list in 1 line\n\n> 💡 In Scratch, you only had simple lists. Python lets you nest them!",
+     "source_fr": "# 🏎️ Chapitre 10 — Listes de Listes (Grille F1)\n\n<p><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nBienvenue en **Saison 2 — Formule 1** ! 🏁\n\n**Ce que tu vas apprendre :**\n- Les **listes imbriquées** (listes dans des listes) — comme une grille 2D\n- Les **compréhensions de liste** — construire une liste en 1 ligne\n\n> 💡 Dans Scratch, tu n'avais que des listes simples. Python te permet de les imbriquer !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — A list inside a list\n\nAn F1 starting grid has 2 cars per row. We can model it like this:\n```python\ngrid = [\n    [\"Verstappen\", \"Leclerc\"],   # row 1 (pole position)\n    [\"Norris\",     \"Sainz\"],    # row 2\n    [\"Hamilton\",   \"Russell\"], # row 3\n]\n```\nAccess with **two** indices: `grid[0][1]` → `\"Leclerc\"`.",
-     "source": "---\n## 📖 Lesson 1 — A list inside a list\n\nAn F1 starting grid has 2 cars per row. We can model it like this:\n```python\ngrid = [\n    [\"Verstappen\", \"Leclerc\"],   # row 1 (pole position)\n    [\"Norris\",     \"Sainz\"],    # row 2\n    [\"Hamilton\",   \"Russell\"], # row 3\n]\n```\nAccess with **two** indices: `grid[0][1]` → `\"Leclerc\"`."
+     "source": "---\n## 📖 Lesson 1 — A list inside a list\n\nAn F1 starting grid has 2 cars per row. We can model it like this:\n```python\ngrid = [\n    [\"Verstappen\", \"Leclerc\"],   # row 1 (pole position)\n    [\"Norris\",     \"Sainz\"],    # row 2\n    [\"Hamilton\",   \"Russell\"], # row 3\n]\n```\nAccess with **two** indices: `grid[0][1]` → `\"Leclerc\"`.",
+     "source_fr": "---\n## 📖 Leçon 1 — Une liste dans une liste\n\nUne grille de départ F1 a 2 voitures par rangée. On peut la modéliser ainsi :\n```python\ngrid = [\n    [\"Verstappen\", \"Leclerc\"],   # rangée 1 (pole position)\n    [\"Norris\",     \"Sainz\"],     # rangée 2\n    [\"Hamilton\",   \"Russell\"],   # rangée 3\n]\n```\nOn accède avec **deux** indices : `grid[0][1]` → `\"Leclerc\"`.\n"
     },
     {
      "type": "code",
@@ -585,7 +639,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — List comprehension\n\nInstead of writing a `for` loop to build a list, you can do it in **one line**:\n```python\n# Long way:\nsquares = []\nfor x in range(5):\n    squares.append(x * x)\n\n# Short way (comprehension):\nsquares = [x * x for x in range(5)]\n```\nBoth give `[0, 1, 4, 9, 16]`.",
-     "source": "---\n## 📖 Lesson 2 — List comprehension\n\nInstead of writing a `for` loop to build a list, you can do it in **one line**:\n```python\n# Long way:\nsquares = []\nfor x in range(5):\n    squares.append(x * x)\n\n# Short way (comprehension):\nsquares = [x * x for x in range(5)]\n```\nBoth give `[0, 1, 4, 9, 16]`."
+     "source": "---\n## 📖 Lesson 2 — List comprehension\n\nInstead of writing a `for` loop to build a list, you can do it in **one line**:\n```python\n# Long way:\nsquares = []\nfor x in range(5):\n    squares.append(x * x)\n\n# Short way (comprehension):\nsquares = [x * x for x in range(5)]\n```\nBoth give `[0, 1, 4, 9, 16]`.",
+     "source_fr": "---\n## 📖 Leçon 2 — Compréhension de liste\n\nAu lieu d'écrire une boucle `for` pour construire une liste, tu peux le faire en **une seule ligne** :\n```python\n# Longue façon :\nsquares = []\nfor x in range(5):\n    squares.append(x * x)\n\n# Façon courte (compréhension) :\nsquares = [x * x for x in range(5)]\n```\nLes deux donnent `[0, 1, 4, 9, 16]`.\n"
     },
     {
      "type": "code",
@@ -594,7 +649,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Simulate overtaking 🔄\n\nLet's make P3 overtake P2 (swap two cars in the grid).",
-     "source": "---\n## 📖 Lesson 3 — Simulate overtaking 🔄\n\nLet's make P3 overtake P2 (swap two cars in the grid)."
+     "source": "---\n## 📖 Lesson 3 — Simulate overtaking 🔄\n\nLet's make P3 overtake P2 (swap two cars in the grid).",
+     "source_fr": "---\n## 📖 Leçon 3 — Simuler un dépassement 🔄\n\nFaisons P3 dépasser P2 (échanger deux voitures dans la grille).\n"
     },
     {
      "type": "code",
@@ -603,7 +659,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Build the full 10-row grid\n\nReplace the `???` to build a starting grid of **10 rows × 2 cars** = 20 drivers.\nUse a **list comprehension** with `range(20)`.",
-     "source": "---\n## ✏️ Exercise — Build the full 10-row grid\n\nReplace the `???` to build a starting grid of **10 rows × 2 cars** = 20 drivers.\nUse a **list comprehension** with `range(20)`."
+     "source": "---\n## ✏️ Exercise — Build the full 10-row grid\n\nReplace the `???` to build a starting grid of **10 rows × 2 cars** = 20 drivers.\nUse a **list comprehension** with `range(20)`.",
+     "source_fr": "---\n## ✏️ Exercice — Construis la grille complète de 10 rangées\n\nRemplace les `???` pour construire une grille de départ de **10 rangées × 2 voitures** = 20 pilotes.\nUtilise une **compréhension de liste** avec `range(20)`.\n"
     },
     {
      "type": "exercise",
@@ -627,12 +684,14 @@
     {
      "type": "md",
      "source_en": "# 🏆 Chapter 11 — Sort & Filter (Championship)\n\n<img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"200\" alt=\"Ferrari\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `sorted()` — sort a list (Scratch had no built-in sort!)\n- `lambda` — a tiny one-line function\n- `filter()` — keep only items that match a rule\n",
-     "source": "# 🏆 Chapter 11 — Sort & Filter (Championship)\n\n<img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"200\" alt=\"Ferrari\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `sorted()` — sort a list (Scratch had no built-in sort!)\n- `lambda` — a tiny one-line function\n- `filter()` — keep only items that match a rule\n"
+     "source": "# 🏆 Chapter 11 — Sort & Filter (Championship)\n\n<img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"200\" alt=\"Ferrari\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `sorted()` — sort a list (Scratch had no built-in sort!)\n- `lambda` — a tiny one-line function\n- `filter()` — keep only items that match a rule\n",
+     "source_fr": "# 🏆 Chapitre 11 — Trier & Filtrer (Championnat)\n\n<img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"200\" alt=\"Ferrari\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**Ce que tu vas apprendre :**\n- `sorted()` — trier une liste (Scratch n'avait pas de tri intégré !)\n- `lambda` — une toute petite fonction en une ligne\n- `filter()` — garder uniquement les éléments qui correspondent à une règle\n\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — `sorted()` basics\n\n```python\npoints = [25, 18, 15, 10]\nsorted(points)            # → [10, 15, 18, 25]   ascending\nsorted(points, reverse=True)  # → [25, 18, 15, 10]   descending\n```",
-     "source": "---\n## 📖 Lesson 1 — `sorted()` basics\n\n```python\npoints = [25, 18, 15, 10]\nsorted(points)            # → [10, 15, 18, 25]   ascending\nsorted(points, reverse=True)  # → [25, 18, 15, 10]   descending\n```"
+     "source": "---\n## 📖 Lesson 1 — `sorted()` basics\n\n```python\npoints = [25, 18, 15, 10]\nsorted(points)            # → [10, 15, 18, 25]   ascending\nsorted(points, reverse=True)  # → [25, 18, 15, 10]   descending\n```",
+     "source_fr": "---\n## 📖 Leçon 1 — Les bases de `sorted()`\n\n```python\npoints = [25, 18, 15, 10]\nsorted(points)                # → [10, 15, 18, 25]   ordre croissant\nsorted(points, reverse=True)  # → [25, 18, 15, 10]   ordre décroissant\n```\n"
     },
     {
      "type": "code",
@@ -641,7 +700,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — `sorted()` with `key` and `lambda`\n\nIf your list contains **dictionaries**, you must tell Python what to sort by.\n`lambda` is a mini-function on one line:\n```python\nsorted(drivers, key=lambda d: d['points'])\n# means: for each driver d, use d['points'] to sort\n```",
-     "source": "---\n## 📖 Lesson 2 — `sorted()` with `key` and `lambda`\n\nIf your list contains **dictionaries**, you must tell Python what to sort by.\n`lambda` is a mini-function on one line:\n```python\nsorted(drivers, key=lambda d: d['points'])\n# means: for each driver d, use d['points'] to sort\n```"
+     "source": "---\n## 📖 Lesson 2 — `sorted()` with `key` and `lambda`\n\nIf your list contains **dictionaries**, you must tell Python what to sort by.\n`lambda` is a mini-function on one line:\n```python\nsorted(drivers, key=lambda d: d['points'])\n# means: for each driver d, use d['points'] to sort\n```",
+     "source_fr": "---\n## 📖 Leçon 2 — `sorted()` avec `key` et `lambda`\n\nSi ta liste contient des **dictionnaires**, tu dois dire à Python sur quoi trier.\n`lambda` est une mini-fonction en une seule ligne :\n```python\nsorted(drivers, key=lambda d: d['points'])\n# signifie : pour chaque pilote d, utilise d['points'] pour trier\n```\n"
     },
     {
      "type": "code",
@@ -650,7 +710,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Filter with a comprehension\n\nWant only Ferrari drivers? Use a **list comprehension** with `if`:\n```python\nferrari = [d for d in standings if d['team'] == 'Ferrari']\n```",
-     "source": "---\n## 📖 Lesson 3 — Filter with a comprehension\n\nWant only Ferrari drivers? Use a **list comprehension** with `if`:\n```python\nferrari = [d for d in standings if d['team'] == 'Ferrari']\n```"
+     "source": "---\n## 📖 Lesson 3 — Filter with a comprehension\n\nWant only Ferrari drivers? Use a **list comprehension** with `if`:\n```python\nferrari = [d for d in standings if d['team'] == 'Ferrari']\n```",
+     "source_fr": "---\n## 📖 Leçon 3 — Filtrer avec une compréhension\n\nTu veux seulement les pilotes Ferrari ? Utilise une **compréhension de liste** avec `if` :\n```python\nferrari = [d for d in standings if d['team'] == 'Ferrari']\n```\n"
     },
     {
      "type": "code",
@@ -659,7 +720,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Build the constructors' championship\n\nEach team's points = **sum** of its drivers' points.\nCompute the team totals and sort them.",
-     "source": "---\n## ✏️ Exercise — Build the constructors' championship\n\nEach team's points = **sum** of its drivers' points.\nCompute the team totals and sort them."
+     "source": "---\n## ✏️ Exercise — Build the constructors' championship\n\nEach team's points = **sum** of its drivers' points.\nCompute the team totals and sort them.",
+     "source_fr": "---\n## ✏️ Exercice — Construis le championnat des constructeurs\n\nLes points d'une équipe = **somme** des points de ses pilotes.\nCalcule les totaux par équipe et trie-les.\n"
     },
     {
      "type": "exercise",
@@ -683,12 +745,14 @@
     {
      "type": "md",
      "source_en": "# 🎲 Chapter 12 — Modules & Random (Race Simulator)\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `import` — bring extra tools into your program\n- `random` — generate random numbers (like Scratch's *pick random*)\n- Build a **mini race simulator** with random events!\n",
-     "source": "# 🎲 Chapter 12 — Modules & Random (Race Simulator)\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `import` — bring extra tools into your program\n- `random` — generate random numbers (like Scratch's *pick random*)\n- Build a **mini race simulator** with random events!\n"
+     "source": "# 🎲 Chapter 12 — Modules & Random (Race Simulator)\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `import` — bring extra tools into your program\n- `random` — generate random numbers (like Scratch's *pick random*)\n- Build a **mini race simulator** with random events!\n",
+     "source_fr": "# 🎲 Chapitre 12 — Modules & Random (Simulateur de Course)\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Ce que tu vas apprendre :**\n- `import` — importer des outils supplémentaires dans ton programme\n- `random` — générer des nombres aléatoires (comme *nombre aléatoire* dans Scratch)\n- Construire un **mini simulateur de course** avec des événements aléatoires !\n\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — `import` a module\n\nA **module** is a toolbox. To use it, write `import` at the top of your file.\n```python\nimport random\nrandom.randint(1, 6)   # random number from 1 to 6 (like a die)\nrandom.choice([...])   # pick one item from a list\nrandom.shuffle(list)   # mix the list in place\n```",
-     "source": "---\n## 📖 Lesson 1 — `import` a module\n\nA **module** is a toolbox. To use it, write `import` at the top of your file.\n```python\nimport random\nrandom.randint(1, 6)   # random number from 1 to 6 (like a die)\nrandom.choice([...])   # pick one item from a list\nrandom.shuffle(list)   # mix the list in place\n```"
+     "source": "---\n## 📖 Lesson 1 — `import` a module\n\nA **module** is a toolbox. To use it, write `import` at the top of your file.\n```python\nimport random\nrandom.randint(1, 6)   # random number from 1 to 6 (like a die)\nrandom.choice([...])   # pick one item from a list\nrandom.shuffle(list)   # mix the list in place\n```",
+     "source_fr": "---\n## 📖 Leçon 1 — `import` un module\n\nUn **module** est une boîte à outils. Pour l'utiliser, écris `import` en haut de ton fichier.\n```python\nimport random\nrandom.randint(1, 6)   # nombre aléatoire de 1 à 6 (comme un dé)\nrandom.choice([...])   # choisit un élément dans une liste\nrandom.shuffle(liste)  # mélange la liste sur place\n```\n"
     },
     {
      "type": "code",
@@ -697,7 +761,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Reproducible randomness with `seed`\n\nIf you set a **seed**, you always get the same random numbers — useful for testing!\n```python\nrandom.seed(42)\n```",
-     "source": "---\n## 📖 Lesson 2 — Reproducible randomness with `seed`\n\nIf you set a **seed**, you always get the same random numbers — useful for testing!\n```python\nrandom.seed(42)\n```"
+     "source": "---\n## 📖 Lesson 2 — Reproducible randomness with `seed`\n\nIf you set a **seed**, you always get the same random numbers — useful for testing!\n```python\nrandom.seed(42)\n```",
+     "source_fr": "---\n## 📖 Leçon 2 — Aléatoire reproductible avec `seed`\n\nSi tu fixes un **seed**, tu obtiens toujours les mêmes nombres aléatoires — pratique pour tester !\n```python\nrandom.seed(42)\n```\n"
     },
     {
      "type": "code",
@@ -706,7 +771,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Random race events 🌧️\n\nEach lap, something might happen: rain, safety car, puncture...",
-     "source": "---\n## 📖 Lesson 3 — Random race events 🌧️\n\nEach lap, something might happen: rain, safety car, puncture..."
+     "source": "---\n## 📖 Lesson 3 — Random race events 🌧️\n\nEach lap, something might happen: rain, safety car, puncture...",
+     "source_fr": "---\n## 📖 Leçon 3 — Événements de course aléatoires 🌧️\n\nÀ chaque tour, il peut se passer quelque chose : pluie, voiture de sécurité, crevaison...\n"
     },
     {
      "type": "code",
@@ -715,7 +781,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Race simulator\n\nSimulate a 50-lap race for 5 drivers. Each lap, every driver gets a random\nlap time between 80.0 and 85.0 seconds. Find the **total time** per driver and\nrank them. Use `random.seed(7)` for reproducible results.",
-     "source": "---\n## ✏️ Exercise — Race simulator\n\nSimulate a 50-lap race for 5 drivers. Each lap, every driver gets a random\nlap time between 80.0 and 85.0 seconds. Find the **total time** per driver and\nrank them. Use `random.seed(7)` for reproducible results."
+     "source": "---\n## ✏️ Exercise — Race simulator\n\nSimulate a 50-lap race for 5 drivers. Each lap, every driver gets a random\nlap time between 80.0 and 85.0 seconds. Find the **total time** per driver and\nrank them. Use `random.seed(7)` for reproducible results.",
+     "source_fr": "---\n## ✏️ Exercice — Simulateur de course\n\nSimule une course de 50 tours pour 5 pilotes. À chaque tour, chaque pilote obtient un\ntemps aléatoire entre 80.0 et 85.0 secondes. Trouve le **temps total** par pilote et\nclasse-les. Utilise `random.seed(7)` pour des résultats reproductibles.\n"
     },
     {
      "type": "exercise",
@@ -739,12 +806,14 @@
     {
      "type": "md",
      "source_en": "# 📊 Chapter 13 — First Chart (matplotlib)\n\n<img src=\"images/heat/circuit-italy.jpg\" width=\"300\" alt=\"Monza\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `matplotlib.pyplot` — Python's drawing tool\n- `plt.bar()` — bar chart\n- `plt.plot()` — line chart\n- Add titles, colours, labels\n\n> ⚠️ Before running this notebook, make sure matplotlib is installed:\n> `pip install matplotlib`",
-     "source": "# 📊 Chapter 13 — First Chart (matplotlib)\n\n<img src=\"images/heat/circuit-italy.jpg\" width=\"300\" alt=\"Monza\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `matplotlib.pyplot` — Python's drawing tool\n- `plt.bar()` — bar chart\n- `plt.plot()` — line chart\n- Add titles, colours, labels\n\n> ⚠️ Before running this notebook, make sure matplotlib is installed:\n> `pip install matplotlib`"
+     "source": "# 📊 Chapter 13 — First Chart (matplotlib)\n\n<img src=\"images/heat/circuit-italy.jpg\" width=\"300\" alt=\"Monza\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `matplotlib.pyplot` — Python's drawing tool\n- `plt.bar()` — bar chart\n- `plt.plot()` — line chart\n- Add titles, colours, labels\n\n> ⚠️ Before running this notebook, make sure matplotlib is installed:\n> `pip install matplotlib`",
+     "source_fr": "# 📊 Chapitre 13 — Premier Graphique (matplotlib)\n\n<img src=\"images/heat/circuit-italy.jpg\" width=\"300\" alt=\"Monza\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**Ce que tu vas apprendre :**\n- `matplotlib.pyplot` — l'outil de dessin de Python\n- `plt.bar()` — graphique en barres\n- `plt.plot()` — graphique en courbes\n- Ajouter des titres, couleurs, légendes\n\n> ⚠️ Avant de lancer ce notebook, assure-toi que matplotlib est installé :\n> `pip install matplotlib`\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Bar chart\n\n```python\nimport matplotlib.pyplot as plt\nplt.bar(['A', 'B', 'C'], [10, 25, 17])\nplt.show()\n```",
-     "source": "---\n## 📖 Lesson 1 — Bar chart\n\n```python\nimport matplotlib.pyplot as plt\nplt.bar(['A', 'B', 'C'], [10, 25, 17])\nplt.show()\n```"
+     "source": "---\n## 📖 Lesson 1 — Bar chart\n\n```python\nimport matplotlib.pyplot as plt\nplt.bar(['A', 'B', 'C'], [10, 25, 17])\nplt.show()\n```",
+     "source_fr": "---\n## 📖 Leçon 1 — Graphique en barres\n\n```python\nimport matplotlib.pyplot as plt\nplt.bar(['A', 'B', 'C'], [10, 25, 17])\nplt.show()\n```\n"
     },
     {
      "type": "code",
@@ -753,7 +822,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Line chart (championship over time)\n\nShow how points evolve race after race.",
-     "source": "---\n## 📖 Lesson 2 — Line chart (championship over time)\n\nShow how points evolve race after race."
+     "source": "---\n## 📖 Lesson 2 — Line chart (championship over time)\n\nShow how points evolve race after race.",
+     "source_fr": "---\n## 📖 Leçon 2 — Courbe (évolution du championnat)\n\nMontre comment les points évoluent course après course.\n"
     },
     {
      "type": "code",
@@ -762,7 +832,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Lap times chart\n\nPlot the lap times of one driver across 20 laps. Use `random` to generate them\n(seed 3, between 79.0 and 82.0 seconds). The result should be a line chart with title and labels.",
-     "source": "---\n## ✏️ Exercise — Lap times chart\n\nPlot the lap times of one driver across 20 laps. Use `random` to generate them\n(seed 3, between 79.0 and 82.0 seconds). The result should be a line chart with title and labels."
+     "source": "---\n## ✏️ Exercise — Lap times chart\n\nPlot the lap times of one driver across 20 laps. Use `random` to generate them\n(seed 3, between 79.0 and 82.0 seconds). The result should be a line chart with title and labels.",
+     "source_fr": "---\n## ✏️ Exercice — Graphique des temps au tour\n\nTrace les temps au tour d'un pilote sur 20 tours. Utilise `random` pour les générer\n(seed 3, entre 79.0 et 82.0 secondes). Le résultat doit être une courbe avec titre et légendes.\n"
     },
     {
      "type": "exercise",
@@ -786,12 +857,14 @@
     {
      "type": "md",
      "source_en": "# 📑 Chapter 14 — Read CSV files\n\n<img src=\"images/heat/circuit-gb.jpg\" width=\"280\" alt=\"Silverstone\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- What a **CSV** file is (one line = one row, columns separated by `,`)\n- Read a CSV with `open()` + `split()` (no module needed)\n- Use the built-in `csv` module (cleaner)\n",
-     "source": "# 📑 Chapter 14 — Read CSV files\n\n<img src=\"images/heat/circuit-gb.jpg\" width=\"280\" alt=\"Silverstone\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- What a **CSV** file is (one line = one row, columns separated by `,`)\n- Read a CSV with `open()` + `split()` (no module needed)\n- Use the built-in `csv` module (cleaner)\n"
+     "source": "# 📑 Chapter 14 — Read CSV files\n\n<img src=\"images/heat/circuit-gb.jpg\" width=\"280\" alt=\"Silverstone\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- What a **CSV** file is (one line = one row, columns separated by `,`)\n- Read a CSV with `open()` + `split()` (no module needed)\n- Use the built-in `csv` module (cleaner)\n",
+     "source_fr": "# 📑 Chapitre 14 — Lire des fichiers CSV\n\n<img src=\"images/heat/circuit-gb.jpg\" width=\"280\" alt=\"Silverstone\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**Ce que tu vas apprendre :**\n- Ce qu'est un fichier **CSV** (une ligne = une rangée, colonnes séparées par `,`)\n- Lire un CSV avec `open()` + `split()` (sans module)\n- Utiliser le module intégré `csv` (plus propre)\n\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Create a CSV from scratch\n\nLet's first **write** a CSV so we have something to read.",
-     "source": "---\n## 📖 Lesson 1 — Create a CSV from scratch\n\nLet's first **write** a CSV so we have something to read."
+     "source": "---\n## 📖 Lesson 1 — Create a CSV from scratch\n\nLet's first **write** a CSV so we have something to read.",
+     "source_fr": "---\n## 📖 Leçon 1 — Créer un CSV de zéro\n\nCommençons par **écrire** un CSV pour avoir quelque chose à lire.\n"
     },
     {
      "type": "code",
@@ -800,7 +873,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Read it the simple way\n\nEach line of a CSV is text. Split it on commas to get the columns.",
-     "source": "---\n## 📖 Lesson 2 — Read it the simple way\n\nEach line of a CSV is text. Split it on commas to get the columns."
+     "source": "---\n## 📖 Lesson 2 — Read it the simple way\n\nEach line of a CSV is text. Split it on commas to get the columns.",
+     "source_fr": "---\n## 📖 Leçon 2 — Le lire de façon simple\n\nChaque ligne d'un CSV est du texte. Découpe-la sur les virgules pour obtenir les colonnes.\n"
     },
     {
      "type": "code",
@@ -809,7 +883,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — The `csv` module\n\n`csv.DictReader` gives you **dictionaries** — one per row — so you can use column names.",
-     "source": "---\n## 📖 Lesson 3 — The `csv` module\n\n`csv.DictReader` gives you **dictionaries** — one per row — so you can use column names."
+     "source": "---\n## 📖 Lesson 3 — The `csv` module\n\n`csv.DictReader` gives you **dictionaries** — one per row — so you can use column names.",
+     "source_fr": "---\n## 📖 Leçon 3 — Le module `csv`\n\n`csv.DictReader` te donne des **dictionnaires** — un par ligne — pour utiliser les noms de colonnes.\n"
     },
     {
      "type": "code",
@@ -818,7 +893,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Compute the championship from the CSV\n\nSum the points per driver across all races, then find the leader.\n⚠️ Don't forget to convert `points` from **string** to **int**!",
-     "source": "---\n## ✏️ Exercise — Compute the championship from the CSV\n\nSum the points per driver across all races, then find the leader.\n⚠️ Don't forget to convert `points` from **string** to **int**!"
+     "source": "---\n## ✏️ Exercise — Compute the championship from the CSV\n\nSum the points per driver across all races, then find the leader.\n⚠️ Don't forget to convert `points` from **string** to **int**!",
+     "source_fr": "---\n## ✏️ Exercice — Calcule le championnat depuis le CSV\n\nAdditionne les points par pilote sur toutes les courses, puis trouve le leader.\n⚠️ N'oublie pas de convertir `points` de **chaîne** en **int** !\n"
     },
     {
      "type": "exercise",
@@ -842,21 +918,24 @@
     {
      "type": "md",
      "source_en": "# 🐼 Chapter 15 — pandas DataFrames\n\n<img src=\"images/heat/circuit-usa.jpg\" width=\"280\" alt=\"COTA Austin\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `pandas` — the most popular library for tables in Python\n- `DataFrame` — a smart 2D table\n- `.head()`, `.sort_values()`, `.groupby()`\n\n> ⚠️ Install pandas first if needed: `pip install pandas`",
-     "source": "# 🐼 Chapter 15 — pandas DataFrames\n\n<img src=\"images/heat/circuit-usa.jpg\" width=\"280\" alt=\"COTA Austin\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `pandas` — the most popular library for tables in Python\n- `DataFrame` — a smart 2D table\n- `.head()`, `.sort_values()`, `.groupby()`\n\n> ⚠️ Install pandas first if needed: `pip install pandas`"
+     "source": "# 🐼 Chapter 15 — pandas DataFrames\n\n<img src=\"images/heat/circuit-usa.jpg\" width=\"280\" alt=\"COTA Austin\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `pandas` — the most popular library for tables in Python\n- `DataFrame` — a smart 2D table\n- `.head()`, `.sort_values()`, `.groupby()`\n\n> ⚠️ Install pandas first if needed: `pip install pandas`",
+     "source_fr": "# 🐼 Chapitre 15 — pandas DataFrames\n\n<img src=\"images/heat/circuit-usa.jpg\" width=\"280\" alt=\"COTA Austin\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**Ce que tu vas apprendre :**\n- `pandas` — la bibliothèque la plus populaire pour les tableaux en Python\n- `DataFrame` — un tableau 2D intelligent\n- `.head()`, `.sort_values()`, `.groupby()`\n\n> ⚠️ Installe pandas si nécessaire : `pip install pandas`\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Create a DataFrame\n\nThink of a `DataFrame` as a spreadsheet (Excel) — but you control it with code.",
-     "source": "---\n## 📖 Lesson 1 — Create a DataFrame\n\nThink of a `DataFrame` as a spreadsheet (Excel) — but you control it with code."
+     "source": "---\n## 📖 Lesson 1 — Create a DataFrame\n\nThink of a `DataFrame` as a spreadsheet (Excel) — but you control it with code.",
+     "source_fr": "---\n## 📖 Leçon 1 — Créer un DataFrame\n\nPense à un `DataFrame` comme un tableur (Excel) — mais tu le contrôles avec du code.\n"
     },
     {
      "type": "code",
-     "source": "import pandas as pd\n\ndata = {\n    'driver':   ['Verstappen', 'Leclerc', 'Norris', 'Sainz', 'Hamilton', 'Russell'],\n    'team':     ['Red Bull',   'Ferrari', 'McLaren','Ferrari','Mercedes','Mercedes'],\n    'wins':     [12, 3, 4, 1, 2, 1],\n    'podiums':  [18, 9, 11, 5, 7, 4],\n    'points':   [410, 280, 350, 220, 190, 175],\n}\ndf = pd.DataFrame(data)\ndf"
+     "source": " import pandas as pd\n\ndata = {\n    'driver':   ['Verstappen', 'Leclerc', 'Norris', 'Sainz', 'Hamilton', 'Russell'],\n    'team':     ['Red Bull',   'Ferrari', 'McLaren','Ferrari','Mercedes','Mercedes'],\n    'wins':     [12, 3, 4, 1, 2, 1],\n    'podiums':  [18, 9, 11, 5, 7, 4],\n    'points':   [410, 280, 350, 220, 190, 175],\n}\ndf = pd.DataFrame(data)\ndf"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Inspect & sort\n",
-     "source": "---\n## 📖 Lesson 2 — Inspect & sort\n"
+     "source": "---\n## 📖 Lesson 2 — Inspect & sort\n",
+     "source_fr": "---\n## 📖 Leçon 2 — Inspecter & trier\n\n"
     },
     {
      "type": "code",
@@ -865,7 +944,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — `groupby` (the magic move)\n\nGroup rows by team, then sum/average the numeric columns.",
-     "source": "---\n## 📖 Lesson 3 — `groupby` (the magic move)\n\nGroup rows by team, then sum/average the numeric columns."
+     "source": "---\n## 📖 Lesson 3 — `groupby` (the magic move)\n\nGroup rows by team, then sum/average the numeric columns.",
+     "source_fr": "---\n## 📖 Leçon 3 — `groupby` (le coup magique)\n\nRegroupe les lignes par équipe, puis additionne/moyenne les colonnes numériques.\n"
     },
     {
      "type": "code",
@@ -874,7 +954,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Find Ferrari's stats\n\nFilter the DataFrame to keep only Ferrari, then compute their total wins & points.",
-     "source": "---\n## ✏️ Exercise — Find Ferrari's stats\n\nFilter the DataFrame to keep only Ferrari, then compute their total wins & points."
+     "source": "---\n## ✏️ Exercise — Find Ferrari's stats\n\nFilter the DataFrame to keep only Ferrari, then compute their total wins & points.",
+     "source_fr": "---\n## ✏️ Exercice — Trouve les stats de Ferrari\n\nFiltre le DataFrame pour garder uniquement Ferrari, puis calcule leur total de victoires et de points.\n"
     },
     {
      "type": "exercise",
@@ -898,12 +979,14 @@
     {
      "type": "md",
      "source_en": "# 🎨 Chapter 16 — Advanced charts (Dashboard)\n\n<p><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/vert_bulbi_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/noir_foret_noire_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `plt.subplots()` — multiple charts in one figure\n- `plt.scatter()` — dots\n- Annotations & styles — make it look pro 💄\n",
-     "source": "# 🎨 Chapter 16 — Advanced charts (Dashboard)\n\n<p><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/vert_bulbi_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/noir_foret_noire_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `plt.subplots()` — multiple charts in one figure\n- `plt.scatter()` — dots\n- Annotations & styles — make it look pro 💄\n"
+     "source": "# 🎨 Chapter 16 — Advanced charts (Dashboard)\n\n<p><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/vert_bulbi_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/noir_foret_noire_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `plt.subplots()` — multiple charts in one figure\n- `plt.scatter()` — dots\n- Annotations & styles — make it look pro 💄\n",
+     "source_fr": "# 🎨 Chapitre 16 — Graphiques Avancés (Tableau de bord)\n\n<p><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/vert_bulbi_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/noir_foret_noire_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Ce que tu vas apprendre :**\n- `plt.subplots()` — plusieurs graphiques dans une seule figure\n- `plt.scatter()` — nuage de points\n- Annotations & styles — un rendu pro 💄\n\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — `subplots`: 4 charts in one figure",
-     "source": "---\n## 📖 Lesson 1 — `subplots`: 4 charts in one figure"
+     "source": "---\n## 📖 Lesson 1 — `subplots`: 4 charts in one figure",
+     "source_fr": "---\n## 📖 Leçon 1 — `subplots` : 4 graphiques dans une figure\n"
     },
     {
      "type": "code",
@@ -912,7 +995,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — `scatter` + annotations\n",
-     "source": "---\n## 📖 Lesson 2 — `scatter` + annotations\n"
+     "source": "---\n## 📖 Lesson 2 — `scatter` + annotations\n",
+     "source_fr": "---\n## 📖 Leçon 2 — `scatter` + annotations\n\n"
     },
     {
      "type": "code",
@@ -921,7 +1005,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Verstappen vs Leclerc dashboard\n\nBuild a 1×2 dashboard:\n- left: bar chart comparing wins\n- right: line chart comparing championship evolution",
-     "source": "---\n## ✏️ Exercise — Verstappen vs Leclerc dashboard\n\nBuild a 1×2 dashboard:\n- left: bar chart comparing wins\n- right: line chart comparing championship evolution"
+     "source": "---\n## ✏️ Exercise — Verstappen vs Leclerc dashboard\n\nBuild a 1×2 dashboard:\n- left: bar chart comparing wins\n- right: line chart comparing championship evolution",
+     "source_fr": "---\n## ✏️ Exercice — Tableau de bord Verstappen vs Leclerc\n\nConstruis un tableau de bord 1×2 :\n- gauche : graphique en barres comparant les victoires\n- droite : courbe comparant l'évolution du championnat\n"
     },
     {
      "type": "exercise",
@@ -945,12 +1030,14 @@
     {
      "type": "md",
      "source_en": "# 🏆 BOSS S2 — F1 Championship Simulator\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-usa.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Final challenge of Season 2!**\n\nYou will simulate a **full 10-race season** with 8 drivers, save the results to JSON,\nand produce a championship dashboard. You'll combine: lists, dicts, random, sorted,\nfiles/JSON, and matplotlib.\n\n> 💡 Run every cell from top to bottom!",
-     "source": "# 🏆 BOSS S2 — F1 Championship Simulator\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-usa.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Final challenge of Season 2!**\n\nYou will simulate a **full 10-race season** with 8 drivers, save the results to JSON,\nand produce a championship dashboard. You'll combine: lists, dicts, random, sorted,\nfiles/JSON, and matplotlib.\n\n> 💡 Run every cell from top to bottom!"
+     "source": "# 🏆 BOSS S2 — F1 Championship Simulator\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-usa.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Final challenge of Season 2!**\n\nYou will simulate a **full 10-race season** with 8 drivers, save the results to JSON,\nand produce a championship dashboard. You'll combine: lists, dicts, random, sorted,\nfiles/JSON, and matplotlib.\n\n> 💡 Run every cell from top to bottom!",
+     "source_fr": "# 🏆 BOSS S2 — Simulateur de Championnat F1\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-usa.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Défi final de la Saison 2 !**\n\nTu vas simuler une **saison complète de 10 courses** avec 8 pilotes, sauvegarder les résultats en JSON,\net produire un tableau de bord du championnat. Tu combineras : listes, dicts, random, sorted,\nfichiers/JSON, et matplotlib.\n\n> 💡 Lance chaque cellule de haut en bas !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## Step 1 — Setup the season",
-     "source": "---\n## Step 1 — Setup the season"
+     "source": "---\n## Step 1 — Setup the season",
+     "source_fr": "---\n## Étape 1 — Prépare la saison\n"
     },
     {
      "type": "code",
@@ -959,7 +1046,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 2 — Run a single race\n\nEach driver gets a score = `skill + random(0..30)`. Highest score wins.",
-     "source": "---\n## Step 2 — Run a single race\n\nEach driver gets a score = `skill + random(0..30)`. Highest score wins."
+     "source": "---\n## Step 2 — Run a single race\n\nEach driver gets a score = `skill + random(0..30)`. Highest score wins.",
+     "source_fr": "---\n## Étape 2 — Lance une seule course\n\nChaque pilote obtient un score = `skill + random(0..30)`. Le score le plus élevé gagne.\n"
     },
     {
      "type": "code",
@@ -968,7 +1056,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 3 — Run the whole season",
-     "source": "---\n## Step 3 — Run the whole season"
+     "source": "---\n## Step 3 — Run the whole season",
+     "source_fr": "---\n## Étape 3 — Lance toute la saison\n"
     },
     {
      "type": "code",
@@ -977,7 +1066,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 4 — Save results to JSON",
-     "source": "---\n## Step 4 — Save results to JSON"
+     "source": "---\n## Step 4 — Save results to JSON",
+     "source_fr": "---\n## Étape 4 — Sauvegarde les résultats en JSON\n"
     },
     {
      "type": "code",
@@ -986,7 +1076,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 5 — Build the championship dashboard",
-     "source": "---\n## Step 5 — Build the championship dashboard"
+     "source": "---\n## Step 5 — Build the championship dashboard",
+     "source_fr": "---\n## Étape 5 — Construis le tableau de bord du championnat\n"
     },
     {
      "type": "code",
@@ -1010,12 +1101,14 @@
     {
      "type": "md",
      "source_en": "# 🧬 Chapter 18 — Classes (Pokémon as objects)\n\n<p><img src=\"images/pokedex/7.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/8.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/9.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 3 — Birds Simulation**! 🐦\n\nBefore we build flying birds, we need to learn **classes** — Python's\nway to group data + actions together.\n\n**What you will learn:**\n- `class` — a blueprint to create objects\n- `__init__` — set up the object\n- **Methods** — functions that belong to an object\n\n> 💡 In Scratch, a **sprite** has variables (x, y, costume) and scripts.\n> A Python **class** is similar: it has **attributes** (data) and **methods** (actions).",
-     "source": "# 🧬 Chapter 18 — Classes (Pokémon as objects)\n\n<p><img src=\"images/pokedex/7.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/8.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/9.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 3 — Birds Simulation**! 🐦\n\nBefore we build flying birds, we need to learn **classes** — Python's\nway to group data + actions together.\n\n**What you will learn:**\n- `class` — a blueprint to create objects\n- `__init__` — set up the object\n- **Methods** — functions that belong to an object\n\n> 💡 In Scratch, a **sprite** has variables (x, y, costume) and scripts.\n> A Python **class** is similar: it has **attributes** (data) and **methods** (actions)."
+     "source": "# 🧬 Chapter 18 — Classes (Pokémon as objects)\n\n<p><img src=\"images/pokedex/7.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/8.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/9.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 3 — Birds Simulation**! 🐦\n\nBefore we build flying birds, we need to learn **classes** — Python's\nway to group data + actions together.\n\n**What you will learn:**\n- `class` — a blueprint to create objects\n- `__init__` — set up the object\n- **Methods** — functions that belong to an object\n\n> 💡 In Scratch, a **sprite** has variables (x, y, costume) and scripts.\n> A Python **class** is similar: it has **attributes** (data) and **methods** (actions).",
+     "source_fr": "# 🧬 Chapitre 18 — Les Classes (Pokémon en objets)\n\n<p><img src=\"images/pokedex/7.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/8.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/9.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nBienvenue en **Saison 3 — Simulation d'oiseaux** ! 🐦\n\nAvant de construire des oiseaux qui volent, on va apprendre les **classes** — la façon\nde Python de regrouper données et actions ensemble.\n\n**Ce que tu vas apprendre :**\n- `class` — un plan pour créer des objets\n- `__init__` — configurer l'objet\n- Les **méthodes** — des fonctions qui appartiennent à un objet\n\n> 💡 Dans Scratch, un **sprite** a des variables (x, y, costume) et des scripts.\n> Une **classe** Python est similaire : elle a des **attributs** (données) et des **méthodes** (actions).\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Your first class\n\n```python\nclass Pokemon:\n    def __init__(self, name, hp, attack):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n```\n- `class` = keyword to create a blueprint\n- `__init__` = runs when you create a new Pokémon\n- `self` = \"this object\" (Scratch: \"this sprite\")",
-     "source": "---\n## 📖 Lesson 1 — Your first class\n\n```python\nclass Pokemon:\n    def __init__(self, name, hp, attack):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n```\n- `class` = keyword to create a blueprint\n- `__init__` = runs when you create a new Pokémon\n- `self` = \"this object\" (Scratch: \"this sprite\")"
+     "source": "---\n## 📖 Lesson 1 — Your first class\n\n```python\nclass Pokemon:\n    def __init__(self, name, hp, attack):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n```\n- `class` = keyword to create a blueprint\n- `__init__` = runs when you create a new Pokémon\n- `self` = \"this object\" (Scratch: \"this sprite\")",
+     "source_fr": "---\n## 📖 Leçon 1 — Ta première classe\n\n```python\nclass Pokemon:\n    def __init__(self, name, hp, attack):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n```\n- `class` = mot-clé pour créer un plan\n- `__init__` = s'exécute quand tu crées un nouveau Pokémon\n- `self` = \"cet objet\" (Scratch : \"ce sprite\")\n"
     },
     {
      "type": "code",
@@ -1024,7 +1117,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Methods (actions)\n\nA **method** is a function inside a class. It always takes `self` as first parameter.",
-     "source": "---\n## 📖 Lesson 2 — Methods (actions)\n\nA **method** is a function inside a class. It always takes `self` as first parameter."
+     "source": "---\n## 📖 Lesson 2 — Methods (actions)\n\nA **method** is a function inside a class. It always takes `self` as first parameter.",
+     "source_fr": "---\n## 📖 Leçon 2 — Les méthodes (actions)\n\nUne **méthode** est une fonction à l'intérieur d'une classe. Elle prend toujours `self` comme premier paramètre.\n"
     },
     {
      "type": "code",
@@ -1033,7 +1127,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — `__str__` magic method\n\n`__str__` is called when you `print()` an object — it controls what gets displayed.",
-     "source": "---\n## 📖 Lesson 3 — `__str__` magic method\n\n`__str__` is called when you `print()` an object — it controls what gets displayed."
+     "source": "---\n## 📖 Lesson 3 — `__str__` magic method\n\n`__str__` is called when you `print()` an object — it controls what gets displayed.",
+     "source_fr": "---\n## 📖 Leçon 3 — La méthode magique `__str__`\n\n`__str__` est appelée quand tu `print()` un objet — elle contrôle ce qui s'affiche.\n"
     },
     {
      "type": "code",
@@ -1042,7 +1137,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Build a Pokédex with classes\n\nCreate a `Pokemon` class with:\n- `__init__` that stores name, hp, attack, ptype\n- a `battle_cry()` method that prints `\"<name> uses <attack_name>!\"`\n- `__str__` to display the Pokémon nicely\n\nThen create a list of 3+ Pokémon and loop through them.",
-     "source": "---\n## ✏️ Exercise — Build a Pokédex with classes\n\nCreate a `Pokemon` class with:\n- `__init__` that stores name, hp, attack, ptype\n- a `battle_cry()` method that prints `\"<name> uses <attack_name>!\"`\n- `__str__` to display the Pokémon nicely\n\nThen create a list of 3+ Pokémon and loop through them."
+     "source": "---\n## ✏️ Exercise — Build a Pokédex with classes\n\nCreate a `Pokemon` class with:\n- `__init__` that stores name, hp, attack, ptype\n- a `battle_cry()` method that prints `\"<name> uses <attack_name>!\"`\n- `__str__` to display the Pokémon nicely\n\nThen create a list of 3+ Pokémon and loop through them.",
+     "source_fr": "---\n## ✏️ Exercice — Construis un Pokédex avec des classes\n\nCrée une classe `Pokemon` avec :\n- `__init__` qui stocke name, hp, attack, ptype\n- une méthode `battle_cry()` qui affiche `\"<nom> utilise <nom_attaque> !\"`\n- `__str__` pour afficher le Pokémon joliment\n\nPuis crée une liste de 3+ Pokémon et parcoure-la.\n"
     },
     {
      "type": "exercise",
@@ -1066,12 +1162,14 @@
     {
      "type": "md",
      "source_en": "# 🟢 Chapter 19 — Objects that Move\n\n**What you will learn:**\n- Store **(x, y) positions** in a class\n- **Velocity** = how much x/y changes each step\n- Move objects and **bounce** off walls\n\n> 💡 In Scratch: `change x by vx` / `if on edge, bounce`.\n> We'll do the same in Python!",
-     "source": "# 🟢 Chapter 19 — Objects that Move\n\n**What you will learn:**\n- Store **(x, y) positions** in a class\n- **Velocity** = how much x/y changes each step\n- Move objects and **bounce** off walls\n\n> 💡 In Scratch: `change x by vx` / `if on edge, bounce`.\n> We'll do the same in Python!"
+     "source": "# 🟢 Chapter 19 — Objects that Move\n\n**What you will learn:**\n- Store **(x, y) positions** in a class\n- **Velocity** = how much x/y changes each step\n- Move objects and **bounce** off walls\n\n> 💡 In Scratch: `change x by vx` / `if on edge, bounce`.\n> We'll do the same in Python!",
+     "source_fr": "# 🟢 Chapitre 19 — Des Objets qui Bougent\n\n**Ce que tu vas apprendre :**\n- Stocker des **positions (x, y)** dans une classe\n- La **vitesse** = de combien x/y change à chaque étape\n- Déplacer des objets et les faire **rebondir** sur les murs\n\n> 💡 Dans Scratch : `ajouter vx à x` / `rebondir si le bord est atteint`.\n> On fait la même chose en Python !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — A dot with position and velocity",
-     "source": "---\n## 📖 Lesson 1 — A dot with position and velocity"
+     "source": "---\n## 📖 Lesson 1 — A dot with position and velocity",
+     "source_fr": "---\n## 📖 Leçon 1 — Un point avec position et vitesse\n"
     },
     {
      "type": "code",
@@ -1080,7 +1178,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Bounce off walls\n\nWhen a dot reaches the edge of the screen, reverse its velocity.",
-     "source": "---\n## 📖 Lesson 2 — Bounce off walls\n\nWhen a dot reaches the edge of the screen, reverse its velocity."
+     "source": "---\n## 📖 Lesson 2 — Bounce off walls\n\nWhen a dot reaches the edge of the screen, reverse its velocity.",
+     "source_fr": "---\n## 📖 Leçon 2 — Rebondir sur les murs\n\nQuand un point atteint le bord de l'écran, inverse sa vitesse.\n"
     },
     {
      "type": "code",
@@ -1089,7 +1188,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Static scatter plot of moving dots",
-     "source": "---\n## 📖 Lesson 3 — Static scatter plot of moving dots"
+     "source": "---\n## 📖 Lesson 3 — Static scatter plot of moving dots",
+     "source_fr": "---\n## 📖 Leçon 3 — Nuage de points statique de points en mouvement\n"
     },
     {
      "type": "code",
@@ -1098,7 +1198,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Create 10 dots and count wall bounces\n\nAdd a `bounces` counter to the Dot class that increments every time a bounce occurs.",
-     "source": "---\n## ✏️ Exercise — Create 10 dots and count wall bounces\n\nAdd a `bounces` counter to the Dot class that increments every time a bounce occurs."
+     "source": "---\n## ✏️ Exercise — Create 10 dots and count wall bounces\n\nAdd a `bounces` counter to the Dot class that increments every time a bounce occurs.",
+     "source_fr": "---\n## ✏️ Exercice — Crée 10 points et compte les rebonds\n\nAjoute un compteur `bounces` à la classe Dot qui s'incrémente à chaque rebond.\n"
     },
     {
      "type": "exercise",
@@ -1122,12 +1223,14 @@
     {
      "type": "md",
      "source_en": "# 🔢 Chapter 20 — numpy: Fast Math with Arrays\n\n**What you will learn:**\n- `numpy.array` — a super-powered list for numbers\n- Vector operations: add, multiply, modulo\n- Why numpy is **much faster** than Python loops\n\n> ⚠️ `pip install numpy` if not already installed",
-     "source": "# 🔢 Chapter 20 — numpy: Fast Math with Arrays\n\n**What you will learn:**\n- `numpy.array` — a super-powered list for numbers\n- Vector operations: add, multiply, modulo\n- Why numpy is **much faster** than Python loops\n\n> ⚠️ `pip install numpy` if not already installed"
+     "source": "# 🔢 Chapter 20 — numpy: Fast Math with Arrays\n\n**What you will learn:**\n- `numpy.array` — a super-powered list for numbers\n- Vector operations: add, multiply, modulo\n- Why numpy is **much faster** than Python loops\n\n> ⚠️ `pip install numpy` if not already installed",
+     "source_fr": "# 🔢 Chapitre 20 — numpy : Calcul Rapide avec des Tableaux\n\n**Ce que tu vas apprendre :**\n- `numpy.array` — une liste surpuissante pour les nombres\n- Opérations vectorielles : addition, multiplication, modulo\n- Pourquoi numpy est **beaucoup plus rapide** que les boucles Python\n\n> ⚠️ `pip install numpy` si pas encore installé\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — numpy arrays vs Python lists",
-     "source": "---\n## 📖 Lesson 1 — numpy arrays vs Python lists"
+     "source": "---\n## 📖 Lesson 1 — numpy arrays vs Python lists",
+     "source_fr": "---\n## 📖 Leçon 1 — Tableaux numpy vs listes Python\n"
     },
     {
      "type": "code",
@@ -1136,7 +1239,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — 2D arrays (positions!)\n\nWe can store positions of N dots as an (N, 2) array.",
-     "source": "---\n## 📖 Lesson 2 — 2D arrays (positions!)\n\nWe can store positions of N dots as an (N, 2) array."
+     "source": "---\n## 📖 Lesson 2 — 2D arrays (positions!)\n\nWe can store positions of N dots as an (N, 2) array.",
+     "source_fr": "---\n## 📖 Leçon 2 — Tableaux 2D (les positions !)\n\nOn peut stocker les positions de N points sous forme de tableau (N, 2).\n"
     },
     {
      "type": "code",
@@ -1145,7 +1249,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Speed comparison 🏎️",
-     "source": "---\n## 📖 Lesson 3 — Speed comparison 🏎️"
+     "source": "---\n## 📖 Lesson 3 — Speed comparison 🏎️",
+     "source_fr": "---\n## 📖 Leçon 3 — Comparaison de vitesse 🏎️\n"
     },
     {
      "type": "code",
@@ -1154,7 +1259,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Move 20 dots with numpy\n\nUse numpy to create random positions and velocities, then move 100 steps.\nKeep dots inside [0, 100] using modulo (`% 100`).",
-     "source": "---\n## ✏️ Exercise — Move 20 dots with numpy\n\nUse numpy to create random positions and velocities, then move 100 steps.\nKeep dots inside [0, 100] using modulo (`% 100`)."
+     "source": "---\n## ✏️ Exercise — Move 20 dots with numpy\n\nUse numpy to create random positions and velocities, then move 100 steps.\nKeep dots inside [0, 100] using modulo (`% 100`).",
+     "source_fr": "---\n## ✏️ Exercice — Déplace 20 points avec numpy\n\nUtilise numpy pour créer des positions et vitesses aléatoires, puis déplace-les 100 étapes.\nGarde les points dans [0, 100] avec le modulo (`% 100`).\n"
     },
     {
      "type": "exercise",
@@ -1178,12 +1284,14 @@
     {
      "type": "md",
      "source_en": "# 🎬 Chapter 21 — Animation with matplotlib\n\n**What you will learn:**\n- `FuncAnimation` — make your scatter plot move!\n- `set_offsets()` — update dot positions\n- Create your first **aquarium** of moving dots 🐟\n\n> ⚠️ In Jupyter, add `%matplotlib notebook` or `%matplotlib widget` for live animation.",
-     "source": "# 🎬 Chapter 21 — Animation with matplotlib\n\n**What you will learn:**\n- `FuncAnimation` — make your scatter plot move!\n- `set_offsets()` — update dot positions\n- Create your first **aquarium** of moving dots 🐟\n\n> ⚠️ In Jupyter, add `%matplotlib notebook` or `%matplotlib widget` for live animation."
+     "source": "# 🎬 Chapter 21 — Animation with matplotlib\n\n**What you will learn:**\n- `FuncAnimation` — make your scatter plot move!\n- `set_offsets()` — update dot positions\n- Create your first **aquarium** of moving dots 🐟\n\n> ⚠️ In Jupyter, add `%matplotlib notebook` or `%matplotlib widget` for live animation.",
+     "source_fr": "# 🎬 Chapitre 21 — Animation avec matplotlib\n\n**Ce que tu vas apprendre :**\n- `FuncAnimation` — fais bouger ton nuage de points !\n- `set_offsets()` — mettre à jour les positions des points\n- Crée ton premier **aquarium** de points en mouvement 🐟\n\n> ⚠️ Dans Jupyter, ajoute `%matplotlib notebook` ou `%matplotlib widget` pour l'animation en direct.\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Animated scatter plot",
-     "source": "---\n## 📖 Lesson 1 — Animated scatter plot"
+     "source": "---\n## 📖 Lesson 1 — Animated scatter plot",
+     "source_fr": "---\n## 📖 Leçon 1 — Nuage de points animé\n"
     },
     {
      "type": "code",
@@ -1192,7 +1300,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Adding colours based on speed",
-     "source": "---\n## 📖 Lesson 2 — Adding colours based on speed"
+     "source": "---\n## 📖 Lesson 2 — Adding colours based on speed",
+     "source_fr": "---\n## 📖 Leçon 2 — Ajouter des couleurs selon la vitesse\n"
     },
     {
      "type": "code",
@@ -1201,7 +1310,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Aquarium with wall bouncing\n\nInstead of wrapping (`% SIZE`), make the dots **bounce** off the walls.\nModify the `update()` function.",
-     "source": "---\n## ✏️ Exercise — Aquarium with wall bouncing\n\nInstead of wrapping (`% SIZE`), make the dots **bounce** off the walls.\nModify the `update()` function."
+     "source": "---\n## ✏️ Exercise — Aquarium with wall bouncing\n\nInstead of wrapping (`% SIZE`), make the dots **bounce** off the walls.\nModify the `update()` function.",
+     "source_fr": "---\n## ✏️ Exercice — Aquarium avec rebond sur les murs\n\nAu lieu de passer à travers (`% SIZE`), fais **rebondir** les points sur les murs.\nModifie la fonction `update()`.\n"
     },
     {
      "type": "exercise",
@@ -1225,12 +1335,14 @@
     {
      "type": "md",
      "source_en": "# 🐦 Chapter 22 — Class Boid\n\n**What you will learn:**\n- Create a `Boid` class with position and velocity\n- Move boids and bounce off walls\n- Display them as **arrows** (showing direction) 🏹\n\n> 🐦 A **boid** = 'bird-oid' (bird-like) — coined by Craig Reynolds in 1986.",
-     "source": "# 🐦 Chapter 22 — Class Boid\n\n**What you will learn:**\n- Create a `Boid` class with position and velocity\n- Move boids and bounce off walls\n- Display them as **arrows** (showing direction) 🏹\n\n> 🐦 A **boid** = 'bird-oid' (bird-like) — coined by Craig Reynolds in 1986."
+     "source": "# 🐦 Chapter 22 — Class Boid\n\n**What you will learn:**\n- Create a `Boid` class with position and velocity\n- Move boids and bounce off walls\n- Display them as **arrows** (showing direction) 🏹\n\n> 🐦 A **boid** = 'bird-oid' (bird-like) — coined by Craig Reynolds in 1986.",
+     "source_fr": "# 🐦 Chapitre 22 — La Classe Boid\n\n**Ce que tu vas apprendre :**\n- Créer une classe `Boid` avec position et vitesse\n- Déplacer les boids et les faire rebondir sur les murs\n- Les afficher sous forme de **flèches** (qui montrent la direction) 🏹\n\n> 🐦 Un **boid** = 'bird-oid' (comme un oiseau) — inventé par Craig Reynolds en 1986.\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — The Boid class",
-     "source": "---\n## 📖 Lesson 1 — The Boid class"
+     "source": "---\n## 📖 Lesson 1 — The Boid class",
+     "source_fr": "---\n## 📖 Leçon 1 — La classe Boid\n"
     },
     {
      "type": "code",
@@ -1239,7 +1351,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Display boids as arrows with `quiver`\n\n`plt.quiver(x, y, vx, vy)` draws arrows.",
-     "source": "---\n## 📖 Lesson 2 — Display boids as arrows with `quiver`\n\n`plt.quiver(x, y, vx, vy)` draws arrows."
+     "source": "---\n## 📖 Lesson 2 — Display boids as arrows with `quiver`\n\n`plt.quiver(x, y, vx, vy)` draws arrows.",
+     "source_fr": "---\n## 📖 Leçon 2 — Afficher les boids comme des flèches avec `quiver`\n\n`plt.quiver(x, y, vx, vy)` dessine des flèches.\n"
     },
     {
      "type": "code",
@@ -1248,7 +1361,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Create a Boid flock and run 100 steps\n\nCreate 30 boids, move them 100 steps, then plot their final positions as arrows.",
-     "source": "---\n## ✏️ Exercise — Create a Boid flock and run 100 steps\n\nCreate 30 boids, move them 100 steps, then plot their final positions as arrows."
+     "source": "---\n## ✏️ Exercise — Create a Boid flock and run 100 steps\n\nCreate 30 boids, move them 100 steps, then plot their final positions as arrows.",
+     "source_fr": "---\n## ✏️ Exercice — Crée un groupe de boids et lance 100 étapes\n\nCrée 30 boids, déplace-les 100 étapes, puis trace leurs positions finales sous forme de flèches.\n"
     },
     {
      "type": "exercise",
@@ -1272,12 +1386,14 @@
     {
      "type": "md",
      "source_en": "# 🐦 Chapter 23 — The 3 Rules of Boids\n\nCraig Reynolds discovered that 3 simple rules create **realistic flocking**:\n\n1. **Separation** 🚫 — Don't crash into neighbours\n2. **Alignment** ➡️ — Fly in the same direction as neighbours\n3. **Cohesion** 🧲 — Stay close to the centre of the group\n\nEach boid looks at its **neighbours** (boids within a certain distance)\nand adjusts its velocity.",
-     "source": "# 🐦 Chapter 23 — The 3 Rules of Boids\n\nCraig Reynolds discovered that 3 simple rules create **realistic flocking**:\n\n1. **Separation** 🚫 — Don't crash into neighbours\n2. **Alignment** ➡️ — Fly in the same direction as neighbours\n3. **Cohesion** 🧲 — Stay close to the centre of the group\n\nEach boid looks at its **neighbours** (boids within a certain distance)\nand adjusts its velocity."
+     "source": "# 🐦 Chapter 23 — The 3 Rules of Boids\n\nCraig Reynolds discovered that 3 simple rules create **realistic flocking**:\n\n1. **Separation** 🚫 — Don't crash into neighbours\n2. **Alignment** ➡️ — Fly in the same direction as neighbours\n3. **Cohesion** 🧲 — Stay close to the centre of the group\n\nEach boid looks at its **neighbours** (boids within a certain distance)\nand adjusts its velocity.",
+     "source_fr": "# 🐦 Chapitre 23 — Les 3 Règles des Boids\n\nCraig Reynolds a découvert que 3 règles simples créent un **vol en groupe réaliste** :\n\n1. **Séparation** 🚫 — Ne pas percuter les voisins\n2. **Alignement** ➡️ — Voler dans la même direction que les voisins\n3. **Cohésion** 🧲 — Rester proche du centre du groupe\n\nChaque boid regarde ses **voisins** (les boids dans un certain rayon)\net ajuste sa vitesse.\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Finding neighbours",
-     "source": "---\n## 📖 Lesson 1 — Finding neighbours"
+     "source": "---\n## 📖 Lesson 1 — Finding neighbours",
+     "source_fr": "---\n## 📖 Leçon 1 — Trouver les voisins\n"
     },
     {
      "type": "code",
@@ -1286,7 +1402,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Rule 1: Separation 🚫\n\nSteer **away** from boids that are too close.",
-     "source": "---\n## 📖 Lesson 2 — Rule 1: Separation 🚫\n\nSteer **away** from boids that are too close."
+     "source": "---\n## 📖 Lesson 2 — Rule 1: Separation 🚫\n\nSteer **away** from boids that are too close.",
+     "source_fr": "---\n## 📖 Leçon 2 — Règle 1 : Séparation 🚫\n\nDiriger le boid **loin** des boids trop proches.\n"
     },
     {
      "type": "code",
@@ -1295,7 +1412,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 3 — Rule 2: Alignment ➡️\n\nSteer towards the **average direction** of neighbours.",
-     "source": "---\n## 📖 Lesson 3 — Rule 2: Alignment ➡️\n\nSteer towards the **average direction** of neighbours."
+     "source": "---\n## 📖 Lesson 3 — Rule 2: Alignment ➡️\n\nSteer towards the **average direction** of neighbours.",
+     "source_fr": "---\n## 📖 Leçon 3 — Règle 2 : Alignement ➡️\n\nDiriger le boid vers la **direction moyenne** des voisins.\n"
     },
     {
      "type": "code",
@@ -1304,7 +1422,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 4 — Rule 3: Cohesion 🧲\n\nSteer towards the **centre** of the group.",
-     "source": "---\n## 📖 Lesson 4 — Rule 3: Cohesion 🧲\n\nSteer towards the **centre** of the group."
+     "source": "---\n## 📖 Lesson 4 — Rule 3: Cohesion 🧲\n\nSteer towards the **centre** of the group.",
+     "source_fr": "---\n## 📖 Leçon 4 — Règle 3 : Cohésion 🧲\n\nDiriger le boid vers le **centre** du groupe.\n"
     },
     {
      "type": "code",
@@ -1313,7 +1432,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 5 — Combining the 3 rules\n\nEach rule returns a force (vector). We combine them with **weights**.",
-     "source": "---\n## 📖 Lesson 5 — Combining the 3 rules\n\nEach rule returns a force (vector). We combine them with **weights**."
+     "source": "---\n## 📖 Lesson 5 — Combining the 3 rules\n\nEach rule returns a force (vector). We combine them with **weights**.",
+     "source_fr": "---\n## 📖 Leçon 5 — Combiner les 3 règles\n\nChaque règle renvoie une force (vecteur). On les combine avec des **poids**.\n"
     },
     {
      "type": "code",
@@ -1322,7 +1442,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Tune the weights\n\nExperiment with the weights! Try:\n- `W_SEP = 3, W_ALI = 0, W_COH = 0` → what happens?\n- `W_SEP = 0, W_ALI = 0, W_COH = 3` → what happens?\n- `W_SEP = 0, W_ALI = 3, W_COH = 0` → what happens?\n\nWrite your observations below.",
-     "source": "---\n## ✏️ Exercise — Tune the weights\n\nExperiment with the weights! Try:\n- `W_SEP = 3, W_ALI = 0, W_COH = 0` → what happens?\n- `W_SEP = 0, W_ALI = 0, W_COH = 3` → what happens?\n- `W_SEP = 0, W_ALI = 3, W_COH = 0` → what happens?\n\nWrite your observations below."
+     "source": "---\n## ✏️ Exercise — Tune the weights\n\nExperiment with the weights! Try:\n- `W_SEP = 3, W_ALI = 0, W_COH = 0` → what happens?\n- `W_SEP = 0, W_ALI = 0, W_COH = 3` → what happens?\n- `W_SEP = 0, W_ALI = 3, W_COH = 0` → what happens?\n\nWrite your observations below.",
+     "source_fr": "---\n## ✏️ Exercice — Ajuste les poids\n\nExpérimente avec les poids ! Essaie :\n- `W_SEP = 3, W_ALI = 0, W_COH = 0` → que se passe-t-il ?\n- `W_SEP = 0, W_ALI = 0, W_COH = 3` → que se passe-t-il ?\n- `W_SEP = 0, W_ALI = 3, W_COH = 0` → que se passe-t-il ?\n\nNote tes observations ci-dessous.\n"
     },
     {
      "type": "exercise",
@@ -1346,12 +1467,14 @@
     {
      "type": "md",
      "source_en": "# 🦅 Chapter 24 — Inheritance: The Predator\n\n<img src=\"images/pokedex/717.png\" width=\"140\" alt=\"Yveltal\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- **Inheritance** — a class that *extends* another class\n- `super()` — call the parent's methods\n- Override methods to change behaviour\n\n> 💡 A `Predator` is a `Boid` that chases instead of flocking.",
-     "source": "# 🦅 Chapter 24 — Inheritance: The Predator\n\n<img src=\"images/pokedex/717.png\" width=\"140\" alt=\"Yveltal\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- **Inheritance** — a class that *extends* another class\n- `super()` — call the parent's methods\n- Override methods to change behaviour\n\n> 💡 A `Predator` is a `Boid` that chases instead of flocking."
+     "source": "# 🦅 Chapter 24 — Inheritance: The Predator\n\n<img src=\"images/pokedex/717.png\" width=\"140\" alt=\"Yveltal\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- **Inheritance** — a class that *extends* another class\n- `super()` — call the parent's methods\n- Override methods to change behaviour\n\n> 💡 A `Predator` is a `Boid` that chases instead of flocking.",
+     "source_fr": "# 🦅 Chapitre 24 — Héritage : Le Prédateur\n\n<img src=\"images/pokedex/717.png\" width=\"140\" alt=\"Yveltal\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**Ce que tu vas apprendre :**\n- L'**héritage** — une classe qui *étend* une autre classe\n- `super()` — appeler les méthodes de la classe parente\n- Surcharger des méthodes pour changer le comportement\n\n> 💡 Un `Predator` est un `Boid` qui chasse au lieu de voler en groupe.\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Inheritance basics\n\n```python\nclass Predator(Boid):  # inherits from Boid\n    pass  # has all methods of Boid already!\n```",
-     "source": "---\n## 📖 Lesson 1 — Inheritance basics\n\n```python\nclass Predator(Boid):  # inherits from Boid\n    pass  # has all methods of Boid already!\n```"
+     "source": "---\n## 📖 Lesson 1 — Inheritance basics\n\n```python\nclass Predator(Boid):  # inherits from Boid\n    pass  # has all methods of Boid already!\n```",
+     "source_fr": "---\n## 📖 Leçon 1 — Les bases de l'héritage\n\n```python\nclass Predator(Boid):  # hérite de Boid\n    pass  # a déjà toutes les méthodes de Boid !\n```\n"
     },
     {
      "type": "code",
@@ -1360,7 +1483,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Boids flee from the predator 🏃",
-     "source": "---\n## 📖 Lesson 2 — Boids flee from the predator 🏃"
+     "source": "---\n## 📖 Lesson 2 — Boids flee from the predator 🏃",
+     "source_fr": "---\n## 📖 Leçon 2 — Les boids fuient le prédateur 🏃\n"
     },
     {
      "type": "code",
@@ -1369,7 +1493,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Add a `Predator.hunt()` method\n\nMake the predator `hunt()`: find the nearest boid and chase it.\nThe predator should also be 1.5× faster than boids.",
-     "source": "---\n## ✏️ Exercise — Add a `Predator.hunt()` method\n\nMake the predator `hunt()`: find the nearest boid and chase it.\nThe predator should also be 1.5× faster than boids."
+     "source": "---\n## ✏️ Exercise — Add a `Predator.hunt()` method\n\nMake the predator `hunt()`: find the nearest boid and chase it.\nThe predator should also be 1.5× faster than boids.",
+     "source_fr": "---\n## ✏️ Exercice — Ajoute une méthode `Predator.hunt()`\n\nFais chasser le prédateur avec `hunt()` : trouve le boid le plus proche et fonce dessus.\nLe prédateur doit aussi être 1,5× plus rapide que les boids.\n"
     },
     {
      "type": "exercise",
@@ -1393,12 +1518,14 @@
     {
      "type": "md",
      "source_en": "# 🎮 Chapter 25 — Interactive Simulation\n\n**What you will learn:**\n- **Sliders** — change parameters in real-time\n- **Mouse events** — click to teleport the predator\n\n> 💡 Like Scratch's \"sensing\" blocks, but more powerful!",
-     "source": "# 🎮 Chapter 25 — Interactive Simulation\n\n**What you will learn:**\n- **Sliders** — change parameters in real-time\n- **Mouse events** — click to teleport the predator\n\n> 💡 Like Scratch's \"sensing\" blocks, but more powerful!"
+     "source": "# 🎮 Chapter 25 — Interactive Simulation\n\n**What you will learn:**\n- **Sliders** — change parameters in real-time\n- **Mouse events** — click to teleport the predator\n\n> 💡 Like Scratch's \"sensing\" blocks, but more powerful!",
+     "source_fr": "# 🎮 Chapitre 25 — Simulation Interactive\n\n**Ce que tu vas apprendre :**\n- Les **sliders** — changer les paramètres en temps réel\n- Les **événements souris** — cliquer pour téléporter le prédateur\n\n> 💡 Comme les blocs \"capteurs\" de Scratch, mais bien plus puissants !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 1 — Sliders with `matplotlib.widgets`",
-     "source": "---\n## 📖 Lesson 1 — Sliders with `matplotlib.widgets`"
+     "source": "---\n## 📖 Lesson 1 — Sliders with `matplotlib.widgets`",
+     "source_fr": "---\n## 📖 Leçon 1 — Sliders avec `matplotlib.widgets`\n"
     },
     {
      "type": "code",
@@ -1407,7 +1534,8 @@
     {
      "type": "md",
      "source_en": "---\n## 📖 Lesson 2 — Mouse click events",
-     "source": "---\n## 📖 Lesson 2 — Mouse click events"
+     "source": "---\n## 📖 Lesson 2 — Mouse click events",
+     "source_fr": "---\n## 📖 Leçon 2 — Événements de clic souris\n"
     },
     {
      "type": "code",
@@ -1416,7 +1544,8 @@
     {
      "type": "md",
      "source_en": "---\n## ✏️ Exercise — Boids with a slider for RADIUS\n\nAdd a slider to control the **neighbourhood radius** of the boids.\nWhen you change the slider, the boids should behave differently!",
-     "source": "---\n## ✏️ Exercise — Boids with a slider for RADIUS\n\nAdd a slider to control the **neighbourhood radius** of the boids.\nWhen you change the slider, the boids should behave differently!"
+     "source": "---\n## ✏️ Exercise — Boids with a slider for RADIUS\n\nAdd a slider to control the **neighbourhood radius** of the boids.\nWhen you change the slider, the boids should behave differently!",
+     "source_fr": "---\n## ✏️ Exercice — Boids avec un slider pour le RAYON\n\nAjoute un slider pour contrôler le **rayon de voisinage** des boids.\nQuand tu bouges le slider, le comportement des boids doit changer !\n"
     },
     {
      "type": "code",
@@ -1440,12 +1569,14 @@
     {
      "type": "md",
      "source_en": "# 🏆 BOSS S3 — Boids Ultimate!\n\n<p><img src=\"images/pokedex/717.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/149.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/373.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**The final challenge!**\n\nBuild the **ultimate Boids simulation** with:\n- A flock of 50 boids\n- 3 flocking rules (separation, alignment, cohesion)\n- A predator that chases the nearest boid\n- Boids flee from the predator\n- Live animation\n- Sliders to control weights\n\n> 💡 Run every cell from top to bottom!",
-     "source": "# 🏆 BOSS S3 — Boids Ultimate!\n\n<p><img src=\"images/pokedex/717.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/149.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/373.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**The final challenge!**\n\nBuild the **ultimate Boids simulation** with:\n- A flock of 50 boids\n- 3 flocking rules (separation, alignment, cohesion)\n- A predator that chases the nearest boid\n- Boids flee from the predator\n- Live animation\n- Sliders to control weights\n\n> 💡 Run every cell from top to bottom!"
+     "source": "# 🏆 BOSS S3 — Boids Ultimate!\n\n<p><img src=\"images/pokedex/717.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/149.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/373.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**The final challenge!**\n\nBuild the **ultimate Boids simulation** with:\n- A flock of 50 boids\n- 3 flocking rules (separation, alignment, cohesion)\n- A predator that chases the nearest boid\n- Boids flee from the predator\n- Live animation\n- Sliders to control weights\n\n> 💡 Run every cell from top to bottom!",
+     "source_fr": "# 🏆 BOSS S3 — Boids Ultime !\n\n<p><img src=\"images/pokedex/717.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/149.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/373.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Le défi final !**\n\nConstruis la **simulation Boids ultime** avec :\n- Un groupe de 50 boids\n- Les 3 règles de vol (séparation, alignement, cohésion)\n- Un prédateur qui chasse le boid le plus proche\n- Les boids qui fuient le prédateur\n- Une animation en direct\n- Des sliders pour contrôler les poids\n\n> 💡 Lance chaque cellule de haut en bas !\n"
     },
     {
      "type": "md",
      "source_en": "---\n## Step 1 — Setup all classes",
-     "source": "---\n## Step 1 — Setup all classes"
+     "source": "---\n## Step 1 — Setup all classes",
+     "source_fr": "---\n## Étape 1 — Configure toutes les classes\n"
     },
     {
      "type": "code",
@@ -1454,7 +1585,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 2 — Flocking rules",
-     "source": "---\n## Step 2 — Flocking rules"
+     "source": "---\n## Step 2 — Flocking rules",
+     "source_fr": "---\n## Étape 2 — Règles de vol en groupe\n"
     },
     {
      "type": "code",
@@ -1463,7 +1595,8 @@
     {
      "type": "md",
      "source_en": "---\n## Step 3 — Live animated simulation with sliders",
-     "source": "---\n## Step 3 — Live animated simulation with sliders"
+     "source": "---\n## Step 3 — Live animated simulation with sliders",
+     "source_fr": "---\n## Étape 3 — Simulation animée en direct avec sliders\n"
     },
     {
      "type": "code",
@@ -1472,12 +1605,14 @@
     {
      "type": "md",
      "source_en": "---\n## Step 4 — Verification\n\nRun this cell after seeing the simulation work.",
-     "source": "---\n## Step 4 — Verification\n\nRun this cell after seeing the simulation work."
+     "source": "---\n## Step 4 — Verification\n\nRun this cell after seeing the simulation work.",
+     "source_fr": "---\n## Étape 4 — Vérification\n\nLance cette cellule après avoir vu la simulation fonctionner.\n"
     },
     {
      "type": "md",
      "source_en": "---\n## 🚀 Bonus ideas\n\nCongrats, you finished Python Quest! Here are some ideas to keep going:\n\n1. **Obstacles** — Add circles that boids must avoid\n2. **Multiple predators** — Each with a different colour\n3. **3D boids** — Use `mpl_toolkits.mplot3d` for 3D\n4. **Export video** — `anim.save('boids.mp4', fps=30)`\n5. **Pygame version** — Faster rendering for 100+ boids\n\nBe creative! 🚀",
-     "source": "---\n## 🚀 Bonus ideas\n\nCongrats, you finished Python Quest! Here are some ideas to keep going:\n\n1. **Obstacles** — Add circles that boids must avoid\n2. **Multiple predators** — Each with a different colour\n3. **3D boids** — Use `mpl_toolkits.mplot3d` for 3D\n4. **Export video** — `anim.save('boids.mp4', fps=30)`\n5. **Pygame version** — Faster rendering for 100+ boids\n\nBe creative! 🚀"
+     "source": "---\n## 🚀 Bonus ideas\n\nCongrats, you finished Python Quest! Here are some ideas to keep going:\n\n1. **Obstacles** — Add circles that boids must avoid\n2. **Multiple predators** — Each with a different colour\n3. **3D boids** — Use `mpl_toolkits.mplot3d` for 3D\n4. **Export video** — `anim.save('boids.mp4', fps=30)`\n5. **Pygame version** — Faster rendering for 100+ boids\n\nBe creative! 🚀",
+     "source_fr": "---\n## 🚀 Idées bonus\n\nFélicitations, tu as terminé Python Quest ! Voici des idées pour continuer :\n\n1. **Obstacles** — Ajoute des cercles que les boids doivent éviter\n2. **Plusieurs prédateurs** — Chacun avec une couleur différente\n3. **Boids en 3D** — Utilise `mpl_toolkits.mplot3d` pour la 3D\n4. **Exporter en vidéo** — `anim.save('boids.mp4', fps=30)`\n5. **Version Pygame** — Rendu plus rapide pour 100+ boids\n\nSois créatif ! 🚀\n"
     },
     {
      "type": "verify",
