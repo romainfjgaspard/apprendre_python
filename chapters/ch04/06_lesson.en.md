@@ -1,13 +1,18 @@
 ---
-## 📖 Lesson 3 — `while`: Repeat until done
+## 📖 Lesson 3 — `range()`: the shortcut
 
-Like Scratch's **"repeat until"** block.
+Writing `[0, 1, 2, 3, 4]` every time is tedious. `range(5)` does the same thing!
 
 ```python
-while condition:
-    # runs while condition is True
-    # MUST change something to eventually make it False!
+for i in range(5):   # same as [0, 1, 2, 3, 4]
+    print(i)
 ```
 
-> ⚠️ If the condition never becomes False you get an **infinite loop** — the
-> program freezes! Always make sure something changes.
+> `range(n)` generates numbers **0 to n−1** (n values, starting from 0).
+> `range(5)` → 0, 1, 2, 3, 4
+
+| Manual list | `range()` shortcut |
+|-------------|-------------------|
+| `[0, 1, 2, 3, 4]` | `range(5)` |
+| `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` | `range(10)` |
+| `[0, 1]` | `range(2)` |

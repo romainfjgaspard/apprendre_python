@@ -1,9 +1,9 @@
-# 🔁 Chapter 4 — Loops
+# 🔁 Chapter 4 — The for Loop
 
-Loops let you repeat code — like Scratch's **"repeat"** and **"forever"** blocks.
+The `for` loop repeats code for each item in a collection — like Scratch's **"for each item in list"** and **"repeat"** blocks.
 
 **What you will learn:**
-- `for` loop with `range()` — repeat a fixed number of times
 - `for` loop with a list — do something for each item
-- `while` loop — repeat until a condition is False
-- `break` — escape a loop early
+- `for` loop with manual counting — `[0, 1, 2, 3, 4]`
+- `range()` — a shortcut for counting sequences
+- ⭐ Bonus: `range()` with start, stop and step

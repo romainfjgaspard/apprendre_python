@@ -101,7 +101,7 @@ def main():
 
     ch_dirs = sorted(
         d for d in CHAPTERS_DIR.iterdir()
-        if d.is_dir() and re.match(r"^ch\d+$", d.name)
+        if d.is_dir() and re.match(r"^ch\d+[a-z]?$", d.name)
     )
 
     if not ch_dirs:
@@ -115,7 +115,7 @@ def main():
             ch = read_chapter(ch_dir)
             out["chapters"][str(ch["num"])] = ch
             boss_tag = " [BOSS]" if ch["boss"] else ""
-            print(f"  ✅ Ch {ch['num']:2d}{boss_tag}: {len(ch['cells'])} cellules — {ch['title']}")
+            print(f"  ✅ Ch {str(ch['num']):>4}{boss_tag}: {len(ch['cells'])} cellules — {ch['title']}")
         except Exception as exc:
             print(f"  ❌ {ch_dir.name}: {exc}")
 

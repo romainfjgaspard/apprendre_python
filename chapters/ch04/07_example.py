@@ -1,11 +1,11 @@
-# Battle! Attack until the enemy faints.
-enemy_hp = 100
-my_attack = 25
-turns = 0
+# range() replaces a manual list of numbers
+print("Manual list:  [0, 1, 2, 3, 4]")
+print("range(5):    ", list(range(5)))   # same thing!
 
-while enemy_hp > 0:
-    enemy_hp = enemy_hp - my_attack
-    turns = turns + 1
-    print(f"  Turn {turns}: enemy HP = {enemy_hp}")
+# Train 5 times with range()
+level = 1
+for i in range(5):
+    level = level + 1
+    print(f"  Session {i + 1}: level {level}")
 
-print(f"\n🏆 Enemy fainted after {turns} turns!")
+print(f"\n🎉 Final level: {level}")

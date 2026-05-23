@@ -1,11 +1,19 @@
 ---
-## 📖 Lesson 1 — `for` + `range()`: Repeat N times
+## 📖 Lesson 1 — `for` with a list: one item at a time
 
-Like Scratch's **repeat (10)** block.
+Like Scratch's **"for each item in list"** block.
 
 ```python
-for i in range(5):   # i goes 0, 1, 2, 3, 4
-    print(i)
+for pokemon in ["Pikachu", "Salameche", "Carapuce"]:
+    print(pokemon)
 ```
 
-> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0).
+> Python reads: "For each `pokemon` in this list, print it."
+> The loop body runs **once per item** — 3 items = 3 runs.
+
+You can loop over any list:
+
+```python
+team = ["Pikachu", "Charizard", "Mewtwo"]
+for p in team:
+    print(f"  ⭐ {p} is ready to battle!")

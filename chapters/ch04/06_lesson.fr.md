@@ -1,13 +1,18 @@
 ---
-## 📖 Leçon 3 — `while` : Répéter jusqu'à la fin
+## 📖 Leçon 3 — `range()` : le raccourci
 
-Comme le bloc **"répéter jusqu'à"** de Scratch.
+Écrire `[0, 1, 2, 3, 4]` à chaque fois, c'est long. `range(5)` fait exactement la même chose !
 
 ```python
-while condition:
-    # s'exécute tant que la condition est True
-    # DOIT changer quelque chose pour finir par devenir False !
+for i in range(5):   # identique à [0, 1, 2, 3, 4]
+    print(i)
 ```
 
-> ⚠️ Si la condition ne devient jamais False, tu obtiens une **boucle infinie** —
-> le programme se bloque ! Assure-toi que quelque chose change à chaque tour.
+> `range(n)` génère les nombres **0 à n−1** (n valeurs, en partant de 0).
+> `range(5)` → 0, 1, 2, 3, 4
+
+| Liste manuelle | Raccourci `range()` |
+|----------------|---------------------|
+| `[0, 1, 2, 3, 4]` | `range(5)` |
+| `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` | `range(10)` |
+| `[0, 1]` | `range(2)` |

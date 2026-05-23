@@ -1,6 +1,6 @@
 import json
 
-# --- Save & Load your Pokédex ---
+# --- Save & Load your Pokédex (in memory) ---
 
 my_pokedex = {
     "trainer": "Basile",
@@ -11,14 +11,12 @@ my_pokedex = {
     ]
 }
 
-# 1. Save the Pokédex to "my_pokedex.json" using json.dump
-#    Don't forget: "w" mode and indent=2 for readability
-with open(???, ???) as f:
-    json.???(my_pokedex, f, indent=2)
+# 1. Convert the Pokédex to a JSON string using json.dumps
+#    Use indent=2 for readability
+json_text = json.???(my_pokedex, ???=2)
 
-# 2. Load it back from the file
-with open("my_pokedex.json", "r") as f:
-    loaded_pokedex = json.???(f)
+# 2. Load it back from the JSON string using json.loads
+loaded_pokedex = json.???(json_text)
 
 # 3. How many Pokémon are in the loaded data?
 pokemon_count = len(loaded_pokedex[???])
@@ -26,5 +24,6 @@ pokemon_count = len(loaded_pokedex[???])
 # 4. Does the loaded data match the original?
 data_matches = loaded_pokedex == my_pokedex
 
-print(f"Saved and loaded {pokemon_count} Pokémon")
+print(f"JSON length: {len(json_text)} characters")
+print(f"Pokémon count: {pokemon_count}")
 print(f"Data matches: {data_matches}")

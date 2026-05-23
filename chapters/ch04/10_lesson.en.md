@@ -1,4 +1,4 @@
 ---
-## ✏️ Your Turn — Training & Battles!
+## ✏️ Your Turn — Pokémon Training!
 
 Replace each `???` with the right code.

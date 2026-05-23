@@ -51,7 +51,8 @@ const I18N = {
     ch1_title: "⚡ Salut Pokémon", ch1_desc: "print, variables, f-strings",
     ch2_title: "🔢 Types & Calculs", ch2_desc: "int, float, opérateurs",
     ch3_title: "🔀 Conditions", ch3_desc: "if/elif/else, types Pokémon",
-    ch4_title: "🔁 Boucles", ch4_desc: "for, while, range, break",
+    ch4_title: "🔁 La Boucle for", ch4_desc: "for, liste, range()",
+    "ch4.5_title": "🔄 La Boucle while", "ch4.5_desc": "while, break",
     ch5_title: "📋 Listes", ch5_desc: "créer, indexer, trier",
     ch6_title: "📖 Dictionnaires", ch6_desc: "dicts, Pokédex",
     ch7_title: "🧩 Fonctions", ch7_desc: "def, return, paramètres",
@@ -185,6 +186,9 @@ function updateHUD() {
 // ── Map rendering ────────────────────────────────────────────────────────────
 function renderMap() {
   updateHUD();
+  // Sorted nums across ALL chapters for unlock chain (handles decimals like 4.5)
+  const allSortedNums = Object.values(DATA.chapters).map(c => c.num).sort((a, b) => a - b);
+
   for (const s of [1, 2, 3]) {
     const grid = $(`#grid-s${s}`);
     grid.innerHTML = "";
@@ -193,7 +197,9 @@ function renderMap() {
 
     for (const ch of chs) {
       const done = PROG.chapters_done.includes(ch.num);
-      const prev = ch.num === 1 || PROG.chapters_done.includes(ch.num - 1);
+      const idx = allSortedNums.indexOf(ch.num);
+      const prevNum = idx > 0 ? allSortedNums[idx - 1] : null;
+      const prev = prevNum === null || PROG.chapters_done.includes(prevNum);
       const locked = !prev && !done;
       const isCurrent = !done && prev; // next to play
 
@@ -436,10 +442,28 @@ sys.stderr = _capture
 }
 
 // ── Victory ──────────────────────────────────────────────────────────────────
+function spawnParticles() {
+  const container = $("#victory-particles");
+  if (!container) return;
+  container.innerHTML = "";
+  const emojis = ["✨", "⭐", "💫", "🌟", "⚡", "🎉"];
+  for (let i = 0; i < 14; i++) {
+    const p = document.createElement("span");
+    p.className = "xp-particle";
+    p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    const dur = (0.7 + Math.random() * 0.7).toFixed(2) + "s";
+    p.style.cssText = `left:${8 + Math.random() * 84}%;bottom:${15 + Math.random() * 30}%;` +
+                      `animation-delay:${(Math.random() * 0.4).toFixed(2)}s;--dur:${dur}`;
+    container.appendChild(p);
+    setTimeout(() => p.remove(), 1800);
+  }
+}
+
 function showVictory(chapterNum, ok, total) {
   const ch = DATA.chapters[String(chapterNum)];
   if (!ch) return;
 
+  const oldLevel = getLevel(PROG.xp);
   let isNew = false;
   if (!PROG.chapters_done.includes(chapterNum)) {
     PROG.chapters_done.push(chapterNum);
@@ -448,11 +472,43 @@ function showVictory(chapterNum, ok, total) {
     saveProgress(PROG);
     isNew = true;
   }
+  const newLevel = getLevel(PROG.xp);
+  const evolved = isNew && oldLevel !== newLevel;
 
   $("#victory-title").textContent = t("victory_perfect");
   $("#victory-score").textContent = `Score: ${ok}/${total}`;
   $("#victory-xp").textContent = isNew ? `+${ch.xp} XP ✨` : t("victory_already");
   $("#victory-badge").textContent = isNew ? ch.badge : "";
+
+  // Pokémon emoji (Season 1 only)
+  const pokemonEl = $("#victory-pokemon");
+  if (pokemonEl) {
+    const levelEmoji = newLevel.split(" ").slice(0, 1).join("") || "⭐";
+    pokemonEl.textContent = levelEmoji;
+    pokemonEl.style.display = ch.season === 1 ? "inline-block" : "none";
+  }
+
+  // Level-up evolution panel
+  const levelupEl = $("#victory-levelup");
+  if (levelupEl) {
+    if (evolved) {
+      show(levelupEl);
+      $("#victory-new-level").textContent = newLevel;
+    } else {
+      hide(levelupEl);
+    }
+  }
+
+  // Glow + particles on new completion (Season 1)
+  if (isNew) {
+    const box = $(".modal-box");
+    if (box) {
+      box.classList.remove("victory-new");
+      void box.offsetWidth;
+      box.classList.add("victory-new");
+    }
+    if (ch.season === 1) spawnParticles();
+  }
 
   show($("#victory-modal"));
 }
@@ -469,6 +525,8 @@ $("#back-btn").addEventListener("click", () => {
 
 $("#victory-btn").addEventListener("click", () => {
   hide($("#victory-modal"));
+  const box = $(".modal-box");
+  if (box) box.classList.remove("victory-new");
   showScreen("home");
   renderMap();
 });
@@ -552,11 +610,11 @@ def _ch1(ns, r):
         print(f"  🎉 PERFECT! Welcome {tn}, your {pn2} is ready!")
 
 def _ch2(ns, r):
-    _vc("new_score = 65", ns.get('new_score')==65, 'score - damage_taken → 100 - 35', r)
+    _vc("hp_after_damage = 65", ns.get('hp_after_damage')==65, 'pokemon_hp - damage_taken → 100 - 35', r)
     _vc("total_heal = 60", ns.get('total_heal')==60, 'potions * potion_heal → 3 * 20', r)
-    _vc("final_score = 125", ns.get('final_score')==125, 'new_score + total_heal', r)
+    _vc("hp_after_healing = 125", ns.get('hp_after_healing')==125, 'hp_after_damage + total_heal', r)
     _vc("hits_survived = 4", ns.get('hits_survived')==4, '200 // 45 → 4', r)
-    _vc("is_boosted is True", ns.get('is_boosted') is True, 'final_score > 100 → True', r)
+    _vc("is_boosted is True", ns.get('is_boosted') is True, 'hp_after_healing > 100 → True', r)
 
 def _ch3(ns, r):
     _vc("is_alive is True", ns.get('is_alive') is True, 'hp > 0 → True', r)
@@ -566,9 +624,14 @@ def _ch3(ns, r):
     _vc("can_evolve is False", ns.get('can_evolve') is False, 'is_alive AND level >= 16 → True AND False → False', r)
 
 def _ch4(ns, r):
-    _vc("total_damage = 90", ns.get('total_damage')==90, '6×15=90', r)
-    _vc("turns = 4", ns.get('turns')==4, '80/25→4 turns', r)
-    _vc("electric_count = 3", ns.get('electric_count')==3, '3 Electric types', r)
+    _vc("xp = 50", ns.get('xp')==50, 'range(5) × 10 = 50', r)
+    _vc("fire_count = 3", ns.get('fire_count')==3, '3 Fire types in the list', r)
+    team = ns.get('team', [])
+    _vc("team has 4 Pokémon", len(team)==4, 'for pokemon in team', r)
+
+def _ch4b(ns, r):
+    _vc("turns = 4", ns.get('turns')==4, 'while enemy_hp > 0: ... 80/25 → 4 turns', r)
+    _vc("heals = 4", ns.get('heals')==4, 'while my_hp < 150: ... 90+4×15=150', r)
 
 def _ch5(ns, r):
     _vc("team has 4", ns.get('team_size')==4, '3+2-1=4', r)
@@ -596,11 +659,10 @@ def _ch7(ns, r):
     _vc("heal(90,100,30)=100", callable(hl) and hl(90,100,30)==100, 'min(120,100)', r)
 
 def _ch8(ns, r):
-    # In browser, we can't check files — just check variables
-    _vc("pokemon_count is 3", ns.get('pokemon_count')==3, 'len(data["pokemon"])', r)
-    _vc("data_matches is True", ns.get('data_matches') is True, 'json.dump then json.load', r)
-    # Give a freebie for file existence in browser
-    _vc("File operations done", ns.get('pokemon_count') is not None, 'Run all cells', r)
+    _vc("pokemon_count is 3", ns.get('pokemon_count')==3, 'len(loaded["pokemon"])', r)
+    _vc("data_matches is True", ns.get('data_matches') is True, 'json.dumps then json.loads', r)
+    jt = ns.get('json_text', '')
+    _vc("json_text is a string", isinstance(jt, str) and len(jt) > 10, 'json.dumps(my_pokedex, indent=2)', r)
 
 def _boss1(ns, r):
     _vc("Tournament completed", ns.get('tournament_complete') is True, 'Run all cells', r)
@@ -710,7 +772,7 @@ def _boss3(ns, r):
     _vc("Predator exists", ns.get('pred') is not None, 'pred=Predator(...)', r)
 
 _CHECKS = {
-    1:_ch1, 2:_ch2, 3:_ch3, 4:_ch4, 5:_ch5, 6:_ch6, 7:_ch7, 8:_ch8, 9:_boss1,
+    1:_ch1, 2:_ch2, 3:_ch3, 4:_ch4, 4.5:_ch4b, 5:_ch5, 6:_ch6, 7:_ch7, 8:_ch8, 9:_boss1,
     10:_ch10, 11:_ch11, 12:_ch12, 13:_ch13, 14:_ch14, 15:_ch15, 16:_ch16, 17:_boss2,
     18:_ch18, 19:_ch19, 20:_ch20, 21:_ch21, 22:_ch22, 23:_ch23, 24:_ch24, 25:_ch25, 26:_boss3,
 }

@@ -10,8 +10,11 @@ pokedex = [
 for p in pokedex:
     print(f"  {p['name']:<12} {p['type']:<10} HP:{p['hp']}  ATK:{p['attack']}")
 
-# Find the strongest (highest attack)
-strongest = max(pokedex, key=lambda p: p["attack"])
+# Find the strongest (highest attack) — loop through all!
+strongest = pokedex[0]
+for p in pokedex:
+    if p["attack"] > strongest["attack"]:
+        strongest = p
 print(f"\n🏆 Strongest: {strongest['name']} (ATK: {strongest['attack']})")
 
 # Filter: only Fire and Water types

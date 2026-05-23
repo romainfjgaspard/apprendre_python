@@ -7,6 +7,6 @@ A **list** stores multiple values in order — like a team of Pokémon!
 - Add and remove items
 - Loop through a list
 - Sort a list
-- List comprehensions (create lists in one line!)
+- ⭐ Bonus: List comprehensions (one-liners for the curious!)
 
 > In Scratch you have **"lists"** blocks — Python lists are very similar but more powerful.

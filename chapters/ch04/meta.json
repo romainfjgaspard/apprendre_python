@@ -1,7 +1,7 @@
 {
   "num": 4,
-  "title": "🔁 Loops",
-  "desc": "for, while, range, break",
+  "title": "🔁 The for Loop",
+  "desc": "for, list, range()",
   "badge": "🔁",
   "xp": 80,
   "season": 1,

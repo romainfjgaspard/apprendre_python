@@ -1,12 +1,14 @@
-# 💾 Chapter 8 — Files & JSON
+# 💾 Chapter 8 — JSON & Data
 
-Save your game data to a file and load it back!
+Work with structured data using JSON!
 
 **What you will learn:**
-- Write text to a file with `open()`
-- Read text from a file
-- Save Python data (dicts, lists) to JSON
-- Load data from a JSON file
+- Convert Python data to JSON text with `json.dumps()`
+- Load data back from JSON text with `json.loads()`
+- The full save/load round-trip in memory
 
 > JSON = JavaScript Object Notation — a universal format for data.
 > It looks exactly like Python dicts and lists!
+
+> ⚠️ Note: In this browser, `open()` (file reading/writing) is **not available**.
+> We use `json.dumps()` and `json.loads()` instead — the same skill, no files needed!

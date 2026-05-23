@@ -1,12 +1,18 @@
-# Read the file we just created
-with open("battle_log.txt", "r") as f:   # "r" = read mode
-    content = f.read()
+import json
 
-print(content)
+# Convert a JSON string back to Python data
+json_text = '{"name": "Ash", "badges": 3, "team": ["Pikachu", "Charizard"]}'
 
-# Read line by line
-with open("battle_log.txt", "r") as f:
-    lines = f.readlines()
+data = json.loads(json_text)
+print(f"Name: {data['name']}")
+print(f"Badges: {data['badges']}")
+print(f"Team: {data['team']}")
+print(f"Type: {type(data)}")   # dict
 
-print(f"The file has {len(lines)} lines.")
-print(f"First line: {lines[0].strip()}")
+# Access nested data
+first_pokemon = data["team"][0]
+print(f"First Pokémon: {first_pokemon}")
+
+# ⚠️ Python local only (PyCharm, terminal):
+# with open("data.json", "r") as f:
+#     data = json.load(f)

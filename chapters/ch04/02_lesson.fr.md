@@ -1,11 +1,19 @@
 ---
-## 📖 Leçon 1 — `for` + `range()` : Répéter N fois
+## 📖 Leçon 1 — `for` sur une liste : un élément à la fois
 
-Comme le bloc **répéter (10)** de Scratch.
+Comme le bloc **"pour chaque élément de la liste"** de Scratch.
 
 ```python
-for i in range(5):   # i vaut 0, 1, 2, 3, 4
-    print(i)
+for pokemon in ["Pikachu", "Salameche", "Carapuce"]:
+    print(pokemon)
 ```
 
-> `range(5)` = les nombres 0, 1, 2, 3, 4 (5 valeurs, en partant de 0).
+> Python lit : "Pour chaque `pokemon` dans cette liste, affiche-le."
+> Le corps de la boucle s'exécute **une fois par élément** — 3 éléments = 3 tours.
+
+Tu peux parcourir n'importe quelle liste :
+
+```python
+team = ["Pikachu", "Charizard", "Mewtwo"]
+for p in team:
+    print(f"  ⭐ {p} est prêt au combat !")

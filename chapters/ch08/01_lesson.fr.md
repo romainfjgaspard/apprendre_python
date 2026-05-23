@@ -1,12 +1,14 @@
-# 💾 Chapitre 8 — Fichiers & JSON
+# 💾 Chapitre 8 — JSON & Données
 
-Sauvegarde les données de ton jeu dans un fichier et recharge-les !
+Travaille avec des données structurées grâce à JSON !
 
 **Ce que tu vas apprendre :**
-- Écrire du texte dans un fichier avec `open()`
-- Lire du texte depuis un fichier
-- Sauvegarder des données Python (dicts, listes) en JSON
-- Charger des données depuis un fichier JSON
+- Convertir des données Python en texte JSON avec `json.dumps()`
+- Recharger des données depuis du texte JSON avec `json.loads()`
+- Le cycle complet sauvegarde/rechargement en mémoire
 
 > JSON = JavaScript Object Notation — un format universel pour les données.
 > Il ressemble exactement aux dicts et listes Python !
+
+> ⚠️ Remarque : dans ce navigateur, `open()` (lecture/écriture de fichiers) **n'est pas disponible**.
+> On utilise `json.dumps()` et `json.loads()` à la place — même compétence, sans fichier !

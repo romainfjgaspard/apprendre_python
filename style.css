@@ -480,6 +480,78 @@ body {
 
 @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.1); } }
 
+/* ── Victory animations ──────────────────────────────────────────────────── */
+.victory-pokemon {
+  font-size: 60px;
+  margin: 8px 0;
+  display: inline-block;
+  animation: pokemon-bounce 0.55s ease-in-out infinite alternate;
+  line-height: 1;
+}
+
+@keyframes pokemon-bounce {
+  from { transform: translateY(0) scale(1); filter: drop-shadow(0 0 0 transparent); }
+  to   { transform: translateY(-14px) scale(1.12); filter: drop-shadow(0 0 18px var(--pokemon-yellow)); }
+}
+
+.victory-levelup {
+  margin: 10px 0 4px;
+  padding: 10px 16px;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  background: rgba(246,211,101,.08);
+  animation: levelup-flash 0.4s ease 4;
+}
+
+.levelup-title {
+  font-family: var(--font-pixel);
+  color: var(--accent);
+  font-size: 11px;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+  animation: pulse .5s ease infinite alternate;
+}
+
+#victory-new-level {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+@keyframes levelup-flash {
+  0%, 100% { background: rgba(246,211,101,.08); }
+  50% { background: rgba(246,211,101,.28); box-shadow: 0 0 24px rgba(246,211,101,.5); }
+}
+
+.modal-box.victory-new {
+  animation: victory-glow-pulse 0.7s ease 2;
+}
+
+@keyframes victory-glow-pulse {
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: 0 0 40px rgba(74,222,128,.45), 0 0 70px rgba(246,211,101,.25); }
+}
+
+.victory-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.xp-particle {
+  position: absolute;
+  font-size: 16px;
+  pointer-events: none;
+  animation: particle-fly var(--dur, 1s) ease-out forwards;
+}
+
+@keyframes particle-fly {
+  0%   { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-200px) scale(0.2) rotate(180deg); opacity: 0; }
+}
+
 /* ── Spinner ─────────────────────────────────────────────────────────────── */
 .spinner {
   width: 40px; height: 40px;

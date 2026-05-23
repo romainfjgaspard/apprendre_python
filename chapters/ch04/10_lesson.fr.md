@@ -1,4 +1,4 @@
 ---
-## ✏️ À toi — Entraînement et Combats !
+## ✏️ À toi — Entraînement Pokémon !
 
 Remplace chaque `???` par le bon code.

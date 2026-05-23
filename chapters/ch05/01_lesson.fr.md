@@ -7,6 +7,6 @@ Une **liste** stocke plusieurs valeurs dans l'ordre — comme une équipe de Pok
 - Ajouter et supprimer des éléments
 - Parcourir une liste avec une boucle
 - Trier une liste
-- Les compréhensions de liste (créer des listes en une ligne !)
+- ⭐ Bonus : Les compréhensions de liste (pour les curieux !)
 
 > Dans Scratch tu as les blocs **"liste"** — les listes Python sont très similaires mais bien plus puissantes.

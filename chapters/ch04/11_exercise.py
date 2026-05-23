@@ -1,26 +1,22 @@
-# --- Training & Battles ---
+# --- Pokémon Training ---
 
-# 1. Use a for loop to calculate the total damage of 6 attacks.
-#    Each attack does 15 damage. What is the total?
-total_damage = 0
-for i in range(6):
-    total_damage = total_damage + ???
+# 1. Print each Pokémon in the team using a for loop.
+team = ["Pikachu", "Charizard", "Bulbasaur", "Snorlax"]
+for pokemon in ???:
+    print(f"  ⭐ {pokemon}")
 
-# 2. An enemy has 80 HP. You deal 25 damage per turn.
-#    Use a while loop to count how many turns to KO it.
-enemy_hp = 80
-turns = 0
-while ???:
-    enemy_hp = enemy_hp - 25
-    turns = turns + 1
+# 2. Use range() to simulate 5 training sessions.
+#    Each session adds 10 XP. What is the total XP?
+xp = 0
+for i in range(???):
+    xp = xp + 10
 
-# 3. Count how many Pokémon in this list are Electric type.
-types = ["Fire", "Electric", "Water", "Electric", "Grass", "Electric"]
-electric_count = 0
+# 3. Count how many Pokémon in this list are Fire type.
+types = ["Fire", "Electric", "Water", "Fire", "Grass", "Fire"]
+fire_count = 0
 for t in types:
     if t == ???:
-        electric_count = electric_count + 1
+        fire_count = fire_count + 1
 
-print(f"Total damage: {total_damage}")
-print(f"Turns to KO: {turns}")
-print(f"Electric types: {electric_count}")
+print(f"Total XP after training: {xp}")
+print(f"Fire types: {fire_count}")

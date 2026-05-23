@@ -1,8 +1,15 @@
-# Save a battle log!
-with open("battle_log.txt", "w") as f:
-    f.write("=== Pokémon Battle Log ===\n")
-    f.write("Pikachu used Thunderbolt!\n")
-    f.write("It's super effective!\n")
-    f.write("Charizard fainted!\n")
+import json
 
-print("✅ File saved!")
+# Convert data to a JSON string — works in any Python, including the browser!
+data = {"name": "Ash", "badges": 3, "team": ["Pikachu", "Charizard"]}
+
+json_text = json.dumps(data, indent=2)
+print("JSON text:")
+print(json_text)
+print()
+print(f"Type: {type(json_text)}")   # str
+print(f"Length: {len(json_text)} characters")
+
+# ⚠️ Python local only (PyCharm, terminal):
+# with open("data.json", "w") as f:
+#     f.write(json_text)

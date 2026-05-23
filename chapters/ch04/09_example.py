@@ -1,12 +1,15 @@
-import random
+# range() with 2 arguments: start and stop
+print("Levels 1 to 5:")
+for level in range(1, 6):   # 1, 2, 3, 4, 5
+    print(f"  Level {level}")
 
-# Wild encounter — try to catch a Pokémon!
-for attempt in range(10):
-    catch_chance = random.randint(1, 100)
-    print(f"  Attempt {attempt + 1}: rolled {catch_chance}...")
-    if catch_chance > 70:
-        print(f"  ✅ Caught on attempt {attempt + 1}!")
-        break
-else:
-    # This runs only if we never broke out of the loop
-    print("  😢 The Pokémon escaped after 10 attempts!")
+# range() with step: count by 2
+print("\nEven numbers (0 to 8):")
+for n in range(0, 10, 2):   # 0, 2, 4, 6, 8
+    print(f"  {n}")
+
+# Countdown!
+print("\nCountdown:")
+for i in range(5, 0, -1):   # 5, 4, 3, 2, 1
+    print(f"  {i}...")
+print("  🚀 GO!")

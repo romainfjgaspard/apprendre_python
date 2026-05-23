@@ -124,7 +124,7 @@
     },
     {
      "type": "exercise",
-     "source": "# --- Pokemon Battle Score ---\n\n# Starting stats:\nscore = 100\ndamage_taken = 35\npotions = 3\npotion_heal = 20\n\n# 1. Your Pokemon took damage! What is the new score?\nnew_score = ???\n\n# 2. You use ALL your potions. How much total healing?\ntotal_heal = ???\n\n# 3. Add the healing to get the final score\nfinal_score = ???\n\n# 4. You have 200 HP. Each hit does 45 damage.\n#    How many FULL hits can you take? (use //)\nhits_survived = ???\n\n# 5. Is your final score above 100?\nis_boosted = ???\n\nprint(f\"After damage: {new_score}\")\nprint(f\"Total heal: {total_heal}\")\nprint(f\"Final score: {final_score}\")\nprint(f\"Hits survived: {hits_survived}\")\nprint(f\"Boosted? {is_boosted}\")"
+     "source": "# --- Pokémon Battle HP ---\n\n# Starting stats:\npokemon_hp = 100\ndamage_taken = 35\npotions = 3\npotion_heal = 20\n\n# 1. Your Pokémon took damage! What is the HP after the hit?\nhp_after_damage = ???\n\n# 2. You use ALL your potions. How much total healing?\ntotal_heal = ???\n\n# 3. Add the healing to get the final HP\nhp_after_healing = ???\n\n# 4. You have 200 HP. Each hit does 45 damage.\n#    How many FULL hits can you take? (use //)\nhits_survived = ???\n\n# 5. Is your final HP above 100?\nis_boosted = ???\n\nprint(f\"After damage: {hp_after_damage}\")\nprint(f\"Total heal: {total_heal}\")\nprint(f\"Final HP: {hp_after_healing}\")\nprint(f\"Hits survived: {hits_survived}\")\nprint(f\"Boosted? {is_boosted}\")"
     },
     {
      "type": "verify",
@@ -205,8 +205,8 @@
   },
   "4": {
    "num": 4,
-   "title": "🔁 Loops",
-   "desc": "for, while, range, break",
+   "title": "🔁 The for Loop",
+   "desc": "for, list, range()",
    "badge": "🔁",
    "xp": 80,
    "season": 1,
@@ -214,15 +214,15 @@
    "cells": [
     {
      "type": "md",
-     "source_en": "# 🔁 Chapter 4 — Loops\n\nLoops let you repeat code — like Scratch's **\"repeat\"** and **\"forever\"** blocks.\n\n**What you will learn:**\n- `for` loop with `range()` — repeat a fixed number of times\n- `for` loop with a list — do something for each item\n- `while` loop — repeat until a condition is False\n- `break` — escape a loop early",
-     "source": "# 🔁 Chapter 4 — Loops\n\nLoops let you repeat code — like Scratch's **\"repeat\"** and **\"forever\"** blocks.\n\n**What you will learn:**\n- `for` loop with `range()` — repeat a fixed number of times\n- `for` loop with a list — do something for each item\n- `while` loop — repeat until a condition is False\n- `break` — escape a loop early",
-     "source_fr": "# 🔁 Chapitre 4 — Les Boucles\n\nLes boucles répètent du code — comme les blocs **\"répéter\"** et **\"répéter indéfiniment\"** de Scratch.\n\n**Ce que tu vas apprendre :**\n- La boucle `for` avec `range()` — répéter un nombre fixe de fois\n- La boucle `for` sur une liste — faire quelque chose pour chaque élément\n- La boucle `while` — répéter tant qu'une condition est vraie\n- `break` — sortir d'une boucle en avance\n"
+     "source_en": "# 🔁 Chapter 4 — The for Loop\n\nThe `for` loop repeats code for each item in a collection — like Scratch's **\"for each item in list\"** and **\"repeat\"** blocks.\n\n**What you will learn:**\n- `for` loop with a list — do something for each item\n- `for` loop with manual counting — `[0, 1, 2, 3, 4]`\n- `range()` — a shortcut for counting sequences\n- ⭐ Bonus: `range()` with start, stop and step",
+     "source": "# 🔁 Chapter 4 — The for Loop\n\nThe `for` loop repeats code for each item in a collection — like Scratch's **\"for each item in list\"** and **\"repeat\"** blocks.\n\n**What you will learn:**\n- `for` loop with a list — do something for each item\n- `for` loop with manual counting — `[0, 1, 2, 3, 4]`\n- `range()` — a shortcut for counting sequences\n- ⭐ Bonus: `range()` with start, stop and step",
+     "source_fr": "# 🔁 Chapitre 4 — La Boucle for\n\nLa boucle `for` répète du code pour chaque élément d'une collection — comme les blocs **\"pour chaque élément de la liste\"** et **\"répéter\"** de Scratch.\n\n**Ce que tu vas apprendre :**\n- La boucle `for` sur une liste — faire quelque chose pour chaque élément\n- La boucle `for` avec un comptage manuel — `[0, 1, 2, 3, 4]`\n- `range()` — un raccourci pour les séquences de nombres\n- ⭐ Bonus : `range()` avec début, fin et pas\n"
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 1 — `for` + `range()`: Repeat N times\n\nLike Scratch's **repeat (10)** block.\n\n```python\nfor i in range(5):   # i goes 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0).",
-     "source": "---\n## 📖 Lesson 1 — `for` + `range()`: Repeat N times\n\nLike Scratch's **repeat (10)** block.\n\n```python\nfor i in range(5):   # i goes 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0).",
-     "source_fr": "---\n## 📖 Leçon 1 — `for` + `range()` : Répéter N fois\n\nComme le bloc **répéter (10)** de Scratch.\n\n```python\nfor i in range(5):   # i vaut 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = les nombres 0, 1, 2, 3, 4 (5 valeurs, en partant de 0).\n"
+     "source_en": "---\n## 📖 Lesson 1 — `for` with a list: one item at a time\n\nLike Scratch's **\"for each item in list\"** block.\n\n```python\nfor pokemon in [\"Pikachu\", \"Salameche\", \"Carapuce\"]:\n    print(pokemon)\n```\n\n> Python reads: \"For each `pokemon` in this list, print it.\"\n> The loop body runs **once per item** — 3 items = 3 runs.\n\nYou can loop over any list:\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\nfor p in team:\n    print(f\"  ⭐ {p} is ready to battle!\")",
+     "source": "---\n## 📖 Lesson 1 — `for` with a list: one item at a time\n\nLike Scratch's **\"for each item in list\"** block.\n\n```python\nfor pokemon in [\"Pikachu\", \"Salameche\", \"Carapuce\"]:\n    print(pokemon)\n```\n\n> Python reads: \"For each `pokemon` in this list, print it.\"\n> The loop body runs **once per item** — 3 items = 3 runs.\n\nYou can loop over any list:\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\nfor p in team:\n    print(f\"  ⭐ {p} is ready to battle!\")",
+     "source_fr": "---\n## 📖 Leçon 1 — `for` sur une liste : un élément à la fois\n\nComme le bloc **\"pour chaque élément de la liste\"** de Scratch.\n\n```python\nfor pokemon in [\"Pikachu\", \"Salameche\", \"Carapuce\"]:\n    print(pokemon)\n```\n\n> Python lit : \"Pour chaque `pokemon` dans cette liste, affiche-le.\"\n> Le corps de la boucle s'exécute **une fois par élément** — 3 éléments = 3 tours.\n\nTu peux parcourir n'importe quelle liste :\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\nfor p in team:\n    print(f\"  ⭐ {p} est prêt au combat !\")\n"
     },
     {
      "type": "code",
@@ -230,47 +230,98 @@
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 2 — `for` with a list\n\nGo through each item in a list, one at a time.",
-     "source": "---\n## 📖 Lesson 2 — `for` with a list\n\nGo through each item in a list, one at a time.",
-     "source_fr": "---\n## 📖 Leçon 2 — `for` sur une liste\n\nParcours chaque élément d'une liste, un par un.\n"
+     "source_en": "---\n## 📖 Lesson 2 — Count with `for`: a list of numbers\n\nYou can also loop over a list of numbers to count steps.\n\n```python\nfor i in [0, 1, 2, 3, 4]:\n    print(f\"Step {i}\")\n```\n\n> This is like Scratch's **repeat (5)** block, but you can see each number.\n> The variable `i` takes each value in the list, one by one.",
+     "source": "---\n## 📖 Lesson 2 — Count with `for`: a list of numbers\n\nYou can also loop over a list of numbers to count steps.\n\n```python\nfor i in [0, 1, 2, 3, 4]:\n    print(f\"Step {i}\")\n```\n\n> This is like Scratch's **repeat (5)** block, but you can see each number.\n> The variable `i` takes each value in the list, one by one.",
+     "source_fr": "---\n## 📖 Leçon 2 — Compter avec `for` : une liste de nombres\n\nTu peux aussi parcourir une liste de nombres pour compter des étapes.\n\n```python\nfor i in [0, 1, 2, 3, 4]:\n    print(f\"Étape {i}\")\n```\n\n> C'est comme le bloc **répéter (5)** de Scratch, mais tu vois chaque nombre.\n> La variable `i` prend chaque valeur de la liste, une par une.\n"
     },
     {
      "type": "code",
-     "source": "team = [\"Pikachu\", \"Charizard\", \"Mewtwo\", \"Eevee\"]\n\nprint(\"My team:\")\nfor pokemon in team:\n    print(f\"  ⭐ {pokemon}\")\n\nprint(f\"\\nTeam size: {len(team)}\")"
+     "source": "# Counting manually with a list of numbers\nprint(\"Counting with a list:\")\nfor i in [0, 1, 2, 3, 4]:\n    print(f\"  Step {i}\")\n\n# Each number is a training session!\nxp = 0\nfor session in [1, 2, 3, 4, 5]:\n    xp = xp + 10\n    print(f\"  Session {session} — XP: {xp}\")\n\nprint(f\"\\nFinal XP: {xp}\")"
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 3 — `while`: Repeat until done\n\nLike Scratch's **\"repeat until\"** block.\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\n> ⚠️ If the condition never becomes False you get an **infinite loop** — the\n> program freezes! Always make sure something changes.",
-     "source": "---\n## 📖 Lesson 3 — `while`: Repeat until done\n\nLike Scratch's **\"repeat until\"** block.\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\n> ⚠️ If the condition never becomes False you get an **infinite loop** — the\n> program freezes! Always make sure something changes.",
-     "source_fr": "---\n## 📖 Leçon 3 — `while` : Répéter jusqu'à la fin\n\nComme le bloc **\"répéter jusqu'à\"** de Scratch.\n\n```python\nwhile condition:\n    # s'exécute tant que la condition est True\n    # DOIT changer quelque chose pour finir par devenir False !\n```\n\n> ⚠️ Si la condition ne devient jamais False, tu obtiens une **boucle infinie** —\n> le programme se bloque ! Assure-toi que quelque chose change à chaque tour.\n"
+     "source_en": "---\n## 📖 Lesson 3 — `range()`: the shortcut\n\nWriting `[0, 1, 2, 3, 4]` every time is tedious. `range(5)` does the same thing!\n\n```python\nfor i in range(5):   # same as [0, 1, 2, 3, 4]\n    print(i)\n```\n\n> `range(n)` generates numbers **0 to n−1** (n values, starting from 0).\n> `range(5)` → 0, 1, 2, 3, 4\n\n| Manual list | `range()` shortcut |\n|-------------|-------------------|\n| `[0, 1, 2, 3, 4]` | `range(5)` |\n| `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` | `range(10)` |\n| `[0, 1]` | `range(2)` |",
+     "source": "---\n## 📖 Lesson 3 — `range()`: the shortcut\n\nWriting `[0, 1, 2, 3, 4]` every time is tedious. `range(5)` does the same thing!\n\n```python\nfor i in range(5):   # same as [0, 1, 2, 3, 4]\n    print(i)\n```\n\n> `range(n)` generates numbers **0 to n−1** (n values, starting from 0).\n> `range(5)` → 0, 1, 2, 3, 4\n\n| Manual list | `range()` shortcut |\n|-------------|-------------------|\n| `[0, 1, 2, 3, 4]` | `range(5)` |\n| `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` | `range(10)` |\n| `[0, 1]` | `range(2)` |",
+     "source_fr": "---\n## 📖 Leçon 3 — `range()` : le raccourci\n\nÉcrire `[0, 1, 2, 3, 4]` à chaque fois, c'est long. `range(5)` fait exactement la même chose !\n\n```python\nfor i in range(5):   # identique à [0, 1, 2, 3, 4]\n    print(i)\n```\n\n> `range(n)` génère les nombres **0 à n−1** (n valeurs, en partant de 0).\n> `range(5)` → 0, 1, 2, 3, 4\n\n| Liste manuelle | Raccourci `range()` |\n|----------------|---------------------|\n| `[0, 1, 2, 3, 4]` | `range(5)` |\n| `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` | `range(10)` |\n| `[0, 1]` | `range(2)` |\n"
     },
     {
      "type": "code",
-     "source": "# Battle! Attack until the enemy faints.\nenemy_hp = 100\nmy_attack = 25\nturns = 0\n\nwhile enemy_hp > 0:\n    enemy_hp = enemy_hp - my_attack\n    turns = turns + 1\n    print(f\"  Turn {turns}: enemy HP = {enemy_hp}\")\n\nprint(f\"\\n🏆 Enemy fainted after {turns} turns!\")"
+     "source": "# range() replaces a manual list of numbers\nprint(\"Manual list:  [0, 1, 2, 3, 4]\")\nprint(\"range(5):    \", list(range(5)))   # same thing!\n\n# Train 5 times with range()\nlevel = 1\nfor i in range(5):\n    level = level + 1\n    print(f\"  Session {i + 1}: level {level}\")\n\nprint(f\"\\n🎉 Final level: {level}\")"
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 4 — `break`: Escape a loop early\n\n`break` immediately exits the current loop.",
-     "source": "---\n## 📖 Lesson 4 — `break`: Escape a loop early\n\n`break` immediately exits the current loop.",
-     "source_fr": "---\n## 📖 Leçon 4 — `break` : Sortir d'une boucle en avance\n\n`break` quitte immédiatement la boucle en cours.\n"
+     "source_en": "---\n## ⭐ Bonus — `range()` with start, stop and step\n\n`range()` can take 2 or 3 arguments for more control:\n\n```python\nrange(1, 6)      # 1, 2, 3, 4, 5  (start=1, stop=6, not included)\nrange(0, 10, 2)  # 0, 2, 4, 6, 8  (count by 2)\nrange(5, 0, -1)  # 5, 4, 3, 2, 1  (count down!)\n```\n\n| Call | Result |\n|------|--------|\n| `range(5)` | 0, 1, 2, 3, 4 |\n| `range(1, 6)` | 1, 2, 3, 4, 5 |\n| `range(0, 10, 2)` | 0, 2, 4, 6, 8 |\n| `range(10, 0, -2)` | 10, 8, 6, 4, 2 |",
+     "source": "---\n## ⭐ Bonus — `range()` with start, stop and step\n\n`range()` can take 2 or 3 arguments for more control:\n\n```python\nrange(1, 6)      # 1, 2, 3, 4, 5  (start=1, stop=6, not included)\nrange(0, 10, 2)  # 0, 2, 4, 6, 8  (count by 2)\nrange(5, 0, -1)  # 5, 4, 3, 2, 1  (count down!)\n```\n\n| Call | Result |\n|------|--------|\n| `range(5)` | 0, 1, 2, 3, 4 |\n| `range(1, 6)` | 1, 2, 3, 4, 5 |\n| `range(0, 10, 2)` | 0, 2, 4, 6, 8 |\n| `range(10, 0, -2)` | 10, 8, 6, 4, 2 |",
+     "source_fr": "---\n## ⭐ Bonus — `range()` avec début, fin et pas\n\n`range()` accepte 2 ou 3 arguments pour plus de contrôle :\n\n```python\nrange(1, 6)      # 1, 2, 3, 4, 5  (début=1, fin=6, non incluse)\nrange(0, 10, 2)  # 0, 2, 4, 6, 8  (compter par 2)\nrange(5, 0, -1)  # 5, 4, 3, 2, 1  (compter à rebours !)\n```\n\n| Appel | Résultat |\n|-------|----------|\n| `range(5)` | 0, 1, 2, 3, 4 |\n| `range(1, 6)` | 1, 2, 3, 4, 5 |\n| `range(0, 10, 2)` | 0, 2, 4, 6, 8 |\n| `range(10, 0, -2)` | 10, 8, 6, 4, 2 |\n"
     },
     {
      "type": "code",
-     "source": "import random\n\n# Wild encounter — try to catch a Pokémon!\nfor attempt in range(10):\n    catch_chance = random.randint(1, 100)\n    print(f\"  Attempt {attempt + 1}: rolled {catch_chance}...\")\n    if catch_chance > 70:\n        print(f\"  ✅ Caught on attempt {attempt + 1}!\")\n        break\nelse:\n    # This runs only if we never broke out of the loop\n    print(\"  😢 The Pokémon escaped after 10 attempts!\")"
+     "source": "# range() with 2 arguments: start and stop\nprint(\"Levels 1 to 5:\")\nfor level in range(1, 6):   # 1, 2, 3, 4, 5\n    print(f\"  Level {level}\")\n\n# range() with step: count by 2\nprint(\"\\nEven numbers (0 to 8):\")\nfor n in range(0, 10, 2):   # 0, 2, 4, 6, 8\n    print(f\"  {n}\")\n\n# Countdown!\nprint(\"\\nCountdown:\")\nfor i in range(5, 0, -1):   # 5, 4, 3, 2, 1\n    print(f\"  {i}...\")\nprint(\"  🚀 GO!\")"
     },
     {
      "type": "md",
-     "source_en": "---\n## ✏️ Your Turn — Training & Battles!\n\nReplace each `???` with the right code.",
-     "source": "---\n## ✏️ Your Turn — Training & Battles!\n\nReplace each `???` with the right code.",
-     "source_fr": "---\n## ✏️ À toi — Entraînement et Combats !\n\nRemplace chaque `???` par le bon code.\n"
+     "source_en": "---\n## ✏️ Your Turn — Pokémon Training!\n\nReplace each `???` with the right code.",
+     "source": "---\n## ✏️ Your Turn — Pokémon Training!\n\nReplace each `???` with the right code.",
+     "source_fr": "---\n## ✏️ À toi — Entraînement Pokémon !\n\nRemplace chaque `???` par le bon code.\n"
     },
     {
      "type": "exercise",
-     "source": "# --- Training & Battles ---\n\n# 1. Use a for loop to calculate the total damage of 6 attacks.\n#    Each attack does 15 damage. What is the total?\ntotal_damage = 0\nfor i in range(6):\n    total_damage = total_damage + ???\n\n# 2. An enemy has 80 HP. You deal 25 damage per turn.\n#    Use a while loop to count how many turns to KO it.\nenemy_hp = 80\nturns = 0\nwhile ???:\n    enemy_hp = enemy_hp - 25\n    turns = turns + 1\n\n# 3. Count how many Pokémon in this list are Electric type.\ntypes = [\"Fire\", \"Electric\", \"Water\", \"Electric\", \"Grass\", \"Electric\"]\nelectric_count = 0\nfor t in types:\n    if t == ???:\n        electric_count = electric_count + 1\n\nprint(f\"Total damage: {total_damage}\")\nprint(f\"Turns to KO: {turns}\")\nprint(f\"Electric types: {electric_count}\")"
+     "source": "# --- Pokémon Training ---\n\n# 1. Print each Pokémon in the team using a for loop.\nteam = [\"Pikachu\", \"Charizard\", \"Bulbasaur\", \"Snorlax\"]\nfor pokemon in ???:\n    print(f\"  ⭐ {pokemon}\")\n\n# 2. Use range() to simulate 5 training sessions.\n#    Each session adds 10 XP. What is the total XP?\nxp = 0\nfor i in range(???):\n    xp = xp + 10\n\n# 3. Count how many Pokémon in this list are Fire type.\ntypes = [\"Fire\", \"Electric\", \"Water\", \"Fire\", \"Grass\", \"Fire\"]\nfire_count = 0\nfor t in types:\n    if t == ???:\n        fire_count = fire_count + 1\n\nprint(f\"Total XP after training: {xp}\")\nprint(f\"Fire types: {fire_count}\")"
     },
     {
      "type": "verify",
      "source": "from _verify import verify\nverify(4, locals())"
+    }
+   ]
+  },
+  "4.5": {
+   "num": 4.5,
+   "title": "🔄 The while Loop",
+   "desc": "while, break",
+   "badge": "🔄",
+   "xp": 60,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🔄 Chapter 4b — The while Loop\n\nThe `while` loop repeats code **as long as a condition is True** — like Scratch's **\"repeat until\"** block (but inverted: while = as long as).\n\n**What you will learn:**\n- `while` loop — repeat until a condition becomes False\n- `break` — escape a loop early when a condition is met\n",
+     "source": "# 🔄 Chapter 4b — The while Loop\n\nThe `while` loop repeats code **as long as a condition is True** — like Scratch's **\"repeat until\"** block (but inverted: while = as long as).\n\n**What you will learn:**\n- `while` loop — repeat until a condition becomes False\n- `break` — escape a loop early when a condition is met\n",
+     "source_fr": "# 🔄 Chapitre 4b — La Boucle while\n\nLa boucle `while` répète du code **tant qu'une condition est True** — comme le bloc **\"répéter jusqu'à\"** de Scratch (mais inversé : while = tant que).\n\n**Ce que tu vas apprendre :**\n- La boucle `while` — répéter jusqu'à ce qu'une condition devienne False\n- `break` — sortir d'une boucle en avance quand une condition est remplie\n"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `while`: repeat as long as a condition is True\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\nExample — Pokémon battle:\n\n```python\nenemy_hp = 100\nmy_attack = 25\n\nwhile enemy_hp > 0:\n    enemy_hp = enemy_hp - my_attack\n    print(f\"  Hit! Enemy HP: {enemy_hp}\")\n\nprint(\"🏆 Enemy fainted!\")\n```\n\n> ⚠️ If the condition **never** becomes False, you get an **infinite loop** — the program freezes!\n> Always make sure something inside the loop changes the condition.\n",
+     "source": "---\n## 📖 Lesson 1 — `while`: repeat as long as a condition is True\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\nExample — Pokémon battle:\n\n```python\nenemy_hp = 100\nmy_attack = 25\n\nwhile enemy_hp > 0:\n    enemy_hp = enemy_hp - my_attack\n    print(f\"  Hit! Enemy HP: {enemy_hp}\")\n\nprint(\"🏆 Enemy fainted!\")\n```\n\n> ⚠️ If the condition **never** becomes False, you get an **infinite loop** — the program freezes!\n> Always make sure something inside the loop changes the condition.\n",
+     "source_fr": "---\n## 📖 Leçon 1 — `while` : répéter tant qu'une condition est True\n\n```python\nwhile condition:\n    # s'exécute tant que la condition est True\n    # DOIT changer quelque chose pour finir par devenir False !\n```\n\nExemple — combat Pokémon :\n\n```python\nenemy_hp = 100\nmy_attack = 25\n\nwhile enemy_hp > 0:\n    enemy_hp = enemy_hp - my_attack\n    print(f\"  Touché ! HP ennemi : {enemy_hp}\")\n\nprint(\"🏆 L'ennemi s'est évanoui !\")\n```\n\n> ⚠️ Si la condition ne devient **jamais** False, tu obtiens une **boucle infinie** — le programme se bloque !\n> Assure-toi que quelque chose change à l'intérieur de la boucle.\n"
+    },
+    {
+     "type": "code",
+     "source": "# Battle! Attack until the enemy faints.\nenemy_hp = 100\nmy_attack = 25\nturns = 0\n\nwhile enemy_hp > 0:\n    enemy_hp = enemy_hp - my_attack\n    turns = turns + 1\n    print(f\"  Turn {turns}: enemy HP = {enemy_hp}\")\n\nprint(f\"\\n🏆 Enemy fainted after {turns} turns!\")\n"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — `break`: escape a loop early\n\n`break` immediately exits the current loop — even if the condition is still True.\n\n```python\nwhile True:          # would loop forever...\n    answer = input(\"Guess the Pokémon: \")\n    if answer == \"Pikachu\":\n        print(\"✅ Correct!\")\n        break        # ...but break stops it!\n```\n\n> Use `break` when you want to stop a loop as soon as something specific happens.\n",
+     "source": "---\n## 📖 Lesson 2 — `break`: escape a loop early\n\n`break` immediately exits the current loop — even if the condition is still True.\n\n```python\nwhile True:          # would loop forever...\n    answer = input(\"Guess the Pokémon: \")\n    if answer == \"Pikachu\":\n        print(\"✅ Correct!\")\n        break        # ...but break stops it!\n```\n\n> Use `break` when you want to stop a loop as soon as something specific happens.\n",
+     "source_fr": "---\n## 📖 Leçon 2 — `break` : sortir d'une boucle en avance\n\n`break` quitte immédiatement la boucle en cours — même si la condition est encore True.\n\n```python\nwhile True:          # bouclerait indéfiniment...\n    answer = input(\"Devine le Pokémon : \")\n    if answer == \"Pikachu\":\n        print(\"✅ Correct !\")\n        break        # ...mais break l'arrête !\n```\n\n> Utilise `break` quand tu veux stopper une boucle dès qu'un événement précis se produit.\n"
+    },
+    {
+     "type": "code",
+     "source": "import random\n\n# Try to find a rare Pokémon — stop as soon as you find it!\nfound = False\nattempts = 0\n\nwhile not found:\n    attempts = attempts + 1\n    encounter = random.randint(1, 10)\n    print(f\"  Attempt {attempts}: encountered Pokémon #{encounter}\")\n    if encounter == 7:   # Rare Pokémon #7!\n        print(f\"  ✅ Found rare Pokémon after {attempts} attempts!\")\n        break\n    if attempts >= 10:\n        print(\"  😢 Gave up after 10 attempts.\")\n        break\n"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Pokémon Battle!\n\nReplace each `???` with the right code.\n",
+     "source": "---\n## ✏️ Your Turn — Pokémon Battle!\n\nReplace each `???` with the right code.\n",
+     "source_fr": "---\n## ✏️ À toi — Combat Pokémon !\n\nRemplace chaque `???` par le bon code.\n"
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Pokémon Battle! ---\n\n# 1. An enemy has 80 HP. You deal 25 damage per turn.\n#    Use a while loop to count how many turns to KO it.\nenemy_hp = 80\nturns = 0\nwhile ???:\n    enemy_hp = enemy_hp - 25\n    turns = turns + 1\n\n# 2. Your Pokémon starts at 90 HP. Each healing restores 15 HP.\n#    How many heals until HP reaches exactly 150?\nmy_hp = 90\nheals = 0\nwhile my_hp < ???:\n    my_hp = my_hp + 15\n    heals = heals + 1\n\nprint(f\"Enemy KO'd in: {turns} turns\")\nprint(f\"Healed {heals} times, final HP: {my_hp}\")\n"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(4.5, locals())"
     }
    ]
   },
@@ -285,9 +336,9 @@
    "cells": [
     {
      "type": "md",
-     "source_en": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- List comprehensions (create lists in one line!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful.",
-     "source": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- List comprehensions (create lists in one line!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful.",
-     "source_fr": "# 📋 Chapitre 5 — Les Listes\n\nUne **liste** stocke plusieurs valeurs dans l'ordre — comme une équipe de Pokémon !\n\n**Ce que tu vas apprendre :**\n- Créer une liste et accéder aux éléments par index\n- Ajouter et supprimer des éléments\n- Parcourir une liste avec une boucle\n- Trier une liste\n- Les compréhensions de liste (créer des listes en une ligne !)\n\n> Dans Scratch tu as les blocs **\"liste\"** — les listes Python sont très similaires mais bien plus puissantes.\n"
+     "source_en": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- ⭐ Bonus: List comprehensions (one-liners for the curious!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful.",
+     "source": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- ⭐ Bonus: List comprehensions (one-liners for the curious!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful.",
+     "source_fr": "# 📋 Chapitre 5 — Les Listes\n\nUne **liste** stocke plusieurs valeurs dans l'ordre — comme une équipe de Pokémon !\n\n**Ce que tu vas apprendre :**\n- Créer une liste et accéder aux éléments par index\n- Ajouter et supprimer des éléments\n- Parcourir une liste avec une boucle\n- Trier une liste\n- ⭐ Bonus : Les compréhensions de liste (pour les curieux !)\n\n> Dans Scratch tu as les blocs **\"liste\"** — les listes Python sont très similaires mais bien plus puissantes.\n"
     },
     {
      "type": "md",
@@ -321,9 +372,9 @@
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```",
-     "source": "---\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```",
-     "source_fr": "---\n## 📖 Leçon 4 — Compréhensions de liste (la magie en une ligne !)\n\nCrée une nouvelle liste en transformant ou filtrant une autre liste.\n\n```python\n# Ancienne façon :\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# Compréhension de liste :\nresult = [x * 2 for x in items]\n```\n"
+     "source_en": "---\n## ⭐ Bonus — List comprehensions (for the curious!)\n\n> This is an optional topic — feel free to skip it for now.\n>\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```",
+     "source": "---\n## ⭐ Bonus — List comprehensions (for the curious!)\n\n> This is an optional topic — feel free to skip it for now.\n>\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```",
+     "source_fr": "---\n## ⭐ Bonus — Compréhensions de liste (pour les curieux !)\n\n> Cette partie est optionnelle — tu peux la passer pour l'instant.\n>\n## 📖 Leçon 4 — Compréhensions de liste (la magie en une ligne !)\n\nCrée une nouvelle liste en transformant ou filtrant une autre liste.\n\n```python\n# Ancienne façon :\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# Compréhension de liste :\nresult = [x * 2 for x in items]\n```\n"
     },
     {
      "type": "code",
@@ -388,7 +439,7 @@
     },
     {
      "type": "code",
-     "source": "pokedex = [\n    {\"name\": \"Pikachu\",   \"type\": \"Electric\", \"hp\": 35,  \"attack\": 55},\n    {\"name\": \"Charizard\", \"type\": \"Fire\",     \"hp\": 78,  \"attack\": 84},\n    {\"name\": \"Blastoise\", \"type\": \"Water\",    \"hp\": 79,  \"attack\": 83},\n    {\"name\": \"Mewtwo\",    \"type\": \"Psychic\",  \"hp\": 106, \"attack\": 110},\n    {\"name\": \"Eevee\",     \"type\": \"Normal\",   \"hp\": 55,  \"attack\": 55},\n]\n\n# Print all Pokémon\nfor p in pokedex:\n    print(f\"  {p['name']:<12} {p['type']:<10} HP:{p['hp']}  ATK:{p['attack']}\")\n\n# Find the strongest (highest attack)\nstrongest = max(pokedex, key=lambda p: p[\"attack\"])\nprint(f\"\\n🏆 Strongest: {strongest['name']} (ATK: {strongest['attack']})\")\n\n# Filter: only Fire and Water types\nselected = [p for p in pokedex if p[\"type\"] in [\"Fire\", \"Water\"]]\nprint(f\"Fire/Water: {[p['name'] for p in selected]}\")"
+     "source": "pokedex = [\n    {\"name\": \"Pikachu\",   \"type\": \"Electric\", \"hp\": 35,  \"attack\": 55},\n    {\"name\": \"Charizard\", \"type\": \"Fire\",     \"hp\": 78,  \"attack\": 84},\n    {\"name\": \"Blastoise\", \"type\": \"Water\",    \"hp\": 79,  \"attack\": 83},\n    {\"name\": \"Mewtwo\",    \"type\": \"Psychic\",  \"hp\": 106, \"attack\": 110},\n    {\"name\": \"Eevee\",     \"type\": \"Normal\",   \"hp\": 55,  \"attack\": 55},\n]\n\n# Print all Pokémon\nfor p in pokedex:\n    print(f\"  {p['name']:<12} {p['type']:<10} HP:{p['hp']}  ATK:{p['attack']}\")\n\n# Find the strongest (highest attack) — loop through all!\nstrongest = pokedex[0]\nfor p in pokedex:\n    if p[\"attack\"] > strongest[\"attack\"]:\n        strongest = p\nprint(f\"\\n🏆 Strongest: {strongest['name']} (ATK: {strongest['attack']})\")\n\n# Filter: only Fire and Water types\nselected = [p for p in pokedex if p[\"type\"] in [\"Fire\", \"Water\"]]\nprint(f\"Fire/Water: {[p['name'] for p in selected]}\")"
     },
     {
      "type": "md",
@@ -478,39 +529,39 @@
    "cells": [
     {
      "type": "md",
-     "source_en": "# 💾 Chapter 8 — Files & JSON\n\nSave your game data to a file and load it back!\n\n**What you will learn:**\n- Write text to a file with `open()`\n- Read text from a file\n- Save Python data (dicts, lists) to JSON\n- Load data from a JSON file\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!",
-     "source": "# 💾 Chapter 8 — Files & JSON\n\nSave your game data to a file and load it back!\n\n**What you will learn:**\n- Write text to a file with `open()`\n- Read text from a file\n- Save Python data (dicts, lists) to JSON\n- Load data from a JSON file\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!",
-     "source_fr": "# 💾 Chapitre 8 — Fichiers & JSON\n\nSauvegarde les données de ton jeu dans un fichier et recharge-les !\n\n**Ce que tu vas apprendre :**\n- Écrire du texte dans un fichier avec `open()`\n- Lire du texte depuis un fichier\n- Sauvegarder des données Python (dicts, listes) en JSON\n- Charger des données depuis un fichier JSON\n\n> JSON = JavaScript Object Notation — un format universel pour les données.\n> Il ressemble exactement aux dicts et listes Python !\n"
+     "source_en": "# 💾 Chapter 8 — JSON & Data\n\nWork with structured data using JSON!\n\n**What you will learn:**\n- Convert Python data to JSON text with `json.dumps()`\n- Load data back from JSON text with `json.loads()`\n- The full save/load round-trip in memory\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!\n\n> ⚠️ Note: In this browser, `open()` (file reading/writing) is **not available**.\n> We use `json.dumps()` and `json.loads()` instead — the same skill, no files needed!",
+     "source": "# 💾 Chapter 8 — JSON & Data\n\nWork with structured data using JSON!\n\n**What you will learn:**\n- Convert Python data to JSON text with `json.dumps()`\n- Load data back from JSON text with `json.loads()`\n- The full save/load round-trip in memory\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!\n\n> ⚠️ Note: In this browser, `open()` (file reading/writing) is **not available**.\n> We use `json.dumps()` and `json.loads()` instead — the same skill, no files needed!",
+     "source_fr": "# 💾 Chapitre 8 — JSON & Données\n\nTravaille avec des données structurées grâce à JSON !\n\n**Ce que tu vas apprendre :**\n- Convertir des données Python en texte JSON avec `json.dumps()`\n- Recharger des données depuis du texte JSON avec `json.loads()`\n- Le cycle complet sauvegarde/rechargement en mémoire\n\n> JSON = JavaScript Object Notation — un format universel pour les données.\n> Il ressemble exactement aux dicts et listes Python !\n\n> ⚠️ Remarque : dans ce navigateur, `open()` (lecture/écriture de fichiers) **n'est pas disponible**.\n> On utilise `json.dumps()` et `json.loads()` à la place — même compétence, sans fichier !\n"
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 1 — Write to a file\n\n```python\nwith open(\"file.txt\", \"w\") as f:   # \"w\" = write mode\n    f.write(\"Hello!\\n\")\n```\n\n- `\"w\"` = **write** (creates or overwrites the file)\n- `\"a\"` = **append** (adds to the end)\n- `with` automatically closes the file when done",
-     "source": "---\n## 📖 Lesson 1 — Write to a file\n\n```python\nwith open(\"file.txt\", \"w\") as f:   # \"w\" = write mode\n    f.write(\"Hello!\\n\")\n```\n\n- `\"w\"` = **write** (creates or overwrites the file)\n- `\"a\"` = **append** (adds to the end)\n- `with` automatically closes the file when done",
-     "source_fr": "---\n## 📖 Leçon 1 — Écrire dans un fichier\n\n```python\nwith open(\"fichier.txt\", \"w\") as f:   # \"w\" = mode écriture\n    f.write(\"Bonjour !\\n\")\n```\n\n- `\"w\"` = **write** (crée ou écrase le fichier)\n- `\"a\"` = **append** (ajoute à la fin)\n- `with` ferme automatiquement le fichier quand c'est terminé\n"
+     "source_en": "---\n## 📖 Lesson 1 — json.dumps(): Python → JSON text\n\n`json.dumps()` converts Python data into a JSON **string** you can store or send anywhere:\n\n```python\nimport json\n\ndata = {\"name\": \"Ash\", \"badges\": 3, \"team\": [\"Pikachu\", \"Charizard\"]}\njson_text = json.dumps(data, indent=2)\nprint(json_text)\nprint(type(json_text))   # <class 'str'>\n```\n\n> `indent=2` makes the output nicely formatted. Without it, it's one long line.\n\n---\n### ⚠️ `open()` — Python local only (PyCharm, terminal)\n\n```python\n# This works on your computer, NOT in the browser:\nwith open(\"file.txt\", \"w\") as f:\n    f.write(\"Hello!\\n\")\n```\n\nUse `json.dumps()` instead when coding in the browser.",
+     "source": "---\n## 📖 Lesson 1 — json.dumps(): Python → JSON text\n\n`json.dumps()` converts Python data into a JSON **string** you can store or send anywhere:\n\n```python\nimport json\n\ndata = {\"name\": \"Ash\", \"badges\": 3, \"team\": [\"Pikachu\", \"Charizard\"]}\njson_text = json.dumps(data, indent=2)\nprint(json_text)\nprint(type(json_text))   # <class 'str'>\n```\n\n> `indent=2` makes the output nicely formatted. Without it, it's one long line.\n\n---\n### ⚠️ `open()` — Python local only (PyCharm, terminal)\n\n```python\n# This works on your computer, NOT in the browser:\nwith open(\"file.txt\", \"w\") as f:\n    f.write(\"Hello!\\n\")\n```\n\nUse `json.dumps()` instead when coding in the browser.",
+     "source_fr": "---\n## 📖 Leçon 1 — json.dumps() : Python → texte JSON\n\n`json.dumps()` convertit des données Python en **chaîne** JSON que tu peux stocker ou envoyer :\n\n```python\nimport json\n\ndata = {\"name\": \"Ash\", \"badges\": 3, \"team\": [\"Pikachu\", \"Charizard\"]}\njson_text = json.dumps(data, indent=2)\nprint(json_text)\nprint(type(json_text))   # <class 'str'>\n```\n\n> `indent=2` formate joliment le résultat. Sans lui, tout est sur une seule ligne.\n\n---\n### ⚠️ `open()` — Python local uniquement (PyCharm, terminal)\n\n```python\n# Ceci fonctionne sur ton ordinateur, PAS dans le navigateur :\nwith open(\"fichier.txt\", \"w\") as f:\n    f.write(\"Bonjour !\\n\")\n```\n\nUtilise `json.dumps()` à la place quand tu codes dans le navigateur.\n"
     },
     {
      "type": "code",
-     "source": "# Save a battle log!\nwith open(\"battle_log.txt\", \"w\") as f:\n    f.write(\"=== Pokémon Battle Log ===\\n\")\n    f.write(\"Pikachu used Thunderbolt!\\n\")\n    f.write(\"It's super effective!\\n\")\n    f.write(\"Charizard fainted!\\n\")\n\nprint(\"✅ File saved!\")"
+     "source": "import json\n\n# Convert data to a JSON string — works in any Python, including the browser!\ndata = {\"name\": \"Ash\", \"badges\": 3, \"team\": [\"Pikachu\", \"Charizard\"]}\n\njson_text = json.dumps(data, indent=2)\nprint(\"JSON text:\")\nprint(json_text)\nprint()\nprint(f\"Type: {type(json_text)}\")   # str\nprint(f\"Length: {len(json_text)} characters\")\n\n# ⚠️ Python local only (PyCharm, terminal):\n# with open(\"data.json\", \"w\") as f:\n#     f.write(json_text)"
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 2 — Read from a file",
-     "source": "---\n## 📖 Lesson 2 — Read from a file",
-     "source_fr": "---\n## 📖 Leçon 2 — Lire depuis un fichier\n"
+     "source_en": "---\n## 📖 Lesson 2 — json.loads(): JSON text → Python\n\n`json.loads()` converts a JSON string back into Python data:\n\n```python\nimport json\n\njson_text = '{\"name\": \"Ash\", \"badges\": 3}'\ndata = json.loads(json_text)\n\nprint(data[\"name\"])    # Ash\nprint(data[\"badges\"])  # 3\nprint(type(data))      # <class 'dict'>\n```\n\n> Memory trick: `dumps` = dump to **S**tring / `loads` = load from **S**tring.\n\n---\n### ⚠️ `open()` for reading — Python local only\n\n```python\n# This works on your computer, NOT in the browser:\nwith open(\"file.txt\", \"r\") as f:\n    content = f.read()\n```\n\nUse variables and `json.loads()` in the browser instead.",
+     "source": "---\n## 📖 Lesson 2 — json.loads(): JSON text → Python\n\n`json.loads()` converts a JSON string back into Python data:\n\n```python\nimport json\n\njson_text = '{\"name\": \"Ash\", \"badges\": 3}'\ndata = json.loads(json_text)\n\nprint(data[\"name\"])    # Ash\nprint(data[\"badges\"])  # 3\nprint(type(data))      # <class 'dict'>\n```\n\n> Memory trick: `dumps` = dump to **S**tring / `loads` = load from **S**tring.\n\n---\n### ⚠️ `open()` for reading — Python local only\n\n```python\n# This works on your computer, NOT in the browser:\nwith open(\"file.txt\", \"r\") as f:\n    content = f.read()\n```\n\nUse variables and `json.loads()` in the browser instead.",
+     "source_fr": "---\n## 📖 Leçon 2 — json.loads() : texte JSON → Python\n\n`json.loads()` convertit une chaîne JSON en données Python :\n\n```python\nimport json\n\njson_text = '{\"name\": \"Ash\", \"badges\": 3}'\ndata = json.loads(json_text)\n\nprint(data[\"name\"])    # Ash\nprint(data[\"badges\"])  # 3\nprint(type(data))      # <class 'dict'>\n```\n\n> Astuce : `dumps` = sauvegarder en **S**tring / `loads` = charger depuis une **S**tring.\n\n---\n### ⚠️ `open()` pour lire — Python local uniquement\n\n```python\n# Ceci fonctionne sur ton ordinateur, PAS dans le navigateur :\nwith open(\"fichier.txt\", \"r\") as f:\n    contenu = f.read()\n```\n\nDans le navigateur, utilise des variables et `json.loads()` à la place.\n"
     },
     {
      "type": "code",
-     "source": "# Read the file we just created\nwith open(\"battle_log.txt\", \"r\") as f:   # \"r\" = read mode\n    content = f.read()\n\nprint(content)\n\n# Read line by line\nwith open(\"battle_log.txt\", \"r\") as f:\n    lines = f.readlines()\n\nprint(f\"The file has {len(lines)} lines.\")\nprint(f\"First line: {lines[0].strip()}\")"
+     "source": "import json\n\n# Convert a JSON string back to Python data\njson_text = '{\"name\": \"Ash\", \"badges\": 3, \"team\": [\"Pikachu\", \"Charizard\"]}'\n\ndata = json.loads(json_text)\nprint(f\"Name: {data['name']}\")\nprint(f\"Badges: {data['badges']}\")\nprint(f\"Team: {data['team']}\")\nprint(f\"Type: {type(data)}\")   # dict\n\n# Access nested data\nfirst_pokemon = data[\"team\"][0]\nprint(f\"First Pokémon: {first_pokemon}\")\n\n# ⚠️ Python local only (PyCharm, terminal):\n# with open(\"data.json\", \"r\") as f:\n#     data = json.load(f)"
     },
     {
      "type": "md",
-     "source_en": "---\n## 📖 Lesson 3 — JSON: Save and load game data\n\nJSON is perfect for saving dicts and lists.\n\n```python\nimport json\n\n# Save\nwith open(\"data.json\", \"w\") as f:\n    json.dump(my_dict, f)\n\n# Load\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n```",
-     "source": "---\n## 📖 Lesson 3 — JSON: Save and load game data\n\nJSON is perfect for saving dicts and lists.\n\n```python\nimport json\n\n# Save\nwith open(\"data.json\", \"w\") as f:\n    json.dump(my_dict, f)\n\n# Load\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n```",
-     "source_fr": "---\n## 📖 Leçon 3 — JSON : Sauvegarder et charger les données du jeu\n\nJSON est parfait pour sauvegarder des dicts et des listes.\n\n```python\nimport json\n\n# Sauvegarder\nwith open(\"data.json\", \"w\") as f:\n    json.dump(mon_dict, f)\n\n# Charger\nwith open(\"data.json\", \"r\") as f:\n    charge = json.load(f)\n```\n"
+     "source_en": "---\n## 📖 Lesson 3 — Round-trip: save and reload your data\n\nThe full pattern: convert to JSON text, then load it back.\n\n```python\nimport json\n\n# Save: Python → JSON string\nsave_data = {\"trainer\": \"Ash\", \"xp\": 150, \"badges\": [\"Boulder\", \"Cascade\"]}\nsaved = json.dumps(save_data, indent=2)\nprint(\"Saved:\", saved)\n\n# Load: JSON string → Python\nloaded = json.loads(saved)\nprint(\"Trainer:\", loaded[\"trainer\"])\nprint(\"Badges:\", loaded[\"badges\"])\nprint(\"Same?\", loaded == save_data)   # True!\n```\n\n---\n### ⚠️ json.dump / json.load — Python local only\n\n```python\n# These use files — not available in the browser:\nwith open(\"save.json\", \"w\") as f:\n    json.dump(save_data, f)      # ⚠️ Python local only!\n\nwith open(\"save.json\", \"r\") as f:\n    loaded = json.load(f)        # ⚠️ Python local only!\n```\n\nIn the browser: `json.dumps()` / `json.loads()` with strings instead.",
+     "source": "---\n## 📖 Lesson 3 — Round-trip: save and reload your data\n\nThe full pattern: convert to JSON text, then load it back.\n\n```python\nimport json\n\n# Save: Python → JSON string\nsave_data = {\"trainer\": \"Ash\", \"xp\": 150, \"badges\": [\"Boulder\", \"Cascade\"]}\nsaved = json.dumps(save_data, indent=2)\nprint(\"Saved:\", saved)\n\n# Load: JSON string → Python\nloaded = json.loads(saved)\nprint(\"Trainer:\", loaded[\"trainer\"])\nprint(\"Badges:\", loaded[\"badges\"])\nprint(\"Same?\", loaded == save_data)   # True!\n```\n\n---\n### ⚠️ json.dump / json.load — Python local only\n\n```python\n# These use files — not available in the browser:\nwith open(\"save.json\", \"w\") as f:\n    json.dump(save_data, f)      # ⚠️ Python local only!\n\nwith open(\"save.json\", \"r\") as f:\n    loaded = json.load(f)        # ⚠️ Python local only!\n```\n\nIn the browser: `json.dumps()` / `json.loads()` with strings instead.",
+     "source_fr": "---\n## 📖 Leçon 3 — Aller-retour : sauvegarder et recharger tes données\n\nLe schéma complet : convertir en texte JSON, puis recharger.\n\n```python\nimport json\n\n# Sauvegarder : Python → chaîne JSON\nsave_data = {\"trainer\": \"Ash\", \"xp\": 150, \"badges\": [\"Rocher\", \"Cascade\"]}\nsaved = json.dumps(save_data, indent=2)\nprint(\"Sauvegardé :\", saved)\n\n# Charger : chaîne JSON → Python\nloaded = json.loads(saved)\nprint(\"Dresseur :\", loaded[\"trainer\"])\nprint(\"Badges :\", loaded[\"badges\"])\nprint(\"Identiques ?\", loaded == save_data)   # True !\n```\n\n---\n### ⚠️ json.dump / json.load — Python local uniquement\n\n```python\n# Ces fonctions utilisent des fichiers — non disponible dans le navigateur :\nwith open(\"save.json\", \"w\") as f:\n    json.dump(save_data, f)      # ⚠️ Python local uniquement !\n\nwith open(\"save.json\", \"r\") as f:\n    loaded = json.load(f)        # ⚠️ Python local uniquement !\n```\n\nDans le navigateur : utilise `json.dumps()` / `json.loads()` avec des chaînes.\n"
     },
     {
      "type": "code",
-     "source": "import json\n\n# Our team data\nsave_data = {\n    \"trainer\": \"Ash\",\n    \"badges\": 3,\n    \"team\": [\n        {\"name\": \"Pikachu\", \"hp\": 35, \"level\": 25},\n        {\"name\": \"Charizard\", \"hp\": 78, \"level\": 36},\n    ]\n}\n\n# Save to JSON\nwith open(\"save_game.json\", \"w\") as f:\n    json.dump(save_data, f, indent=2)\nprint(\"✅ Game saved!\")\n\n# Load from JSON\nwith open(\"save_game.json\", \"r\") as f:\n    loaded = json.load(f)\n\nprint(f\"Trainer: {loaded['trainer']}\")\nprint(f\"Badges: {loaded['badges']}\")\nprint(f\"Team: {[p['name'] for p in loaded['team']]}\")\nprint(f\"Data matches? {loaded == save_data}\")"
+     "source": "import json\n\n# Our team data\nsave_data = {\n    \"trainer\": \"Ash\",\n    \"badges\": 3,\n    \"team\": [\n        {\"name\": \"Pikachu\", \"hp\": 35, \"level\": 25},\n        {\"name\": \"Charizard\", \"hp\": 78, \"level\": 36},\n    ]\n}\n\n# Save: Python → JSON string\nsaved = json.dumps(save_data, indent=2)\nprint(\"✅ Converted to JSON!\")\nprint(saved)\n\n# Load: JSON string → Python\nloaded = json.loads(saved)\n\nprint(f\"\\nTrainer: {loaded['trainer']}\")\nprint(f\"Badges: {loaded['badges']}\")\nprint(f\"Team: {[p['name'] for p in loaded['team']]}\")\nprint(f\"Data matches? {loaded == save_data}\")\n\n# ⚠️ Python local only (PyCharm, terminal):\n# with open(\"save.json\", \"w\") as f: json.dump(save_data, f, indent=2)\n# with open(\"save.json\", \"r\") as f: loaded = json.load(f)"
     },
     {
      "type": "md",
@@ -520,7 +571,7 @@
     },
     {
      "type": "exercise",
-     "source": "import json\n\n# --- Save & Load your Pokédex ---\n\nmy_pokedex = {\n    \"trainer\": \"Basile\",\n    \"pokemon\": [\n        {\"name\": \"Pikachu\", \"type\": \"Electric\", \"hp\": 35},\n        {\"name\": \"Charizard\", \"type\": \"Fire\", \"hp\": 78},\n        {\"name\": \"Mewtwo\", \"type\": \"Psychic\", \"hp\": 106},\n    ]\n}\n\n# 1. Save the Pokédex to \"my_pokedex.json\" using json.dump\n#    Don't forget: \"w\" mode and indent=2 for readability\nwith open(???, ???) as f:\n    json.???(my_pokedex, f, indent=2)\n\n# 2. Load it back from the file\nwith open(\"my_pokedex.json\", \"r\") as f:\n    loaded_pokedex = json.???(f)\n\n# 3. How many Pokémon are in the loaded data?\npokemon_count = len(loaded_pokedex[???])\n\n# 4. Does the loaded data match the original?\ndata_matches = loaded_pokedex == my_pokedex\n\nprint(f\"Saved and loaded {pokemon_count} Pokémon\")\nprint(f\"Data matches: {data_matches}\")"
+     "source": "import json\n\n# --- Save & Load your Pokédex (in memory) ---\n\nmy_pokedex = {\n    \"trainer\": \"Basile\",\n    \"pokemon\": [\n        {\"name\": \"Pikachu\", \"type\": \"Electric\", \"hp\": 35},\n        {\"name\": \"Charizard\", \"type\": \"Fire\", \"hp\": 78},\n        {\"name\": \"Mewtwo\", \"type\": \"Psychic\", \"hp\": 106},\n    ]\n}\n\n# 1. Convert the Pokédex to a JSON string using json.dumps\n#    Use indent=2 for readability\njson_text = json.???(my_pokedex, ???=2)\n\n# 2. Load it back from the JSON string using json.loads\nloaded_pokedex = json.???(json_text)\n\n# 3. How many Pokémon are in the loaded data?\npokemon_count = len(loaded_pokedex[???])\n\n# 4. Does the loaded data match the original?\ndata_matches = loaded_pokedex == my_pokedex\n\nprint(f\"JSON length: {len(json_text)} characters\")\nprint(f\"Pokémon count: {pokemon_count}\")\nprint(f\"Data matches: {data_matches}\")"
     },
     {
      "type": "verify",
