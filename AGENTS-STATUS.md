@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — session Tâche 4 terminée + fix persistance cellules_
+_Dernière mise à jour : 2026-05-23 — session Tâche 5 terminée (Leaderboard)_
 
 ---
 
@@ -24,7 +24,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | 2 | Cellules toutes éditables (`readOnly: false`) | ✅ Done 2026-05-23 | `app.js` ligne 281 — 1 ligne |
 | 3 | Déplacer `web/` → racine + git init | ✅ Done 2026-05-23 | `web/` supprimé, `export_web.py` mis à jour |
 | 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Credentials à remplir dans firebase.js |
-| 5 | Leaderboard | ⬜ Todo | Dépend de 4 |
+| 5 | Leaderboard | ✅ Done 2026-05-23 | `leaderboard.html` réécrit — table + refresh |
 | 6 | Contenu bilingue EN/FR complet | ⬜ Todo | `.fr.md` à rédiger manuellement |
 | 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ⬜ Todo | Voir PLAN_REFONTE.md §7a-7f |
 | 8 | UX / Gamification | ⬜ Todo | Bouton "Tout exécuter", sidebar Scratch |
@@ -95,7 +95,17 @@ apprendre_python/
 - `app.js` : contenu saisi dans les cellules code/exercice sauvegardé en localStorage
   (clé `pq_cell_{num}_{idx}`) et restauré à la réouverture du chapitre
 
-**Prochaine session — Tâche 5** : Leaderboard (`leaderboard.html` à réécrire, dépend de `listAllPlayers()`).
+**2026-05-23** : Tâche 5 exécutée.
+- `leaderboard.html` : 6 bugs corrigés + bouton refresh ajouté
+  - `<script src>` → `<script type="module" src>` (firebase.js est un ES module)
+  - Inline script en `type="module"` pour garantir l'ordre d'exécution
+  - `loadLeaderboard()` (inexistant) → `window.listAllPlayers()`
+  - `p.level` (inexistant) → calculé depuis XP via table LEVELS dupliquée inline
+  - `p.chapters_done || 0` → `(p.chapters_done || []).length` (c'est un array)
+  - Colonne "Level" → "Pokémon (niveau)" avec `starter_pokemon` + niveau calculé
+  - Bouton "Rafraîchir" ajouté
+
+**Prochaine session — Tâche 6** : Contenu bilingue EN/FR (`.fr.md` à rédiger).
 
 **Blocants connus** :
 - `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait

@@ -22,6 +22,12 @@
     display: inline-block;
     margin-bottom: 16px;
   }
+  .lb-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
   .lb-table {
     width: 100%;
     border-collapse: collapse;
@@ -48,10 +54,10 @@
   .lb-rank.silver { color: #c0c0c0; }
   .lb-rank.bronze { color: #cd7f32; }
   .lb-name { color: var(--green); font-weight: 700; }
+  .lb-pokemon { color: var(--cyan); }
+  .lb-level { color: var(--text-dim); font-size: 12px; }
   .lb-xp { color: var(--accent); }
-  .lb-level { color: var(--cyan); font-size: 13px; }
   .lb-chapters { color: var(--text-dim); font-size: 13px; }
-  .lb-badges { font-size: 16px; }
   .lb-empty {
     text-align: center;
     padding: 40px;
@@ -74,54 +80,32 @@
 </head>
 <body>
   <div class="lb-container">
-    <a href="index.html" class="btn btn-small lb-back">← Back to game</a>
+    <div class="lb-toolbar">
+      <a href="index.html" class="btn btn-small lb-back">← Retour au jeu</a>
+      <button id="btn-refresh" class="btn btn-small">🔄 Rafraîchir</button>
+    </div>
     <h1>🏆 Leaderboard</h1>
-    <div id="lb-content" class="lb-loading">Loading...</div>
+    <div id="lb-content" class="lb-loading">Chargement...</div>
   </div>
 
-  <script src="firebase.js"></script>
-  <script>
-    async function renderLeaderboard() {
-      const container = document.getElementById("lb-content");
+  <script type="module" src="firebase.js"></script>
+  <script type="module">
+    const LEVELS = [
+      [0,    "🥚 Œuf"],
+      [50,   "⚡ Pichu"],
+      [150,  "⚡ Pikachu"],
+      [300,  "⚡ Raichu"],
+      [500,  "🔥 Dracaufeu"],
+      [750,  "🐉 Dracolosse"],
+      [1000, "🌟 Mewtwo"],
+      [1500, "🏆 Maître Pokémon"],
+    ];
 
-      const ok = await initFirebase();
-      if (!ok) {
-        container.innerHTML = `<div class="lb-empty">
-          <p>Firebase is not configured.</p>
-          <p style="margin-top:8px;font-size:13px;color:var(--text-dim)">
-            Add your Firebase config in <code>firebase.js</code> to enable the leaderboard.
-          </p>
-        </div>`;
-        return;
+    function getLevel(xp) {
+      for (let i = LEVELS.length - 1; i >= 0; i--) {
+        if (xp >= LEVELS[i][0]) return LEVELS[i][1];
       }
-
-      const players = await loadLeaderboard();
-      if (players.length === 0) {
-        container.innerHTML = `<div class="lb-empty">No players yet! Be the first to complete a chapter.</div>`;
-        return;
-      }
-
-      let html = `<table class="lb-table">
-        <thead><tr>
-          <th>#</th><th>Player</th><th>Level</th><th>XP</th><th>Chapters</th><th>Badges</th>
-        </tr></thead><tbody>`;
-
-      players.forEach((p, i) => {
-        const rankClass = i === 0 ? "gold" : i === 1 ? "silver" : i === 2 ? "bronze" : "";
-        const medals = ["🥇", "🥈", "🥉"];
-        const rankText = i < 3 ? medals[i] : String(i + 1);
-        html += `<tr>
-          <td class="lb-rank ${rankClass}">${rankText}</td>
-          <td class="lb-name">${escapeHtml(p.name)}</td>
-          <td class="lb-level">${escapeHtml(p.level || "")}</td>
-          <td class="lb-xp">${p.xp} XP</td>
-          <td class="lb-chapters">${p.chapters_done || 0}/26</td>
-          <td class="lb-badges">${(p.badges || []).join(" ")}</td>
-        </tr>`;
-      });
-
-      html += "</tbody></table>";
-      container.innerHTML = html;
+      return LEVELS[0][1];
     }
 
     function escapeHtml(s) {
@@ -129,6 +113,65 @@
       d.textContent = s || "";
       return d.innerHTML;
     }
+
+    async function renderLeaderboard() {
+      const container = document.getElementById("lb-content");
+      container.className = "lb-loading";
+      container.innerHTML = "Chargement...";
+
+      const ok = await window.initFirebase();
+      if (!ok) {
+        container.className = "";
+        container.innerHTML = `<div class="lb-empty">
+          <p>Firebase non configuré.</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--text-dim)">
+            Ajoute la config Firebase dans <code>firebase.js</code> pour activer le leaderboard.
+          </p>
+        </div>`;
+        return;
+      }
+
+      const players = await window.listAllPlayers();
+      container.className = "";
+
+      if (players.length === 0) {
+        container.innerHTML = `<div class="lb-empty">Aucun joueur pour l'instant — sois le premier à finir un chapitre !</div>`;
+        return;
+      }
+
+      let html = `<table class="lb-table">
+        <thead><tr>
+          <th>#</th>
+          <th>Joueur</th>
+          <th>Pokémon (niveau)</th>
+          <th>XP</th>
+          <th>Chapitres</th>
+        </tr></thead><tbody>`;
+
+      players.forEach((p, i) => {
+        const rankClass = i === 0 ? "gold" : i === 1 ? "silver" : i === 2 ? "bronze" : "";
+        const medals = ["🥇", "🥈", "🥉"];
+        const rankText = i < 3 ? medals[i] : String(i + 1);
+        const chaptersDone = Array.isArray(p.chapters_done) ? p.chapters_done.length : 0;
+        const level = getLevel(p.xp || 0);
+
+        html += `<tr>
+          <td class="lb-rank ${rankClass}">${rankText}</td>
+          <td class="lb-name">${escapeHtml(p.name)}</td>
+          <td>
+            <span class="lb-pokemon">${escapeHtml(p.starter_pokemon || "—")}</span>
+            <span class="lb-level"> ${escapeHtml(level)}</span>
+          </td>
+          <td class="lb-xp">${p.xp || 0} XP</td>
+          <td class="lb-chapters">${chaptersDone}/26</td>
+        </tr>`;
+      });
+
+      html += "</tbody></table>";
+      container.innerHTML = html;
+    }
+
+    document.getElementById("btn-refresh").addEventListener("click", renderLeaderboard);
 
     renderLeaderboard();
   </script>
