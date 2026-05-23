@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — session Tâche 4 terminée_
+_Dernière mise à jour : 2026-05-23 — session Tâche 4 terminée + fix persistance cellules_
 
 ---
 
@@ -91,11 +91,13 @@ apprendre_python/
   boot() peuple le dropdown, i18n complété (splash_existing_label, splash_or)
 - `style.css` : style `<select>` aligné sur l'input existant
 
-**Prochaine session — Tâche 5** : Leaderboard (`leaderboard.html` à réécrire).
-Pré-requis : remplir les credentials Firebase dans `firebase.js` (console.firebase.google.com).
+**2026-05-23** : Fix persistance cellules CodeMirror (hors plan, découvert en test).
+- `app.js` : contenu saisi dans les cellules code/exercice sauvegardé en localStorage
+  (clé `pq_cell_{num}_{idx}`) et restauré à la réouverture du chapitre
+
+**Prochaine session — Tâche 5** : Leaderboard (`leaderboard.html` à réécrire, dépend de `listAllPlayers()`).
 
 **Blocants connus** :
-- ⚠️ **Firebase credentials** à remplir manuellement dans `firebase.js` lignes 16-22
-  (Console Firebase → Paramètres → Tes applications → config web)
 - `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait
+- Les `.ipynb` sont untracked — à ajouter à `.gitignore`
 - Traduction `.fr.md` à faire manuellement (Tâche 6) — pas de blocant immédiat

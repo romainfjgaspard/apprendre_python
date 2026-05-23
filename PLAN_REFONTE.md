@@ -92,12 +92,7 @@ readOnly: false,
    .env
    node_modules/
    ```
-5. Initialiser le repo git :
-   ```bash
-   git init
-   git remote add origin https://github.com/romainfjgaspard/apprendre_python.git
-   ```
-6. GitHub Pages : branche `main`, dossier `/`
+
 
 ---
 
