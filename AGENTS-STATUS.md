@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — session Tâche 3 terminée_
+_Dernière mise à jour : 2026-05-23 — session Tâche 4 terminée_
 
 ---
 
@@ -23,7 +23,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | 1 | Restructurer contenu → `chapters/ch*/` | ✅ Done 2026-05-23 | 240 fichiers, 26 chapitres |
 | 2 | Cellules toutes éditables (`readOnly: false`) | ✅ Done 2026-05-23 | `app.js` ligne 281 — 1 ligne |
 | 3 | Déplacer `web/` → racine + git init | ✅ Done 2026-05-23 | `web/` supprimé, `export_web.py` mis à jour |
-| 4 | Firebase Firestore multi-joueur | ⬜ Todo | Dépend de 3 |
+| 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Credentials à remplir dans firebase.js |
 | 5 | Leaderboard | ⬜ Todo | Dépend de 4 |
 | 6 | Contenu bilingue EN/FR complet | ⬜ Todo | `.fr.md` à rédiger manuellement |
 | 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ⬜ Todo | Voir PLAN_REFONTE.md §7a-7f |
@@ -82,8 +82,20 @@ apprendre_python/
 - `export_web.py` : chemin de sortie `web/chapters.json` → `chapters.json`
 - Chemins HTML déjà relatifs, aucune modification nécessaire dans index.html / leaderboard.html / app.js
 
-**Prochaine session — Tâche 4** : Firebase Firestore multi-joueur + `git remote add origin`.
+**2026-05-23** : Tâche 4 exécutée.
+- `firebase.js` : réécriture complète Realtime DB → Firestore SDK modulaire v9+
+  (fonctions : initFirebase, syncProgress, loadPlayer, listAllPlayers exposées sur window)
+- `index.html` : firebase.js en `type=module`, app.js en `defer` (ordre d'exécution garanti)
+  + dropdown `#existing-player` dans le splash (masqué si Firebase non configuré)
+- `app.js` : startGame() async, charge progression Firestore pour joueurs existants,
+  boot() peuple le dropdown, i18n complété (splash_existing_label, splash_or)
+- `style.css` : style `<select>` aligné sur l'input existant
+
+**Prochaine session — Tâche 5** : Leaderboard (`leaderboard.html` à réécrire).
+Pré-requis : remplir les credentials Firebase dans `firebase.js` (console.firebase.google.com).
 
 **Blocants connus** :
-- Firebase credentials à créer manuellement (Tâche 4) — pas de blocant immédiat
+- ⚠️ **Firebase credentials** à remplir manuellement dans `firebase.js` lignes 16-22
+  (Console Firebase → Paramètres → Tes applications → config web)
+- `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait
 - Traduction `.fr.md` à faire manuellement (Tâche 6) — pas de blocant immédiat
