@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — Tâche 6 : moteur bilingue EN/FR_
+_Dernière mise à jour : 2026-05-23 — Tâche 6 : traductions FR complètes (26 chapitres)_
 
 ---
 
@@ -25,7 +25,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | 3 | Déplacer `web/` → racine + git init | ✅ Done 2026-05-23 | `web/` supprimé, `export_web.py` mis à jour |
 | 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Credentials à remplir dans firebase.js |
 | 5 | Leaderboard | ✅ Done 2026-05-23 | `leaderboard.html` réécrit — table + refresh |
-| 6 | Contenu bilingue EN/FR complet | 🔶 Partiel 2026-05-23 | Moteur app.js OK — `.fr.md` à rédiger manuellement |
+| 6 | Contenu bilingue EN/FR complet | ✅ Done 2026-05-23 | Moteur app.js + 130 fichiers .fr.md + chapters.json régénéré |
 | 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ⬜ Todo | Voir PLAN_REFONTE.md §7a-7f |
 | 8 | UX / Gamification | ⬜ Todo | Bouton "Tout exécuter", sidebar Scratch |
 | 9 | Progression Pokémon avec évolution | ⬜ Todo | En dernier (dépend de 4 + contenu stable) |
@@ -132,10 +132,12 @@ Résultat :
 - `.fr.md` : aucun créé — contenu à rédiger manuellement chapitre par chapitre
 - Rétrocompat `source` dans chapters.json conservée (fallback si `source_fr` absent)
 
+**2026-05-23** : Tâche 6 complétée + correctifs de fin de session.
+- 130 fichiers `.fr.md` créés (ch01→ch26) — ton adapté ~11 ans, analogies Scratch conservées
+- `chapters.json` régénéré : toutes les cellules md ont désormais `source_en` et `source_fr`
+- `.gitignore` : `*.ipynb` ajouté (bloquant signalé depuis la Tâche 3)
+
 **Prochaine session — Tâche 7** : Fixes pédagogiques (Ch2/4/5/6/8).
-Ou : rédiger les `.fr.md` pour terminer la Tâche 6 complètement.
 
 **Blocants connus** :
-- `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait
-- Les `.ipynb` sont untracked — à ajouter à `.gitignore`
-- `.fr.md` non rédigés → EN/FR bascule n'a pas d'effet sur le contenu tant qu'aucun fichier .fr.md n'existe
+- `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait (repo GitHub à créer + push initial)
