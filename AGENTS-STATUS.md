@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — Tâche 6 : traductions FR complètes (26 chapitres)_
+_Dernière mise à jour : 2026-05-23 — Tâche 7 : fixes pédagogiques 7a-7f_
 
 ---
 
@@ -26,7 +26,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Credentials à remplir dans firebase.js |
 | 5 | Leaderboard | ✅ Done 2026-05-23 | `leaderboard.html` réécrit — table + refresh |
 | 6 | Contenu bilingue EN/FR complet | ✅ Done 2026-05-23 | Moteur app.js + 130 fichiers .fr.md + chapters.json régénéré |
-| 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ⬜ Todo | Voir PLAN_REFONTE.md §7a-7f |
+| 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ✅ Done 2026-05-23 | 7a-7f complets — 27 chapitres (ch04b num=4.5 ajouté) |
 | 8 | UX / Gamification | ⬜ Todo | Bouton "Tout exécuter", sidebar Scratch |
 | 9 | Progression Pokémon avec évolution | ⬜ Todo | En dernier (dépend de 4 + contenu stable) |
 
@@ -137,7 +137,16 @@ Résultat :
 - `chapters.json` régénéré : toutes les cellules md ont désormais `source_en` et `source_fr`
 - `.gitignore` : `*.ipynb` ajouté (bloquant signalé depuis la Tâche 3)
 
-**Prochaine session — Tâche 7** : Fixes pédagogiques (Ch2/4/5/6/8).
+**Prochaine session — Tâche 8** : UX / Gamification (bouton "Tout exécuter", sidebar Scratch→Python).
 
 **Blocants connus** :
 - `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait (repo GitHub à créer + push initial)
+
+**2026-05-23** : Tâche 7 exécutée — fixes pédagogiques.
+- **7a** : `ch02/09_exercise.py` — renommage `score→pokemon_hp`, `new_score→hp_after_damage`, `final_score→hp_after_healing`. `_ch2()` dans app.js mis à jour.
+- **7b** : `ch04` réécrit (boucle `for` uniquement : list, [0,1,2,3,4], range()). Nouveau chapitre `ch04b` (num=4.5, boucle while + break). `renderMap()` : locking basé sur ordre trié global (gère les decimaux). `export_web.py` : regex `ch\d+[a-z]?`.
+- **7c** : `ch05` leçon 4 (list comprehensions) marquée ⭐ Bonus optionnelle.
+- **7d** : `ch06/07_example.py` — lambda remplacé par boucle `for` explicite.
+- **7e** : `ch08` réécrit pour Pyodide — `json.dumps()`/`json.loads()` en mémoire, warnings ⚠️ sur tous les `open()`. Exercice compatible navigateur.
+- **7f** : Modal de victoire — emoji LEVELS animé (bounce+glow), particules XP ✨, panneau "LEVEL UP!" si seuil franchi. CSS dans style.css.
+- `chapters.json` régénéré : 27 chapitres (ch04b inclus).
