@@ -36,32 +36,31 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 
 ```
 apprendre_python/
-├── chapters/ch{N:02d}/   ← SOURCE DE VÉRITÉ (nouveau depuis T1)
-│   ├── meta.json
-│   ├── {N}_lesson.en.md
-│   ├── {N}_example.py
-│   └── {N}_exercise.py
+├── chapters/
+│   ├── ch{N:02d}/        ← SOURCE DE VÉRITÉ (26 chapitres + ch04b)
+│   │   ├── meta.json     ← { num, title, desc, badge, xp, season, boss }
+│   │   ├── {N}_lesson.en.md / {N}_lesson.fr.md
+│   │   ├── {N}_example.py
+│   │   └── {N}_exercise.py
+│   └── ch04b/            ← num=4.5, boucle while (entre ch04 et ch05)
 ├── index.html            ← GA4 G-HCG77H3QXB
-├── leaderboard.html      ← placeholder
-├── app.js                ← moteur (~719 lignes)
-├── chapters.json         ← généré par export_web.py
-├── firebase.js           ← stub Realtime DB (à remplacer par Firestore en T4)
+├── leaderboard.html      ← Firestore multi-joueur
+├── app.js                ← moteur principal
+├── chapters.json         ← généré par export_web.py (27 chapitres)
+├── firebase.js           ← Firestore SDK v9+ (credentials à configurer)
 ├── style.css
-├── images/pokedex/
-├── export_web.py         ← lit chapters/ → génère chapters.json (racine)
+├── images/pokedex/       ← vide (à remplir en Tâche 9)
+├── export_web.py         ← regex ch\d+[a-z]? pour ch04b
 ├── migrate_to_chapters.py ← one-shot T1, archivable
 └── _verify.py
 ```
 
----
+## Points d'attention pour la prochaine session
 
-## Problèmes pédagogiques connus (à traiter en Tâche 7)
-
-- **Ch2** : confusion `score` vs HP → renommer `score → pokemon_hp`
-- **Ch4** : trop dense (for + while + break + for/else) → splitter Ch4 (for) + Ch4b (while)
-- **Ch5** : list comprehensions prématurées → leçon 4 optionnelle (⭐ Bonus)
-- **Ch6** : `lambda` trop tôt dans `max(..., key=lambda...)` → remplacer par boucle explicite
-- **Ch8** : `open()` ne fonctionne pas dans Pyodide → reformuler autour de `json.dumps/loads`
+- **images/pokedex/** vide — les animations 7f utilisent les emojis de LEVELS en attendant Tâche 9
+- **ch04b `.fr.md`** créés (EN+FR bilingue) — cohérent avec Tâche 6
+- **Firebase credentials** toujours manquants dans `firebase.js` (TODO depuis T4)
+- **Zoom trackpad** Windows non résolu (Visual Viewport API, hors plan)
 
 ---
 
@@ -137,10 +136,12 @@ Résultat :
 - `chapters.json` régénéré : toutes les cellules md ont désormais `source_en` et `source_fr`
 - `.gitignore` : `*.ipynb` ajouté (bloquant signalé depuis la Tâche 3)
 
-**Prochaine session — Tâche 8** : UX / Gamification (bouton "Tout exécuter", sidebar Scratch→Python).
+**Prochaine session — Tâche 8** : UX / Gamification (bouton "Tout exécuter", sidebar Scratch→Python, panneau parcours joueur).
 
 **Blocants connus** :
-- `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait (repo GitHub à créer + push initial)
+- Repo GitHub pas encore créé → `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` puis `git push -u origin main`
+- Firebase credentials manquants dans `firebase.js` (section `firebaseConfig`)
+- `images/pokedex/` vide → animations 7f en mode emoji jusqu'à Tâche 9
 
 **2026-05-23** : Tâche 7 exécutée — fixes pédagogiques.
 - **7a** : `ch02/09_exercise.py` — renommage `score→pokemon_hp`, `new_score→hp_after_damage`, `final_score→hp_after_healing`. `_ch2()` dans app.js mis à jour.
