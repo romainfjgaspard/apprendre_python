@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — session Tâche 5 terminée (Leaderboard)_
+_Dernière mise à jour : 2026-05-23 — fix zoom CSS (hors plan)_
 
 ---
 
@@ -104,6 +104,11 @@ apprendre_python/
   - `p.chapters_done || 0` → `(p.chapters_done || []).length` (c'est un array)
   - Colonne "Level" → "Pokémon (niveau)" avec `starter_pokemon` + niveau calculé
   - Bouton "Rafraîchir" ajouté
+
+**2026-05-23** : Fix zoom CSS (hors plan).
+- `style.css` : `min-width: 640px` + `overflow-x: auto` sur `html`
+- Zoom Ctrl+scroll → centrage et top-bar stables ✅
+- Zoom pinch trackpad Windows → non résolu ⚠️ (comportement Visual Viewport natif, nécessiterait JS)
 
 **Prochaine session — Tâche 6** : Contenu bilingue EN/FR (`.fr.md` à rédiger).
 

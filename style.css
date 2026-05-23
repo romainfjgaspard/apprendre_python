@@ -31,6 +31,12 @@ html, body {
   padding: 0;
 }
 
+/* plancher de largeur : zoom fort → scrollbar horizontale plutôt que layout cassé */
+html {
+  min-width: 640px;
+  overflow-x: auto;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
