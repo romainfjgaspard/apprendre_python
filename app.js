@@ -101,6 +101,10 @@ function setLang(lang) {
   if (DATA && !document.getElementById("home-screen").classList.contains("hidden")) {
     renderMap();
   }
+  // Re-render current chapter if visible
+  if (DATA && CURRENT_CHAPTER !== null && !document.getElementById("chapter-screen").classList.contains("hidden")) {
+    openChapter(CURRENT_CHAPTER);
+  }
 }
 
 // ── State ────────────────────────────────────────────────────────────────────
@@ -108,6 +112,7 @@ let DATA = null;          // chapters.json
 let pyodide = null;       // Pyodide instance
 let pyodideLoading = false;
 const editors = [];       // CodeMirror instances for current chapter
+let CURRENT_CHAPTER = null;
 
 const SAVE_KEY = "python_quest_save";
 
@@ -231,6 +236,7 @@ function openChapter(num) {
   const ch = DATA.chapters[String(num)];
   if (!ch) return;
 
+  CURRENT_CHAPTER = num;
   editors.length = 0;
   showScreen("chapter");
 
@@ -249,7 +255,7 @@ function openChapter(num) {
     if (cell.type === "md") {
       const div = document.createElement("div");
       div.className = "cell-md";
-      div.innerHTML = marked.parse(cell.source);
+      div.innerHTML = marked.parse(cell[LANG === "fr" ? "source_fr" : "source_en"] || cell.source);
       content.appendChild(div);
     }
     else if (cell.type === "code" || cell.type === "exercise") {

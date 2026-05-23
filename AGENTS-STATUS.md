@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — fix zoom CSS (hors plan)_
+_Dernière mise à jour : 2026-05-23 — Tâche 6 : moteur bilingue EN/FR_
 
 ---
 
@@ -25,7 +25,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | 3 | Déplacer `web/` → racine + git init | ✅ Done 2026-05-23 | `web/` supprimé, `export_web.py` mis à jour |
 | 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Credentials à remplir dans firebase.js |
 | 5 | Leaderboard | ✅ Done 2026-05-23 | `leaderboard.html` réécrit — table + refresh |
-| 6 | Contenu bilingue EN/FR complet | ⬜ Todo | `.fr.md` à rédiger manuellement |
+| 6 | Contenu bilingue EN/FR complet | 🔶 Partiel 2026-05-23 | Moteur app.js OK — `.fr.md` à rédiger manuellement |
 | 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ⬜ Todo | Voir PLAN_REFONTE.md §7a-7f |
 | 8 | UX / Gamification | ⬜ Todo | Bouton "Tout exécuter", sidebar Scratch |
 | 9 | Progression Pokémon avec évolution | ⬜ Todo | En dernier (dépend de 4 + contenu stable) |
@@ -122,9 +122,20 @@ Résultat :
   recalcul du layout CSS), `min-width` est donc inopérant. Fix possible : JS sur
   `window.visualViewport` pour détecter et compenser — non implémenté.
 
-**Prochaine session — Tâche 6** : Contenu bilingue EN/FR (`.fr.md` à rédiger).
+**2026-05-23** : Tâche 6 — moteur bilingue EN/FR (partiel).
+- `app.js` : 4 modifications ciblées
+  - `CURRENT_CHAPTER` variable d'état ajoutée (ligne ~115)
+  - `openChapter()` : affecte `CURRENT_CHAPTER = num` au début
+  - Rendu cellule md : `cell.source` → `cell[LANG==="fr"?"source_fr":"source_en"] || cell.source`
+  - `setLang()` : re-render du chapitre courant si écran chapitre visible
+- `export_web.py` : inchangé (génère déjà `source_en`/`source_fr` correctement)
+- `.fr.md` : aucun créé — contenu à rédiger manuellement chapitre par chapitre
+- Rétrocompat `source` dans chapters.json conservée (fallback si `source_fr` absent)
+
+**Prochaine session — Tâche 7** : Fixes pédagogiques (Ch2/4/5/6/8).
+Ou : rédiger les `.fr.md` pour terminer la Tâche 6 complètement.
 
 **Blocants connus** :
 - `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` pas encore fait
 - Les `.ipynb` sont untracked — à ajouter à `.gitignore`
-- Traduction `.fr.md` à faire manuellement (Tâche 6) — pas de blocant immédiat
+- `.fr.md` non rédigés → EN/FR bascule n'a pas d'effet sur le contenu tant qu'aucun fichier .fr.md n'existe
