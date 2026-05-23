@@ -1,0 +1,1540 @@
+{
+ "chapters": {
+  "1": {
+   "num": 1,
+   "title": "⚡ Hello Pokémon",
+   "desc": "print, variables, f-strings",
+   "badge": "⚡",
+   "xp": 50,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# ⚡ Chapter 1 — Hello Pokémon!\n\n<img src=\"images/pokedex/7.png\" width=\"160\" alt=\"Squirtle\" style=\"margin: 6px; vertical-align: middle;\"/>\n\nWelcome to **Python Quest**! You will learn Python by building a Pokémon game.\n\n**What you will learn:**\n- `print()` — display text on screen\n- **Variables** — store data (like Scratch variables 🟧)\n- **f-strings** — put variables inside text\n\n**How to play:**\n1. Read each 📖 lesson cell\n2. Click **▶ Run** to run code cells\n3. Fill in the ✏️ exercise — replace `???` with your code\n4. Click **✅ Verify** at the bottom to check your answers\n\n> 💡 Click **▶ Run** next to any code cell to execute it",
+     "source": "# ⚡ Chapter 1 — Hello Pokémon!\n\n<img src=\"images/pokedex/7.png\" width=\"160\" alt=\"Squirtle\" style=\"margin: 6px; vertical-align: middle;\"/>\n\nWelcome to **Python Quest**! You will learn Python by building a Pokémon game.\n\n**What you will learn:**\n- `print()` — display text on screen\n- **Variables** — store data (like Scratch variables 🟧)\n- **f-strings** — put variables inside text\n\n**How to play:**\n1. Read each 📖 lesson cell\n2. Click **▶ Run** to run code cells\n3. Fill in the ✏️ exercise — replace `???` with your code\n4. Click **✅ Verify** at the bottom to check your answers\n\n> 💡 Click **▶ Run** next to any code cell to execute it"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `print()`: Talk to the screen!\n\nIn Scratch you use the **\"say\"** 💬 block to show a message.\nIn Python you use `print()`.\n\n⚠️ Text must be inside **quotes**: `\"hello\"` or `'hello'`",
+     "source": "---\n## 📖 Lesson 1 — `print()`: Talk to the screen!\n\nIn Scratch you use the **\"say\"** 💬 block to show a message.\nIn Python you use `print()`.\n\n⚠️ Text must be inside **quotes**: `\"hello\"` or `'hello'`"
+    },
+    {
+     "type": "code",
+     "source": "# Run me! (Shift+Enter)\nprint(\"Hello, Pokémon Trainer!\")\nprint(\"Welcome to the world of Pokémon!\")\nprint()  # blank line\nprint(\"Let's catch 'em all!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Variables: Store your data\n\nA **variable** stores a value — like a Scratch variable 🟧.\n\n```python\nname = \"Pikachu\"    # text → needs quotes\nhp = 35             # number → no quotes\nlevel = 5           # number → no quotes\n```\n\n| Rule | Example |\n|------|--------|\n| Text → **quotes** | `\"Pikachu\"` |\n| Whole number → **no quotes** | `35` |\n| Decimal → **dot, no quotes** | `3.14` |\n| True/False → **capital, no quotes** | `True` |",
+     "source": "---\n## 📖 Lesson 2 — Variables: Store your data\n\nA **variable** stores a value — like a Scratch variable 🟧.\n\n```python\nname = \"Pikachu\"    # text → needs quotes\nhp = 35             # number → no quotes\nlevel = 5           # number → no quotes\n```\n\n| Rule | Example |\n|------|--------|\n| Text → **quotes** | `\"Pikachu\"` |\n| Whole number → **no quotes** | `35` |\n| Decimal → **dot, no quotes** | `3.14` |\n| True/False → **capital, no quotes** | `True` |"
+    },
+    {
+     "type": "code",
+     "source": "# A Pokémon stored in variables\nname = \"Pikachu\"\nhp = 35\nattack = 55\nlevel = 5\nis_electric = True\n\nprint(name)\nprint(\"HP:\", hp)\nprint(\"Attack:\", attack)\nprint(\"Level:\", level)\nprint(\"Electric type?\", is_electric)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — f-strings: Mix text and variables\n\nAn **f-string** lets you put variables inside text using `{curly braces}`.\n\n```python\nname = \"Pikachu\"\nhp = 35\nprint(f\"{name} has {hp} HP\")  # → Pikachu has 35 HP\n```\n\nDon't forget the **`f`** before the opening quote!",
+     "source": "---\n## 📖 Lesson 3 — f-strings: Mix text and variables\n\nAn **f-string** lets you put variables inside text using `{curly braces}`.\n\n```python\nname = \"Pikachu\"\nhp = 35\nprint(f\"{name} has {hp} HP\")  # → Pikachu has 35 HP\n```\n\nDon't forget the **`f`** before the opening quote!"
+    },
+    {
+     "type": "code",
+     "source": "name = \"Pikachu\"\nhp = 35\nattack = 55\nlevel = 5\n\n# f-strings — notice the f before the quote!\nprint(f\"⚡ {name}\")\nprint(f\"   Level: {level}\")\nprint(f\"   HP: {hp}\")\nprint(f\"   Attack: {attack}\")\nprint()\n\n# You can do math inside f-strings!\nprint(f\"{name} at level {level + 1} would have {hp + 10} HP!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 4 — More Pokémon, more variables!\n\nYou can create as many variables as you want.\nGive each one a descriptive name.",
+     "source": "---\n## 📖 Lesson 4 — More Pokémon, more variables!\n\nYou can create as many variables as you want.\nGive each one a descriptive name."
+    },
+    {
+     "type": "code",
+     "source": "# Two Pokémon side by side\npoke1_name = \"Charizard\"\npoke1_hp   = 78\npoke1_type = \"Fire\"\n\npoke2_name = \"Blastoise\"\npoke2_hp   = 79\npoke2_type = \"Water\"\n\nprint(f\"🔥 {poke1_name} ({poke1_type}) — HP: {poke1_hp}\")\nprint(f\"💧 {poke2_name} ({poke2_type}) — HP: {poke2_hp}\")\nprint()\n\n# Who has more HP?\nif poke1_hp > poke2_hp:\n    print(f\"{poke1_name} has more HP!\")\nelse:\n    print(f\"{poke2_name} has more HP!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Create your starter Pokémon!\n\nReplace each `???` with the right value.\nChoose your favorite starter Pokémon!\n\n> 🔑 Remember:\n> - Text → in quotes: `\"Bulbasaur\"`\n> - Numbers → no quotes: `45`\n> - True/False → capital, no quotes: `True`",
+     "source": "---\n## ✏️ Your Turn — Create your starter Pokémon!\n\nReplace each `???` with the right value.\nChoose your favorite starter Pokémon!\n\n> 🔑 Remember:\n> - Text → in quotes: `\"Bulbasaur\"`\n> - Numbers → no quotes: `45`\n> - True/False → capital, no quotes: `True`"
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Create your starter Pokémon! ---\n\n# 1. Your trainer name — text (use quotes!)\ntrainer_name = ???\n\n# 2. Your Pokémon's name — text (use quotes!)\npokemon_name = ???\n\n# 3. Your Pokémon's HP — a whole number (no quotes!)\npokemon_hp = ???\n\n# 4. Your Pokémon's level — a whole number between 1 and 100\npokemon_level = ???\n\n# 5. Now create an f-string with your Pokémon's info!\n#    It should contain the pokemon_name AND the pokemon_hp.\n#    Example: \"Pikachu — HP: 35\"\npokemon_info = f\"???\""
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(1, locals())"
+    }
+   ]
+  },
+  "2": {
+   "num": 2,
+   "title": "🔢 Types & Math",
+   "desc": "int, float, operators",
+   "badge": "🔢",
+   "xp": 60,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🔢 Chapter 2 — Types & Math\n\nEvery value in Python has a **type**. The type tells Python what you can\ndo with the value.\n\n**What you will learn:**\n- The 4 basic types: `int`, `float`, `str`, `bool`\n- Math operators: `+  -  *  /  //  %  **`\n- Comparisons: `==  !=  <  >  <=  >=`\n- How to calculate Pokémon battle damage!\n\n> In Scratch every number is the same.\n> In Python whole numbers (`int`) and decimals (`float`) are different types.",
+     "source": "# 🔢 Chapter 2 — Types & Math\n\nEvery value in Python has a **type**. The type tells Python what you can\ndo with the value.\n\n**What you will learn:**\n- The 4 basic types: `int`, `float`, `str`, `bool`\n- Math operators: `+  -  *  /  //  %  **`\n- Comparisons: `==  !=  <  >  <=  >=`\n- How to calculate Pokémon battle damage!\n\n> In Scratch every number is the same.\n> In Python whole numbers (`int`) and decimals (`float`) are different types."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — The 4 basic types\n\n| Type | What it is | Example |\n|------|-----------|--------|\n| `int` | Whole number | `hp = 35` |\n| `float` | Decimal number | `speed = 3.14` |\n| `str` | Text (string) | `name = \"Pikachu\"` |\n| `bool` | True or False | `alive = True` |\n\nUse `type()` to check:",
+     "source": "---\n## 📖 Lesson 1 — The 4 basic types\n\n| Type | What it is | Example |\n|------|-----------|--------|\n| `int` | Whole number | `hp = 35` |\n| `float` | Decimal number | `speed = 3.14` |\n| `str` | Text (string) | `name = \"Pikachu\"` |\n| `bool` | True or False | `alive = True` |\n\nUse `type()` to check:"
+    },
+    {
+     "type": "code",
+     "source": "print(type(35))          # <class 'int'>\nprint(type(3.14))        # <class 'float'>\nprint(type(\"Pikachu\"))   # <class 'str'>\nprint(type(True))        # <class 'bool'>\n\n# ⚠️ Watch out! \"35\" with quotes is text, not a number!\nprint(type(\"35\"))        # <class 'str'>  ← text!\nprint(type(35))          # <class 'int'>  ← number!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Math operators\n\n| Operator | What it does | Example | Result |\n|----------|-------------|---------|--------|\n| `+` | Addition | `10 + 3` | `13` |\n| `-` | Subtraction | `10 - 3` | `7` |\n| `*` | Multiplication | `10 * 3` | `30` |\n| `/` | Division | `10 / 3` | `3.333` |\n| `//` | Integer division | `10 // 3` | `3` |\n| `%` | Remainder | `10 % 3` | `1` |\n| `**` | Power | `2 ** 3` | `8` |\n\n> 💡 `/` always gives a `float`. `//` always gives an `int` (rounded down).",
+     "source": "---\n## 📖 Lesson 2 — Math operators\n\n| Operator | What it does | Example | Result |\n|----------|-------------|---------|--------|\n| `+` | Addition | `10 + 3` | `13` |\n| `-` | Subtraction | `10 - 3` | `7` |\n| `*` | Multiplication | `10 * 3` | `30` |\n| `/` | Division | `10 / 3` | `3.333` |\n| `//` | Integer division | `10 // 3` | `3` |\n| `%` | Remainder | `10 % 3` | `1` |\n| `**` | Power | `2 ** 3` | `8` |\n\n> 💡 `/` always gives a `float`. `//` always gives an `int` (rounded down)."
+    },
+    {
+     "type": "code",
+     "source": "# Pokémon damage formula (simplified)\nattack = 55\ndefense = 40\nbase_power = 50\nlevel = 5\n\n# Regular damage\ndamage = (attack / defense) * base_power\nprint(f\"Damage: {damage}\")\nprint(f\"Type: {type(damage)}\")  # float — division gives float!\n\n# Integer division — rounds down\ndamage_int = (attack * base_power) // defense\nprint(f\"Integer damage: {damage_int}\")\n\n# Critical hit — double damage!\ncritical = damage * 2\nprint(f\"💥 Critical hit! {critical} damage!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Comparisons\n\nComparisons return a `bool` — `True` or `False`.\n\n| Operator | Meaning |\n|----------|--------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `<` | Less than |\n| `>` | Greater than |\n| `<=` | Less or equal |\n| `>=` | Greater or equal |\n\n> ⚠️ `=` means **store** a value. `==` means **compare**. Do not mix them up!",
+     "source": "---\n## 📖 Lesson 3 — Comparisons\n\nComparisons return a `bool` — `True` or `False`.\n\n| Operator | Meaning |\n|----------|--------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `<` | Less than |\n| `>` | Greater than |\n| `<=` | Less or equal |\n| `>=` | Greater or equal |\n\n> ⚠️ `=` means **store** a value. `==` means **compare**. Do not mix them up!"
+    },
+    {
+     "type": "code",
+     "source": "pikachu_hp = 35\ncharizard_hp = 78\n\nprint(pikachu_hp > charizard_hp)   # False\nprint(pikachu_hp < charizard_hp)   # True\nprint(pikachu_hp == 35)            # True\nprint(pikachu_hp != charizard_hp)  # True\n\n# The result is a bool!\nis_stronger = pikachu_hp > charizard_hp\nprint(f\"Pikachu stronger? {is_stronger}\")  # False\nprint(type(is_stronger))                   # <class 'bool'>"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Pokemon Battle Score!\n\nYour Pokemon just fought a battle! Replace each `???` with a Python **expression** — a calculation using the variables above.\n\n> Use the operators from the lesson: `+ - * / //` and comparisons: `> < == >=`",
+     "source": "---\n## ✏️ Your Turn — Pokemon Battle Score!\n\nYour Pokemon just fought a battle! Replace each `???` with a Python **expression** — a calculation using the variables above.\n\n> Use the operators from the lesson: `+ - * / //` and comparisons: `> < == >=`"
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Pokemon Battle Score ---\n\n# Starting stats:\nscore = 100\ndamage_taken = 35\npotions = 3\npotion_heal = 20\n\n# 1. Your Pokemon took damage! What is the new score?\nnew_score = ???\n\n# 2. You use ALL your potions. How much total healing?\ntotal_heal = ???\n\n# 3. Add the healing to get the final score\nfinal_score = ???\n\n# 4. You have 200 HP. Each hit does 45 damage.\n#    How many FULL hits can you take? (use //)\nhits_survived = ???\n\n# 5. Is your final score above 100?\nis_boosted = ???\n\nprint(f\"After damage: {new_score}\")\nprint(f\"Total heal: {total_heal}\")\nprint(f\"Final score: {final_score}\")\nprint(f\"Hits survived: {hits_survived}\")\nprint(f\"Boosted? {is_boosted}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(2, locals())"
+    }
+   ]
+  },
+  "3": {
+   "num": 3,
+   "title": "🔀 Conditions",
+   "desc": "if/elif/else, type matchups",
+   "badge": "🔀",
+   "xp": 70,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🔀 Chapter 3 — Conditions\n\nMake your program **decide** what to do!\n\n**What you will learn:**\n- `if` / `elif` / `else` — like Scratch's **\"if-then-else\"** block\n- `and`, `or`, `not` — combining conditions\n- Pokémon type effectiveness!\n\n> In Scratch: ⬡ if <condition> then / else\n> In Python: `if condition:` / `else:`",
+     "source": "# 🔀 Chapter 3 — Conditions\n\nMake your program **decide** what to do!\n\n**What you will learn:**\n- `if` / `elif` / `else` — like Scratch's **\"if-then-else\"** block\n- `and`, `or`, `not` — combining conditions\n- Pokémon type effectiveness!\n\n> In Scratch: ⬡ if <condition> then / else\n> In Python: `if condition:` / `else:`"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `if` and `else`\n\n```python\nif condition:\n    # runs when True\nelse:\n    # runs when False\n```\n\n⚠️ Don't forget the **colon** `:` at the end and the **4-space indentation**!",
+     "source": "---\n## 📖 Lesson 1 — `if` and `else`\n\n```python\nif condition:\n    # runs when True\nelse:\n    # runs when False\n```\n\n⚠️ Don't forget the **colon** `:` at the end and the **4-space indentation**!"
+    },
+    {
+     "type": "code",
+     "source": "hp = 35\n\nif hp > 0:\n    print(\"⚡ Pikachu is still standing!\")\nelse:\n    print(\"💀 Pikachu fainted!\")\n\n# Try changing hp to 0 and run again!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — `elif` — Multiple choices\n\nWhen you have more than 2 options use `elif` (short for \"else if\").\n\n```python\nif condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...  # none of the above\n```",
+     "source": "---\n## 📖 Lesson 2 — `elif` — Multiple choices\n\nWhen you have more than 2 options use `elif` (short for \"else if\").\n\n```python\nif condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...  # none of the above\n```"
+    },
+    {
+     "type": "code",
+     "source": "hp = 25\nmax_hp = 100\npercent = hp / max_hp * 100\n\nif percent > 50:\n    status = \"🟢 Healthy\"\nelif percent > 20:\n    status = \"🟡 Injured\"\nelse:\n    status = \"🔴 Critical!\"\n\nprint(f\"HP: {hp}/{max_hp} ({percent}%) — {status}\")\n\n# Try different values of hp!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — `and`, `or`, `not`\n\nCombine conditions:\n\n| Keyword | Meaning | Example |\n|---------|---------|--------|\n| `and` | Both must be True | `hp > 0 and level >= 5` |\n| `or` | At least one True | `type == \"Fire\" or type == \"Water\"` |\n| `not` | Flip True ↔ False | `not fainted` |",
+     "source": "---\n## 📖 Lesson 3 — `and`, `or`, `not`\n\nCombine conditions:\n\n| Keyword | Meaning | Example |\n|---------|---------|--------|\n| `and` | Both must be True | `hp > 0 and level >= 5` |\n| `or` | At least one True | `type == \"Fire\" or type == \"Water\"` |\n| `not` | Flip True ↔ False | `not fainted` |"
+    },
+    {
+     "type": "code",
+     "source": "pokemon_type = \"Fire\"\nlevel = 15\nhp = 30\n\n# Can evolve? Fire type AND level >= 16\ncan_evolve = pokemon_type == \"Fire\" and level >= 16\nprint(f\"Can evolve? {can_evolve}\")  # False — level too low\n\n# Is it a starter?\nname = \"Charmander\"\nis_starter = (name == \"Bulbasaur\" or name == \"Charmander\"\n              or name == \"Squirtle\")\nprint(f\"{name} is starter? {is_starter}\")  # True"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 4 — Type Effectiveness\n\nIn Pokémon, type matchups change the damage:\n- 🔥 Fire beats 🌿 Grass\n- 🌿 Grass beats 💧 Water\n- 💧 Water beats 🔥 Fire\n\nLet's code this!",
+     "source": "---\n## 📖 Lesson 4 — Type Effectiveness\n\nIn Pokémon, type matchups change the damage:\n- 🔥 Fire beats 🌿 Grass\n- 🌿 Grass beats 💧 Water\n- 💧 Water beats 🔥 Fire\n\nLet's code this!"
+    },
+    {
+     "type": "code",
+     "source": "atk_type = \"Fire\"\ndef_type = \"Grass\"\nbase_damage = 50\n\nif ((atk_type == \"Fire\" and def_type == \"Grass\") or\n    (atk_type == \"Grass\" and def_type == \"Water\") or\n    (atk_type == \"Water\" and def_type == \"Fire\")):\n    multiplier = 2.0\n    print(\"💥 It's super effective!\")\nelif ((atk_type == \"Fire\" and def_type == \"Water\") or\n      (atk_type == \"Grass\" and def_type == \"Fire\") or\n      (atk_type == \"Water\" and def_type == \"Grass\")):\n    multiplier = 0.5\n    print(\"😕 It's not very effective...\")\nelse:\n    multiplier = 1.0\n    print(\"Normal effectiveness.\")\n\nfinal = base_damage * multiplier\nprint(f\"{atk_type} vs {def_type}: {final} damage\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Pokemon Health Check!\n\nWrite conditions to check a Pokemon's battle status. Replace each `???` with a Python expression.\n\n> Use comparisons, `if/elif/else`, and `and`/`or` from the lessons above!",
+     "source": "---\n## ✏️ Your Turn — Pokemon Health Check!\n\nWrite conditions to check a Pokemon's battle status. Replace each `???` with a Python expression.\n\n> Use comparisons, `if/elif/else`, and `and`/`or` from the lessons above!"
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Pokemon Health Check ---\n\npokemon = \"Charizard\"\nhp = 25\nmax_hp = 100\nlevel = 12\n\n# 1. Is the Pokemon alive?\nis_alive = ???\n\n# 2. What percentage of HP does it have left?\nhealth_pct = ???\n\n# 3. What is its status?\n#    Above 50% -> \"Healthy\"\n#    Above 20% -> \"Injured\"\n#    Otherwise -> \"Critical\"\nif ???:\n    status = \"Healthy\"\nelif ???:\n    status = \"Injured\"\nelse:\n    status = \"Critical\"\n\n# 4. Can it evolve? Must be alive and at least level 16\ncan_evolve = ???\n\nprint(f\"{pokemon}: {hp}/{max_hp} HP ({health_pct}%%)\")\nprint(f\"Status: {status}\")\nprint(f\"Alive? {is_alive}\")\nprint(f\"Can evolve? {can_evolve}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(3, locals())"
+    }
+   ]
+  },
+  "4": {
+   "num": 4,
+   "title": "🔁 Loops",
+   "desc": "for, while, range, break",
+   "badge": "🔁",
+   "xp": 80,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🔁 Chapter 4 — Loops\n\nLoops let you repeat code — like Scratch's **\"repeat\"** and **\"forever\"** blocks.\n\n**What you will learn:**\n- `for` loop with `range()` — repeat a fixed number of times\n- `for` loop with a list — do something for each item\n- `while` loop — repeat until a condition is False\n- `break` — escape a loop early",
+     "source": "# 🔁 Chapter 4 — Loops\n\nLoops let you repeat code — like Scratch's **\"repeat\"** and **\"forever\"** blocks.\n\n**What you will learn:**\n- `for` loop with `range()` — repeat a fixed number of times\n- `for` loop with a list — do something for each item\n- `while` loop — repeat until a condition is False\n- `break` — escape a loop early"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `for` + `range()`: Repeat N times\n\nLike Scratch's **repeat (10)** block.\n\n```python\nfor i in range(5):   # i goes 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0).",
+     "source": "---\n## 📖 Lesson 1 — `for` + `range()`: Repeat N times\n\nLike Scratch's **repeat (10)** block.\n\n```python\nfor i in range(5):   # i goes 0, 1, 2, 3, 4\n    print(i)\n```\n\n> `range(5)` = the numbers 0, 1, 2, 3, 4 (5 values, starting from 0)."
+    },
+    {
+     "type": "code",
+     "source": "# Train your Pokémon 5 times!\nlevel = 1\n\nfor i in range(5):\n    level = level + 1\n    print(f\"Training session {i + 1}... Level is now {level}!\")\n\nprint(f\"\\n🎉 Final level: {level}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — `for` with a list\n\nGo through each item in a list, one at a time.",
+     "source": "---\n## 📖 Lesson 2 — `for` with a list\n\nGo through each item in a list, one at a time."
+    },
+    {
+     "type": "code",
+     "source": "team = [\"Pikachu\", \"Charizard\", \"Mewtwo\", \"Eevee\"]\n\nprint(\"My team:\")\nfor pokemon in team:\n    print(f\"  ⭐ {pokemon}\")\n\nprint(f\"\\nTeam size: {len(team)}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — `while`: Repeat until done\n\nLike Scratch's **\"repeat until\"** block.\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\n> ⚠️ If the condition never becomes False you get an **infinite loop** — the\n> program freezes! Always make sure something changes.",
+     "source": "---\n## 📖 Lesson 3 — `while`: Repeat until done\n\nLike Scratch's **\"repeat until\"** block.\n\n```python\nwhile condition:\n    # runs while condition is True\n    # MUST change something to eventually make it False!\n```\n\n> ⚠️ If the condition never becomes False you get an **infinite loop** — the\n> program freezes! Always make sure something changes."
+    },
+    {
+     "type": "code",
+     "source": "# Battle! Attack until the enemy faints.\nenemy_hp = 100\nmy_attack = 25\nturns = 0\n\nwhile enemy_hp > 0:\n    enemy_hp = enemy_hp - my_attack\n    turns = turns + 1\n    print(f\"  Turn {turns}: enemy HP = {enemy_hp}\")\n\nprint(f\"\\n🏆 Enemy fainted after {turns} turns!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 4 — `break`: Escape a loop early\n\n`break` immediately exits the current loop.",
+     "source": "---\n## 📖 Lesson 4 — `break`: Escape a loop early\n\n`break` immediately exits the current loop."
+    },
+    {
+     "type": "code",
+     "source": "import random\n\n# Wild encounter — try to catch a Pokémon!\nfor attempt in range(10):\n    catch_chance = random.randint(1, 100)\n    print(f\"  Attempt {attempt + 1}: rolled {catch_chance}...\")\n    if catch_chance > 70:\n        print(f\"  ✅ Caught on attempt {attempt + 1}!\")\n        break\nelse:\n    # This runs only if we never broke out of the loop\n    print(\"  😢 The Pokémon escaped after 10 attempts!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Training & Battles!\n\nReplace each `???` with the right code.",
+     "source": "---\n## ✏️ Your Turn — Training & Battles!\n\nReplace each `???` with the right code."
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Training & Battles ---\n\n# 1. Use a for loop to calculate the total damage of 6 attacks.\n#    Each attack does 15 damage. What is the total?\ntotal_damage = 0\nfor i in range(6):\n    total_damage = total_damage + ???\n\n# 2. An enemy has 80 HP. You deal 25 damage per turn.\n#    Use a while loop to count how many turns to KO it.\nenemy_hp = 80\nturns = 0\nwhile ???:\n    enemy_hp = enemy_hp - 25\n    turns = turns + 1\n\n# 3. Count how many Pokémon in this list are Electric type.\ntypes = [\"Fire\", \"Electric\", \"Water\", \"Electric\", \"Grass\", \"Electric\"]\nelectric_count = 0\nfor t in types:\n    if t == ???:\n        electric_count = electric_count + 1\n\nprint(f\"Total damage: {total_damage}\")\nprint(f\"Turns to KO: {turns}\")\nprint(f\"Electric types: {electric_count}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(4, locals())"
+    }
+   ]
+  },
+  "5": {
+   "num": 5,
+   "title": "📋 Lists",
+   "desc": "create, index, sort",
+   "badge": "📋",
+   "xp": 80,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- List comprehensions (create lists in one line!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful.",
+     "source": "# 📋 Chapter 5 — Lists\n\nA **list** stores multiple values in order — like a team of Pokémon!\n\n**What you will learn:**\n- Create a list and access items by index\n- Add and remove items\n- Loop through a list\n- Sort a list\n- List comprehensions (create lists in one line!)\n\n> In Scratch you have **\"lists\"** blocks — Python lists are very similar but more powerful."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Create & access a list\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\n#        index 0     index 1      index 2\n```\n\n⚠️ Indexing starts at **0**, not 1!",
+     "source": "---\n## 📖 Lesson 1 — Create & access a list\n\n```python\nteam = [\"Pikachu\", \"Charizard\", \"Mewtwo\"]\n#        index 0     index 1      index 2\n```\n\n⚠️ Indexing starts at **0**, not 1!"
+    },
+    {
+     "type": "code",
+     "source": "team = [\"Pikachu\", \"Charizard\", \"Mewtwo\", \"Eevee\", \"Snorlax\"]\n\nprint(team[0])     # Pikachu  (first)\nprint(team[2])     # Mewtwo   (third)\nprint(team[-1])    # Snorlax  (last!)\nprint(len(team))   # 5\n\n# Slicing — get a sub-list\nprint(team[1:3])   # ['Charizard', 'Mewtwo']"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Add and remove items\n\n| Method | What it does |\n|--------|------------|\n| `list.append(x)` | Add `x` at the end |\n| `list.remove(x)` | Remove the first `x` found |\n| `list.pop()` | Remove and return the last item |\n| `list.insert(i, x)` | Insert `x` at position `i` |",
+     "source": "---\n## 📖 Lesson 2 — Add and remove items\n\n| Method | What it does |\n|--------|------------|\n| `list.append(x)` | Add `x` at the end |\n| `list.remove(x)` | Remove the first `x` found |\n| `list.pop()` | Remove and return the last item |\n| `list.insert(i, x)` | Insert `x` at position `i` |"
+    },
+    {
+     "type": "code",
+     "source": "team = [\"Pikachu\", \"Charizard\"]\nprint(\"Before:\", team)\n\nteam.append(\"Mewtwo\")          # add at the end\nprint(\"After append:\", team)\n\nteam.insert(1, \"Gengar\")        # insert at position 1\nprint(\"After insert:\", team)\n\nteam.remove(\"Charizard\")        # remove by name\nprint(\"After remove:\", team)\n\nlast = team.pop()               # remove and return last\nprint(f\"Popped: {last}\")\nprint(\"Final:\", team)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Sort, min, max\n\nUseful list functions:",
+     "source": "---\n## 📖 Lesson 3 — Sort, min, max\n\nUseful list functions:"
+    },
+    {
+     "type": "code",
+     "source": "hp_values = [35, 78, 106, 45, 79]\n\nprint(f\"Min HP: {min(hp_values)}\")\nprint(f\"Max HP: {max(hp_values)}\")\nprint(f\"Sum HP: {sum(hp_values)}\")\n\n# sorted() returns a new sorted list\nprint(f\"Sorted: {sorted(hp_values)}\")\nprint(f\"Reversed: {sorted(hp_values, reverse=True)}\")\n\n# sort names alphabetically\nnames = [\"Mewtwo\", \"Abra\", \"Pikachu\", \"Charizard\"]\nprint(f\"Sorted names: {sorted(names)}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```",
+     "source": "---\n## 📖 Lesson 4 — List comprehensions (magic one-liners!)\n\nCreate a new list by transforming or filtering another list.\n\n```python\n# Old way:\nresult = []\nfor x in items:\n    result.append(x * 2)\n\n# List comprehension:\nresult = [x * 2 for x in items]\n```"
+    },
+    {
+     "type": "code",
+     "source": "hp_values = [35, 78, 106, 45, 79, 150]\n\n# Double all HP values\ndoubled = [hp * 2 for hp in hp_values]\nprint(f\"Doubled: {doubled}\")\n\n# Filter: only HP above 70\nstrong = [hp for hp in hp_values if hp > 70]\nprint(f\"Strong (>70 HP): {strong}\")\n\n# Count: how many are above 70?\nprint(f\"Count: {len(strong)}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Build your dream team!\n\nReplace each `???`.",
+     "source": "---\n## ✏️ Your Turn — Build your dream team!\n\nReplace each `???`."
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Build your dream team ---\n\n# Start with these Pokémon\nteam = [\"Pikachu\", \"Bulbasaur\", \"Squirtle\"]\n\n# 1. Add \"Charizard\" to the team\n???\n\n# 2. Add \"Mewtwo\" to the team\n???\n\n# 3. Remove \"Bulbasaur\" from the team\n???\n\n# 4. How many Pokémon are in the team now?\nteam_size = ???\n\n# 5. Sort the team alphabetically (use sorted()) and store in sorted_team\nsorted_team = ???\n\n# 6. What is the first Pokémon alphabetically?\nfirst_alpha = sorted_team[???]\n\nprint(f\"Team: {team}\")\nprint(f\"Size: {team_size}\")\nprint(f\"Sorted: {sorted_team}\")\nprint(f\"First alphabetically: {first_alpha}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(5, locals())"
+    }
+   ]
+  },
+  "6": {
+   "num": 6,
+   "title": "📖 Dictionaries",
+   "desc": "dicts, Pokédex",
+   "badge": "📖",
+   "xp": 90,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 📖 Chapter 6 — Dictionaries\n\nA **dictionary** (`dict`) maps **keys** to **values** — like a real\nPokédex where you look up a Pokémon by name and get its info!\n\n**What you will learn:**\n- Create a dict and access values by key\n- Add, update, and loop through a dict\n- Nested dicts and lists of dicts\n- Build a Pokédex!",
+     "source": "# 📖 Chapter 6 — Dictionaries\n\nA **dictionary** (`dict`) maps **keys** to **values** — like a real\nPokédex where you look up a Pokémon by name and get its info!\n\n**What you will learn:**\n- Create a dict and access values by key\n- Add, update, and loop through a dict\n- Nested dicts and lists of dicts\n- Build a Pokédex!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Create and read a dict\n\n```python\npikachu = {\n    \"name\": \"Pikachu\",      # key → value\n    \"type\": \"Electric\",\n    \"hp\":   35,\n}\nprint(pikachu[\"type\"])  # → Electric\n```\n\nAccess a value with `dict[\"key\"]`. The key is always a string in quotes.",
+     "source": "---\n## 📖 Lesson 1 — Create and read a dict\n\n```python\npikachu = {\n    \"name\": \"Pikachu\",      # key → value\n    \"type\": \"Electric\",\n    \"hp\":   35,\n}\nprint(pikachu[\"type\"])  # → Electric\n```\n\nAccess a value with `dict[\"key\"]`. The key is always a string in quotes."
+    },
+    {
+     "type": "code",
+     "source": "pikachu = {\n    \"name\": \"Pikachu\",\n    \"type\": \"Electric\",\n    \"hp\": 35,\n    \"attack\": 55,\n    \"defense\": 40,\n}\n\nprint(pikachu[\"name\"])      # Pikachu\nprint(pikachu[\"hp\"])        # 35\nprint(pikachu[\"attack\"])    # 55\n\n# Update a value\npikachu[\"hp\"] = 45\nprint(f\"New HP: {pikachu['hp']}\")\n\n# Add a new key\npikachu[\"level\"] = 25\nprint(pikachu)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Loop through a dict\n\n| Method | What you get |\n|--------|------------|\n| `dict.keys()` | All keys |\n| `dict.values()` | All values |\n| `dict.items()` | All (key, value) pairs |",
+     "source": "---\n## 📖 Lesson 2 — Loop through a dict\n\n| Method | What you get |\n|--------|------------|\n| `dict.keys()` | All keys |\n| `dict.values()` | All values |\n| `dict.items()` | All (key, value) pairs |"
+    },
+    {
+     "type": "code",
+     "source": "pikachu = {\"name\": \"Pikachu\", \"type\": \"Electric\", \"hp\": 35, \"attack\": 55}\n\n# Loop through key-value pairs\nfor key, value in pikachu.items():\n    print(f\"  {key}: {value}\")\n\nprint()\n\n# Check if a key exists\nif \"type\" in pikachu:\n    print(f\"Type is: {pikachu['type']}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — List of dicts = Pokédex!\n\nA **list of dicts** is one of the most useful structures in Python.\nEach dict has the same keys. You can loop, filter, sort, etc.",
+     "source": "---\n## 📖 Lesson 3 — List of dicts = Pokédex!\n\nA **list of dicts** is one of the most useful structures in Python.\nEach dict has the same keys. You can loop, filter, sort, etc."
+    },
+    {
+     "type": "code",
+     "source": "pokedex = [\n    {\"name\": \"Pikachu\",   \"type\": \"Electric\", \"hp\": 35,  \"attack\": 55},\n    {\"name\": \"Charizard\", \"type\": \"Fire\",     \"hp\": 78,  \"attack\": 84},\n    {\"name\": \"Blastoise\", \"type\": \"Water\",    \"hp\": 79,  \"attack\": 83},\n    {\"name\": \"Mewtwo\",    \"type\": \"Psychic\",  \"hp\": 106, \"attack\": 110},\n    {\"name\": \"Eevee\",     \"type\": \"Normal\",   \"hp\": 55,  \"attack\": 55},\n]\n\n# Print all Pokémon\nfor p in pokedex:\n    print(f\"  {p['name']:<12} {p['type']:<10} HP:{p['hp']}  ATK:{p['attack']}\")\n\n# Find the strongest (highest attack)\nstrongest = max(pokedex, key=lambda p: p[\"attack\"])\nprint(f\"\\n🏆 Strongest: {strongest['name']} (ATK: {strongest['attack']})\")\n\n# Filter: only Fire and Water types\nselected = [p for p in pokedex if p[\"type\"] in [\"Fire\", \"Water\"]]\nprint(f\"Fire/Water: {[p['name'] for p in selected]}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Build a Pokédex!\n\nReplace each `???`.",
+     "source": "---\n## ✏️ Your Turn — Build a Pokédex!\n\nReplace each `???`."
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Build your Pokédex ---\n\n# Here is a small Pokédex:\npokedex = [\n    {\"name\": \"Pikachu\",   \"type\": \"Electric\", \"hp\": 35},\n    {\"name\": \"Charizard\", \"type\": \"Fire\",     \"hp\": 78},\n    {\"name\": \"Bulbasaur\", \"type\": \"Grass\",    \"hp\": 45},\n    {\"name\": \"Squirtle\",  \"type\": \"Water\",    \"hp\": 44},\n    {\"name\": \"Gengar\",    \"type\": \"Ghost\",    \"hp\": 60},\n]\n\n# 1. What is Charizard's type? Access it from the pokedex list.\n#    (Charizard is at index 1)\ncharizard_type = pokedex[???][???]\n\n# 2. What is the total HP of all Pokémon?\n#    Use a for loop or sum() with a list comprehension.\ntotal_hp = ???\n\n# 3. How many Pokémon have HP > 50?\nstrong_count = len([p for p in pokedex if ???])\n\n# 4. Add a new Pokémon to the Pokédex:\n#    Mewtwo, Psychic type, 106 HP\npokedex.append(???)\n\nprint(f\"Charizard type: {charizard_type}\")\nprint(f\"Total HP: {total_hp}\")\nprint(f\"Strong Pokémon (>50 HP): {strong_count}\")\nprint(f\"Pokédex size: {len(pokedex)}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(6, locals())"
+    }
+   ]
+  },
+  "7": {
+   "num": 7,
+   "title": "🧩 Functions",
+   "desc": "def, return, params",
+   "badge": "🧩",
+   "xp": 100,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🧩 Chapter 7 — Functions\n\nA **function** is a reusable block of code — like a **custom block** in Scratch!\n\n**What you will learn:**\n- `def` — define a function\n- Parameters and `return`\n- Default values for parameters\n- Functions that call other functions\n- Build the Pokémon battle system!",
+     "source": "# 🧩 Chapter 7 — Functions\n\nA **function** is a reusable block of code — like a **custom block** in Scratch!\n\n**What you will learn:**\n- `def` — define a function\n- Parameters and `return`\n- Default values for parameters\n- Functions that call other functions\n- Build the Pokémon battle system!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `def` and `return`\n\n```python\ndef function_name(parameters):\n    # code inside the function\n    return result\n```\n\n- `def` = \"I am defining a function\"\n- Parameters = inputs the function receives\n- `return` = the result sent back\n- Indentation (4 spaces) = everything inside the function",
+     "source": "---\n## 📖 Lesson 1 — `def` and `return`\n\n```python\ndef function_name(parameters):\n    # code inside the function\n    return result\n```\n\n- `def` = \"I am defining a function\"\n- Parameters = inputs the function receives\n- `return` = the result sent back\n- Indentation (4 spaces) = everything inside the function"
+    },
+    {
+     "type": "code",
+     "source": "def calculate_damage(attack, defense, power):\n    damage = (attack / defense) * power\n    return damage\n\n# Use the function\nresult = calculate_damage(55, 40, 50)\nprint(f\"Damage: {result}\")\n\n# Use it again with different values!\nresult2 = calculate_damage(84, 78, 60)\nprint(f\"Damage: {result2:.1f}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Default values\n\nGive a parameter a default so it becomes optional.",
+     "source": "---\n## 📖 Lesson 2 — Default values\n\nGive a parameter a default so it becomes optional."
+    },
+    {
+     "type": "code",
+     "source": "def heal(pokemon_name, current_hp, amount=20):\n    new_hp = current_hp + amount\n    print(f\"💊 {pokemon_name} healed! HP: {current_hp} → {new_hp}\")\n    return new_hp\n\n# Use default healing amount (20)\nhp = heal(\"Pikachu\", 15)\n\n# Use a custom healing amount\nhp = heal(\"Pikachu\", hp, amount=50)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Functions calling functions\n\nFunctions can call other functions — that is how you build complex systems\nfrom simple pieces!",
+     "source": "---\n## 📖 Lesson 3 — Functions calling functions\n\nFunctions can call other functions — that is how you build complex systems\nfrom simple pieces!"
+    },
+    {
+     "type": "code",
+     "source": "def get_type_multiplier(atk_type, def_type):\n    \"\"\"Return 2.0, 0.5, or 1.0 based on type matchup.\"\"\"\n    super_effective = [\n        (\"Fire\", \"Grass\"), (\"Grass\", \"Water\"), (\"Water\", \"Fire\"),\n    ]\n    not_effective = [\n        (\"Fire\", \"Water\"), (\"Grass\", \"Fire\"), (\"Water\", \"Grass\"),\n    ]\n    if (atk_type, def_type) in super_effective:\n        return 2.0\n    elif (atk_type, def_type) in not_effective:\n        return 0.5\n    return 1.0\n\ndef battle_damage(atk, dfn, power, atk_type, def_type):\n    \"\"\"Calculate damage with type effectiveness.\"\"\"\n    raw = (atk / dfn) * power\n    mult = get_type_multiplier(atk_type, def_type)  # ← calls the other function!\n    return raw * mult\n\n# Fire vs Grass — super effective!\ndmg = battle_damage(84, 49, 50, \"Fire\", \"Grass\")\nprint(f\"🔥→🌿  Damage: {dmg:.1f}  (super effective!)\")\n\n# Fire vs Water — not very effective\ndmg = battle_damage(84, 83, 50, \"Fire\", \"Water\")\nprint(f\"🔥→💧  Damage: {dmg:.1f}  (not very effective)\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Build battle functions!\n\nComplete the functions below by replacing `???`.",
+     "source": "---\n## ✏️ Your Turn — Build battle functions!\n\nComplete the functions below by replacing `???`."
+    },
+    {
+     "type": "exercise",
+     "source": "# --- Battle Functions ---\n\n# 1. Write a function that calculates damage.\n#    Formula: (attack / defense) * power\ndef calc_damage(attack, defense, power):\n    return ???\n\n# 2. Write a function that checks if a Pokémon is alive.\n#    Return True if hp > 0, False otherwise.\ndef is_alive(hp):\n    return ???\n\n# 3. Write a function that heals a Pokémon.\n#    Add heal_amount to current_hp, but do NOT exceed max_hp.\n#    Hint: use min(current_hp + heal_amount, max_hp)\ndef heal(current_hp, max_hp, heal_amount=20):\n    return ???\n\n# Test your functions:\ndmg = calc_damage(60, 40, 50)\nprint(f\"Damage: {dmg}\")\n\nprint(f\"Alive at 10 HP? {is_alive(10)}\")\nprint(f\"Alive at 0 HP? {is_alive(0)}\")\n\nnew_hp = heal(30, 100)\nprint(f\"Healed: 30 → {new_hp}\")\n\ncapped = heal(90, 100, 30)\nprint(f\"Healed (capped): 90 → {capped}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(7, locals())"
+    }
+   ]
+  },
+  "8": {
+   "num": 8,
+   "title": "💾 Files & JSON",
+   "desc": "read/write, save/load",
+   "badge": "💾",
+   "xp": 100,
+   "season": 1,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 💾 Chapter 8 — Files & JSON\n\nSave your game data to a file and load it back!\n\n**What you will learn:**\n- Write text to a file with `open()`\n- Read text from a file\n- Save Python data (dicts, lists) to JSON\n- Load data from a JSON file\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!",
+     "source": "# 💾 Chapter 8 — Files & JSON\n\nSave your game data to a file and load it back!\n\n**What you will learn:**\n- Write text to a file with `open()`\n- Read text from a file\n- Save Python data (dicts, lists) to JSON\n- Load data from a JSON file\n\n> JSON = JavaScript Object Notation — a universal format for data.\n> It looks exactly like Python dicts and lists!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Write to a file\n\n```python\nwith open(\"file.txt\", \"w\") as f:   # \"w\" = write mode\n    f.write(\"Hello!\\n\")\n```\n\n- `\"w\"` = **write** (creates or overwrites the file)\n- `\"a\"` = **append** (adds to the end)\n- `with` automatically closes the file when done",
+     "source": "---\n## 📖 Lesson 1 — Write to a file\n\n```python\nwith open(\"file.txt\", \"w\") as f:   # \"w\" = write mode\n    f.write(\"Hello!\\n\")\n```\n\n- `\"w\"` = **write** (creates or overwrites the file)\n- `\"a\"` = **append** (adds to the end)\n- `with` automatically closes the file when done"
+    },
+    {
+     "type": "code",
+     "source": "# Save a battle log!\nwith open(\"battle_log.txt\", \"w\") as f:\n    f.write(\"=== Pokémon Battle Log ===\\n\")\n    f.write(\"Pikachu used Thunderbolt!\\n\")\n    f.write(\"It's super effective!\\n\")\n    f.write(\"Charizard fainted!\\n\")\n\nprint(\"✅ File saved!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Read from a file",
+     "source": "---\n## 📖 Lesson 2 — Read from a file"
+    },
+    {
+     "type": "code",
+     "source": "# Read the file we just created\nwith open(\"battle_log.txt\", \"r\") as f:   # \"r\" = read mode\n    content = f.read()\n\nprint(content)\n\n# Read line by line\nwith open(\"battle_log.txt\", \"r\") as f:\n    lines = f.readlines()\n\nprint(f\"The file has {len(lines)} lines.\")\nprint(f\"First line: {lines[0].strip()}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — JSON: Save and load game data\n\nJSON is perfect for saving dicts and lists.\n\n```python\nimport json\n\n# Save\nwith open(\"data.json\", \"w\") as f:\n    json.dump(my_dict, f)\n\n# Load\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n```",
+     "source": "---\n## 📖 Lesson 3 — JSON: Save and load game data\n\nJSON is perfect for saving dicts and lists.\n\n```python\nimport json\n\n# Save\nwith open(\"data.json\", \"w\") as f:\n    json.dump(my_dict, f)\n\n# Load\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n```"
+    },
+    {
+     "type": "code",
+     "source": "import json\n\n# Our team data\nsave_data = {\n    \"trainer\": \"Ash\",\n    \"badges\": 3,\n    \"team\": [\n        {\"name\": \"Pikachu\", \"hp\": 35, \"level\": 25},\n        {\"name\": \"Charizard\", \"hp\": 78, \"level\": 36},\n    ]\n}\n\n# Save to JSON\nwith open(\"save_game.json\", \"w\") as f:\n    json.dump(save_data, f, indent=2)\nprint(\"✅ Game saved!\")\n\n# Load from JSON\nwith open(\"save_game.json\", \"r\") as f:\n    loaded = json.load(f)\n\nprint(f\"Trainer: {loaded['trainer']}\")\nprint(f\"Badges: {loaded['badges']}\")\nprint(f\"Team: {[p['name'] for p in loaded['team']]}\")\nprint(f\"Data matches? {loaded == save_data}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Your Turn — Save and load your Pokédex!\n\nReplace each `???`.",
+     "source": "---\n## ✏️ Your Turn — Save and load your Pokédex!\n\nReplace each `???`."
+    },
+    {
+     "type": "exercise",
+     "source": "import json\n\n# --- Save & Load your Pokédex ---\n\nmy_pokedex = {\n    \"trainer\": \"Basile\",\n    \"pokemon\": [\n        {\"name\": \"Pikachu\", \"type\": \"Electric\", \"hp\": 35},\n        {\"name\": \"Charizard\", \"type\": \"Fire\", \"hp\": 78},\n        {\"name\": \"Mewtwo\", \"type\": \"Psychic\", \"hp\": 106},\n    ]\n}\n\n# 1. Save the Pokédex to \"my_pokedex.json\" using json.dump\n#    Don't forget: \"w\" mode and indent=2 for readability\nwith open(???, ???) as f:\n    json.???(my_pokedex, f, indent=2)\n\n# 2. Load it back from the file\nwith open(\"my_pokedex.json\", \"r\") as f:\n    loaded_pokedex = json.???(f)\n\n# 3. How many Pokémon are in the loaded data?\npokemon_count = len(loaded_pokedex[???])\n\n# 4. Does the loaded data match the original?\ndata_matches = loaded_pokedex == my_pokedex\n\nprint(f\"Saved and loaded {pokemon_count} Pokémon\")\nprint(f\"Data matches: {data_matches}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(8, locals())"
+    }
+   ]
+  },
+  "9": {
+   "num": 9,
+   "title": "🏆 BOSS — Pokémon Arena",
+   "desc": "combine everything!",
+   "badge": "🏆",
+   "xp": 200,
+   "season": 1,
+   "boss": true,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🏆 BOSS — Pokémon Arena!\n\nTime to combine **everything** you learned in Season 1!\n\nYou will build a complete Pokémon battle game step by step.\nEach step uses concepts from the previous chapters.\n\n| Step | Concept used |\n|------|-------------|\n| 1 | Dicts — Pokémon data |\n| 2 | Functions — damage & battle |\n| 3 | Loops + Conditions — battle loop |\n| 4 | Lists — Team management |\n| 5 | Files — Save results |\n\n> Follow each step and customize it your way! 🎮",
+     "source": "# 🏆 BOSS — Pokémon Arena!\n\nTime to combine **everything** you learned in Season 1!\n\nYou will build a complete Pokémon battle game step by step.\nEach step uses concepts from the previous chapters.\n\n| Step | Concept used |\n|------|-------------|\n| 1 | Dicts — Pokémon data |\n| 2 | Functions — damage & battle |\n| 3 | Loops + Conditions — battle loop |\n| 4 | Lists — Team management |\n| 5 | Files — Save results |\n\n> Follow each step and customize it your way! 🎮"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 1 — Define your Pokémon\n\nEach Pokémon is a dict.",
+     "source": "---\n## Step 1 — Define your Pokémon\n\nEach Pokémon is a dict."
+    },
+    {
+     "type": "code",
+     "source": "import random\nimport json\n\n# All available Pokémon\nALL_POKEMON = [\n    {\"name\": \"Pikachu\",   \"type\": \"Electric\", \"hp\": 35,  \"attack\": 55,  \"defense\": 40},\n    {\"name\": \"Charizard\", \"type\": \"Fire\",     \"hp\": 78,  \"attack\": 84,  \"defense\": 78},\n    {\"name\": \"Blastoise\", \"type\": \"Water\",    \"hp\": 79,  \"attack\": 83,  \"defense\": 100},\n    {\"name\": \"Venusaur\",  \"type\": \"Grass\",    \"hp\": 80,  \"attack\": 82,  \"defense\": 83},\n    {\"name\": \"Mewtwo\",    \"type\": \"Psychic\",  \"hp\": 106, \"attack\": 110, \"defense\": 90},\n    {\"name\": \"Gengar\",    \"type\": \"Ghost\",    \"hp\": 60,  \"attack\": 65,  \"defense\": 60},\n    {\"name\": \"Dragonite\", \"type\": \"Dragon\",   \"hp\": 91,  \"attack\": 134, \"defense\": 95},\n    {\"name\": \"Snorlax\",   \"type\": \"Normal\",   \"hp\": 160, \"attack\": 110, \"defense\": 65},\n]\n\n# Print them all!\nprint(\"🏟️ POKÉMON ARENA — Available fighters:\\n\")\nfor i, p in enumerate(ALL_POKEMON):\n    print(f\"  {i+1}. {p['name']:<12} {p['type']:<10} \"\n          f\"HP:{p['hp']:<4} ATK:{p['attack']:<4} DEF:{p['defense']}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 2 — Battle functions",
+     "source": "---\n## Step 2 — Battle functions"
+    },
+    {
+     "type": "code",
+     "source": "def get_multiplier(atk_type, def_type):\n    \"\"\"Return type effectiveness multiplier.\"\"\"\n    chart = {\n        (\"Fire\", \"Grass\"): 2.0,  (\"Grass\", \"Water\"): 2.0,  (\"Water\", \"Fire\"): 2.0,\n        (\"Fire\", \"Water\"): 0.5,  (\"Grass\", \"Fire\"): 0.5,   (\"Water\", \"Grass\"): 0.5,\n        (\"Electric\", \"Water\"): 2.0, (\"Electric\", \"Grass\"): 0.5,\n    }\n    return chart.get((atk_type, def_type), 1.0)\n\ndef calc_damage(attacker, defender):\n    \"\"\"Calculate damage from attacker to defender.\"\"\"\n    raw = (attacker[\"attack\"] / defender[\"defense\"]) * 50\n    mult = get_multiplier(attacker[\"type\"], defender[\"type\"])\n    # Add some randomness (±20%)\n    luck = random.uniform(0.8, 1.2)\n    return int(raw * mult * luck)\n\ndef display_hp(name, hp, max_hp):\n    \"\"\"Show a visual HP bar.\"\"\"\n    bar_len = 20\n    filled = max(0, int(hp / max_hp * bar_len))\n    bar = \"█\" * filled + \"░\" * (bar_len - filled)\n    print(f\"  {name:<12} [{bar}] {hp}/{max_hp} HP\")\n\nprint(\"✅ Battle functions ready!\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 3 — Fight! (Run this cell to watch a battle)",
+     "source": "---\n## Step 3 — Fight! (Run this cell to watch a battle)"
+    },
+    {
+     "type": "code",
+     "source": "def battle(poke1_data, poke2_data):\n    \"\"\"Simulate a full battle. Returns the winner's name.\"\"\"\n    # Make copies so we don't modify the originals\n    p1 = dict(poke1_data)\n    p2 = dict(poke2_data)\n    p1[\"max_hp\"] = p1[\"hp\"]\n    p2[\"max_hp\"] = p2[\"hp\"]\n\n    print(f\"\\n⚔️  {p1['name']} vs {p2['name']}!\")\n    print(f\"     ({p1['type']})       ({p2['type']})\\n\")\n\n    turn = 0\n    while p1[\"hp\"] > 0 and p2[\"hp\"] > 0:\n        turn += 1\n        print(f\"--- Turn {turn} ---\")\n\n        # Player 1 attacks\n        dmg = calc_damage(p1, p2)\n        p2[\"hp\"] = max(0, p2[\"hp\"] - dmg)\n        mult = get_multiplier(p1[\"type\"], p2[\"type\"])\n        eff = \" 💥 Super effective!\" if mult > 1 else (\n              \" 😕 Not very effective...\" if mult < 1 else \"\")\n        print(f\"  {p1['name']} attacks! {dmg} damage!{eff}\")\n        display_hp(p2[\"name\"], p2[\"hp\"], p2[\"max_hp\"])\n\n        if p2[\"hp\"] <= 0:\n            break\n\n        # Player 2 attacks\n        dmg = calc_damage(p2, p1)\n        p1[\"hp\"] = max(0, p1[\"hp\"] - dmg)\n        mult = get_multiplier(p2[\"type\"], p1[\"type\"])\n        eff = \" 💥 Super effective!\" if mult > 1 else (\n              \" 😕 Not very effective...\" if mult < 1 else \"\")\n        print(f\"  {p2['name']} attacks! {dmg} damage!{eff}\")\n        display_hp(p1[\"name\"], p1[\"hp\"], p1[\"max_hp\"])\n        print()\n\n    winner = p1[\"name\"] if p1[\"hp\"] > 0 else p2[\"name\"]\n    print(f\"\\n🏆 {winner} wins in {turn} turns!\")\n    return winner\n\n# Run a battle!\nwinner = battle(ALL_POKEMON[0], ALL_POKEMON[1])  # Pikachu vs Charizard"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 4 — Tournament!\n\nRun a 3-round tournament with random matchups.",
+     "source": "---\n## Step 4 — Tournament!\n\nRun a 3-round tournament with random matchups."
+    },
+    {
+     "type": "code",
+     "source": "print(\"\\n🏟️ === POKÉMON ARENA TOURNAMENT ===\")\nprint(\"=\"*40)\n\nfighters = random.sample(ALL_POKEMON, 6)  # pick 6 random Pokémon\nresults = []\n\nfor round_num in range(3):\n    p1 = fighters[round_num * 2]\n    p2 = fighters[round_num * 2 + 1]\n    winner = battle(p1, p2)\n    results.append(winner)\n\nprint(\"\\n\" + \"=\"*40)\nprint(\"🏆 TOURNAMENT RESULTS:\")\nfor i, w in enumerate(results):\n    print(f\"  Round {i+1}: {w} wins!\")\n\ntournament_complete = len(results) == 3\nprint(f\"\\n✅ Tournament complete: {tournament_complete}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 5 — Save the results",
+     "source": "---\n## Step 5 — Save the results"
+    },
+    {
+     "type": "code",
+     "source": "# Save tournament results to JSON\ntournament_data = {\n    \"trainer\": \"Basile\",\n    \"rounds\": len(results),\n    \"winners\": results,\n    \"fighters\": [p[\"name\"] for p in fighters],\n}\n\nwith open(\"tournament_results.json\", \"w\") as f:\n    json.dump(tournament_data, f, indent=2)\n\nprint(\"✅ Results saved to tournament_results.json!\")\nprint()\nprint(json.dumps(tournament_data, indent=2))"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✅ Boss Verification\n\nRun this cell to verify you completed the boss!",
+     "source": "---\n## ✅ Boss Verification\n\nRun this cell to verify you completed the boss!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 🌟 Bonus Challenges (optional!)\n\nIf you want to go further, try these:\n\n1. **Team battle** — Each player has 3 Pokémon. When one faints, the next one comes in.\n2. **Choose your moves** — Each Pokémon has 4 moves with different power levels.\n3. **Level system** — Pokémon gain XP after winning and level up.\n4. **Evolution** — At certain levels, a Pokémon evolves (changes stats and name).\n5. **Pokédex viewer** — Use `input()` to let the player search for a Pokémon by name.\n\nThese are open-ended — there is no single right answer. Be creative! 🚀",
+     "source": "---\n## 🌟 Bonus Challenges (optional!)\n\nIf you want to go further, try these:\n\n1. **Team battle** — Each player has 3 Pokémon. When one faints, the next one comes in.\n2. **Choose your moves** — Each Pokémon has 4 moves with different power levels.\n3. **Level system** — Pokémon gain XP after winning and level up.\n4. **Evolution** — At certain levels, a Pokémon evolves (changes stats and name).\n5. **Pokédex viewer** — Use `input()` to let the player search for a Pokémon by name.\n\nThese are open-ended — there is no single right answer. Be creative! 🚀"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(9, locals())"
+    }
+   ]
+  },
+  "10": {
+   "num": 10,
+   "title": "🏎️ Lists of Lists",
+   "desc": "nested lists, F1 grid",
+   "badge": "🏎️",
+   "xp": 90,
+   "season": 2,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🏎️ Chapter 10 — Lists of Lists (F1 Grid)\n\n<p><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 2 — Formula 1**! 🏁\n\n**What you will learn:**\n- **Nested lists** (lists inside lists) — like a 2D grid\n- **List comprehensions** — build a list in 1 line\n\n> 💡 In Scratch, you only had simple lists. Python lets you nest them!",
+     "source": "# 🏎️ Chapter 10 — Lists of Lists (F1 Grid)\n\n<p><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"140\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 2 — Formula 1**! 🏁\n\n**What you will learn:**\n- **Nested lists** (lists inside lists) — like a 2D grid\n- **List comprehensions** — build a list in 1 line\n\n> 💡 In Scratch, you only had simple lists. Python lets you nest them!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — A list inside a list\n\nAn F1 starting grid has 2 cars per row. We can model it like this:\n```python\ngrid = [\n    [\"Verstappen\", \"Leclerc\"],   # row 1 (pole position)\n    [\"Norris\",     \"Sainz\"],    # row 2\n    [\"Hamilton\",   \"Russell\"], # row 3\n]\n```\nAccess with **two** indices: `grid[0][1]` → `\"Leclerc\"`.",
+     "source": "---\n## 📖 Lesson 1 — A list inside a list\n\nAn F1 starting grid has 2 cars per row. We can model it like this:\n```python\ngrid = [\n    [\"Verstappen\", \"Leclerc\"],   # row 1 (pole position)\n    [\"Norris\",     \"Sainz\"],    # row 2\n    [\"Hamilton\",   \"Russell\"], # row 3\n]\n```\nAccess with **two** indices: `grid[0][1]` → `\"Leclerc\"`."
+    },
+    {
+     "type": "code",
+     "source": "grid = [\n    [\"Verstappen\", \"Leclerc\"],\n    [\"Norris\",     \"Sainz\"],\n    [\"Hamilton\",   \"Russell\"],\n    [\"Alonso\",     \"Stroll\"],\n]\n\nprint(\"🏁 Pole position:\", grid[0][0])\nprint(\"🏁 P2:           \", grid[0][1])\nprint(\"🏁 Row 3 left:   \", grid[2][0])\nprint(\"\\nFull grid:\")\nfor i, row in enumerate(grid):\n    print(f\"  Row {i+1}: {row[0]:<12} {row[1]}\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — List comprehension\n\nInstead of writing a `for` loop to build a list, you can do it in **one line**:\n```python\n# Long way:\nsquares = []\nfor x in range(5):\n    squares.append(x * x)\n\n# Short way (comprehension):\nsquares = [x * x for x in range(5)]\n```\nBoth give `[0, 1, 4, 9, 16]`.",
+     "source": "---\n## 📖 Lesson 2 — List comprehension\n\nInstead of writing a `for` loop to build a list, you can do it in **one line**:\n```python\n# Long way:\nsquares = []\nfor x in range(5):\n    squares.append(x * x)\n\n# Short way (comprehension):\nsquares = [x * x for x in range(5)]\n```\nBoth give `[0, 1, 4, 9, 16]`."
+    },
+    {
+     "type": "code",
+     "source": "drivers = [\"Verstappen\", \"Leclerc\", \"Norris\", \"Sainz\", \"Hamilton\"]\n\n# Long way\nupper1 = []\nfor d in drivers:\n    upper1.append(d.upper())\nprint(upper1)\n\n# Short way (comprehension)\nupper2 = [d.upper() for d in drivers]\nprint(upper2)\n\n# Filter: only short names (≤ 6 letters)\nshort = [d for d in drivers if len(d) <= 6]\nprint(\"Short names:\", short)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Simulate overtaking 🔄\n\nLet's make P3 overtake P2 (swap two cars in the grid).",
+     "source": "---\n## 📖 Lesson 3 — Simulate overtaking 🔄\n\nLet's make P3 overtake P2 (swap two cars in the grid)."
+    },
+    {
+     "type": "code",
+     "source": "grid = [\n    [\"Verstappen\", \"Leclerc\"],\n    [\"Norris\",     \"Sainz\"],\n    [\"Hamilton\",   \"Russell\"],\n]\n\nprint(\"Before overtake — P2:\", grid[0][1], \"| P3:\", grid[1][0])\n\n# Norris (P3) overtakes Leclerc (P2)\ngrid[0][1], grid[1][0] = grid[1][0], grid[0][1]\n\nprint(\"After overtake  — P2:\", grid[0][1], \"| P3:\", grid[1][0])"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Build the full 10-row grid\n\nReplace the `???` to build a starting grid of **10 rows × 2 cars** = 20 drivers.\nUse a **list comprehension** with `range(20)`.",
+     "source": "---\n## ✏️ Exercise — Build the full 10-row grid\n\nReplace the `???` to build a starting grid of **10 rows × 2 cars** = 20 drivers.\nUse a **list comprehension** with `range(20)`."
+    },
+    {
+     "type": "exercise",
+     "source": "drivers_20 = [\n    \"Verstappen\", \"Leclerc\", \"Norris\", \"Sainz\", \"Hamilton\",\n    \"Russell\", \"Alonso\", \"Stroll\", \"Gasly\", \"Ocon\",\n    \"Albon\", \"Sargeant\", \"Hülkenberg\", \"Magnussen\", \"Tsunoda\",\n    \"Ricciardo\", \"Bottas\", \"Zhou\", \"Piastri\", \"Pérez\",\n]\n\n# TODO: build a list of 10 rows, each row = [drivers_20[i*2], drivers_20[i*2+1]]\n# Use a list comprehension with range(10)\ngrid = ???\n\n# Show the result\nfor i, row in enumerate(grid):\n    print(f\"Row {i+1:>2}: {row[0]:<12} {row[1]}\")\n\n# How many rows?\nn_rows = len(grid)\nprint(f\"\\nTotal rows: {n_rows}\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(10, locals())"
+    }
+   ]
+  },
+  "11": {
+   "num": 11,
+   "title": "🏆 Sort & Filter",
+   "desc": "sorted, lambda",
+   "badge": "🏆",
+   "xp": 90,
+   "season": 2,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🏆 Chapter 11 — Sort & Filter (Championship)\n\n<img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"200\" alt=\"Ferrari\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `sorted()` — sort a list (Scratch had no built-in sort!)\n- `lambda` — a tiny one-line function\n- `filter()` — keep only items that match a rule\n",
+     "source": "# 🏆 Chapter 11 — Sort & Filter (Championship)\n\n<img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"200\" alt=\"Ferrari\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `sorted()` — sort a list (Scratch had no built-in sort!)\n- `lambda` — a tiny one-line function\n- `filter()` — keep only items that match a rule\n"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `sorted()` basics\n\n```python\npoints = [25, 18, 15, 10]\nsorted(points)            # → [10, 15, 18, 25]   ascending\nsorted(points, reverse=True)  # → [25, 18, 15, 10]   descending\n```",
+     "source": "---\n## 📖 Lesson 1 — `sorted()` basics\n\n```python\npoints = [25, 18, 15, 10]\nsorted(points)            # → [10, 15, 18, 25]   ascending\nsorted(points, reverse=True)  # → [25, 18, 15, 10]   descending\n```"
+    },
+    {
+     "type": "code",
+     "source": "points = [125, 280, 95, 410, 175]\nprint(\"Original :\", points)\nprint(\"Asc      :\", sorted(points))\nprint(\"Desc     :\", sorted(points, reverse=True))\nprint(\"Original is unchanged:\", points)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — `sorted()` with `key` and `lambda`\n\nIf your list contains **dictionaries**, you must tell Python what to sort by.\n`lambda` is a mini-function on one line:\n```python\nsorted(drivers, key=lambda d: d['points'])\n# means: for each driver d, use d['points'] to sort\n```",
+     "source": "---\n## 📖 Lesson 2 — `sorted()` with `key` and `lambda`\n\nIf your list contains **dictionaries**, you must tell Python what to sort by.\n`lambda` is a mini-function on one line:\n```python\nsorted(drivers, key=lambda d: d['points'])\n# means: for each driver d, use d['points'] to sort\n```"
+    },
+    {
+     "type": "code",
+     "source": "standings = [\n    {'name': 'Verstappen', 'team': 'Red Bull',   'points': 410},\n    {'name': 'Leclerc',    'team': 'Ferrari',    'points': 280},\n    {'name': 'Norris',     'team': 'McLaren',    'points': 350},\n    {'name': 'Sainz',      'team': 'Ferrari',    'points': 220},\n    {'name': 'Hamilton',   'team': 'Mercedes',   'points': 190},\n    {'name': 'Russell',    'team': 'Mercedes',   'points': 175},\n    {'name': 'Alonso',     'team': 'Aston',      'points': 95},\n]\n\n# Sort by points (descending)\nranked = sorted(standings, key=lambda d: d['points'], reverse=True)\n\nprint('🏆 CHAMPIONSHIP STANDINGS')\nprint('-' * 40)\nfor i, d in enumerate(ranked, start=1):\n    print(f\"  P{i:<2} {d['name']:<12} {d['team']:<10} {d['points']:>4} pts\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Filter with a comprehension\n\nWant only Ferrari drivers? Use a **list comprehension** with `if`:\n```python\nferrari = [d for d in standings if d['team'] == 'Ferrari']\n```",
+     "source": "---\n## 📖 Lesson 3 — Filter with a comprehension\n\nWant only Ferrari drivers? Use a **list comprehension** with `if`:\n```python\nferrari = [d for d in standings if d['team'] == 'Ferrari']\n```"
+    },
+    {
+     "type": "code",
+     "source": "# Only Ferrari drivers\nferrari = [d for d in standings if d['team'] == 'Ferrari']\nprint('🐎 Ferrari drivers:')\nfor d in ferrari:\n    print(f\"   {d['name']} — {d['points']} pts\")\n\n# Drivers with more than 200 points\ntop = [d for d in standings if d['points'] > 200]\nprint(f\"\\n🔥 {len(top)} drivers have > 200 points\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Build the constructors' championship\n\nEach team's points = **sum** of its drivers' points.\nCompute the team totals and sort them.",
+     "source": "---\n## ✏️ Exercise — Build the constructors' championship\n\nEach team's points = **sum** of its drivers' points.\nCompute the team totals and sort them."
+    },
+    {
+     "type": "exercise",
+     "source": "# Step 1: list of all unique team names\nteams = list({d['team'] for d in standings})\nprint('Teams:', teams)\n\n# Step 2: total points per team — TODO\n# Hint: for each team, sum d['points'] for d in standings if d['team'] == team\nteam_totals = ???   # should be a list of dicts: [{'team': ..., 'points': ...}, ...]\n\n# Step 3: sort by points, descending — TODO\nranking = ???\n\nprint('\\n🏆 CONSTRUCTORS CHAMPIONSHIP')\nfor i, t in enumerate(ranking, start=1):\n    print(f\"  P{i}  {t['team']:<10} {t['points']:>4} pts\")"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(11, locals())"
+    }
+   ]
+  },
+  "12": {
+   "num": 12,
+   "title": "🎲 Modules & Random",
+   "desc": "import, random, simulator",
+   "badge": "🎲",
+   "xp": 100,
+   "season": 2,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🎲 Chapter 12 — Modules & Random (Race Simulator)\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `import` — bring extra tools into your program\n- `random` — generate random numbers (like Scratch's *pick random*)\n- Build a **mini race simulator** with random events!\n",
+     "source": "# 🎲 Chapter 12 — Modules & Random (Race Simulator)\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"160\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `import` — bring extra tools into your program\n- `random` — generate random numbers (like Scratch's *pick random*)\n- Build a **mini race simulator** with random events!\n"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `import` a module\n\nA **module** is a toolbox. To use it, write `import` at the top of your file.\n```python\nimport random\nrandom.randint(1, 6)   # random number from 1 to 6 (like a die)\nrandom.choice([...])   # pick one item from a list\nrandom.shuffle(list)   # mix the list in place\n```",
+     "source": "---\n## 📖 Lesson 1 — `import` a module\n\nA **module** is a toolbox. To use it, write `import` at the top of your file.\n```python\nimport random\nrandom.randint(1, 6)   # random number from 1 to 6 (like a die)\nrandom.choice([...])   # pick one item from a list\nrandom.shuffle(list)   # mix the list in place\n```"
+    },
+    {
+     "type": "code",
+     "source": "import random\n\n# Roll a die\nfor _ in range(5):\n    print('🎲', random.randint(1, 6))\n\n# Pick a random circuit\ntracks = ['Monaco', 'Silverstone', 'Monza', 'Spa', 'Suzuka']\nprint('\\nNext race:', random.choice(tracks))"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Reproducible randomness with `seed`\n\nIf you set a **seed**, you always get the same random numbers — useful for testing!\n```python\nrandom.seed(42)\n```",
+     "source": "---\n## 📖 Lesson 2 — Reproducible randomness with `seed`\n\nIf you set a **seed**, you always get the same random numbers — useful for testing!\n```python\nrandom.seed(42)\n```"
+    },
+    {
+     "type": "code",
+     "source": "import random\nrandom.seed(42)\nprint([random.randint(1, 100) for _ in range(5)])\n\nrandom.seed(42)  # same seed → same numbers\nprint([random.randint(1, 100) for _ in range(5)])"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Random race events 🌧️\n\nEach lap, something might happen: rain, safety car, puncture...",
+     "source": "---\n## 📖 Lesson 3 — Random race events 🌧️\n\nEach lap, something might happen: rain, safety car, puncture..."
+    },
+    {
+     "type": "code",
+     "source": "import random\n\nevents = [\n    ('🌧️ Rain starts',       0.10),\n    ('🚨 Safety car',        0.05),\n    ('💥 Puncture',          0.03),\n    ('⚡ Fastest lap',        0.15),\n    ('☀️ Clear lap',         0.67),\n]\n\ndef random_event():\n    r = random.random()  # number between 0 and 1\n    cum = 0\n    for label, prob in events:\n        cum += prob\n        if r <= cum:\n            return label\n    return events[-1][0]\n\nrandom.seed(0)\nfor lap in range(1, 11):\n    print(f'Lap {lap:>2}: {random_event()}')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Race simulator\n\nSimulate a 50-lap race for 5 drivers. Each lap, every driver gets a random\nlap time between 80.0 and 85.0 seconds. Find the **total time** per driver and\nrank them. Use `random.seed(7)` for reproducible results.",
+     "source": "---\n## ✏️ Exercise — Race simulator\n\nSimulate a 50-lap race for 5 drivers. Each lap, every driver gets a random\nlap time between 80.0 and 85.0 seconds. Find the **total time** per driver and\nrank them. Use `random.seed(7)` for reproducible results."
+    },
+    {
+     "type": "exercise",
+     "source": "import random\nrandom.seed(7)\n\ndrivers = ['Verstappen', 'Leclerc', 'Norris', 'Hamilton', 'Alonso']\nn_laps  = 50\n\n# TODO: build a dict {driver: total_time_in_seconds}\n# Hint: use random.uniform(80.0, 85.0) for each lap\ntotals = ???\n\n# Sort by total time (fastest first)\nranking = sorted(totals.items(), key=lambda x: x[1])\n\nprint(f'🏁 RACE RESULTS — {n_laps} laps')\nprint('-' * 40)\nfor i, (name, t) in enumerate(ranking, start=1):\n    gap = t - ranking[0][1]\n    gap_str = '   --' if i == 1 else f'+{gap:>5.2f}s'\n    print(f'  P{i}  {name:<12} {t:>7.2f}s   {gap_str}')\n\nwinner = ranking[0][0]\nprint(f'\\n🏆 Winner: {winner}')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(12, locals())"
+    }
+   ]
+  },
+  "13": {
+   "num": 13,
+   "title": "📊 First Chart",
+   "desc": "matplotlib bar & line",
+   "badge": "📊",
+   "xp": 110,
+   "season": 2,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 📊 Chapter 13 — First Chart (matplotlib)\n\n<img src=\"images/heat/circuit-italy.jpg\" width=\"300\" alt=\"Monza\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `matplotlib.pyplot` — Python's drawing tool\n- `plt.bar()` — bar chart\n- `plt.plot()` — line chart\n- Add titles, colours, labels\n\n> ⚠️ Before running this notebook, make sure matplotlib is installed:\n> `pip install matplotlib`",
+     "source": "# 📊 Chapter 13 — First Chart (matplotlib)\n\n<img src=\"images/heat/circuit-italy.jpg\" width=\"300\" alt=\"Monza\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `matplotlib.pyplot` — Python's drawing tool\n- `plt.bar()` — bar chart\n- `plt.plot()` — line chart\n- Add titles, colours, labels\n\n> ⚠️ Before running this notebook, make sure matplotlib is installed:\n> `pip install matplotlib`"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Bar chart\n\n```python\nimport matplotlib.pyplot as plt\nplt.bar(['A', 'B', 'C'], [10, 25, 17])\nplt.show()\n```",
+     "source": "---\n## 📖 Lesson 1 — Bar chart\n\n```python\nimport matplotlib.pyplot as plt\nplt.bar(['A', 'B', 'C'], [10, 25, 17])\nplt.show()\n```"
+    },
+    {
+     "type": "code",
+     "source": "import matplotlib.pyplot as plt\n\ndrivers = ['Verstappen', 'Norris', 'Leclerc', 'Sainz', 'Hamilton']\npoints  = [410, 350, 280, 220, 190]\ncolors  = ['navy', 'orange', 'red', 'red', 'silver']\n\nplt.figure(figsize=(8, 4))\nplt.bar(drivers, points, color=colors)\nplt.title('🏆 Drivers Championship — Top 5')\nplt.ylabel('Points')\nplt.xticks(rotation=15)\nplt.tight_layout()\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Line chart (championship over time)\n\nShow how points evolve race after race.",
+     "source": "---\n## 📖 Lesson 2 — Line chart (championship over time)\n\nShow how points evolve race after race."
+    },
+    {
+     "type": "code",
+     "source": "import matplotlib.pyplot as plt\n\nraces = list(range(1, 11))  # 10 races\nmax_pts  = [25, 50, 75, 100, 118, 143, 168, 193, 218, 243]\nlec_pts  = [18, 33, 51, 76,  94, 119, 137, 162, 180, 205]\nnor_pts  = [15, 33, 58, 83, 108, 126, 144, 169, 187, 212]\n\nplt.figure(figsize=(9, 5))\nplt.plot(races, max_pts, marker='o', color='navy',   label='Verstappen')\nplt.plot(races, lec_pts, marker='s', color='red',    label='Leclerc')\nplt.plot(races, nor_pts, marker='^', color='orange', label='Norris')\n\nplt.title('Championship Evolution')\nplt.xlabel('Race')\nplt.ylabel('Cumulative points')\nplt.grid(True, alpha=0.3)\nplt.legend()\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Lap times chart\n\nPlot the lap times of one driver across 20 laps. Use `random` to generate them\n(seed 3, between 79.0 and 82.0 seconds). The result should be a line chart with title and labels.",
+     "source": "---\n## ✏️ Exercise — Lap times chart\n\nPlot the lap times of one driver across 20 laps. Use `random` to generate them\n(seed 3, between 79.0 and 82.0 seconds). The result should be a line chart with title and labels."
+    },
+    {
+     "type": "exercise",
+     "source": "import matplotlib.pyplot as plt\nimport random\n\nrandom.seed(3)\nn_laps    = 20\nlap_times = [random.uniform(79.0, 82.0) for _ in range(n_laps)]\nlap_nums  = list(range(1, n_laps + 1))\n\n# TODO: build the chart — use plt.plot, plt.title, plt.xlabel, plt.ylabel\n???\n\nfastest = min(lap_times)\nslowest = max(lap_times)\naverage = sum(lap_times) / len(lap_times)\nprint(f'Fastest: {fastest:.2f}s  |  Slowest: {slowest:.2f}s  |  Average: {average:.2f}s')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(13, locals())"
+    }
+   ]
+  },
+  "14": {
+   "num": 14,
+   "title": "📑 Read CSV",
+   "desc": "csv module, F1 results",
+   "badge": "📑",
+   "xp": 110,
+   "season": 2,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 📑 Chapter 14 — Read CSV files\n\n<img src=\"images/heat/circuit-gb.jpg\" width=\"280\" alt=\"Silverstone\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- What a **CSV** file is (one line = one row, columns separated by `,`)\n- Read a CSV with `open()` + `split()` (no module needed)\n- Use the built-in `csv` module (cleaner)\n",
+     "source": "# 📑 Chapter 14 — Read CSV files\n\n<img src=\"images/heat/circuit-gb.jpg\" width=\"280\" alt=\"Silverstone\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- What a **CSV** file is (one line = one row, columns separated by `,`)\n- Read a CSV with `open()` + `split()` (no module needed)\n- Use the built-in `csv` module (cleaner)\n"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Create a CSV from scratch\n\nLet's first **write** a CSV so we have something to read.",
+     "source": "---\n## 📖 Lesson 1 — Create a CSV from scratch\n\nLet's first **write** a CSV so we have something to read."
+    },
+    {
+     "type": "code",
+     "source": "csv_text = '''race,driver,team,position,points\nBahrain,Verstappen,Red Bull,1,25\nBahrain,Leclerc,Ferrari,2,18\nBahrain,Norris,McLaren,3,15\nSaudi,Verstappen,Red Bull,1,25\nSaudi,Norris,McLaren,2,18\nSaudi,Leclerc,Ferrari,3,15\nAustralia,Norris,McLaren,1,25\nAustralia,Verstappen,Red Bull,2,18\nAustralia,Hamilton,Mercedes,3,15\n'''\n\nwith open('f1_results.csv', 'w', encoding='utf-8') as f:\n    f.write(csv_text)\n\nprint('✅ f1_results.csv created')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Read it the simple way\n\nEach line of a CSV is text. Split it on commas to get the columns.",
+     "source": "---\n## 📖 Lesson 2 — Read it the simple way\n\nEach line of a CSV is text. Split it on commas to get the columns."
+    },
+    {
+     "type": "code",
+     "source": "with open('f1_results.csv', encoding='utf-8') as f:\n    lines = f.readlines()\n\nheader = lines[0].strip().split(',')\nrows   = [line.strip().split(',') for line in lines[1:]]\n\nprint('Columns:', header)\nprint(f'\\n{len(rows)} rows loaded:')\nfor r in rows[:5]:\n    print(' ', r)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — The `csv` module\n\n`csv.DictReader` gives you **dictionaries** — one per row — so you can use column names.",
+     "source": "---\n## 📖 Lesson 3 — The `csv` module\n\n`csv.DictReader` gives you **dictionaries** — one per row — so you can use column names."
+    },
+    {
+     "type": "code",
+     "source": "import csv\n\nwith open('f1_results.csv', encoding='utf-8') as f:\n    reader = csv.DictReader(f)\n    rows = list(reader)\n\nprint('Type of one row:', type(rows[0]).__name__)\nprint('First row:      ', rows[0])\nprint('Driver column:  ', rows[0]['driver'])"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Compute the championship from the CSV\n\nSum the points per driver across all races, then find the leader.\n⚠️ Don't forget to convert `points` from **string** to **int**!",
+     "source": "---\n## ✏️ Exercise — Compute the championship from the CSV\n\nSum the points per driver across all races, then find the leader.\n⚠️ Don't forget to convert `points` from **string** to **int**!"
+    },
+    {
+     "type": "exercise",
+     "source": "import csv\n\nwith open('f1_results.csv', encoding='utf-8') as f:\n    rows = list(csv.DictReader(f))\n\n# TODO: build a dict {driver: total_points}\ntotals = {}\nfor r in rows:\n    name = r['driver']\n    pts  = ???   # convert r['points'] to int\n    totals[name] = totals.get(name, 0) + pts\n\n# TODO: find the leader (driver with max points)\nleader = ???\nleader_pts = totals[leader]\n\nprint('🏆 Standings:')\nfor d, p in sorted(totals.items(), key=lambda x: -x[1]):\n    print(f'  {d:<12} {p} pts')\nprint(f'\\n👑 Leader: {leader} ({leader_pts} pts)')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(14, locals())"
+    }
+   ]
+  },
+  "15": {
+   "num": 15,
+   "title": "🐼 Pandas DataFrames",
+   "desc": "DataFrame, groupby",
+   "badge": "🐼",
+   "xp": 120,
+   "season": 2,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🐼 Chapter 15 — pandas DataFrames\n\n<img src=\"images/heat/circuit-usa.jpg\" width=\"280\" alt=\"COTA Austin\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `pandas` — the most popular library for tables in Python\n- `DataFrame` — a smart 2D table\n- `.head()`, `.sort_values()`, `.groupby()`\n\n> ⚠️ Install pandas first if needed: `pip install pandas`",
+     "source": "# 🐼 Chapter 15 — pandas DataFrames\n\n<img src=\"images/heat/circuit-usa.jpg\" width=\"280\" alt=\"COTA Austin\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- `pandas` — the most popular library for tables in Python\n- `DataFrame` — a smart 2D table\n- `.head()`, `.sort_values()`, `.groupby()`\n\n> ⚠️ Install pandas first if needed: `pip install pandas`"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Create a DataFrame\n\nThink of a `DataFrame` as a spreadsheet (Excel) — but you control it with code.",
+     "source": "---\n## 📖 Lesson 1 — Create a DataFrame\n\nThink of a `DataFrame` as a spreadsheet (Excel) — but you control it with code."
+    },
+    {
+     "type": "code",
+     "source": "import pandas as pd\n\ndata = {\n    'driver':   ['Verstappen', 'Leclerc', 'Norris', 'Sainz', 'Hamilton', 'Russell'],\n    'team':     ['Red Bull',   'Ferrari', 'McLaren','Ferrari','Mercedes','Mercedes'],\n    'wins':     [12, 3, 4, 1, 2, 1],\n    'podiums':  [18, 9, 11, 5, 7, 4],\n    'points':   [410, 280, 350, 220, 190, 175],\n}\ndf = pd.DataFrame(data)\ndf"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Inspect & sort\n",
+     "source": "---\n## 📖 Lesson 2 — Inspect & sort\n"
+    },
+    {
+     "type": "code",
+     "source": "print('Shape (rows, cols):', df.shape)\nprint('\\nFirst 3 rows:')\nprint(df.head(3))\nprint('\\nSorted by points (desc):')\nprint(df.sort_values('points', ascending=False))"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — `groupby` (the magic move)\n\nGroup rows by team, then sum/average the numeric columns.",
+     "source": "---\n## 📖 Lesson 3 — `groupby` (the magic move)\n\nGroup rows by team, then sum/average the numeric columns."
+    },
+    {
+     "type": "code",
+     "source": "by_team = df.groupby('team').agg(\n    total_points=('points', 'sum'),\n    total_wins  =('wins',   'sum'),\n    drivers     =('driver', 'count'),\n).sort_values('total_points', ascending=False)\n\nprint('🏆 Constructors Championship:')\nprint(by_team)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Find Ferrari's stats\n\nFilter the DataFrame to keep only Ferrari, then compute their total wins & points.",
+     "source": "---\n## ✏️ Exercise — Find Ferrari's stats\n\nFilter the DataFrame to keep only Ferrari, then compute their total wins & points."
+    },
+    {
+     "type": "exercise",
+     "source": "import pandas as pd\n\n# TODO: keep only Ferrari rows  (df[df['team'] == 'Ferrari'])\nferrari = ???\n\nferrari_wins   = int(ferrari['wins'].sum())\nferrari_points = int(ferrari['points'].sum())\nn_ferrari      = len(ferrari)\n\nprint(f'🐎 Ferrari summary')\nprint(f'   drivers : {n_ferrari}')\nprint(f'   wins    : {ferrari_wins}')\nprint(f'   points  : {ferrari_points}')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(15, locals())"
+    }
+   ]
+  },
+  "16": {
+   "num": 16,
+   "title": "🎨 Advanced Charts",
+   "desc": "subplots, dashboards",
+   "badge": "🎨",
+   "xp": 130,
+   "season": 2,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🎨 Chapter 16 — Advanced charts (Dashboard)\n\n<p><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/vert_bulbi_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/noir_foret_noire_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `plt.subplots()` — multiple charts in one figure\n- `plt.scatter()` — dots\n- Annotations & styles — make it look pro 💄\n",
+     "source": "# 🎨 Chapter 16 — Advanced charts (Dashboard)\n\n<p><img src=\"images/heat/bleu_poke_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/rouge_ferrari_312.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/vert_bulbi_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/jaune_torpille_doree_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/noir_foret_noire_voiture.jpg\" width=\"110\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**What you will learn:**\n- `plt.subplots()` — multiple charts in one figure\n- `plt.scatter()` — dots\n- Annotations & styles — make it look pro 💄\n"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — `subplots`: 4 charts in one figure",
+     "source": "---\n## 📖 Lesson 1 — `subplots`: 4 charts in one figure"
+    },
+    {
+     "type": "code",
+     "source": "import matplotlib.pyplot as plt\n\ndrivers = ['Verstappen', 'Leclerc', 'Norris', 'Sainz', 'Hamilton', 'Russell']\nwins    = [12, 3, 4, 1, 2, 1]\npodiums = [18, 9, 11, 5, 7, 4]\npoints  = [410, 280, 350, 220, 190, 175]\nraces   = list(range(1, 11))\nevol    = [25, 50, 75, 100, 125, 150, 175, 200, 220, 243]\n\nfig, axes = plt.subplots(2, 2, figsize=(11, 7))\n\naxes[0, 0].bar(drivers, wins, color='gold')\naxes[0, 0].set_title('🥇 Wins')\naxes[0, 0].tick_params(axis='x', rotation=30)\n\naxes[0, 1].bar(drivers, podiums, color='silver')\naxes[0, 1].set_title('🏆 Podiums')\naxes[0, 1].tick_params(axis='x', rotation=30)\n\naxes[1, 0].bar(drivers, points, color='navy')\naxes[1, 0].set_title('⭐ Points')\naxes[1, 0].tick_params(axis='x', rotation=30)\n\naxes[1, 1].plot(races, evol, marker='o', color='red')\naxes[1, 1].set_title('📈 Verstappen evolution')\naxes[1, 1].set_xlabel('Race')\naxes[1, 1].grid(True, alpha=0.3)\n\nfig.suptitle('🏎️  F1 Season Dashboard', fontsize=14, fontweight='bold')\nplt.tight_layout()\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — `scatter` + annotations\n",
+     "source": "---\n## 📖 Lesson 2 — `scatter` + annotations\n"
+    },
+    {
+     "type": "code",
+     "source": "import matplotlib.pyplot as plt\n\ndrivers = ['Verstappen', 'Leclerc', 'Norris', 'Sainz', 'Hamilton', 'Russell']\nwins    = [12, 3, 4, 1, 2, 1]\npoints  = [410, 280, 350, 220, 190, 175]\n\nplt.figure(figsize=(8, 5))\nplt.scatter(wins, points, s=160, c='red', edgecolor='black', zorder=3)\n\nfor w, p, name in zip(wins, points, drivers):\n    plt.annotate(name, (w, p), xytext=(8, 5), textcoords='offset points')\n\nplt.title('Wins vs Points')\nplt.xlabel('Wins')\nplt.ylabel('Points')\nplt.grid(True, alpha=0.3)\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Verstappen vs Leclerc dashboard\n\nBuild a 1×2 dashboard:\n- left: bar chart comparing wins\n- right: line chart comparing championship evolution",
+     "source": "---\n## ✏️ Exercise — Verstappen vs Leclerc dashboard\n\nBuild a 1×2 dashboard:\n- left: bar chart comparing wins\n- right: line chart comparing championship evolution"
+    },
+    {
+     "type": "exercise",
+     "source": "import matplotlib.pyplot as plt\n\nraces   = list(range(1, 11))\nmax_evo = [25, 50, 75, 100, 118, 143, 168, 193, 218, 243]\nlec_evo = [18, 33, 51, 76,  94, 119, 137, 162, 180, 205]\nmax_wins, lec_wins = 12, 3\n\n# TODO: build a 1x2 figure — fig, axes = plt.subplots(1, 2, figsize=(11, 4))\nfig, axes = ???\n\n# Left: bar chart of wins\naxes[0].bar(['Verstappen', 'Leclerc'], [max_wins, lec_wins], color=['navy', 'red'])\naxes[0].set_title('Wins')\n\n# Right: line chart of evolution\naxes[1].plot(races, max_evo, marker='o', color='navy', label='Verstappen')\naxes[1].plot(races, lec_evo, marker='s', color='red',  label='Leclerc')\naxes[1].set_title('Championship evolution')\naxes[1].legend()\naxes[1].grid(True, alpha=0.3)\n\nfig.suptitle('Verstappen vs Leclerc')\nplt.tight_layout()\nplt.show()\n\nn_subplots = len(axes)\nprint(f'Number of subplots: {n_subplots}')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(16, locals())"
+    }
+   ]
+  },
+  "17": {
+   "num": 17,
+   "title": "🏆 BOSS — F1 Championship",
+   "desc": "full season + dashboard",
+   "badge": "🏆",
+   "xp": 250,
+   "season": 2,
+   "boss": true,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🏆 BOSS S2 — F1 Championship Simulator\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-usa.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Final challenge of Season 2!**\n\nYou will simulate a **full 10-race season** with 8 drivers, save the results to JSON,\nand produce a championship dashboard. You'll combine: lists, dicts, random, sorted,\nfiles/JSON, and matplotlib.\n\n> 💡 Run every cell from top to bottom!",
+     "source": "# 🏆 BOSS S2 — F1 Championship Simulator\n\n<p><img src=\"images/heat/circuit-france.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-italy.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-gb.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/heat/circuit-usa.jpg\" width=\"130\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**Final challenge of Season 2!**\n\nYou will simulate a **full 10-race season** with 8 drivers, save the results to JSON,\nand produce a championship dashboard. You'll combine: lists, dicts, random, sorted,\nfiles/JSON, and matplotlib.\n\n> 💡 Run every cell from top to bottom!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 1 — Setup the season",
+     "source": "---\n## Step 1 — Setup the season"
+    },
+    {
+     "type": "code",
+     "source": "import random, json\nimport matplotlib.pyplot as plt\n\nrandom.seed(2024)\n\nDRIVERS = [\n    {'name': 'Verstappen', 'team': 'Red Bull', 'skill': 95},\n    {'name': 'Norris',     'team': 'McLaren',  'skill': 90},\n    {'name': 'Leclerc',    'team': 'Ferrari',  'skill': 88},\n    {'name': 'Sainz',      'team': 'Ferrari',  'skill': 85},\n    {'name': 'Hamilton',   'team': 'Mercedes', 'skill': 87},\n    {'name': 'Russell',    'team': 'Mercedes', 'skill': 84},\n    {'name': 'Alonso',     'team': 'Aston',    'skill': 82},\n    {'name': 'Pérez',      'team': 'Red Bull', 'skill': 80},\n]\n\nTRACKS = ['Bahrain', 'Saudi', 'Australia', 'Japan', 'China',\n          'Miami', 'Monaco', 'Spain', 'Silverstone', 'Monza']\n\nPOINTS_TABLE = [25, 18, 15, 12, 10, 8, 6, 4]   # P1..P8\n\nprint(f'{len(DRIVERS)} drivers, {len(TRACKS)} races to go!')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 2 — Run a single race\n\nEach driver gets a score = `skill + random(0..30)`. Highest score wins.",
+     "source": "---\n## Step 2 — Run a single race\n\nEach driver gets a score = `skill + random(0..30)`. Highest score wins."
+    },
+    {
+     "type": "code",
+     "source": "def run_race(track):\n    scores = []\n    for d in DRIVERS:\n        score = d['skill'] + random.uniform(0, 30)\n        scores.append((d['name'], d['team'], score))\n    scores.sort(key=lambda x: -x[2])  # best first\n    return [{'pos': i + 1,\n             'driver': name,\n             'team':   team,\n             'points': POINTS_TABLE[i]}\n            for i, (name, team, _) in enumerate(scores)]\n\n# Test on one track\ndemo = run_race('Bahrain')\nprint('🇧🇭 Bahrain GP:')\nfor r in demo:\n    print(f\"  P{r['pos']}  {r['driver']:<12} {r['team']:<10} {r['points']:>2} pts\")"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 3 — Run the whole season",
+     "source": "---\n## Step 3 — Run the whole season"
+    },
+    {
+     "type": "code",
+     "source": "season = {}\nfor track in TRACKS:\n    season[track] = run_race(track)\n\n# Aggregate driver totals\ntotals = {d['name']: 0 for d in DRIVERS}\nfor results in season.values():\n    for r in results:\n        totals[r['driver']] += r['points']\n\nranking = sorted(totals.items(), key=lambda x: -x[1])\n\nprint('🏆 FINAL DRIVERS CHAMPIONSHIP')\nprint('-' * 40)\nfor i, (name, pts) in enumerate(ranking, start=1):\n    print(f'  P{i}  {name:<12} {pts:>4} pts')\n\nchampion = ranking[0][0]\nprint(f'\\n👑 World Champion: {champion}')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 4 — Save results to JSON",
+     "source": "---\n## Step 4 — Save results to JSON"
+    },
+    {
+     "type": "code",
+     "source": "save_data = {\n    'champion': champion,\n    'standings': [{'driver': n, 'points': p} for n, p in ranking],\n    'season': season,\n}\n\nwith open('f1_season.json', 'w', encoding='utf-8') as f:\n    json.dump(save_data, f, indent=2, ensure_ascii=False)\n\nprint('✅ Saved to f1_season.json')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 5 — Build the championship dashboard",
+     "source": "---\n## Step 5 — Build the championship dashboard"
+    },
+    {
+     "type": "code",
+     "source": "import matplotlib.pyplot as plt\n\nnames = [n for n, _ in ranking]\npts   = [p for _, p in ranking]\n\n# Cumulative points race by race for top 3\ntop3 = names[:3]\ncum  = {n: [] for n in top3}\nrunning = {n: 0 for n in top3}\nfor track in TRACKS:\n    for r in season[track]:\n        if r['driver'] in running:\n            running[r['driver']] += r['points']\n    for n in top3:\n        cum[n].append(running[n])\n\nfig, axes = plt.subplots(1, 2, figsize=(13, 5))\n\naxes[0].bar(names, pts, color='navy')\naxes[0].set_title('Final points')\naxes[0].tick_params(axis='x', rotation=30)\n\nfor n in top3:\n    axes[1].plot(range(1, len(TRACKS) + 1), cum[n], marker='o', label=n)\naxes[1].set_title('Top 3 evolution')\naxes[1].set_xlabel('Race')\naxes[1].set_ylabel('Cumulative points')\naxes[1].legend()\naxes[1].grid(True, alpha=0.3)\n\nfig.suptitle(f'🏆 F1 Championship — Champion: {champion}', fontsize=14, fontweight='bold')\nplt.tight_layout()\nplt.show()\n\ndashboard_done = True"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(17, locals())"
+    }
+   ]
+  },
+  "18": {
+   "num": 18,
+   "title": "🧬 Classes (OOP)",
+   "desc": "class, __init__, methods",
+   "badge": "🧬",
+   "xp": 100,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🧬 Chapter 18 — Classes (Pokémon as objects)\n\n<p><img src=\"images/pokedex/7.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/8.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/9.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 3 — Birds Simulation**! 🐦\n\nBefore we build flying birds, we need to learn **classes** — Python's\nway to group data + actions together.\n\n**What you will learn:**\n- `class` — a blueprint to create objects\n- `__init__` — set up the object\n- **Methods** — functions that belong to an object\n\n> 💡 In Scratch, a **sprite** has variables (x, y, costume) and scripts.\n> A Python **class** is similar: it has **attributes** (data) and **methods** (actions).",
+     "source": "# 🧬 Chapter 18 — Classes (Pokémon as objects)\n\n<p><img src=\"images/pokedex/7.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/8.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/9.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\nWelcome to **Season 3 — Birds Simulation**! 🐦\n\nBefore we build flying birds, we need to learn **classes** — Python's\nway to group data + actions together.\n\n**What you will learn:**\n- `class` — a blueprint to create objects\n- `__init__` — set up the object\n- **Methods** — functions that belong to an object\n\n> 💡 In Scratch, a **sprite** has variables (x, y, costume) and scripts.\n> A Python **class** is similar: it has **attributes** (data) and **methods** (actions)."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Your first class\n\n```python\nclass Pokemon:\n    def __init__(self, name, hp, attack):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n```\n- `class` = keyword to create a blueprint\n- `__init__` = runs when you create a new Pokémon\n- `self` = \"this object\" (Scratch: \"this sprite\")",
+     "source": "---\n## 📖 Lesson 1 — Your first class\n\n```python\nclass Pokemon:\n    def __init__(self, name, hp, attack):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n```\n- `class` = keyword to create a blueprint\n- `__init__` = runs when you create a new Pokémon\n- `self` = \"this object\" (Scratch: \"this sprite\")"
+    },
+    {
+     "type": "code",
+     "source": "class Pokemon:\n    def __init__(self, name, hp, attack, ptype):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n        self.ptype  = ptype\n\n# Create two Pokémon\npikachu = Pokemon('Pikachu', 35, 55, 'Electric')\ncharizard = Pokemon('Charizard', 78, 84, 'Fire')\n\nprint(f'{pikachu.name}: HP={pikachu.hp}, Attack={pikachu.attack}, Type={pikachu.ptype}')\nprint(f'{charizard.name}: HP={charizard.hp}, Attack={charizard.attack}, Type={charizard.ptype}')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Methods (actions)\n\nA **method** is a function inside a class. It always takes `self` as first parameter.",
+     "source": "---\n## 📖 Lesson 2 — Methods (actions)\n\nA **method** is a function inside a class. It always takes `self` as first parameter."
+    },
+    {
+     "type": "code",
+     "source": "class Pokemon:\n    def __init__(self, name, hp, attack, ptype):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n        self.ptype  = ptype\n        self.alive  = True\n\n    def info(self):\n        status = '❤️' if self.alive else '💀'\n        return f'{status} {self.name} [{self.ptype}] HP:{self.hp} ATK:{self.attack}'\n\n    def take_damage(self, dmg):\n        self.hp -= dmg\n        if self.hp <= 0:\n            self.hp = 0\n            self.alive = False\n            print(f'  💀 {self.name} fainted!')\n        else:\n            print(f'  💥 {self.name} takes {dmg} damage! HP: {self.hp}')\n\np = Pokemon('Pikachu', 35, 55, 'Electric')\nprint(p.info())\np.take_damage(20)\nprint(p.info())\np.take_damage(20)\nprint(p.info())"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — `__str__` magic method\n\n`__str__` is called when you `print()` an object — it controls what gets displayed.",
+     "source": "---\n## 📖 Lesson 3 — `__str__` magic method\n\n`__str__` is called when you `print()` an object — it controls what gets displayed."
+    },
+    {
+     "type": "code",
+     "source": "class Pokemon:\n    def __init__(self, name, hp, attack, ptype):\n        self.name   = name\n        self.hp     = hp\n        self.attack = attack\n        self.ptype  = ptype\n\n    def __str__(self):\n        return f'🔴 {self.name} [{self.ptype}] HP:{self.hp} ATK:{self.attack}'\n\np = Pokemon('Gengar', 60, 65, 'Ghost')\nprint(p)  # calls __str__ automatically!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Build a Pokédex with classes\n\nCreate a `Pokemon` class with:\n- `__init__` that stores name, hp, attack, ptype\n- a `battle_cry()` method that prints `\"<name> uses <attack_name>!\"`\n- `__str__` to display the Pokémon nicely\n\nThen create a list of 3+ Pokémon and loop through them.",
+     "source": "---\n## ✏️ Exercise — Build a Pokédex with classes\n\nCreate a `Pokemon` class with:\n- `__init__` that stores name, hp, attack, ptype\n- a `battle_cry()` method that prints `\"<name> uses <attack_name>!\"`\n- `__str__` to display the Pokémon nicely\n\nThen create a list of 3+ Pokémon and loop through them."
+    },
+    {
+     "type": "exercise",
+     "source": "class Pokemon:\n    def __init__(self, name, hp, attack, ptype):\n        ???\n\n    def battle_cry(self, attack_name):\n        ???  # print(f'{self.name} uses {attack_name}!')\n\n    def __str__(self):\n        ???  # return a nice string\n\n# Create at least 3 Pokémon\nteam = [\n    Pokemon('Pikachu', 35, 55, 'Electric'),\n    ???,\n    ???,\n]\n\nprint('📋 My Pokédex:')\nfor p in team:\n    print(f'  {p}')\n    p.battle_cry('Thunderbolt')\n\nteam_size = len(team)\nfirst_name = team[0].name\nprint(f'\\nTeam size: {team_size}')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(18, locals())"
+    }
+   ]
+  },
+  "19": {
+   "num": 19,
+   "title": "🟢 Moving Objects",
+   "desc": "position, velocity, bounce",
+   "badge": "🟢",
+   "xp": 100,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🟢 Chapter 19 — Objects that Move\n\n**What you will learn:**\n- Store **(x, y) positions** in a class\n- **Velocity** = how much x/y changes each step\n- Move objects and **bounce** off walls\n\n> 💡 In Scratch: `change x by vx` / `if on edge, bounce`.\n> We'll do the same in Python!",
+     "source": "# 🟢 Chapter 19 — Objects that Move\n\n**What you will learn:**\n- Store **(x, y) positions** in a class\n- **Velocity** = how much x/y changes each step\n- Move objects and **bounce** off walls\n\n> 💡 In Scratch: `change x by vx` / `if on edge, bounce`.\n> We'll do the same in Python!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — A dot with position and velocity",
+     "source": "---\n## 📖 Lesson 1 — A dot with position and velocity"
+    },
+    {
+     "type": "code",
+     "source": "class Dot:\n    def __init__(self, x, y, vx, vy):\n        self.x  = x\n        self.y  = y\n        self.vx = vx\n        self.vy = vy\n\n    def move(self):\n        self.x += self.vx\n        self.y += self.vy\n\n    def __str__(self):\n        return f'Dot at ({self.x:.1f}, {self.y:.1f})'\n\nd = Dot(0, 0, 1.5, 2.0)\nfor step in range(5):\n    d.move()\n    print(d)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Bounce off walls\n\nWhen a dot reaches the edge of the screen, reverse its velocity.",
+     "source": "---\n## 📖 Lesson 2 — Bounce off walls\n\nWhen a dot reaches the edge of the screen, reverse its velocity."
+    },
+    {
+     "type": "code",
+     "source": "WIDTH, HEIGHT = 100, 100\n\nclass Dot:\n    def __init__(self, x, y, vx, vy):\n        self.x, self.y   = x, y\n        self.vx, self.vy = vx, vy\n\n    def move(self):\n        self.x += self.vx\n        self.y += self.vy\n        # Bounce!\n        if self.x < 0 or self.x > WIDTH:\n            self.vx *= -1\n        if self.y < 0 or self.y > HEIGHT:\n            self.vy *= -1\n\nd = Dot(95, 50, 3, 2)\nfor step in range(10):\n    d.move()\n    print(f'Step {step+1}: ({d.x:.0f}, {d.y:.0f})  vel=({d.vx}, {d.vy})')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Static scatter plot of moving dots",
+     "source": "---\n## 📖 Lesson 3 — Static scatter plot of moving dots"
+    },
+    {
+     "type": "code",
+     "source": "import matplotlib.pyplot as plt\nimport random\n\nrandom.seed(42)\ndots = [Dot(random.uniform(10, 90), random.uniform(10, 90),\n            random.uniform(-3, 3), random.uniform(-3, 3))\n        for _ in range(20)]\n\n# Move 50 steps\nfor _ in range(50):\n    for d in dots:\n        d.move()\n\n# Plot final positions\nxs = [d.x for d in dots]\nys = [d.y for d in dots]\nplt.figure(figsize=(5, 5))\nplt.scatter(xs, ys, s=80, c='blue', edgecolor='black')\nplt.xlim(0, WIDTH)\nplt.ylim(0, HEIGHT)\nplt.title('20 dots after 50 steps')\nplt.grid(True, alpha=0.3)\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Create 10 dots and count wall bounces\n\nAdd a `bounces` counter to the Dot class that increments every time a bounce occurs.",
+     "source": "---\n## ✏️ Exercise — Create 10 dots and count wall bounces\n\nAdd a `bounces` counter to the Dot class that increments every time a bounce occurs."
+    },
+    {
+     "type": "exercise",
+     "source": "import random\nrandom.seed(7)\n\nWIDTH, HEIGHT = 100, 100\n\nclass Dot:\n    def __init__(self, x, y, vx, vy):\n        self.x, self.y   = x, y\n        self.vx, self.vy = vx, vy\n        self.bounces     = 0\n\n    def move(self):\n        self.x += self.vx\n        self.y += self.vy\n        # TODO: if x is out of [0, WIDTH], reverse vx AND add 1 to self.bounces\n        ???\n        # TODO: same for y and HEIGHT\n        ???\n\ndots = [Dot(random.uniform(10, 90), random.uniform(10, 90),\n            random.uniform(-4, 4), random.uniform(-4, 4))\n        for _ in range(10)]\n\n# Run 200 steps\nfor _ in range(200):\n    for d in dots:\n        d.move()\n\ntotal_bounces = sum(d.bounces for d in dots)\nn_dots = len(dots)\nprint(f'{n_dots} dots, {total_bounces} total bounces after 200 steps')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(19, locals())"
+    }
+   ]
+  },
+  "20": {
+   "num": 20,
+   "title": "🔢 numpy Basics",
+   "desc": "arrays, vector math",
+   "badge": "🔢",
+   "xp": 110,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🔢 Chapter 20 — numpy: Fast Math with Arrays\n\n**What you will learn:**\n- `numpy.array` — a super-powered list for numbers\n- Vector operations: add, multiply, modulo\n- Why numpy is **much faster** than Python loops\n\n> ⚠️ `pip install numpy` if not already installed",
+     "source": "# 🔢 Chapter 20 — numpy: Fast Math with Arrays\n\n**What you will learn:**\n- `numpy.array` — a super-powered list for numbers\n- Vector operations: add, multiply, modulo\n- Why numpy is **much faster** than Python loops\n\n> ⚠️ `pip install numpy` if not already installed"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — numpy arrays vs Python lists",
+     "source": "---\n## 📖 Lesson 1 — numpy arrays vs Python lists"
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\n\n# Python list\npy_list = [1, 2, 3, 4, 5]\n\n# numpy array\nnp_arr = np.array([1, 2, 3, 4, 5])\n\n# Multiply each element by 10\n# Python: need a loop\npy_result = [x * 10 for x in py_list]\n\n# numpy: just multiply!\nnp_result = np_arr * 10\n\nprint('Python:', py_result)\nprint('numpy: ', np_result)"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — 2D arrays (positions!)\n\nWe can store positions of N dots as an (N, 2) array.",
+     "source": "---\n## 📖 Lesson 2 — 2D arrays (positions!)\n\nWe can store positions of N dots as an (N, 2) array."
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\n\n# 5 dots, each with (x, y)\npositions = np.array([\n    [10, 20],\n    [30, 40],\n    [50, 60],\n    [70, 80],\n    [90, 10],\n])\n\nvelocities = np.array([\n    [1, 2],\n    [-1, 3],\n    [2, -2],\n    [-3, 1],\n    [0, -1],\n])\n\n# Move ALL dots in one line!\npositions = positions + velocities\nprint('New positions:\\n', positions)\n\n# All x coordinates\nprint('\\nAll x:', positions[:, 0])\n# All y coordinates\nprint('All y:', positions[:, 1])"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Speed comparison 🏎️",
+     "source": "---\n## 📖 Lesson 3 — Speed comparison 🏎️"
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\nimport time\n\nN = 100_000\n\n# Python loop\npy_x = list(range(N))\nt0 = time.time()\npy_r = [x * 2 + 1 for x in py_x]\npy_time = time.time() - t0\n\n# numpy\nnp_x = np.arange(N)\nt0 = time.time()\nnp_r = np_x * 2 + 1\nnp_time = time.time() - t0\n\nprint(f'Python loop: {py_time*1000:.1f} ms')\nprint(f'numpy:       {np_time*1000:.1f} ms')\nprint(f'numpy is {py_time/np_time:.0f}x faster!')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Move 20 dots with numpy\n\nUse numpy to create random positions and velocities, then move 100 steps.\nKeep dots inside [0, 100] using modulo (`% 100`).",
+     "source": "---\n## ✏️ Exercise — Move 20 dots with numpy\n\nUse numpy to create random positions and velocities, then move 100 steps.\nKeep dots inside [0, 100] using modulo (`% 100`)."
+    },
+    {
+     "type": "exercise",
+     "source": "import numpy as np\nnp.random.seed(42)\n\nN = 20\nSIZE = 100\n\n# Random positions (N, 2) between 0 and SIZE\npos = np.random.uniform(0, SIZE, size=(N, 2))\n# Random velocities between -2 and 2\nvel = np.random.uniform(-2, 2, size=(N, 2))\n\n# TODO: move 100 steps — each step: pos = (pos + vel) % SIZE\nfor _ in range(100):\n    pos = ???\n\nall_inside = bool(np.all((pos >= 0) & (pos <= SIZE)))\nn_dots = len(pos)\nprint(f'{n_dots} dots, all inside: {all_inside}')\nprint(f'First dot at: ({pos[0, 0]:.1f}, {pos[0, 1]:.1f})')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(20, locals())"
+    }
+   ]
+  },
+  "21": {
+   "num": 21,
+   "title": "🎬 Animation",
+   "desc": "FuncAnimation, scatter",
+   "badge": "🎬",
+   "xp": 110,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🎬 Chapter 21 — Animation with matplotlib\n\n**What you will learn:**\n- `FuncAnimation` — make your scatter plot move!\n- `set_offsets()` — update dot positions\n- Create your first **aquarium** of moving dots 🐟\n\n> ⚠️ In Jupyter, add `%matplotlib notebook` or `%matplotlib widget` for live animation.",
+     "source": "# 🎬 Chapter 21 — Animation with matplotlib\n\n**What you will learn:**\n- `FuncAnimation` — make your scatter plot move!\n- `set_offsets()` — update dot positions\n- Create your first **aquarium** of moving dots 🐟\n\n> ⚠️ In Jupyter, add `%matplotlib notebook` or `%matplotlib widget` for live animation."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Animated scatter plot",
+     "source": "---\n## 📖 Lesson 1 — Animated scatter plot"
+    },
+    {
+     "type": "code",
+     "source": "%matplotlib notebook\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.animation import FuncAnimation\n\nN = 30\nSIZE = 100\nnp.random.seed(42)\npos = np.random.uniform(10, 90, size=(N, 2))\nvel = np.random.uniform(-2, 2, size=(N, 2))\n\nfig, ax = plt.subplots(figsize=(5, 5))\nax.set_xlim(0, SIZE)\nax.set_ylim(0, SIZE)\nax.set_title('🐟 Aquarium — 30 dots')\nscatter = ax.scatter(pos[:, 0], pos[:, 1], s=40, c='blue')\n\ndef update(frame):\n    global pos\n    pos = (pos + vel) % SIZE\n    scatter.set_offsets(pos)\n    return scatter,\n\nani = FuncAnimation(fig, update, frames=200, interval=50, blit=True)\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Adding colours based on speed",
+     "source": "---\n## 📖 Lesson 2 — Adding colours based on speed"
+    },
+    {
+     "type": "code",
+     "source": "%matplotlib notebook\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.animation import FuncAnimation\n\nN = 40\nSIZE = 100\nnp.random.seed(7)\npos = np.random.uniform(5, 95, size=(N, 2))\nvel = np.random.uniform(-3, 3, size=(N, 2))\n\n# Speed = length of velocity vector\nspeeds = np.sqrt(vel[:, 0]**2 + vel[:, 1]**2)\n\nfig, ax = plt.subplots(figsize=(5, 5))\nax.set_xlim(0, SIZE)\nax.set_ylim(0, SIZE)\nax.set_title('Speed = colour 🌈')\nscatter = ax.scatter(pos[:, 0], pos[:, 1], s=50, c=speeds, cmap='hot', edgecolor='gray')\nplt.colorbar(scatter, label='Speed')\n\ndef update(frame):\n    global pos\n    pos = (pos + vel) % SIZE\n    scatter.set_offsets(pos)\n    return scatter,\n\nani = FuncAnimation(fig, update, frames=200, interval=50, blit=True)\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Aquarium with wall bouncing\n\nInstead of wrapping (`% SIZE`), make the dots **bounce** off the walls.\nModify the `update()` function.",
+     "source": "---\n## ✏️ Exercise — Aquarium with wall bouncing\n\nInstead of wrapping (`% SIZE`), make the dots **bounce** off the walls.\nModify the `update()` function."
+    },
+    {
+     "type": "exercise",
+     "source": "%matplotlib notebook\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.animation import FuncAnimation\n\nN = 25\nSIZE = 100\nnp.random.seed(3)\npos = np.random.uniform(10, 90, size=(N, 2))\nvel = np.random.uniform(-2, 2, size=(N, 2))\n\nfig, ax = plt.subplots(figsize=(5, 5))\nax.set_xlim(0, SIZE)\nax.set_ylim(0, SIZE)\nax.set_title('🐟 Bouncing aquarium')\nscatter = ax.scatter(pos[:, 0], pos[:, 1], s=50, c='teal')\n\ndef update(frame):\n    global pos, vel\n    pos += vel\n    # TODO: for each axis (0 and 1):\n    #   where pos < 0, set pos to 0 and reverse vel\n    #   where pos > SIZE, set pos to SIZE and reverse vel\n    # Hint: use numpy boolean indexing:\n    #   mask = pos[:, 0] < 0\n    #   vel[mask, 0] *= -1\n    #   pos[mask, 0] = 0\n    ???\n    scatter.set_offsets(pos)\n    return scatter,\n\nani = FuncAnimation(fig, update, frames=300, interval=50, blit=True)\nplt.show()\n\n# Check (run after animation completes)\nbounce_anim_created = True\nn_dots_anim = N"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(21, locals())"
+    }
+   ]
+  },
+  "22": {
+   "num": 22,
+   "title": "🐦 Class Boid",
+   "desc": "Boid class, arrows",
+   "badge": "🐦",
+   "xp": 120,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🐦 Chapter 22 — Class Boid\n\n**What you will learn:**\n- Create a `Boid` class with position and velocity\n- Move boids and bounce off walls\n- Display them as **arrows** (showing direction) 🏹\n\n> 🐦 A **boid** = 'bird-oid' (bird-like) — coined by Craig Reynolds in 1986.",
+     "source": "# 🐦 Chapter 22 — Class Boid\n\n**What you will learn:**\n- Create a `Boid` class with position and velocity\n- Move boids and bounce off walls\n- Display them as **arrows** (showing direction) 🏹\n\n> 🐦 A **boid** = 'bird-oid' (bird-like) — coined by Craig Reynolds in 1986."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — The Boid class",
+     "source": "---\n## 📖 Lesson 1 — The Boid class"
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\n\nclass Boid:\n    def __init__(self, x, y, vx, vy):\n        self.pos = np.array([x, y], dtype=float)\n        self.vel = np.array([vx, vy], dtype=float)\n\n    def move(self, width, height):\n        self.pos += self.vel\n        # Bounce off walls\n        for i, limit in enumerate([width, height]):\n            if self.pos[i] < 0:\n                self.pos[i] = 0\n                self.vel[i] *= -1\n            elif self.pos[i] > limit:\n                self.pos[i] = limit\n                self.vel[i] *= -1\n\n    def speed(self):\n        return np.linalg.norm(self.vel)\n\nb = Boid(50, 50, 2, -1)\nfor _ in range(5):\n    b.move(100, 100)\n    print(f'pos=({b.pos[0]:.0f},{b.pos[1]:.0f})  speed={b.speed():.1f}')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Display boids as arrows with `quiver`\n\n`plt.quiver(x, y, vx, vy)` draws arrows.",
+     "source": "---\n## 📖 Lesson 2 — Display boids as arrows with `quiver`\n\n`plt.quiver(x, y, vx, vy)` draws arrows."
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(42)\nN = 20\nboids = [Boid(np.random.uniform(10, 90),\n              np.random.uniform(10, 90),\n              np.random.uniform(-3, 3),\n              np.random.uniform(-3, 3))\n         for _ in range(N)]\n\nxs  = [b.pos[0] for b in boids]\nys  = [b.pos[1] for b in boids]\nvxs = [b.vel[0] for b in boids]\nvys = [b.vel[1] for b in boids]\n\nplt.figure(figsize=(5, 5))\nplt.quiver(xs, ys, vxs, vys, color='navy', scale=50)\nplt.xlim(0, 100)\nplt.ylim(0, 100)\nplt.title('🐦 20 Boids')\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Create a Boid flock and run 100 steps\n\nCreate 30 boids, move them 100 steps, then plot their final positions as arrows.",
+     "source": "---\n## ✏️ Exercise — Create a Boid flock and run 100 steps\n\nCreate 30 boids, move them 100 steps, then plot their final positions as arrows."
+    },
+    {
+     "type": "exercise",
+     "source": "import numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(0)\nW, H = 100, 100\nN = 30\n\n# TODO: create N Boid objects\nflock = ???\n\n# Move 100 steps\nfor _ in range(100):\n    for b in flock:\n        b.move(W, H)\n\n# Plot\nxs  = [b.pos[0] for b in flock]\nys  = [b.pos[1] for b in flock]\nvxs = [b.vel[0] for b in flock]\nvys = [b.vel[1] for b in flock]\n\nplt.figure(figsize=(5, 5))\nplt.quiver(xs, ys, vxs, vys, color='teal', scale=50)\nplt.xlim(0, W)\nplt.ylim(0, H)\nplt.title(f'🐦 {N} Boids after 100 steps')\nplt.show()\n\nn_boids = len(flock)\nall_inside = all(0 <= b.pos[0] <= W and 0 <= b.pos[1] <= H for b in flock)"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(22, locals())"
+    }
+   ]
+  },
+  "23": {
+   "num": 23,
+   "title": "🐦 3 Flocking Rules",
+   "desc": "separation, alignment, cohesion",
+   "badge": "🌊",
+   "xp": 140,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🐦 Chapter 23 — The 3 Rules of Boids\n\nCraig Reynolds discovered that 3 simple rules create **realistic flocking**:\n\n1. **Separation** 🚫 — Don't crash into neighbours\n2. **Alignment** ➡️ — Fly in the same direction as neighbours\n3. **Cohesion** 🧲 — Stay close to the centre of the group\n\nEach boid looks at its **neighbours** (boids within a certain distance)\nand adjusts its velocity.",
+     "source": "# 🐦 Chapter 23 — The 3 Rules of Boids\n\nCraig Reynolds discovered that 3 simple rules create **realistic flocking**:\n\n1. **Separation** 🚫 — Don't crash into neighbours\n2. **Alignment** ➡️ — Fly in the same direction as neighbours\n3. **Cohesion** 🧲 — Stay close to the centre of the group\n\nEach boid looks at its **neighbours** (boids within a certain distance)\nand adjusts its velocity."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Finding neighbours",
+     "source": "---\n## 📖 Lesson 1 — Finding neighbours"
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\n\ndef get_neighbours(boid, flock, radius):\n    \"\"\"Return list of boids within `radius` distance.\"\"\"\n    neighbours = []\n    for other in flock:\n        if other is boid:\n            continue\n        dist = np.linalg.norm(boid.pos - other.pos)\n        if dist < radius:\n            neighbours.append(other)\n    return neighbours\n\n# Test with 5 boids\nnp.random.seed(0)\nflock = [Boid(np.random.uniform(0, 100), np.random.uniform(0, 100),\n              np.random.uniform(-2, 2), np.random.uniform(-2, 2))\n         for _ in range(5)]\n\nn = get_neighbours(flock[0], flock, radius=40)\nprint(f'Boid 0 has {len(n)} neighbours within radius 40')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Rule 1: Separation 🚫\n\nSteer **away** from boids that are too close.",
+     "source": "---\n## 📖 Lesson 2 — Rule 1: Separation 🚫\n\nSteer **away** from boids that are too close."
+    },
+    {
+     "type": "code",
+     "source": "def separation(boid, neighbours, min_dist=15):\n    steer = np.array([0.0, 0.0])\n    for other in neighbours:\n        diff = boid.pos - other.pos\n        dist = np.linalg.norm(diff)\n        if dist < min_dist and dist > 0:\n            steer += diff / dist  # push away\n    return steer\n\nprint('Separation force:', separation(flock[0], get_neighbours(flock[0], flock, 40)))"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 3 — Rule 2: Alignment ➡️\n\nSteer towards the **average direction** of neighbours.",
+     "source": "---\n## 📖 Lesson 3 — Rule 2: Alignment ➡️\n\nSteer towards the **average direction** of neighbours."
+    },
+    {
+     "type": "code",
+     "source": "def alignment(boid, neighbours):\n    if not neighbours:\n        return np.array([0.0, 0.0])\n    avg_vel = np.mean([b.vel for b in neighbours], axis=0)\n    return avg_vel - boid.vel\n\nprint('Alignment force:', alignment(flock[0], get_neighbours(flock[0], flock, 40)))"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 4 — Rule 3: Cohesion 🧲\n\nSteer towards the **centre** of the group.",
+     "source": "---\n## 📖 Lesson 4 — Rule 3: Cohesion 🧲\n\nSteer towards the **centre** of the group."
+    },
+    {
+     "type": "code",
+     "source": "def cohesion(boid, neighbours):\n    if not neighbours:\n        return np.array([0.0, 0.0])\n    centre = np.mean([b.pos for b in neighbours], axis=0)\n    return centre - boid.pos\n\nprint('Cohesion force:', cohesion(flock[0], get_neighbours(flock[0], flock, 40)))"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 5 — Combining the 3 rules\n\nEach rule returns a force (vector). We combine them with **weights**.",
+     "source": "---\n## 📖 Lesson 5 — Combining the 3 rules\n\nEach rule returns a force (vector). We combine them with **weights**."
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.animation import FuncAnimation\n\nW, H = 100, 100\nN = 40\nRADIUS = 20\nMAX_SPEED = 4\n\n# Weights for each rule\nW_SEP = 1.5   # separation\nW_ALI = 1.0   # alignment\nW_COH = 0.5   # cohesion\n\nnp.random.seed(42)\nflock = [Boid(np.random.uniform(20, 80), np.random.uniform(20, 80),\n              np.random.uniform(-2, 2), np.random.uniform(-2, 2))\n         for _ in range(N)]\n\ndef update_flock(flock):\n    for b in flock:\n        neighbours = get_neighbours(b, flock, RADIUS)\n        force = (W_SEP * separation(b, neighbours)\n               + W_ALI * alignment(b, neighbours)\n               + W_COH * cohesion(b, neighbours))\n        b.vel += force * 0.1\n        # Limit speed\n        speed = np.linalg.norm(b.vel)\n        if speed > MAX_SPEED:\n            b.vel = b.vel / speed * MAX_SPEED\n        b.move(W, H)\n\n# Run 200 steps and plot every 50\nfig, axes = plt.subplots(1, 4, figsize=(16, 4))\nfor i, ax in enumerate(axes):\n    for _ in range(50):\n        update_flock(flock)\n    xs  = [b.pos[0] for b in flock]\n    ys  = [b.pos[1] for b in flock]\n    vxs = [b.vel[0] for b in flock]\n    vys = [b.vel[1] for b in flock]\n    ax.quiver(xs, ys, vxs, vys, color='teal', scale=60)\n    ax.set_xlim(0, W)\n    ax.set_ylim(0, H)\n    ax.set_title(f'Step {(i+1)*50}')\nplt.suptitle('🐦 Flocking over time', fontweight='bold')\nplt.tight_layout()\nplt.show()\n\nflocking_works = True"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Tune the weights\n\nExperiment with the weights! Try:\n- `W_SEP = 3, W_ALI = 0, W_COH = 0` → what happens?\n- `W_SEP = 0, W_ALI = 0, W_COH = 3` → what happens?\n- `W_SEP = 0, W_ALI = 3, W_COH = 0` → what happens?\n\nWrite your observations below.",
+     "source": "---\n## ✏️ Exercise — Tune the weights\n\nExperiment with the weights! Try:\n- `W_SEP = 3, W_ALI = 0, W_COH = 0` → what happens?\n- `W_SEP = 0, W_ALI = 0, W_COH = 3` → what happens?\n- `W_SEP = 0, W_ALI = 3, W_COH = 0` → what happens?\n\nWrite your observations below."
+    },
+    {
+     "type": "exercise",
+     "source": "# Your observations:\nobs_separation = '???'  # What happens with only separation?\nobs_cohesion   = '???'  # What happens with only cohesion?\nobs_alignment  = '???'  # What happens with only alignment?\n\nprint(f'Separation only: {obs_separation}')\nprint(f'Cohesion only:   {obs_cohesion}')\nprint(f'Alignment only:  {obs_alignment}')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(23, locals())"
+    }
+   ]
+  },
+  "24": {
+   "num": 24,
+   "title": "🦅 Inheritance: Predator",
+   "desc": "super(), override, chase",
+   "badge": "🦅",
+   "xp": 150,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🦅 Chapter 24 — Inheritance: The Predator\n\n<img src=\"images/pokedex/717.png\" width=\"140\" alt=\"Yveltal\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- **Inheritance** — a class that *extends* another class\n- `super()` — call the parent's methods\n- Override methods to change behaviour\n\n> 💡 A `Predator` is a `Boid` that chases instead of flocking.",
+     "source": "# 🦅 Chapter 24 — Inheritance: The Predator\n\n<img src=\"images/pokedex/717.png\" width=\"140\" alt=\"Yveltal\" style=\"margin: 6px; vertical-align: middle;\"/>\n\n**What you will learn:**\n- **Inheritance** — a class that *extends* another class\n- `super()` — call the parent's methods\n- Override methods to change behaviour\n\n> 💡 A `Predator` is a `Boid` that chases instead of flocking."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Inheritance basics\n\n```python\nclass Predator(Boid):  # inherits from Boid\n    pass  # has all methods of Boid already!\n```",
+     "source": "---\n## 📖 Lesson 1 — Inheritance basics\n\n```python\nclass Predator(Boid):  # inherits from Boid\n    pass  # has all methods of Boid already!\n```"
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\n\nclass Boid:\n    def __init__(self, x, y, vx, vy):\n        self.pos = np.array([x, y], dtype=float)\n        self.vel = np.array([vx, vy], dtype=float)\n\n    def move(self, w, h):\n        self.pos += self.vel\n        for i, limit in enumerate([w, h]):\n            if self.pos[i] < 0:\n                self.pos[i] = 0; self.vel[i] *= -1\n            elif self.pos[i] > limit:\n                self.pos[i] = limit; self.vel[i] *= -1\n\nclass Predator(Boid):\n    def __init__(self, x, y, vx, vy):\n        super().__init__(x, y, vx, vy)\n        self.is_predator = True\n\n    def chase(self, target):\n        direction = target.pos - self.pos\n        dist = np.linalg.norm(direction)\n        if dist > 0:\n            self.vel += 0.05 * direction / dist\n\np = Predator(10, 10, 1, 1)\nprey = Boid(80, 80, 0, 0)\nprint(f'Predator at {p.pos}, prey at {prey.pos}')\nfor _ in range(20):\n    p.chase(prey)\n    p.move(100, 100)\nprint(f'Predator at ({p.pos[0]:.0f}, {p.pos[1]:.0f}) — getting closer!')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Boids flee from the predator 🏃",
+     "source": "---\n## 📖 Lesson 2 — Boids flee from the predator 🏃"
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\nimport matplotlib.pyplot as plt\n\nW, H = 100, 100\nFLEE_RADIUS = 25\n\ndef flee_from_predator(boid, predator, radius=FLEE_RADIUS):\n    diff = boid.pos - predator.pos\n    dist = np.linalg.norm(diff)\n    if dist < radius and dist > 0:\n        return 2.0 * diff / dist  # strong push away\n    return np.array([0.0, 0.0])\n\nnp.random.seed(42)\nflock = [Boid(np.random.uniform(20, 80), np.random.uniform(20, 80),\n              np.random.uniform(-2, 2), np.random.uniform(-2, 2))\n         for _ in range(30)]\npred = Predator(50, 50, 0, 0)\n\n# Simulate 100 steps\nfor _ in range(100):\n    # Predator chases nearest boid\n    nearest = min(flock, key=lambda b: np.linalg.norm(b.pos - pred.pos))\n    pred.chase(nearest)\n    pred.move(W, H)\n    # Boids flee from predator\n    for b in flock:\n        flee = flee_from_predator(b, pred)\n        b.vel += flee * 0.1\n        speed = np.linalg.norm(b.vel)\n        if speed > 4:\n            b.vel = b.vel / speed * 4\n        b.move(W, H)\n\n# Plot\nfig, ax = plt.subplots(figsize=(6, 6))\nfor b in flock:\n    ax.annotate('', xy=b.pos + b.vel, xytext=b.pos,\n                arrowprops=dict(arrowstyle='->', color='teal', lw=1.2))\nax.plot(*pred.pos, 'r^', markersize=15, label='Predator')\nax.set_xlim(0, W); ax.set_ylim(0, H)\nax.set_title('🦅 Predator chasing boids')\nax.legend()\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Add a `Predator.hunt()` method\n\nMake the predator `hunt()`: find the nearest boid and chase it.\nThe predator should also be 1.5× faster than boids.",
+     "source": "---\n## ✏️ Exercise — Add a `Predator.hunt()` method\n\nMake the predator `hunt()`: find the nearest boid and chase it.\nThe predator should also be 1.5× faster than boids."
+    },
+    {
+     "type": "exercise",
+     "source": "import numpy as np\n\nclass Predator(Boid):\n    def __init__(self, x, y, vx, vy):\n        super().__init__(x, y, vx, vy)\n        self.max_speed = 6  # faster than boids\n\n    def hunt(self, flock):\n        \"\"\"Chase the nearest boid.\"\"\"\n        # TODO: find nearest boid (use min + lambda + np.linalg.norm)\n        nearest = ???\n        # TODO: steer towards it\n        self.chase(nearest)\n        # Limit speed\n        speed = np.linalg.norm(self.vel)\n        if speed > self.max_speed:\n            self.vel = self.vel / speed * self.max_speed\n\n    def chase(self, target):\n        direction = target.pos - self.pos\n        dist = np.linalg.norm(direction)\n        if dist > 0:\n            self.vel += 0.1 * direction / dist\n\nnp.random.seed(7)\nflock = [Boid(np.random.uniform(10, 90), np.random.uniform(10, 90),\n              np.random.uniform(-2, 2), np.random.uniform(-2, 2))\n         for _ in range(20)]\npred = Predator(50, 50, 0, 0)\n\nfor _ in range(50):\n    pred.hunt(flock)\n    pred.move(100, 100)\n\nhas_hunt = hasattr(pred, 'hunt')\npred_fast = pred.max_speed > 4\nprint(f'Predator at ({pred.pos[0]:.0f}, {pred.pos[1]:.0f}), speed: {np.linalg.norm(pred.vel):.1f}')\nprint(f'hunt() exists: {has_hunt}, faster than boids: {pred_fast}')"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(24, locals())"
+    }
+   ]
+  },
+  "25": {
+   "num": 25,
+   "title": "🎮 Interactive Sim",
+   "desc": "sliders, mouse events",
+   "badge": "🎮",
+   "xp": 160,
+   "season": 3,
+   "boss": false,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🎮 Chapter 25 — Interactive Simulation\n\n**What you will learn:**\n- **Sliders** — change parameters in real-time\n- **Mouse events** — click to teleport the predator\n\n> 💡 Like Scratch's \"sensing\" blocks, but more powerful!",
+     "source": "# 🎮 Chapter 25 — Interactive Simulation\n\n**What you will learn:**\n- **Sliders** — change parameters in real-time\n- **Mouse events** — click to teleport the predator\n\n> 💡 Like Scratch's \"sensing\" blocks, but more powerful!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 1 — Sliders with `matplotlib.widgets`",
+     "source": "---\n## 📖 Lesson 1 — Sliders with `matplotlib.widgets`"
+    },
+    {
+     "type": "code",
+     "source": "%matplotlib notebook\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.widgets import Slider\n\nfig, ax = plt.subplots(figsize=(6, 5))\nplt.subplots_adjust(bottom=0.25)\n\nx = np.linspace(0, 10, 100)\nline, = ax.plot(x, np.sin(x))\nax.set_title('Play with the slider!')\n\nax_freq = plt.axes([0.2, 0.05, 0.6, 0.04])\nslider  = Slider(ax_freq, 'Frequency', 0.5, 5.0, valinit=1.0)\n\ndef update(val):\n    line.set_ydata(np.sin(slider.val * x))\n    fig.canvas.draw_idle()\n\nslider.on_changed(update)\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 📖 Lesson 2 — Mouse click events",
+     "source": "---\n## 📖 Lesson 2 — Mouse click events"
+    },
+    {
+     "type": "code",
+     "source": "%matplotlib notebook\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots(figsize=(5, 5))\nax.set_xlim(0, 100)\nax.set_ylim(0, 100)\nax.set_title('Click anywhere!')\ndot, = ax.plot(50, 50, 'ro', markersize=15)\n\ndef on_click(event):\n    if event.inaxes == ax:\n        dot.set_data([event.xdata], [event.ydata])\n        ax.set_title(f'Clicked at ({event.xdata:.0f}, {event.ydata:.0f})')\n        fig.canvas.draw_idle()\n\nfig.canvas.mpl_connect('button_press_event', on_click)\nplt.show()"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## ✏️ Exercise — Boids with a slider for RADIUS\n\nAdd a slider to control the **neighbourhood radius** of the boids.\nWhen you change the slider, the boids should behave differently!",
+     "source": "---\n## ✏️ Exercise — Boids with a slider for RADIUS\n\nAdd a slider to control the **neighbourhood radius** of the boids.\nWhen you change the slider, the boids should behave differently!"
+    },
+    {
+     "type": "code",
+     "source": "%matplotlib notebook\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.animation import FuncAnimation\nfrom matplotlib.widgets import Slider\n\nW, H = 100, 100\nN = 30\nnp.random.seed(42)\n\n# Reuse Boid class from chapter 22\nclass Boid:\n    def __init__(self, x, y, vx, vy):\n        self.pos = np.array([x, y], dtype=float)\n        self.vel = np.array([vx, vy], dtype=float)\n    def move(self, w, h):\n        self.pos += self.vel\n        for i, lim in enumerate([w, h]):\n            if self.pos[i] < 0: self.pos[i] = 0; self.vel[i] *= -1\n            elif self.pos[i] > lim: self.pos[i] = lim; self.vel[i] *= -1\n\nflock = [Boid(np.random.uniform(10, 90), np.random.uniform(10, 90),\n              np.random.uniform(-2, 2), np.random.uniform(-2, 2))\n         for _ in range(N)]\n\nfig, ax = plt.subplots(figsize=(6, 6))\nplt.subplots_adjust(bottom=0.15)\nax.set_xlim(0, W); ax.set_ylim(0, H)\nscatter = ax.scatter([b.pos[0] for b in flock],\n                     [b.pos[1] for b in flock], s=30, c='teal')\n\nax_radius = plt.axes([0.2, 0.03, 0.6, 0.03])\nradius_slider = Slider(ax_radius, 'Radius', 5, 50, valinit=20)\n\ndef get_neighbours(boid, flock, radius):\n    return [b for b in flock if b is not boid\n            and np.linalg.norm(b.pos - boid.pos) < radius]\n\ndef update(frame):\n    r = radius_slider.val\n    for b in flock:\n        nbs = get_neighbours(b, flock, r)\n        if nbs:\n            centre = np.mean([n.pos for n in nbs], axis=0)\n            b.vel += 0.02 * (centre - b.pos)  # cohesion\n            avg_vel = np.mean([n.vel for n in nbs], axis=0)\n            b.vel += 0.05 * (avg_vel - b.vel)  # alignment\n            for n in nbs:\n                diff = b.pos - n.pos\n                d = np.linalg.norm(diff)\n                if d < 10 and d > 0:\n                    b.vel += 0.5 * diff / d  # separation\n        sp = np.linalg.norm(b.vel)\n        if sp > 4: b.vel = b.vel / sp * 4\n        b.move(W, H)\n    scatter.set_offsets(np.array([b.pos for b in flock]))\n    return scatter,\n\nani = FuncAnimation(fig, update, frames=500, interval=50, blit=True)\nplt.show()\n\ninteractive_done = True\nslider_exists = True"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(25, locals())"
+    }
+   ]
+  },
+  "26": {
+   "num": 26,
+   "title": "🏆 BOSS — Birds Ultimate",
+   "desc": "50 birds + predator + sliders",
+   "badge": "🏆",
+   "xp": 300,
+   "season": 3,
+   "boss": true,
+   "cells": [
+    {
+     "type": "md",
+     "source_en": "# 🏆 BOSS S3 — Boids Ultimate!\n\n<p><img src=\"images/pokedex/717.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/149.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/373.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**The final challenge!**\n\nBuild the **ultimate Boids simulation** with:\n- A flock of 50 boids\n- 3 flocking rules (separation, alignment, cohesion)\n- A predator that chases the nearest boid\n- Boids flee from the predator\n- Live animation\n- Sliders to control weights\n\n> 💡 Run every cell from top to bottom!",
+     "source": "# 🏆 BOSS S3 — Boids Ultimate!\n\n<p><img src=\"images/pokedex/717.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/149.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/><img src=\"images/pokedex/373.png\" width=\"100\" alt=\"\" style=\"margin: 6px; vertical-align: middle;\"/></p>\n\n**The final challenge!**\n\nBuild the **ultimate Boids simulation** with:\n- A flock of 50 boids\n- 3 flocking rules (separation, alignment, cohesion)\n- A predator that chases the nearest boid\n- Boids flee from the predator\n- Live animation\n- Sliders to control weights\n\n> 💡 Run every cell from top to bottom!"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 1 — Setup all classes",
+     "source": "---\n## Step 1 — Setup all classes"
+    },
+    {
+     "type": "code",
+     "source": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.animation import FuncAnimation\nfrom matplotlib.widgets import Slider\n\nW, H = 200, 200\nN = 50\nRADIUS = 25\nMAX_SPEED = 4\nnp.random.seed(42)\n\nclass Boid:\n    def __init__(self, x, y, vx, vy):\n        self.pos = np.array([x, y], dtype=float)\n        self.vel = np.array([vx, vy], dtype=float)\n\n    def move(self):\n        self.pos += self.vel\n        for i, lim in enumerate([W, H]):\n            if self.pos[i] < 0: self.pos[i] = 0; self.vel[i] *= -1\n            elif self.pos[i] > lim: self.pos[i] = lim; self.vel[i] *= -1\n\nclass Predator(Boid):\n    def __init__(self, x, y):\n        super().__init__(x, y, 0, 0)\n        self.max_speed = 5\n\n    def hunt(self, flock):\n        if not flock: return\n        nearest = min(flock, key=lambda b: np.linalg.norm(b.pos - self.pos))\n        diff = nearest.pos - self.pos\n        dist = np.linalg.norm(diff)\n        if dist > 0:\n            self.vel += 0.08 * diff / dist\n        sp = np.linalg.norm(self.vel)\n        if sp > self.max_speed:\n            self.vel = self.vel / sp * self.max_speed\n\nflock = [Boid(np.random.uniform(20, W-20), np.random.uniform(20, H-20),\n              np.random.uniform(-2, 2), np.random.uniform(-2, 2))\n         for _ in range(N)]\npred = Predator(W/2, H/2)\n\nprint(f'{N} boids + 1 predator ready!')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 2 — Flocking rules",
+     "source": "---\n## Step 2 — Flocking rules"
+    },
+    {
+     "type": "code",
+     "source": "def get_neighbours(boid, flock, radius):\n    return [b for b in flock if b is not boid\n            and np.linalg.norm(b.pos - boid.pos) < radius]\n\ndef separation(boid, neighbours, min_dist=15):\n    steer = np.array([0.0, 0.0])\n    for n in neighbours:\n        diff = boid.pos - n.pos\n        d = np.linalg.norm(diff)\n        if 0 < d < min_dist:\n            steer += diff / d\n    return steer\n\ndef alignment(boid, neighbours):\n    if not neighbours: return np.array([0.0, 0.0])\n    return np.mean([b.vel for b in neighbours], axis=0) - boid.vel\n\ndef cohesion(boid, neighbours):\n    if not neighbours: return np.array([0.0, 0.0])\n    return np.mean([b.pos for b in neighbours], axis=0) - boid.pos\n\ndef flee(boid, predator, radius=30):\n    diff = boid.pos - predator.pos\n    d = np.linalg.norm(diff)\n    if 0 < d < radius:\n        return 3.0 * diff / d\n    return np.array([0.0, 0.0])\n\nprint('✅ Flocking rules defined')"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 3 — Live animated simulation with sliders",
+     "source": "---\n## Step 3 — Live animated simulation with sliders"
+    },
+    {
+     "type": "code",
+     "source": "%matplotlib notebook\n\nfig, ax = plt.subplots(figsize=(7, 7))\nplt.subplots_adjust(bottom=0.22)\nax.set_xlim(0, W); ax.set_ylim(0, H)\nax.set_title('🐦 Boids Ultimate')\n\nsc_boids = ax.scatter([b.pos[0] for b in flock],\n                      [b.pos[1] for b in flock], s=20, c='teal')\nsc_pred  = ax.scatter([pred.pos[0]], [pred.pos[1]], s=120, c='red',\n                      marker='^', zorder=5, label='Predator')\nax.legend(loc='upper right')\n\nax_sep = plt.axes([0.15, 0.12, 0.3, 0.03])\nax_ali = plt.axes([0.15, 0.07, 0.3, 0.03])\nax_coh = plt.axes([0.15, 0.02, 0.3, 0.03])\nax_rad = plt.axes([0.60, 0.07, 0.3, 0.03])\n\nsl_sep = Slider(ax_sep, 'Separation', 0, 5, valinit=1.5)\nsl_ali = Slider(ax_ali, 'Alignment',  0, 5, valinit=1.0)\nsl_coh = Slider(ax_coh, 'Cohesion',   0, 5, valinit=0.5)\nsl_rad = Slider(ax_rad, 'Radius',     5, 60, valinit=25)\n\n# Click to teleport predator\ndef on_click(event):\n    if event.inaxes == ax:\n        pred.pos[:] = [event.xdata, event.ydata]\n        pred.vel[:] = 0\n\nfig.canvas.mpl_connect('button_press_event', on_click)\n\ndef update(frame):\n    r = sl_rad.val\n    for b in flock:\n        nbs = get_neighbours(b, flock, r)\n        force = (sl_sep.val * separation(b, nbs)\n               + sl_ali.val * alignment(b, nbs)\n               + sl_coh.val * cohesion(b, nbs)\n               + flee(b, pred))\n        b.vel += force * 0.05\n        sp = np.linalg.norm(b.vel)\n        if sp > MAX_SPEED:\n            b.vel = b.vel / sp * MAX_SPEED\n        b.move()\n    pred.hunt(flock)\n    pred.move()\n    sc_boids.set_offsets(np.array([b.pos for b in flock]))\n    sc_pred.set_offsets(np.array([pred.pos]))\n    return sc_boids, sc_pred\n\nani = FuncAnimation(fig, update, frames=1000, interval=40, blit=True)\nplt.show()\n\nsimulation_running = True"
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## Step 4 — Verification\n\nRun this cell after seeing the simulation work.",
+     "source": "---\n## Step 4 — Verification\n\nRun this cell after seeing the simulation work."
+    },
+    {
+     "type": "md",
+     "source_en": "---\n## 🚀 Bonus ideas\n\nCongrats, you finished Python Quest! Here are some ideas to keep going:\n\n1. **Obstacles** — Add circles that boids must avoid\n2. **Multiple predators** — Each with a different colour\n3. **3D boids** — Use `mpl_toolkits.mplot3d` for 3D\n4. **Export video** — `anim.save('boids.mp4', fps=30)`\n5. **Pygame version** — Faster rendering for 100+ boids\n\nBe creative! 🚀",
+     "source": "---\n## 🚀 Bonus ideas\n\nCongrats, you finished Python Quest! Here are some ideas to keep going:\n\n1. **Obstacles** — Add circles that boids must avoid\n2. **Multiple predators** — Each with a different colour\n3. **3D boids** — Use `mpl_toolkits.mplot3d` for 3D\n4. **Export video** — `anim.save('boids.mp4', fps=30)`\n5. **Pygame version** — Faster rendering for 100+ boids\n\nBe creative! 🚀"
+    },
+    {
+     "type": "verify",
+     "source": "from _verify import verify\nverify(26, locals())"
+    }
+   ]
+  }
+ },
+ "seasons": {
+  "1": {
+   "name": "Pokémon Edition",
+   "emoji": "⚡",
+   "color": "#f6d365"
+  },
+  "2": {
+   "name": "Formula 1",
+   "emoji": "🏎️",
+   "color": "#e74c3c"
+  },
+  "3": {
+   "name": "Birds Simulation",
+   "emoji": "🐦",
+   "color": "#a855f7"
+  }
+ },
+ "levels": [
+  [
+   0,
+   "🥚 Egg"
+  ],
+  [
+   50,
+   "⚡ Pichu"
+  ],
+  [
+   150,
+   "⚡ Pikachu"
+  ],
+  [
+   300,
+   "⚡ Raichu"
+  ],
+  [
+   500,
+   "🔥 Charizard"
+  ],
+  [
+   750,
+   "🐉 Dragonite"
+  ],
+  [
+   1000,
+   "🌟 Mewtwo"
+  ],
+  [
+   1500,
+   "🏆 Pokémon Master"
+  ]
+ ]
+}

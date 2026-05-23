@@ -1,0 +1,9 @@
+{
+  "num": 19,
+  "title": "🟢 Moving Objects",
+  "desc": "position, velocity, bounce",
+  "badge": "🟢",
+  "xp": 100,
+  "season": 3,
+  "boss": false
+}

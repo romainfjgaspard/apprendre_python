@@ -1,0 +1,5 @@
+print('Shape (rows, cols):', df.shape)
+print('\nFirst 3 rows:')
+print(df.head(3))
+print('\nSorted by points (desc):')
+print(df.sort_values('points', ascending=False))

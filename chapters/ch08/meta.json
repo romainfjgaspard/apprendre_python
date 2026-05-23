@@ -1,0 +1,9 @@
+{
+  "num": 8,
+  "title": "💾 Files & JSON",
+  "desc": "read/write, save/load",
+  "badge": "💾",
+  "xp": 100,
+  "season": 1,
+  "boss": false
+}

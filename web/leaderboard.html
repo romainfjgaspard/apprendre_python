@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏆 Python Quest — Leaderboard</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .lb-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .lb-container h1 {
+    text-align: center;
+    font-family: var(--font-pixel);
+    font-size: 16px;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .lb-back {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .lb-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .lb-table th, .lb-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .lb-table th {
+    color: var(--accent);
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .lb-table tr:hover {
+    background: var(--bg-hover);
+  }
+  .lb-rank {
+    font-family: var(--font-pixel);
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  .lb-rank.gold { color: #ffd700; }
+  .lb-rank.silver { color: #c0c0c0; }
+  .lb-rank.bronze { color: #cd7f32; }
+  .lb-name { color: var(--green); font-weight: 700; }
+  .lb-xp { color: var(--accent); }
+  .lb-level { color: var(--cyan); font-size: 13px; }
+  .lb-chapters { color: var(--text-dim); font-size: 13px; }
+  .lb-badges { font-size: 16px; }
+  .lb-empty {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-dim);
+  }
+  .lb-loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--cyan);
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HCG77H3QXB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HCG77H3QXB');
+</script>
+</head>
+<body>
+  <div class="lb-container">
+    <a href="index.html" class="btn btn-small lb-back">← Back to game</a>
+    <h1>🏆 Leaderboard</h1>
+    <div id="lb-content" class="lb-loading">Loading...</div>
+  </div>
+
+  <script src="firebase.js"></script>
+  <script>
+    async function renderLeaderboard() {
+      const container = document.getElementById("lb-content");
+
+      const ok = await initFirebase();
+      if (!ok) {
+        container.innerHTML = `<div class="lb-empty">
+          <p>Firebase is not configured.</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--text-dim)">
+            Add your Firebase config in <code>firebase.js</code> to enable the leaderboard.
+          </p>
+        </div>`;
+        return;
+      }
+
+      const players = await loadLeaderboard();
+      if (players.length === 0) {
+        container.innerHTML = `<div class="lb-empty">No players yet! Be the first to complete a chapter.</div>`;
+        return;
+      }
+
+      let html = `<table class="lb-table">
+        <thead><tr>
+          <th>#</th><th>Player</th><th>Level</th><th>XP</th><th>Chapters</th><th>Badges</th>
+        </tr></thead><tbody>`;
+
+      players.forEach((p, i) => {
+        const rankClass = i === 0 ? "gold" : i === 1 ? "silver" : i === 2 ? "bronze" : "";
+        const medals = ["🥇", "🥈", "🥉"];
+        const rankText = i < 3 ? medals[i] : String(i + 1);
+        html += `<tr>
+          <td class="lb-rank ${rankClass}">${rankText}</td>
+          <td class="lb-name">${escapeHtml(p.name)}</td>
+          <td class="lb-level">${escapeHtml(p.level || "")}</td>
+          <td class="lb-xp">${p.xp} XP</td>
+          <td class="lb-chapters">${p.chapters_done || 0}/26</td>
+          <td class="lb-badges">${(p.badges || []).join(" ")}</td>
+        </tr>`;
+      });
+
+      html += "</tbody></table>";
+      container.innerHTML = html;
+    }
+
+    function escapeHtml(s) {
+      const d = document.createElement("div");
+      d.textContent = s || "";
+      return d.innerHTML;
+    }
+
+    renderLeaderboard();
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "num": 24,
+  "title": "🦅 Inheritance: Predator",
+  "desc": "super(), override, chase",
+  "badge": "🦅",
+  "xp": 150,
+  "season": 3,
+  "boss": false
+}

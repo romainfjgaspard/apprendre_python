@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐍 Python Quest</title>
+<link rel="stylesheet" href="style.css">
+<!-- Marked.js for markdown rendering -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- CodeMirror 6 (bundled) for code editing -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/theme/dracula.min.css">
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HCG77H3QXB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HCG77H3QXB');
+</script>
+</head>
+<body>
+  <!-- ═══ SPLASH / NAME ENTRY ═══ -->
+  <div id="splash-screen" class="screen">
+    <div class="splash-content">
+      <pre class="ascii-logo">
+ ██████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ███╗   ██╗
+ ██╔══██╗╚██╗ ██╔╝╚══██╔══╝██║  ██║██╔═══██╗████╗  ██║
+ ██████╔╝ ╚████╔╝    ██║   ███████║██║   ██║██╔██╗ ██║
+ ██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║
+ ██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║
+ ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+      </pre>
+      <h2>⚡ PYTHON QUEST ⚡</h2>
+      <div class="lang-toggle">
+        <button id="lang-en" class="active">EN</button>
+        <button id="lang-fr">FR</button>
+      </div>
+      <p class="subtitle" data-i18n="splash_subtitle">Learn Python by building games!</p>
+      <div class="name-form">
+        <label for="player-name" data-i18n="splash_label">What is your name, Trainer?</label>
+        <input type="text" id="player-name" maxlength="20" placeholder="Your name..." autofocus>
+        <button id="start-btn" class="btn btn-primary" data-i18n="splash_start">Start Adventure! ⚡</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ HOME / MAP ═══ -->
+  <div id="home-screen" class="screen hidden">
+    <header class="top-bar">
+      <div class="player-info">
+        <span id="hud-name"></span>
+        <span id="hud-level"></span>
+      </div>
+      <div class="xp-container">
+        <div class="xp-bar"><div id="hud-xp-fill" class="xp-fill"></div></div>
+        <span id="hud-xp-text"></span>
+      </div>
+      <div id="hud-badges"></div>
+      <div class="lang-toggle" style="position:static;">
+        <button id="lang-en2" class="active">EN</button>
+        <button id="lang-fr2">FR</button>
+      </div>
+    </header>
+
+    <main class="map-container">
+      <h1 data-i18n="map_title">🗺️ Adventure Map</h1>
+      <div id="season-1" class="season-block">
+        <h2 class="season-title season-pokemon" data-i18n="season1_title">⚡ Season 1 — Pokémon Edition</h2>
+        <div class="chapter-path" id="grid-s1"></div>
+      </div>
+      <div id="season-2" class="season-block">
+        <h2 class="season-title season-f1" data-i18n="season2_title">🏎️ Season 2 — Formula 1</h2>
+        <div class="chapter-path" id="grid-s2"></div>
+      </div>
+      <div id="season-3" class="season-block">
+        <h2 class="season-title season-birds" data-i18n="season3_title">🐦 Season 3 — Birds Simulation</h2>
+        <div class="chapter-path" id="grid-s3"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ═══ CHAPTER VIEW ═══ -->
+  <div id="chapter-screen" class="screen hidden">
+    <header class="top-bar chapter-bar">
+      <button id="back-btn" class="btn btn-small" data-i18n="chapter_back">← Map</button>
+      <span id="chapter-title"></span>
+      <span id="chapter-xp-badge"></span>
+    </header>
+    <main id="chapter-content" class="chapter-content"></main>
+  </div>
+
+  <!-- ═══ VICTORY MODAL ═══ -->
+  <div id="victory-modal" class="modal hidden">
+    <div class="modal-box">
+      <h2 id="victory-title">🎉 PERFECT!</h2>
+      <p id="victory-score"></p>
+      <div id="victory-xp" class="xp-gain"></div>
+      <div id="victory-badge" class="badge-gain"></div>
+      <button id="victory-btn" class="btn btn-primary" data-i18n="victory_back">Back to Map 🗺️</button>
+    </div>
+  </div>
+
+  <!-- ═══ PYODIDE LOADING OVERLAY ═══ -->
+  <div id="loading-overlay" class="modal hidden">
+    <div class="modal-box">
+      <div class="spinner"></div>
+      <p id="loading-text">Loading Python engine...</p>
+    </div>
+  </div>
+
+  <script src="firebase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

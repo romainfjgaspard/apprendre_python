@@ -1,0 +1,9 @@
+{
+  "num": 1,
+  "title": "⚡ Hello Pokémon",
+  "desc": "print, variables, f-strings",
+  "badge": "⚡",
+  "xp": 50,
+  "season": 1,
+  "boss": false
+}
