@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Génère web/chapters.json depuis chapters/ch*/ (structure markdown + .py).
+"""Génère chapters.json depuis chapters/ch*/ (structure markdown + .py).
 
 Structure attendue par chapitre :
   chapters/ch{N:02d}/
@@ -119,7 +119,7 @@ def main():
         except Exception as exc:
             print(f"  ❌ {ch_dir.name}: {exc}")
 
-    out_path = HERE / "web" / "chapters.json"
+    out_path = HERE / "chapters.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
 

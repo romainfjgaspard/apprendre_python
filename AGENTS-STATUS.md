@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — session Tâche 2 terminée_
+_Dernière mise à jour : 2026-05-23 — session Tâche 3 terminée_
 
 ---
 
@@ -22,7 +22,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 |---|-------|------|-------|
 | 1 | Restructurer contenu → `chapters/ch*/` | ✅ Done 2026-05-23 | 240 fichiers, 26 chapitres |
 | 2 | Cellules toutes éditables (`readOnly: false`) | ✅ Done 2026-05-23 | `app.js` ligne 281 — 1 ligne |
-| 3 | Déplacer `web/` → racine + git init | ⬜ Todo | Avant GitHub Pages |
+| 3 | Déplacer `web/` → racine + git init | ✅ Done 2026-05-23 | `web/` supprimé, `export_web.py` mis à jour |
 | 4 | Firebase Firestore multi-joueur | ⬜ Todo | Dépend de 3 |
 | 5 | Leaderboard | ⬜ Todo | Dépend de 4 |
 | 6 | Contenu bilingue EN/FR complet | ⬜ Todo | `.fr.md` à rédiger manuellement |
@@ -41,14 +41,14 @@ apprendre_python/
 │   ├── {N}_lesson.en.md
 │   ├── {N}_example.py
 │   └── {N}_exercise.py
-├── web/                  ← site servi (généré / à déplacer à la racine en T3)
-│   ├── index.html        ← GA4 G-HCG77H3QXB
-│   ├── leaderboard.html  ← placeholder
-│   ├── app.js            ← moteur (~719 lignes)
-│   ├── chapters.json     ← généré par export_web.py
-│   ├── firebase.js       ← stub Realtime DB (à remplacer par Firestore en T4)
-│   └── style.css
-├── export_web.py         ← lit chapters/ → génère web/chapters.json
+├── index.html            ← GA4 G-HCG77H3QXB
+├── leaderboard.html      ← placeholder
+├── app.js                ← moteur (~719 lignes)
+├── chapters.json         ← généré par export_web.py
+├── firebase.js           ← stub Realtime DB (à remplacer par Firestore en T4)
+├── style.css
+├── images/pokedex/
+├── export_web.py         ← lit chapters/ → génère chapters.json (racine)
 ├── migrate_to_chapters.py ← one-shot T1, archivable
 └── _verify.py
 ```
@@ -77,7 +77,12 @@ apprendre_python/
 - `web/app.js` ligne 281 : `readOnly: cell.type === "code"` → `readOnly: false`
 - Toutes les cellules (exemples + exercices) sont maintenant éditables par le joueur
 
-**Prochaine session — Tâche 3** : déplacer `web/` → racine + `git remote add origin`.
+**2026-05-23** : Tâche 3 exécutée.
+- `web/` déplacé à la racine (`mv web/* .` + `rmdir web`)
+- `export_web.py` : chemin de sortie `web/chapters.json` → `chapters.json`
+- Chemins HTML déjà relatifs, aucune modification nécessaire dans index.html / leaderboard.html / app.js
+
+**Prochaine session — Tâche 4** : Firebase Firestore multi-joueur + `git remote add origin`.
 
 **Blocants connus** :
 - Firebase credentials à créer manuellement (Tâche 4) — pas de blocant immédiat
