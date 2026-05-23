@@ -5,20 +5,18 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 
 import { initializeApp }
-  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
 import { getFirestore, doc, setDoc, getDoc, getDocs, collection, query, orderBy }
-  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
 // ── Config Firebase ──────────────────────────────────────────────────────────
-// Remplis avec la config de ton projet Firebase :
-// Console Firebase → Paramètres du projet → Tes applications → config web
 const FIREBASE_CONFIG = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  apiKey: "AIzaSyBpjHG9PvRbfg-t1nqzmifDoPpQPnbhG-4",
+  authDomain: "apprendre-python-f454a.firebaseapp.com",
+  projectId: "apprendre-python-f454a",
+  storageBucket: "apprendre-python-f454a.firebasestorage.app",
+  messagingSenderId: "502890991106",
+  appId: "1:502890991106:web:598ae7dba1954ddcbea11b"
 };
 
 let fbDb = null;
