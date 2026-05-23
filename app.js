@@ -275,9 +275,10 @@ function openChapter(num) {
 
       content.appendChild(wrapper);
 
-      // Create CodeMirror editor
+      // Create CodeMirror editor — restaure le contenu saisi précédemment si dispo
+      const cellKey = `pq_cell_${num}_${editors.length}`;
       const cm = CodeMirror(editorDiv, {
-        value: cell.source,
+        value: localStorage.getItem(cellKey) || cell.source,
         mode: "python",
         theme: "dracula",
         lineNumbers: true,
@@ -288,6 +289,7 @@ function openChapter(num) {
       editors.push({ cm, outputDiv, type: cell.type });
 
       const editorIdx = editors.length - 1;
+      cm.on("change", () => localStorage.setItem(cellKey, cm.getValue()));
       runBtn.addEventListener("click", () => runCell(editorIdx));
     }
     else if (cell.type === "verify") {
