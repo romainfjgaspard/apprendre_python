@@ -1,15 +1,16 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-24 — Tâche 9 : Progression Pokémon avec évolution_
+_Dernière mise à jour : 2026-05-24 — Firebase opérationnel, plan complet terminé_
 
 ---
 
 ## État du projet
 
 Site d'apprentissage Python gamifié pour Basile (~11 ans, expert Scratch).
-Stack : HTML statique + Pyodide + CodeMirror + Firebase Firestore (à implémenter).
-Repo GitHub : **pas encore créé** (cible : `github.com/romainfjgaspard/apprendre_python`).
-GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
+Stack : HTML statique + Pyodide + CodeMirror + Firebase Firestore.
+Repo GitHub : https://github.com/romainfjgaspard/apprendre_python
+GitHub Pages : https://romainfjgaspard.github.io/apprendre_python/
+Firebase : projet `apprendre-python-f454a` — Firestore opérationnel ✅
 
 **Source de vérité du contenu** : `chapters/ch{N:02d}/` (depuis 2026-05-23).
 `chapters.json` est généré par `export_web.py` — ne pas éditer à la main.
@@ -23,7 +24,7 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | 1 | Restructurer contenu → `chapters/ch*/` | ✅ Done 2026-05-23 | 240 fichiers, 26 chapitres |
 | 2 | Cellules toutes éditables (`readOnly: false`) | ✅ Done 2026-05-23 | `app.js` ligne 281 — 1 ligne |
 | 3 | Déplacer `web/` → racine + git init | ✅ Done 2026-05-23 | `web/` supprimé, `export_web.py` mis à jour |
-| 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Credentials à remplir dans firebase.js |
+| 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Projet `apprendre-python-f454a` — vérifié opérationnel |
 | 5 | Leaderboard | ✅ Done 2026-05-23 | `leaderboard.html` réécrit — table + refresh |
 | 6 | Contenu bilingue EN/FR complet | ✅ Done 2026-05-23 | Moteur app.js + 130 fichiers .fr.md + chapters.json régénéré |
 | 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ✅ Done 2026-05-23 | 7a-7f complets — 27 chapitres (ch04b num=4.5 ajouté) |
@@ -57,8 +58,8 @@ apprendre_python/
 
 ## Points d'attention pour la prochaine session
 
-- **Firebase credentials** toujours manquants dans `firebase.js` (TODO depuis T4)
 - **Zoom trackpad** Windows non résolu (Visual Viewport API, hors plan)
+- **Firestore rules** : actuellement `write: true` — voir note sécurité ci-dessous
 
 ---
 
