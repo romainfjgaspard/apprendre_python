@@ -25,6 +25,15 @@ const I18N = {
     exercise_label: "✏️ Your code",
     run_btn: "▶ Run",
     no_output: "(no output)",
+    run_all_btn: "▶ Run All",
+    scratch_btn: "📋 Scratch?",
+    journey_title: "📊 My Journey",
+    journey_concepts: "Mastered concepts",
+    journey_badges_title: "Badges",
+    journey_seasons: "Season progress",
+    journey_no_chapters: "No chapters completed yet!",
+    starter_title: "🌟 Choose your partner!",
+    starter_subtitle: "They'll accompany you throughout the adventure.",
   },
   fr: {
     splash_subtitle: "Apprends Python en créant des jeux !",
@@ -47,6 +56,15 @@ const I18N = {
     exercise_label: "✏️ Ton code",
     run_btn: "▶ Run",
     no_output: "(pas de sortie)",
+    run_all_btn: "▶ Tout exécuter",
+    scratch_btn: "📋 Scratch?",
+    journey_title: "📊 Mon parcours",
+    journey_concepts: "Concepts maîtrisés",
+    journey_badges_title: "Badges",
+    journey_seasons: "Progression par saison",
+    journey_no_chapters: "Aucun chapitre terminé pour l'instant !",
+    starter_title: "🌟 Choisis ton partenaire !",
+    starter_subtitle: "Il t'accompagnera tout au long de l'aventure.",
     // Chapter titles & descriptions (map)
     ch1_title: "⚡ Salut Pokémon", ch1_desc: "print, variables, f-strings",
     ch2_title: "🔢 Types & Calculs", ch2_desc: "int, float, opérateurs",
@@ -143,6 +161,70 @@ const LEVELS = [
   [1500, "🏆 Pokémon Master"],
 ];
 
+// ── Starters Pokémon ─────────────────────────────────────────────────────────
+const STARTERS = [
+  { id: 7, forms: [
+    { minXp: 0,   pokeId: 7,   en: "Squirtle",  fr: "Carapuce" },
+    { minXp: 150, pokeId: 8,   en: "Wartortle",  fr: "Carabaffe" },
+    { minXp: 500, pokeId: 9,   en: "Blastoise",  fr: "Tortank" },
+  ]},
+  { id: 656, forms: [
+    { minXp: 0,   pokeId: 656, en: "Froakie",    fr: "Grenousse" },
+    { minXp: 150, pokeId: 657, en: "Frogadier",  fr: "Croâporal" },
+    { minXp: 500, pokeId: 658, en: "Greninja",   fr: "Amphinobi" },
+  ]},
+  { id: 371, forms: [
+    { minXp: 0,   pokeId: 371, en: "Bagon",      fr: "Draby" },
+    { minXp: 150, pokeId: 372, en: "Shelgon",    fr: "Drackhaus" },
+    { minXp: 500, pokeId: 373, en: "Salamence",  fr: "Drattak" },
+  ]},
+  { id: 147, forms: [
+    { minXp: 0,   pokeId: 147, en: "Dratini",    fr: "Minidraco" },
+    { minXp: 150, pokeId: 148, en: "Dragonair",  fr: "Draco" },
+    { minXp: 500, pokeId: 149, en: "Dragonite",  fr: "Dracolosse" },
+  ]},
+];
+
+function getPokemonForm(xp, starterId) {
+  const starter = STARTERS.find(s => s.id === starterId);
+  if (!starter) return null;
+  let form = starter.forms[0];
+  for (const f of starter.forms) {
+    if (xp >= f.minXp) form = f;
+  }
+  return form;
+}
+
+const CHAPTER_CONCEPTS = {
+  1: "print() · variables · f-strings",
+  2: "int · float · opérateurs",
+  3: "if / elif / else",
+  4: "boucle for · range()",
+  4.5: "boucle while · break",
+  5: "listes",
+  6: "dictionnaires",
+  7: "fonctions · return",
+  8: "JSON · sérialisation",
+  9: "BOSS Saison 1",
+  10: "listes imbriquées",
+  11: "sorted() · lambda",
+  12: "modules · random",
+  13: "matplotlib",
+  14: "CSV",
+  15: "pandas · DataFrame",
+  16: "subplots · tableaux de bord",
+  17: "BOSS Saison 2",
+  18: "classes · POO",
+  19: "objets · mouvement",
+  20: "numpy",
+  21: "animation",
+  22: "classe Boid",
+  23: "3 règles de vol",
+  24: "héritage · Predator",
+  25: "simulation interactive",
+  26: "BOSS Saison 3",
+};
+
 function getLevel(xp) {
   for (let i = LEVELS.length - 1; i >= 0; i--) {
     if (xp >= LEVELS[i][0]) return LEVELS[i][1];
@@ -181,6 +263,18 @@ function updateHUD() {
   $("#hud-xp-fill").style.width = (p.ratio * 100) + "%";
   $("#hud-xp-text").textContent = p.text;
   $("#hud-badges").textContent = PROG.badges.join(" ");
+
+  const hudImg = $("#hud-pokemon");
+  if (hudImg) {
+    const form = PROG.starter_pokemon ? getPokemonForm(PROG.xp, PROG.starter_pokemon) : null;
+    if (form) {
+      hudImg.src = `images/pokedex/${form.pokeId}.png`;
+      hudImg.alt = LANG === "fr" ? form.fr : form.en;
+      hudImg.style.display = "inline-block";
+    } else {
+      hudImg.style.display = "none";
+    }
+  }
 }
 
 // ── Map rendering ────────────────────────────────────────────────────────────
@@ -324,20 +418,29 @@ function openChapter(num) {
 
   // Scroll to top
   window.scrollTo(0, 0);
+
+  // 8b — précharger Pyodide en arrière-plan pendant la lecture
+  ensurePyodide(true).catch(() => {});
 }
 
 // ── Pyodide ──────────────────────────────────────────────────────────────────
-async function ensurePyodide() {
+async function ensurePyodide(silent = false) {
   if (pyodide) return pyodide;
   if (pyodideLoading) {
-    // Wait for existing load
+    if (!silent) {
+      show($("#loading-overlay"));
+      $("#loading-text").textContent = t("loading_pyodide");
+    }
     while (!pyodide) await new Promise(r => setTimeout(r, 200));
+    if (!silent) hide($("#loading-overlay"));
     return pyodide;
   }
 
   pyodideLoading = true;
-  show($("#loading-overlay"));
-  $("#loading-text").textContent = t("loading_pyodide");
+  if (!silent) {
+    show($("#loading-overlay"));
+    $("#loading-text").textContent = t("loading_pyodide");
+  }
 
   // Dynamically load Pyodide
   const script = document.createElement("script");
@@ -354,7 +457,7 @@ async function ensurePyodide() {
   // Pre-load the verify module
   await pyodide.runPythonAsync(VERIFY_PY_SOURCE);
 
-  hide($("#loading-overlay"));
+  if (!silent) hide($("#loading-overlay"));
   pyodideLoading = false;
   return pyodide;
 }
@@ -390,6 +493,16 @@ sys.stderr = _capture
     // Restore stdout
     try { pyodide.runPython("sys.stdout = sys.__stdout__; sys.stderr = sys.__stderr__"); } catch {}
   }
+}
+
+// ── Run all cells ────────────────────────────────────────────────────────────
+async function runAllCells() {
+  const btn = $("#run-all-btn");
+  if (btn) { btn.disabled = true; btn.textContent = "⏳..."; }
+  for (let i = 0; i < editors.length; i++) {
+    await runCell(i);
+  }
+  if (btn) { btn.disabled = false; btn.textContent = t("run_all_btn"); }
 }
 
 // ── Run verify ───────────────────────────────────────────────────────────────
@@ -480,12 +593,21 @@ function showVictory(chapterNum, ok, total) {
   $("#victory-xp").textContent = isNew ? `+${ch.xp} XP ✨` : t("victory_already");
   $("#victory-badge").textContent = isNew ? ch.badge : "";
 
-  // Pokémon emoji (Season 1 only)
+  // Pokémon image (Season 1 only)
   const pokemonEl = $("#victory-pokemon");
   if (pokemonEl) {
-    const levelEmoji = newLevel.split(" ").slice(0, 1).join("") || "⭐";
-    pokemonEl.textContent = levelEmoji;
-    pokemonEl.style.display = ch.season === 1 ? "inline-block" : "none";
+    if (ch.season === 1) {
+      const form = PROG.starter_pokemon ? getPokemonForm(PROG.xp, PROG.starter_pokemon) : null;
+      if (form) {
+        pokemonEl.innerHTML = `<img src="images/pokedex/${form.pokeId}.png" alt="${LANG === "fr" ? form.fr : form.en}" class="victory-pokemon-img">`;
+      } else {
+        pokemonEl.textContent = newLevel.split(" ").slice(0, 1).join("") || "⭐";
+      }
+      pokemonEl.style.display = "inline-block";
+    } else {
+      pokemonEl.style.display = "none";
+      pokemonEl.innerHTML = "";
+    }
   }
 
   // Level-up evolution panel
@@ -515,6 +637,7 @@ function showVictory(chapterNum, ok, total) {
 
 // ── Navigation ───────────────────────────────────────────────────────────────
 $("#back-btn").addEventListener("click", () => {
+  $("#scratch-panel").classList.add("hidden");
   // Reset Pyodide namespace for fresh chapter
   if (pyodide) {
     try { pyodide.runPython("pass"); } catch {}
@@ -530,6 +653,64 @@ $("#victory-btn").addEventListener("click", () => {
   showScreen("home");
   renderMap();
 });
+
+// ── Mon parcours ─────────────────────────────────────────────────────────────
+function showJourney() {
+  const title = $("#journey-title");
+  if (title) title.textContent = t("journey_title");
+
+  const content = $("#journey-content");
+  content.innerHTML = "";
+
+  if (!PROG.chapters_done.length) {
+    content.innerHTML = `<p style="color:var(--text-dim);text-align:center;padding:12px">${t("journey_no_chapters")}</p>`;
+    show($("#journey-modal"));
+    return;
+  }
+
+  // Concepts maîtrisés
+  const conceptsDiv = document.createElement("div");
+  conceptsDiv.className = "journey-section";
+  conceptsDiv.innerHTML = `<h3>${t("journey_concepts")}</h3>`;
+  const sorted = [...PROG.chapters_done].sort((a, b) => a - b);
+  sorted.forEach(num => {
+    const concept = CHAPTER_CONCEPTS[num];
+    if (concept) {
+      const s = document.createElement("div");
+      s.className = "journey-concept";
+      s.textContent = `✅ Ch${num} — ${concept}`;
+      conceptsDiv.appendChild(s);
+    }
+  });
+  content.appendChild(conceptsDiv);
+
+  // Badges
+  if (PROG.badges.length) {
+    const badgesDiv = document.createElement("div");
+    badgesDiv.className = "journey-section";
+    badgesDiv.innerHTML = `<h3>${t("journey_badges_title")}</h3><div class="journey-badges">${PROG.badges.join(" ")}</div>`;
+    content.appendChild(badgesDiv);
+  }
+
+  // Progression par saison
+  if (DATA) {
+    const seasonsDiv = document.createElement("div");
+    seasonsDiv.className = "journey-section";
+    seasonsDiv.innerHTML = `<h3>${t("journey_seasons")}</h3>`;
+    const seasonLabels = { 1: "⚡ Saison 1 — Pokémon", 2: "🏎️ Saison 2 — F1", 3: "🐦 Saison 3 — Boids" };
+    for (const s of [1, 2, 3]) {
+      const all = Object.values(DATA.chapters).filter(c => c.season === s);
+      const done = all.filter(c => PROG.chapters_done.includes(c.num));
+      const row = document.createElement("div");
+      row.className = "journey-season-row";
+      row.innerHTML = `<span>${seasonLabels[s]}</span><span>${done.length} / ${all.length}</span>`;
+      seasonsDiv.appendChild(row);
+    }
+    content.appendChild(seasonsDiv);
+  }
+
+  show($("#journey-modal"));
+}
 
 // ── Splash / name entry ──────────────────────────────────────────────────────
 async function startGame() {
@@ -559,6 +740,8 @@ async function startGame() {
     if (!name) { nameInput.focus(); return; }
     PROG.name = name;
     PROG.lang = LANG;
+    showStarterSelect();
+    return;
   }
 
   saveProgress(PROG);
@@ -796,6 +979,46 @@ def _verify_chapter(chapter, ns):
     print(f"\\n  Score: {_last_ok}/{_last_total}")
 `;
 
+
+// ── Starter selection ────────────────────────────────────────────────────────
+function showStarterSelect() {
+  const modal = $("#starter-modal");
+  const grid = $("#starter-grid");
+  grid.innerHTML = "";
+
+  STARTERS.forEach(starter => {
+    const baseForm = starter.forms[0];
+    const name = LANG === "fr" ? baseForm.fr : baseForm.en;
+    const card = document.createElement("div");
+    card.className = "starter-card";
+    card.innerHTML = `<img src="images/pokedex/${baseForm.pokeId}.png" alt="${name}"><div class="starter-name">${name}</div>`;
+    card.addEventListener("click", () => chooseStarter(starter.id));
+    grid.appendChild(card);
+  });
+
+  show(modal);
+}
+
+function chooseStarter(starterId) {
+  PROG.starter_pokemon = starterId;
+  hide($("#starter-modal"));
+  saveProgress(PROG);
+  showScreen("home");
+  renderMap();
+}
+
+// ── 8a/8c/8d event listeners ─────────────────────────────────────────────────
+$("#run-all-btn").addEventListener("click", () => runAllCells());
+
+$("#scratch-btn").addEventListener("click", () => {
+  $("#scratch-panel").classList.toggle("hidden");
+});
+$("#scratch-close").addEventListener("click", () => {
+  $("#scratch-panel").classList.add("hidden");
+});
+
+$("#journey-btn").addEventListener("click", () => showJourney());
+$("#journey-close").addEventListener("click", () => hide($("#journey-modal")));
 
 // ── Boot ─────────────────────────────────────────────────────────────────────
 // Language toggle (splash + map header)

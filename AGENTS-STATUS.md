@@ -1,6 +1,6 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-23 — Tâche 7 : fixes pédagogiques 7a-7f_
+_Dernière mise à jour : 2026-05-24 — Tâche 9 : Progression Pokémon avec évolution_
 
 ---
 
@@ -27,8 +27,8 @@ GitHub Pages cible : `https://romainfjgaspard.github.io/apprendre_python/`
 | 5 | Leaderboard | ✅ Done 2026-05-23 | `leaderboard.html` réécrit — table + refresh |
 | 6 | Contenu bilingue EN/FR complet | ✅ Done 2026-05-23 | Moteur app.js + 130 fichiers .fr.md + chapters.json régénéré |
 | 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ✅ Done 2026-05-23 | 7a-7f complets — 27 chapitres (ch04b num=4.5 ajouté) |
-| 8 | UX / Gamification | ⬜ Todo | Bouton "Tout exécuter", sidebar Scratch |
-| 9 | Progression Pokémon avec évolution | ⬜ Todo | En dernier (dépend de 4 + contenu stable) |
+| 8 | UX / Gamification | ✅ Done 2026-05-23 | 8a-8d complets |
+| 9 | Progression Pokémon avec évolution | ✅ Done 2026-05-24 | 4 starters × 3 évolutions, modal sélection, image HUD + victoire |
 
 ---
 
@@ -57,8 +57,6 @@ apprendre_python/
 
 ## Points d'attention pour la prochaine session
 
-- **images/pokedex/** vide — les animations 7f utilisent les emojis de LEVELS en attendant Tâche 9
-- **ch04b `.fr.md`** créés (EN+FR bilingue) — cohérent avec Tâche 6
 - **Firebase credentials** toujours manquants dans `firebase.js` (TODO depuis T4)
 - **Zoom trackpad** Windows non résolu (Visual Viewport API, hors plan)
 
@@ -136,7 +134,30 @@ Résultat :
 - `chapters.json` régénéré : toutes les cellules md ont désormais `source_en` et `source_fr`
 - `.gitignore` : `*.ipynb` ajouté (bloquant signalé depuis la Tâche 3)
 
-**Prochaine session — Tâche 8** : UX / Gamification (bouton "Tout exécuter", sidebar Scratch→Python, panneau parcours joueur).
+**Prochaine session — Tâche 9** : Progression Pokémon avec évolution (starter au démarrage, images pokedex/, seuils LEVELS).
+
+**2026-05-23** : Tâche 8 exécutée — UX / Gamification.
+- **8a** : `runAllCells()` dans `app.js` — bouton "▶ Tout exécuter" dans `chapter-bar` (`.chapter-bar-actions`).
+  Exécute toutes les cellules code/exercice dans l'ordre, désactive le bouton pendant l'exécution.
+- **8b** : `ensurePyodide(silent=false)` — préchargement Pyodide en arrière-plan à l'ouverture de chaque chapitre.
+  Si un chargement silencieux est en cours et l'user clique "▶ Run", l'overlay s'affiche quand même.
+- **8c** : Panel latéral Scratch → Python (`.side-panel`, position: fixed droite).
+  Toggle via bouton "📋 Scratch?" dans `chapter-bar`. Fermé automatiquement au retour carte.
+  14 correspondances Scratch/Python dans une table statique dans `index.html`.
+- **8d** : Modal "Mon parcours" (bouton "📊" dans home top-bar).
+  Affiche : concepts maîtrisés par chapitre (`CHAPTER_CONCEPTS`), badges, progression par saison.
+  Données issues de `PROG.chapters_done` + `DATA.chapters`.
+- Fichiers modifiés : `app.js` (~120 lignes), `index.html` (~35 lignes), `style.css` (~95 lignes).
+
+**2026-05-24** : Tâche 9 exécutée — Progression Pokémon avec évolution.
+- **STARTERS** : 4 starters × 3 formes d'évolution (Squirtle/7→8→9, Froakie/656→657→658, Bagon/371→372→373, Dratini/147→148→149)
+- Seuils d'évolution : 0 XP (base), 150 XP (1ère évolution), 500 XP (forme finale) — alignés sur LEVELS existant
+- `images/pokedex/` : 12 images PNG copiées depuis `~/projects/pokedex/images/`
+- `app.js` : `STARTERS` constant + `getPokemonForm()`, `updateHUD()` → `<img>` Pokémon, `showVictory()` → image au lieu d'emoji, `startGame()` → modal starter pour nouveaux joueurs, `showStarterSelect()` + `chooseStarter()`
+- `index.html` : modal `#starter-modal` (4 cartes cliquables) + `#hud-pokemon` image dans le HUD
+- `style.css` : `.starter-card`, `.starter-grid`, `.hud-pokemon-img`, `.victory-pokemon-img`
+- Joueurs existants (sans starter_pokemon) : HUD image masquée, fallback emoji emoji dans victory
+- Noms bilingues : Squirtle/Carapuce, Wartortle/Carabaffe, Blastoise/Tortank, Froakie/Grenousse, Frogadier/Croâporal, Greninja/Amphinobi, Bagon/Draby, Shelgon/Drackhaus, Salamence/Drattak, Dratini/Minidraco, Dragonair/Draco, Dragonite/Dracolosse
 
 **Blocants connus** :
 - Repo GitHub pas encore créé → `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` puis `git push -u origin main`

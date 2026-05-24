@@ -59,6 +59,7 @@
   <div id="home-screen" class="screen hidden">
     <header class="top-bar">
       <div class="player-info">
+        <img id="hud-pokemon" class="hud-pokemon-img" src="" alt="" style="display:none">
         <span id="hud-name"></span>
         <span id="hud-level"></span>
       </div>
@@ -67,6 +68,7 @@
         <span id="hud-xp-text"></span>
       </div>
       <div id="hud-badges"></div>
+      <button id="journey-btn" class="btn btn-small">📊</button>
       <a href="leaderboard.html" class="btn btn-small">🏆</a>
       <div class="lang-toggle" style="position:static;">
         <button id="lang-en2" class="active">EN</button>
@@ -96,7 +98,11 @@
     <header class="top-bar chapter-bar">
       <button id="back-btn" class="btn btn-small" data-i18n="chapter_back">← Map</button>
       <span id="chapter-title"></span>
-      <span id="chapter-xp-badge"></span>
+      <div class="chapter-bar-actions">
+        <span id="chapter-xp-badge"></span>
+        <button id="scratch-btn" class="btn btn-small" data-i18n="scratch_btn">📋 Scratch?</button>
+        <button id="run-all-btn" class="btn btn-small btn-run" data-i18n="run_all_btn">▶ Tout exécuter</button>
+      </div>
     </header>
     <main id="chapter-content" class="chapter-content"></main>
   </div>
@@ -123,6 +129,53 @@
     <div class="modal-box">
       <div class="spinner"></div>
       <p id="loading-text">Loading Python engine...</p>
+    </div>
+  </div>
+
+  <!-- ═══ SCRATCH → PYTHON SIDEBAR ═══ -->
+  <div id="scratch-panel" class="side-panel hidden">
+    <div class="side-panel-header">
+      <span>📋 Scratch → Python</span>
+      <button id="scratch-close" class="btn btn-small">✕</button>
+    </div>
+    <div class="side-panel-body">
+      <table class="scratch-table">
+        <thead><tr><th>Scratch</th><th>Python</th></tr></thead>
+        <tbody>
+          <tr><td><code>dire "Bonjour"</code></td><td><code>print("Bonjour")</code></td></tr>
+          <tr><td><code>répéter 10 fois</code></td><td><code>for i in range(10):</code></td></tr>
+          <tr><td><code>si &lt;&gt; alors</code></td><td><code>if condition:</code></td></tr>
+          <tr><td><code>sinon si &lt;&gt;</code></td><td><code>elif condition:</code></td></tr>
+          <tr><td><code>sinon</code></td><td><code>else:</code></td></tr>
+          <tr><td><code>attendre jusqu'à</code></td><td><code>while not cond:</code></td></tr>
+          <tr><td><code>mettre X à valeur</code></td><td><code>x = valeur</code></td></tr>
+          <tr><td><code>ajouter à ma liste</code></td><td><code>liste.append(x)</code></td></tr>
+          <tr><td><code>longueur de ma liste</code></td><td><code>len(liste)</code></td></tr>
+          <tr><td><code>élément n° de liste</code></td><td><code>liste[n-1]</code></td></tr>
+          <tr><td><code>et / ou / non</code></td><td><code>and / or / not</code></td></tr>
+          <tr><td><code>nombre aléatoire</code></td><td><code>random.randint(a,b)</code></td></tr>
+          <tr><td><code>définir bloc(x)</code></td><td><code>def bloc(x):</code></td></tr>
+          <tr><td><code>renvoyer résultat</code></td><td><code>return résultat</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══ STARTER SELECTION MODAL ═══ -->
+  <div id="starter-modal" class="modal hidden">
+    <div class="modal-box starter-box">
+      <h2 data-i18n="starter_title">🌟 Choisis ton partenaire !</h2>
+      <p class="starter-subtitle" data-i18n="starter_subtitle">Il t'accompagnera tout au long de l'aventure.</p>
+      <div id="starter-grid" class="starter-grid"></div>
+    </div>
+  </div>
+
+  <!-- ═══ MON PARCOURS MODAL ═══ -->
+  <div id="journey-modal" class="modal hidden">
+    <div class="modal-box journey-box">
+      <h2 id="journey-title">📊 Mon parcours</h2>
+      <div id="journey-content"></div>
+      <button id="journey-close" class="btn btn-small" style="margin-top:16px">✕ Fermer</button>
     </div>
   </div>
 
