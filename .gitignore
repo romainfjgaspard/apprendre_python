@@ -7,3 +7,7 @@ service-account.json
 *.ipynb
 _archive/
 *:Zone.Identifier
+
+# Fichiers locaux — ne pas commiter
+AGENTS.md
+ecran acceuil.png

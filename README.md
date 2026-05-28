@@ -15,19 +15,16 @@ A progressive Python course for Basile (11, Scratch expert) with 3 themed season
 
 1. **Start a local server:**
    ```bash
-   # Using Python
-   python -m http.server 8000
-   
+   # Using Python 3 (WSL2 / Linux / macOS)
+   python3 -m http.server 8000
+
    # OR using Node.js
-   npx http-server
-   
-   # OR using Ruby
-   ruby -run -ehttpd . -p8000
+   npx http-server -p 8000
    ```
 
 2. **Open in browser:**
    ```
-   http://localhost:8000/web/index.html
+   http://localhost:8000/index.html
    ```
 
 3. **Create your trainer:**
