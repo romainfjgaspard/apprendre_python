@@ -225,7 +225,7 @@ body {
 /* ── Map ─────────────────────────────────────────────────────────────────── */
 .map-container {
   padding: 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   width: 100%;
 }
@@ -252,114 +252,138 @@ body {
 .season-f1      { background: linear-gradient(90deg, rgba(231,76,60,.15), transparent);  color: var(--f1-red);        border-left: 4px solid var(--f1-red); }
 .season-birds   { background: linear-gradient(90deg, rgba(168,85,247,.15), transparent); color: var(--purple);        border-left: 4px solid var(--purple); }
 
-/* ── Chapter path (connected nodes) ──────────────────────────────────────── */
-.chapter-path {
+/* ── 2D Snake Map ─────────────────────────────────────────────────────────── */
+.map-grid {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  position: relative;
-  padding-left: 32px;
+  align-items: stretch;
+  gap: 4px;
+  border-radius: 12px;
+  padding: 16px 12px;
+  overflow-x: auto;
 }
 
-.chapter-path::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--border);
+.grid-bg-pokemon {
+  background: radial-gradient(ellipse at top, #162a16 0%, #0a150a 100%);
+  border: 2px solid rgba(246,211,101,.18);
+}
+.grid-bg-f1 {
+  background: radial-gradient(ellipse at top, #1c1010 0%, #0d0808 100%);
+  border: 2px solid rgba(231,76,60,.18);
+}
+.grid-bg-birds {
+  background: radial-gradient(ellipse at top, #0d1628 0%, #060c18 100%);
+  border: 2px solid rgba(168,85,247,.18);
 }
 
-.chapter-node {
+.map-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tile-spacer { flex-shrink: 0; }
+
+.arrow-h {
+  font-size: 18px;
+  color: rgba(255,255,255,.35);
+  flex-shrink: 0;
+  user-select: none;
+  line-height: 1;
+}
+
+.map-row-connector {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 16px;
+  font-size: 20px;
+  color: rgba(255,255,255,.35);
+  user-select: none;
+  line-height: 1;
+  padding: 0 12px;
+}
+.map-row-connector.right-side { justify-content: flex-end; }
+.map-row-connector.left-side  { justify-content: flex-start; }
+
+.map-tile {
+  width: 80px;
+  min-height: 88px;
   background: var(--bg-card);
   border: 2px solid var(--border);
-  border-radius: var(--radius);
-  margin-bottom: 8px;
-  cursor: pointer;
-  transition: all .2s;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 4px 6px;
+  flex-shrink: 0;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
   position: relative;
-  text-decoration: none;
-  color: inherit;
+  cursor: pointer;
 }
 
-.chapter-node::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  width: 14px;
-  height: 2px;
-  background: var(--border);
+.tile-emoji {
+  font-size: 22px;
+  line-height: 1;
 }
 
-.chapter-node:hover:not(.locked) {
+.tile-num {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.tile-player {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  margin-top: 2px;
+}
+
+.tile-player-fallback {
+  font-size: 22px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.map-tile:hover:not(.locked) {
   border-color: var(--cyan);
   background: var(--bg-hover);
-  transform: translateX(4px);
-  box-shadow: 0 4px 16px rgba(103,232,249,.15);
+  transform: scale(1.08);
+  box-shadow: 0 4px 18px rgba(103,232,249,.2);
+  z-index: 1;
 }
 
-.chapter-node.done {
+.map-tile.done {
   border-color: var(--green);
-  background: rgba(74,222,128,.05);
+  background: rgba(74,222,128,.07);
 }
-.chapter-node.done::before { background: var(--green); }
-.chapter-node.done .node-status { color: var(--green); }
 
-.chapter-node.current {
+.map-tile.current {
   border-color: var(--cyan);
-  box-shadow: 0 0 16px rgba(103,232,249,.2);
+  background: rgba(103,232,249,.08);
+  box-shadow: 0 0 14px rgba(103,232,249,.25);
   animation: pulse-border 2s ease infinite;
+  min-height: 108px;
 }
 
 @keyframes pulse-border {
   0%, 100% { box-shadow: 0 0 8px rgba(103,232,249,.15); }
-  50% { box-shadow: 0 0 20px rgba(103,232,249,.3); }
+  50%       { box-shadow: 0 0 22px rgba(103,232,249,.35); }
 }
 
-.chapter-node.locked {
+.map-tile.locked {
   opacity: .35;
   cursor: not-allowed;
 }
 
-.chapter-node.boss { border-width: 3px; }
-.chapter-node.boss.s1 { border-color: var(--pokemon-yellow); }
-.chapter-node.boss.s2 { border-color: var(--f1-red); }
-.chapter-node.boss.s3 { border-color: var(--purple); }
-
-.node-num {
-  font-family: var(--font-pixel);
-  font-size: 10px;
-  color: var(--text-dim);
-  min-width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255,255,255,.05);
-  flex-shrink: 0;
-}
-
-.chapter-node.done .node-num {
-  background: rgba(74,222,128,.15);
-  color: var(--green);
-}
-
-.chapter-node.current .node-num {
-  background: rgba(103,232,249,.15);
-  color: var(--cyan);
-}
-
-.node-info { flex: 1; min-width: 0; }
-.node-title { font-weight: 700; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.node-desc { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
-.node-status { font-size: 18px; flex-shrink: 0; }
+.map-tile.boss { border-width: 3px; }
+.map-tile.boss.s1 { border-color: var(--pokemon-yellow); }
+.map-tile.boss.s2 { border-color: var(--f1-red); }
+.map-tile.boss.s3 { border-color: var(--purple); }
 
 /* ── Chapter content ─────────────────────────────────────────────────────── */
 .chapter-bar {
@@ -772,9 +796,12 @@ body {
 .lang-toggle button.active { color: var(--accent); border-color: var(--accent); background: rgba(246,211,101,.1); }
 
 @media (max-width: 600px) {
-  .chapter-path { padding-left: 24px; }
   .top-bar { padding: 8px 12px; font-size: 12px; }
   .xp-bar { width: 120px; }
   .ascii-logo { font-size: 6px; }
-  .node-title { font-size: 12px; }
+  .map-tile { width: 68px; min-height: 78px; }
+  .map-tile.current { min-height: 98px; }
+  .tile-emoji { font-size: 18px; }
+  .tile-player { width: 32px; height: 32px; }
+  .arrow-h { font-size: 14px; }
 }

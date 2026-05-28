@@ -195,6 +195,7 @@ function getPokemonForm(xp, starterId) {
   return form;
 }
 
+
 const CHAPTER_CONCEPTS = {
   1: "print() · variables · f-strings",
   2: "int · float · opérateurs",
@@ -280,48 +281,109 @@ function updateHUD() {
 // ── Map rendering ────────────────────────────────────────────────────────────
 function renderMap() {
   updateHUD();
-  // Sorted nums across ALL chapters for unlock chain (handles decimals like 4.5)
   const allSortedNums = Object.values(DATA.chapters).map(c => c.num).sort((a, b) => a - b);
 
+  const SEASON_CFG = {
+    1: { cols: 5, tileEmoji: "🌿", bgClass: "grid-bg-pokemon" },
+    2: { cols: 4, tileEmoji: "🏎️", bgClass: "grid-bg-f1" },
+    3: { cols: 5, tileEmoji: "🐦", bgClass: "grid-bg-birds" },
+  };
+
   for (const s of [1, 2, 3]) {
-    const grid = $(`#grid-s${s}`);
-    grid.innerHTML = "";
-    const chs = Object.values(DATA.chapters).filter(c => c.season === s);
-    chs.sort((a, b) => a.num - b.num);
+    const container = $(`#grid-s${s}`);
+    container.innerHTML = "";
+    container.className = `map-grid ${SEASON_CFG[s].bgClass}`;
 
-    for (const ch of chs) {
-      const done = PROG.chapters_done.includes(ch.num);
-      const idx = allSortedNums.indexOf(ch.num);
-      const prevNum = idx > 0 ? allSortedNums[idx - 1] : null;
-      const prev = prevNum === null || PROG.chapters_done.includes(prevNum);
-      const locked = !prev && !done;
-      const isCurrent = !done && prev; // next to play
+    const cfg = SEASON_CFG[s];
+    const chs = Object.values(DATA.chapters).filter(c => c.season === s).sort((a, b) => a.num - b.num);
 
-      // Use translated titles if available
-      const title = t(`ch${ch.num}_title`) !== `ch${ch.num}_title` ? t(`ch${ch.num}_title`) : ch.title;
-      const desc = t(`ch${ch.num}_desc`) !== `ch${ch.num}_desc` ? t(`ch${ch.num}_desc`) : ch.desc;
+    // Split into snake rows
+    const rows = [];
+    for (let i = 0; i < chs.length; i += cfg.cols) rows.push(chs.slice(i, i + cfg.cols));
 
-      const node = document.createElement("div");
-      node.className = "chapter-node" +
-        (done ? " done" : "") +
-        (locked ? " locked" : "") +
-        (isCurrent ? " current" : "") +
-        (ch.boss ? ` boss s${s}` : "");
+    rows.forEach((row, rowIdx) => {
+      const isReversed = rowIdx % 2 === 1;
+      const displayOrder = isReversed ? [...row].reverse() : row;
+      const arrowChar = isReversed ? "←" : "→";
+      const numPad = cfg.cols - row.length;
 
-      node.innerHTML = `
-        <span class="node-num">${ch.num}</span>
-        <div class="node-info">
-          <div class="node-title">${escapeHtml(title)}</div>
-          <div class="node-desc">${escapeHtml(desc)}</div>
-        </div>
-        <span class="node-status">${done ? "✅" : locked ? "🔒" : "⬜"}</span>
-      `;
+      const rowEl = document.createElement("div");
+      rowEl.className = "map-row";
 
-      if (!locked) {
-        node.addEventListener("click", () => openChapter(ch.num));
+      // Reversed partial row: spacer on left so last chapter aligns with col above
+      if (isReversed && numPad > 0) {
+        const spacer = document.createElement("div");
+        spacer.className = "tile-spacer";
+        spacer.style.width = `${numPad * 116}px`; // 80px tile + 28px arrow + 8px gap
+        rowEl.appendChild(spacer);
       }
-      grid.appendChild(node);
-    }
+
+      displayOrder.forEach((ch, tileIdx) => {
+        const done = PROG.chapters_done.includes(ch.num);
+        const idx = allSortedNums.indexOf(ch.num);
+        const prevNum = idx > 0 ? allSortedNums[idx - 1] : null;
+        const prev = prevNum === null || PROG.chapters_done.includes(prevNum);
+        const locked = !prev && !done;
+        const isCurrent = !done && prev;
+
+        if (tileIdx > 0) {
+          const arrow = document.createElement("span");
+          arrow.className = "arrow-h";
+          arrow.textContent = arrowChar;
+          rowEl.appendChild(arrow);
+        }
+
+        const tile = document.createElement("div");
+        tile.className = "map-tile" +
+          (done ? " done" : "") +
+          (locked ? " locked" : "") +
+          (isCurrent ? " current" : "") +
+          (ch.boss ? ` boss s${s}` : "");
+
+        const topEmoji = ch.boss ? "🏆" : locked ? "🔒" : done ? "✅" : cfg.tileEmoji;
+        const numDisplay = Number.isInteger(ch.num) ? ch.num : ch.num.toFixed(1);
+
+        const title = t(`ch${ch.num}_title`) !== `ch${ch.num}_title` ? t(`ch${ch.num}_title`) : ch.title;
+        tile.setAttribute("title", title);
+        tile.innerHTML = `<div class="tile-emoji">${topEmoji}</div><div class="tile-num">${numDisplay}</div>`;
+
+        if (isCurrent) {
+          const form = PROG.starter_pokemon ? getPokemonForm(PROG.xp, PROG.starter_pokemon) : null;
+          if (form) {
+            const img = document.createElement("img");
+            img.className = "tile-player";
+            img.src = `images/pokedex/${form.pokeId}.png`;
+            img.alt = LANG === "fr" ? form.fr : form.en;
+            tile.appendChild(img);
+          } else {
+            const star = document.createElement("div");
+            star.className = "tile-player-fallback";
+            star.textContent = "⭐";
+            tile.appendChild(star);
+          }
+        }
+
+        if (!locked) tile.addEventListener("click", () => openChapter(ch.num));
+        rowEl.appendChild(tile);
+      });
+
+      // Forward partial row: spacer on right (cosmetic)
+      if (!isReversed && numPad > 0) {
+        const spacer = document.createElement("div");
+        spacer.className = "tile-spacer";
+        spacer.style.width = `${numPad * 116}px`;
+        rowEl.appendChild(spacer);
+      }
+
+      container.appendChild(rowEl);
+
+      if (rowIdx < rows.length - 1) {
+        const conn = document.createElement("div");
+        conn.className = "map-row-connector " + (isReversed ? "left-side" : "right-side");
+        conn.textContent = "↓";
+        container.appendChild(conn);
+      }
+    });
   }
 }
 
@@ -638,10 +700,7 @@ function showVictory(chapterNum, ok, total) {
 // ── Navigation ───────────────────────────────────────────────────────────────
 $("#back-btn").addEventListener("click", () => {
   $("#scratch-panel").classList.add("hidden");
-  // Reset Pyodide namespace for fresh chapter
-  if (pyodide) {
-    try { pyodide.runPython("pass"); } catch {}
-  }
+  if (pyodide) { try { pyodide.runPython("pass"); } catch {} }
   showScreen("home");
   renderMap();
 });

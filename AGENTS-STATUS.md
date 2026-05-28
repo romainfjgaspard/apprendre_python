@@ -1,13 +1,13 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-28 — Phase 0 migration SVG terminée_
+_Dernière mise à jour : 2026-05-28 — Phase 1 migration SVG terminée (Phaser supprimé, snake grid S1 restaurée)_
 
 ---
 
 ## État du projet
 
 Site d'apprentissage Python gamifié pour Basile (~11 ans, expert Scratch).
-Stack : HTML statique + Pyodide + CodeMirror + Firebase Firestore + **Phaser 3** (overworld).
+Stack : HTML statique + Pyodide + CodeMirror + Firebase Firestore.
 Repo GitHub : https://github.com/romainfjgaspard/apprendre_python
 GitHub Pages : https://romainfjgaspard.github.io/apprendre_python/
 Firebase : projet `apprendre-python-f454a` — Firestore opérationnel ✅
@@ -32,6 +32,7 @@ Firebase : projet `apprendre-python-f454a` — Firestore opérationnel ✅
 | 9 | Progression Pokémon avec évolution | ✅ Done | 4 starters × 3 évolutions |
 | 10 | Overworld map Phaser.js (S1) | ✅ Done | Carte Pokémon scrollable, WASD, zones |
 | 11 | Phase 0 — Nettoyage avant migration SVG | ✅ Done | Zone.Identifier supprimé, .gitignore, archive |
+| 12 | Phase 1 — Suppression Phaser + snake grid S1 | ✅ Done | overworld.js supprimé, ~800 KB lib retirée, grid-s1 visible |
 
 ---
 
@@ -49,7 +50,6 @@ apprendre_python/
 ├── index.html            ← GA4 G-HCG77H3QXB
 ├── leaderboard.html      ← Firestore multi-joueur
 ├── app.js                ← moteur principal
-├── overworld.js          ← Phaser 3 — overworld S1 (carte Pokémon)
 ├── chapters.json         ← généré par export_web.py (27 chapitres)
 ├── firebase.js           ← Firestore SDK v9+ (credentials à configurer)
 ├── style.css
@@ -70,15 +70,10 @@ apprendre_python/
 ### Non résolu
 - **Zoom trackpad** Windows (pinch-to-zoom visuel) — non traité, hors plan
 
-### Améliorations prévues S1 overworld
-- Tileset pixel art réel (FireRed-style) à la place du rendu programmatique actuel
-- Sprite sheet de marche 4 directions pour le joueur (animation walk N/S/E/W)
-- PNJ statiques avec bulles de dialogue (Prof. Chen, etc.)
-- Musique rétro (optionnelle, Web Audio API)
-
-### Saisons à traiter
-- **S2 (Formule 1)** : overworld circuit top-down + voiture — à planifier
-- **S3 (Birds)** : pas encore de concept défini
+### Saisons à traiter (migration SVG)
+- **S1** : snake grid temporaire — sera remplacée par carte SVG en Phase 2
+- **S2 (Formule 1)** : snake grid — carte SVG conditionnelle Phase 4
+- **S3 (Birds)** : snake grid — carte SVG conditionnelle Phase 4
 
 ---
 
@@ -108,6 +103,14 @@ python3 -m http.server 8000
 - `.ipynb` : déjà dans `.gitignore` (hors repo), contenu migré dans `chapters/` depuis T1 → supprimables en local si besoin de place
 - `FIREBASE_SETUP.md` conservé (documentation utile)
 
+**2026-05-28** : Phase 1 — Suppression Phaser + snake grid S1 restaurée.
+- `overworld.js` supprimé (~287 lignes, 800 KB lib Phaser retirée)
+- `index.html` : script Phaser, `<script defer src="overworld.js">`, `#overworld-screen`, bouton `#enter-overworld-btn` supprimés — `#grid-s1` plus `hidden`
+- `app.js` : `FROM_OVERWORLD`, `window.getPokemonForm`, `Object.defineProperty(window,'PROG')`, `Object.defineProperty(window,'DATA')`, `window.openChapterFromOverworld`, blocs conditionnels `if (FROM_OVERWORLD)` (back-btn + victory-btn), handlers overworld supprimés
+- `style.css` : `.btn-overworld`, `#overworld-screen`, `.ow-season-label`, `#phaser-container`, `.ow-prompt` supprimés
+- Grep final : 0 référence Phaser/overworld hors `_archive/`
+- S1 affiche désormais la snake grid comme S2 et S3 — cohérence restaurée
+
 **2026-05-28** : Phase 0 — Nettoyage avant migration SVG.
 - `python_quest_worldmap_plan.md:Zone.Identifier` supprimé
 - `python_quest_worldmap_plan.md` racine supprimé (copie identique déjà dans `_archive/`)
@@ -123,7 +126,7 @@ Prompts d'exécution : `PROMPTS_PHASES.md`
 | Phase | Objectif | État |
 |---|---|---|
 | **0** | Nettoyage fichiers parasites (Zone.Identifier, archive, .gitignore) | ✅ Done |
-| **1** | Suppression Phaser + retour temporaire snake grid S1 | ⏳ À faire |
+| **1** | Suppression Phaser + retour temporaire snake grid S1 | ✅ Done |
 | **2** | Carte SVG S1 (remplace snake grid S1) | ⏳ À faire |
 | **3** | Animation évolution + 4e palier + remplacement Dratini par Charmander | ⏳ À faire |
 | **4** | Cartes SVG S2 + S3 — **conditionnelle** (post-validation Basile) | ⏳ À faire |
