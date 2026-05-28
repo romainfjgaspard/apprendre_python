@@ -1,35 +1,37 @@
 # AGENTS-STATUS.md — Python Quest
 
-_Dernière mise à jour : 2026-05-24 — Firebase opérationnel, plan complet terminé_
+_Dernière mise à jour : 2026-05-28 — Phase 0 migration SVG terminée_
 
 ---
 
 ## État du projet
 
 Site d'apprentissage Python gamifié pour Basile (~11 ans, expert Scratch).
-Stack : HTML statique + Pyodide + CodeMirror + Firebase Firestore.
+Stack : HTML statique + Pyodide + CodeMirror + Firebase Firestore + **Phaser 3** (overworld).
 Repo GitHub : https://github.com/romainfjgaspard/apprendre_python
 GitHub Pages : https://romainfjgaspard.github.io/apprendre_python/
 Firebase : projet `apprendre-python-f454a` — Firestore opérationnel ✅
 
-**Source de vérité du contenu** : `chapters/ch{N:02d}/` (depuis 2026-05-23).
+**Source de vérité du contenu** : `chapters/ch{N:02d}/`
 `chapters.json` est généré par `export_web.py` — ne pas éditer à la main.
 
 ---
 
-## Avancement PLAN_REFONTE.md
+## Avancement global
 
 | # | Tâche | État | Notes |
 |---|-------|------|-------|
-| 1 | Restructurer contenu → `chapters/ch*/` | ✅ Done 2026-05-23 | 240 fichiers, 26 chapitres |
-| 2 | Cellules toutes éditables (`readOnly: false`) | ✅ Done 2026-05-23 | `app.js` ligne 281 — 1 ligne |
-| 3 | Déplacer `web/` → racine + git init | ✅ Done 2026-05-23 | `web/` supprimé, `export_web.py` mis à jour |
-| 4 | Firebase Firestore multi-joueur | ✅ Done 2026-05-23 | Projet `apprendre-python-f454a` — vérifié opérationnel |
-| 5 | Leaderboard | ✅ Done 2026-05-23 | `leaderboard.html` réécrit — table + refresh |
-| 6 | Contenu bilingue EN/FR complet | ✅ Done 2026-05-23 | Moteur app.js + 130 fichiers .fr.md + chapters.json régénéré |
-| 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ✅ Done 2026-05-23 | 7a-7f complets — 27 chapitres (ch04b num=4.5 ajouté) |
-| 8 | UX / Gamification | ✅ Done 2026-05-23 | 8a-8d complets |
-| 9 | Progression Pokémon avec évolution | ✅ Done 2026-05-24 | 4 starters × 3 évolutions, modal sélection, image HUD + victoire |
+| 1 | Restructurer contenu → `chapters/ch*/` | ✅ Done | 240 fichiers, 26 chapitres |
+| 2 | Cellules toutes éditables | ✅ Done | `app.js` ligne ~281 |
+| 3 | Déplacer `web/` → racine | ✅ Done | `web/` supprimé |
+| 4 | Firebase Firestore multi-joueur | ✅ Done | Projet `apprendre-python-f454a` |
+| 5 | Leaderboard | ✅ Done | `leaderboard.html` |
+| 6 | Contenu bilingue EN/FR complet | ✅ Done | 130 fichiers .fr.md |
+| 7 | Fixes pédagogiques (Ch2/4/5/6/8) | ✅ Done | 7a-7f + ch04b ajouté |
+| 8 | UX / Gamification | ✅ Done | Run all, Scratch panel, Journey modal |
+| 9 | Progression Pokémon avec évolution | ✅ Done | 4 starters × 3 évolutions |
+| 10 | Overworld map Phaser.js (S1) | ✅ Done | Carte Pokémon scrollable, WASD, zones |
+| 11 | Phase 0 — Nettoyage avant migration SVG | ✅ Done | Zone.Identifier supprimé, .gitignore, archive |
 
 ---
 
@@ -38,138 +40,91 @@ Firebase : projet `apprendre-python-f454a` — Firestore opérationnel ✅
 ```
 apprendre_python/
 ├── chapters/
-│   ├── ch{N:02d}/        ← SOURCE DE VÉRITÉ (26 chapitres + ch04b)
+│   ├── ch{N:02d}/        ← SOURCE DE VÉRITÉ (27 chapitres, ch04b inclus)
 │   │   ├── meta.json     ← { num, title, desc, badge, xp, season, boss }
 │   │   ├── {N}_lesson.en.md / {N}_lesson.fr.md
 │   │   ├── {N}_example.py
 │   │   └── {N}_exercise.py
-│   └── ch04b/            ← num=4.5, boucle while (entre ch04 et ch05)
+│   └── ch04b/            ← num=4.5, boucle while
 ├── index.html            ← GA4 G-HCG77H3QXB
 ├── leaderboard.html      ← Firestore multi-joueur
 ├── app.js                ← moteur principal
+├── overworld.js          ← Phaser 3 — overworld S1 (carte Pokémon)
 ├── chapters.json         ← généré par export_web.py (27 chapitres)
 ├── firebase.js           ← Firestore SDK v9+ (credentials à configurer)
 ├── style.css
-├── images/pokedex/       ← vide (à remplir en Tâche 9)
-├── export_web.py         ← regex ch\d+[a-z]? pour ch04b
-├── migrate_to_chapters.py ← one-shot T1, archivable
+├── images/pokedex/       ← sprites Pokémon starters (12 PNG)
+├── export_web.py         ← génère chapters.json depuis chapters/
+├── _archive/             ← docs de planification archivés
 └── _verify.py
 ```
 
-## Points d'attention pour la prochaine session
+---
 
-- **Zoom trackpad** Windows non résolu (Visual Viewport API, hors plan)
-- **Firestore rules** : actuellement `write: true` — voir note sécurité ci-dessous
+## Points d'attention
+
+### Bloquants connus
+- **Firebase credentials** manquants dans `firebase.js` (section `firebaseConfig`) — Firebase non fonctionnel sans ça
+- **Firestore rules** : actuellement `write: true` — à durcir avant usage réel
+
+### Non résolu
+- **Zoom trackpad** Windows (pinch-to-zoom visuel) — non traité, hors plan
+
+### Améliorations prévues S1 overworld
+- Tileset pixel art réel (FireRed-style) à la place du rendu programmatique actuel
+- Sprite sheet de marche 4 directions pour le joueur (animation walk N/S/E/W)
+- PNJ statiques avec bulles de dialogue (Prof. Chen, etc.)
+- Musique rétro (optionnelle, Web Audio API)
+
+### Saisons à traiter
+- **S2 (Formule 1)** : overworld circuit top-down + voiture — à planifier
+- **S3 (Birds)** : pas encore de concept défini
+
+---
+
+## Lancer en local
+
+```bash
+cd ~/projects/apprendre_python
+python3 -m http.server 8000
+# → http://localhost:8000/index.html
+```
 
 ---
 
 ## Notes de session
 
-**2026-05-23** : Tâche 1 exécutée.
-- `migrate_to_chapters.py` : migration one-shot chapters.json → 240 fichiers dans `chapters/ch{N:02d}/`
-- `export_web.py` : réécrit pour lire `chapters/ch*/` au lieu des notebooks .ipynb
-- `.gitignore` créé, repo git initialisé (commit initial)
-- Rétrocompat : champ `source` = `source_en` dans les cellules md (supprimer en Tâche 6)
+**2026-05-26** : Tâche 10 — Overworld Phaser.js S1.
+- `overworld.js` créé (~260 lignes) : scène Phaser 3 avec carte dessinée programmatiquement
+- 10 zones (Bourg Palette → Arène Finale) avec type de terrain (ville/route/forêt/montagne/arène)
+- Joueur = sprite Pokémon choisi (ou cercle jaune fallback), WASD + flèches, caméra qui suit
+- Prompt ESPACE quand joueur est dans une zone débloquée → `openChapter(num)`
+- Bouton "🎮 Explorer la Région Pokémon →" dans `#home-screen` S1
+- `FROM_OVERWORLD` flag dans `app.js` pour le retour back/victory → overworld
+- `renderMap()` : `#grid-s1` caché par défaut (`class="map-grid hidden"`)
 
-**2026-05-23** : Tâche 2 exécutée.
-- `web/app.js` ligne 281 : `readOnly: cell.type === "code"` → `readOnly: false`
-- Toutes les cellules (exemples + exercices) sont maintenant éditables par le joueur
+**2026-05-26** : Ménage fichiers.
+- 7 .md archivés dans `_archive/` (PLAN_ACTION, PLAN_REFONTE, SYNTHESE_ACTIONS, AGENTS, Map Python, mode_jeu, python_quest_worldmap_plan)
+- `.ipynb` : déjà dans `.gitignore` (hors repo), contenu migré dans `chapters/` depuis T1 → supprimables en local si besoin de place
+- `FIREBASE_SETUP.md` conservé (documentation utile)
 
-**2026-05-23** : Tâche 3 exécutée.
-- `web/` déplacé à la racine (`mv web/* .` + `rmdir web`)
-- `export_web.py` : chemin de sortie `web/chapters.json` → `chapters.json`
-- Chemins HTML déjà relatifs, aucune modification nécessaire dans index.html / leaderboard.html / app.js
+**2026-05-28** : Phase 0 — Nettoyage avant migration SVG.
+- `python_quest_worldmap_plan.md:Zone.Identifier` supprimé
+- `python_quest_worldmap_plan.md` racine supprimé (copie identique déjà dans `_archive/`)
+- `.gitignore` : ajout `*:Zone.Identifier`
 
-**2026-05-23** : Tâche 4 exécutée.
-- `firebase.js` : réécriture complète Realtime DB → Firestore SDK modulaire v9+
-  (fonctions : initFirebase, syncProgress, loadPlayer, listAllPlayers exposées sur window)
-- `index.html` : firebase.js en `type=module`, app.js en `defer` (ordre d'exécution garanti)
-  + dropdown `#existing-player` dans le splash (masqué si Firebase non configuré)
-- `app.js` : startGame() async, charge progression Firestore pour joueurs existants,
-  boot() peuple le dropdown, i18n complété (splash_existing_label, splash_or)
-- `style.css` : style `<select>` aligné sur l'input existant
+---
 
-**2026-05-23** : Fix persistance cellules CodeMirror (hors plan, découvert en test).
-- `app.js` : contenu saisi dans les cellules code/exercice sauvegardé en localStorage
-  (clé `pq_cell_{num}_{idx}`) et restauré à la réouverture du chapitre
+## Migration overworld → SVG en cours
 
-**2026-05-23** : Tâche 5 exécutée.
-- `leaderboard.html` : 6 bugs corrigés + bouton refresh ajouté
-  - `<script src>` → `<script type="module" src>` (firebase.js est un ES module)
-  - Inline script en `type="module"` pour garantir l'ordre d'exécution
-  - `loadLeaderboard()` (inexistant) → `window.listAllPlayers()`
-  - `p.level` (inexistant) → calculé depuis XP via table LEVELS dupliquée inline
-  - `p.chapters_done || 0` → `(p.chapters_done || []).length` (c'est un array)
-  - Colonne "Level" → "Pokémon (niveau)" avec `starter_pokemon` + niveau calculé
-  - Bouton "Rafraîchir" ajouté
+Source de vérité : `PLAN_MIGRATION_SVG.md`
+Prompts d'exécution : `PROMPTS_PHASES.md`
 
-**2026-05-23** : Fix zoom CSS (hors plan) — partiellement résolu.
-
-Symptôme : au zoom, le centrage gauche/droite se perd et la top-bar se décale (icônes cachées).
-Cause : le viewport CSS rétrécit sous la largeur naturelle de la top-bar (~620px), le flex-wrap
-bascule les icônes en ligne 2, le justify-content:center se recalcule ligne par ligne.
-
-Essais effectués (aucun n'a réglé le trackpad) :
-- `min-width: 640px` sur `html` → règle Ctrl+scroll ✅, pas le trackpad ❌
-- `overflow-x: auto` sur `html` → aucun effet supplémentaire ❌
-
-Résultat :
-- Zoom Ctrl+scroll → centrage et top-bar stables ✅
-- Zoom pinch trackpad Windows → non résolu ⚠️
-  Hypothèse : le geste trackpad déclenche la Visual Viewport API (zoom visuel sans
-  recalcul du layout CSS), `min-width` est donc inopérant. Fix possible : JS sur
-  `window.visualViewport` pour détecter et compenser — non implémenté.
-
-**2026-05-23** : Tâche 6 — moteur bilingue EN/FR (partiel).
-- `app.js` : 4 modifications ciblées
-  - `CURRENT_CHAPTER` variable d'état ajoutée (ligne ~115)
-  - `openChapter()` : affecte `CURRENT_CHAPTER = num` au début
-  - Rendu cellule md : `cell.source` → `cell[LANG==="fr"?"source_fr":"source_en"] || cell.source`
-  - `setLang()` : re-render du chapitre courant si écran chapitre visible
-- `export_web.py` : inchangé (génère déjà `source_en`/`source_fr` correctement)
-- `.fr.md` : aucun créé — contenu à rédiger manuellement chapitre par chapitre
-- Rétrocompat `source` dans chapters.json conservée (fallback si `source_fr` absent)
-
-**2026-05-23** : Tâche 6 complétée + correctifs de fin de session.
-- 130 fichiers `.fr.md` créés (ch01→ch26) — ton adapté ~11 ans, analogies Scratch conservées
-- `chapters.json` régénéré : toutes les cellules md ont désormais `source_en` et `source_fr`
-- `.gitignore` : `*.ipynb` ajouté (bloquant signalé depuis la Tâche 3)
-
-**Prochaine session — Tâche 9** : Progression Pokémon avec évolution (starter au démarrage, images pokedex/, seuils LEVELS).
-
-**2026-05-23** : Tâche 8 exécutée — UX / Gamification.
-- **8a** : `runAllCells()` dans `app.js` — bouton "▶ Tout exécuter" dans `chapter-bar` (`.chapter-bar-actions`).
-  Exécute toutes les cellules code/exercice dans l'ordre, désactive le bouton pendant l'exécution.
-- **8b** : `ensurePyodide(silent=false)` — préchargement Pyodide en arrière-plan à l'ouverture de chaque chapitre.
-  Si un chargement silencieux est en cours et l'user clique "▶ Run", l'overlay s'affiche quand même.
-- **8c** : Panel latéral Scratch → Python (`.side-panel`, position: fixed droite).
-  Toggle via bouton "📋 Scratch?" dans `chapter-bar`. Fermé automatiquement au retour carte.
-  14 correspondances Scratch/Python dans une table statique dans `index.html`.
-- **8d** : Modal "Mon parcours" (bouton "📊" dans home top-bar).
-  Affiche : concepts maîtrisés par chapitre (`CHAPTER_CONCEPTS`), badges, progression par saison.
-  Données issues de `PROG.chapters_done` + `DATA.chapters`.
-- Fichiers modifiés : `app.js` (~120 lignes), `index.html` (~35 lignes), `style.css` (~95 lignes).
-
-**2026-05-24** : Tâche 9 exécutée — Progression Pokémon avec évolution.
-- **STARTERS** : 4 starters × 3 formes d'évolution (Squirtle/7→8→9, Froakie/656→657→658, Bagon/371→372→373, Dratini/147→148→149)
-- Seuils d'évolution : 0 XP (base), 150 XP (1ère évolution), 500 XP (forme finale) — alignés sur LEVELS existant
-- `images/pokedex/` : 12 images PNG copiées depuis `~/projects/pokedex/images/`
-- `app.js` : `STARTERS` constant + `getPokemonForm()`, `updateHUD()` → `<img>` Pokémon, `showVictory()` → image au lieu d'emoji, `startGame()` → modal starter pour nouveaux joueurs, `showStarterSelect()` + `chooseStarter()`
-- `index.html` : modal `#starter-modal` (4 cartes cliquables) + `#hud-pokemon` image dans le HUD
-- `style.css` : `.starter-card`, `.starter-grid`, `.hud-pokemon-img`, `.victory-pokemon-img`
-- Joueurs existants (sans starter_pokemon) : HUD image masquée, fallback emoji emoji dans victory
-- Noms bilingues : Squirtle/Carapuce, Wartortle/Carabaffe, Blastoise/Tortank, Froakie/Grenousse, Frogadier/Croâporal, Greninja/Amphinobi, Bagon/Draby, Shelgon/Drackhaus, Salamence/Drattak, Dratini/Minidraco, Dragonair/Draco, Dragonite/Dracolosse
-
-**Blocants connus** :
-- Repo GitHub pas encore créé → `git remote add origin https://github.com/romainfjgaspard/apprendre_python.git` puis `git push -u origin main`
-- Firebase credentials manquants dans `firebase.js` (section `firebaseConfig`)
-- `images/pokedex/` vide → animations 7f en mode emoji jusqu'à Tâche 9
-
-**2026-05-23** : Tâche 7 exécutée — fixes pédagogiques.
-- **7a** : `ch02/09_exercise.py` — renommage `score→pokemon_hp`, `new_score→hp_after_damage`, `final_score→hp_after_healing`. `_ch2()` dans app.js mis à jour.
-- **7b** : `ch04` réécrit (boucle `for` uniquement : list, [0,1,2,3,4], range()). Nouveau chapitre `ch04b` (num=4.5, boucle while + break). `renderMap()` : locking basé sur ordre trié global (gère les decimaux). `export_web.py` : regex `ch\d+[a-z]?`.
-- **7c** : `ch05` leçon 4 (list comprehensions) marquée ⭐ Bonus optionnelle.
-- **7d** : `ch06/07_example.py` — lambda remplacé par boucle `for` explicite.
-- **7e** : `ch08` réécrit pour Pyodide — `json.dumps()`/`json.loads()` en mémoire, warnings ⚠️ sur tous les `open()`. Exercice compatible navigateur.
-- **7f** : Modal de victoire — emoji LEVELS animé (bounce+glow), particules XP ✨, panneau "LEVEL UP!" si seuil franchi. CSS dans style.css.
-- `chapters.json` régénéré : 27 chapitres (ch04b inclus).
+| Phase | Objectif | État |
+|---|---|---|
+| **0** | Nettoyage fichiers parasites (Zone.Identifier, archive, .gitignore) | ✅ Done |
+| **1** | Suppression Phaser + retour temporaire snake grid S1 | ⏳ À faire |
+| **2** | Carte SVG S1 (remplace snake grid S1) | ⏳ À faire |
+| **3** | Animation évolution + 4e palier + remplacement Dratini par Charmander | ⏳ À faire |
+| **4** | Cartes SVG S2 + S3 — **conditionnelle** (post-validation Basile) | ⏳ À faire |
+| **5** | Polish : sons + sprite ambulant — **optionnel** | ⏳ À faire |
